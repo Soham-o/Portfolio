@@ -75,7 +75,7 @@ I am a **Computer Science Student** at **SGTU** (Batch of 2028) with a passion f
 
 | Project | Description | Tech Stack |
 | :--- | :--- | :--- |
-| **[MyBuddy](https://github.com/Soham-o/Mybuddy)** | A personalized companion app or utility tool designed to assist users with daily tasks. | `React` `JavaScript` |
+| **[MyBuddy](https://github.com/Soham-o/Mybuddy)** | A personalized companion app or utility tool designed to assist users with daily tasks. | `Python` |
 | **Personal Portfolio** | A modern, responsive developer portfolio with 3D animations and theme switching. | `HTML` `CSS` `JS` |
 
 ---
