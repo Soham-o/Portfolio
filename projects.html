@@ -51,8 +51,8 @@
 
     <main class="projects-page">
         <div class="title-section">
-            <h1 class="big-text">Systems That Run Themselves.</h1>
-            <p class="projects-subtitle">Every project below solves a real problem I got tired of solving manually. Each one runs autonomously on free infrastructure — no subscription, no babysitting required.</p>
+            <h1 class="big-text">Projects, Experiments, and Tools</h1>
+            <p class="projects-subtitle">A selection of projects across AI, automation, data analysis, machine learning, and web development. Each description focuses on the documented workflow; direct source links are shown only when a project repository is publicly available.</p>
         </div>
 
         <div class="projects-grid">
@@ -116,23 +116,23 @@
                     </div>
 
                     <div class="fp-content">
-                        <span class="fp-type">AI Automation · Live Pipeline</span>
-                        <a href="https://github.com/Soham-o" class="fp-title"><h2>InternPilot AI</h2></a>
-                        <p class="fp-desc">I was spending 2–3 hours daily searching for internships across five platforms, manually deduplicating listings, and still missing the good ones. So I built a system to do it instead. InternPilot AI discovers opportunities automatically, runs scam detection using Groq LLM, deduplicates across sources, ranks by fit, and delivers a personalised Telegram digest every morning — all orchestrated by GitHub Actions at zero cost.</p>
+                        <span class="fp-type">AI & Automation · Project Workflow</span>
+                        <div class="fp-title"><h2>InternPilot AI</h2></div>
+                        <p class="fp-desc">InternPilot AI explores an internship-discovery workflow: collect listings, normalize and deduplicate results, assess opportunities, and present them in a Telegram digest. The description focuses on the workflow rather than claiming measured time savings or uninterrupted production operation.</p>
 
                         <!-- Case study breakdown -->
                         <div class="case-grid">
                             <div class="case-cell">
                                 <span class="case-label">Problem</span>
-                                <span class="case-val">Hours wasted daily on manual internship hunting across fragmented platforms</span>
+                                <span class="case-val">Finding relevant listings across multiple sources</span>
                             </div>
                             <div class="case-cell">
                                 <span class="case-label">Key Challenge</span>
-                                <span class="case-val">Deduplication across inconsistent source formats — solved via fuzzy matching before LLM ranking to keep API cost at zero</span>
+                                <span class="case-val">Normalizing listings and removing duplicates before ranking</span>
                             </div>
                             <div class="case-cell">
                                 <span class="case-label">Impact</span>
-                                <span class="case-val">~2–3 hrs saved daily · $0 infra cost · Ranked digest delivered every morning autonomously</span>
+                                <span class="case-val">Listing collection · deduplication · ranking · Telegram digest</span>
                             </div>
                         </div>
 
@@ -147,8 +147,8 @@
                         </div>
 
                         <div class="fp-links">
-                            <a href="https://github.com/Soham-o" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o" target="_blank" class="btn-visit">View on GitHub</a>
+                            
+                            <span class="btn-visit" aria-disabled="true">Public source link unavailable</span>
                         </div>
                     </div>
                 </article>
@@ -231,7 +231,7 @@
                                 <rect x="210" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
                                 <text x="260" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Dograh AI</text>
                                 <text x="260" y="79" text-anchor="middle" fill="var(--text-color)" font-size="9" font-family="Montserrat,sans-serif">Voice Agent</text>
-                                <text x="260" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Interview</text>
+                                <text x="260" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Voice Agent</text>
                                 <!-- Arrow -->
                                 <line x1="310" y1="70" x2="328" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a2)"/>
                                 <text x="319" y="62" text-anchor="middle" fill="var(--text-color)" font-size="7" font-family="Montserrat,sans-serif" opacity="0.5">webhook</text>
@@ -255,28 +255,28 @@
                                 <text x="592" y="66" text-anchor="middle" fill="var(--text-color)" font-size="8" font-weight="700" font-family="Montserrat,sans-serif">You</text>
                                 <text x="592" y="79" text-anchor="middle" fill="var(--primary)" font-size="7.5" font-family="Montserrat,sans-serif">✓ notified</text>
                                 <!-- Timing -->
-                                <text x="310" y="128" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.4">⚡ End-to-end: caller info in Telegram in under 15 seconds</text>
+                                <text x="310" y="128" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.4">Workflow: caller context summarized and sent to Telegram</text>
                             </svg>
                         </div>
                     </div>
 
                     <div class="fp-content">
-                        <span class="fp-type">Voice AI · Autonomous Agent · Live</span>
-                        <a href="https://github.com/Soham-o" class="fp-title"><h2>PVCA 1.0 — Personal Voice Call Assistant</h2></a>
-                        <p class="fp-desc">I missed an important call. An hour later I still didn't know who called or why. PVCA 1.0 was built in response. When a call is missed, Twilio forwards it to a Dograh AI voice agent that collects the caller's name, reason, and urgency. The data hits a Flask webhook on Hugging Face Spaces, gets summarised by Groq, and lands in Telegram in under 15 seconds. The trickiest part: Twilio demands a response within 5 seconds — so the webhook returns 200 immediately and processes async in a background thread. Entire stack costs $0/month.</p>
+                        <span class="fp-type">Voice AI · Workflow Project</span>
+                        <div class="fp-title"><h2>PVCA 1.0 — Personal Voice Call Assistant</h2></div>
+                        <p class="fp-desc">PVCA 1.0 explores an AI-assisted missed-call workflow. A voice agent collects caller context, webhook processing handles the result, and a Telegram message delivers the summary. The project combines call handling, asynchronous processing, and messaging; this page does not claim measured response times, operating costs, or production availability.</p>
 
                         <div class="case-grid">
                             <div class="case-cell">
                                 <span class="case-label">Problem</span>
-                                <span class="case-val">No way to know who called, why, or how urgent — without calling back manually</span>
+                                <span class="case-val">Capturing caller context after a missed call</span>
                             </div>
                             <div class="case-cell">
                                 <span class="case-label">Key Challenge</span>
-                                <span class="case-val">Twilio's 5-second webhook timeout — solved with async fire-and-forget: return 200 instantly, summarise in background thread</span>
+                                <span class="case-val">Handling the webhook response while processing a summary</span>
                             </div>
                             <div class="case-cell">
                                 <span class="case-label">Impact</span>
-                                <span class="case-val">Caller info in Telegram in &lt;15s · 24/7 autonomous receptionist · $0 infrastructure cost</span>
+                                <span class="case-val">Call handling · voice interaction · Telegram summary</span>
                             </div>
                         </div>
 
@@ -291,8 +291,8 @@
                         </div>
 
                         <div class="fp-links">
-                            <a href="https://github.com/Soham-o" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o" target="_blank" class="btn-visit">View on GitHub</a>
+                            
+                            <span class="btn-visit" aria-disabled="true">Public source link unavailable</span>
                         </div>
                     </div>
                 </article>
@@ -329,12 +329,12 @@
                     </div>
                     <div class="sp-content">
                         <span class="fp-type">Personal AI · LLM</span>
-                        <a href="https://github.com/Soham-o/Mybuddy.git" class="fp-title"><h2>Mybuddy</h2></a>
+                        <div class="fp-title"><h2>Mybuddy</h2></div>
                         <p class="fp-desc">An early personal LLM assistant built before agentic frameworks made this pattern mainstream. Conversational AI with a custom system prompt and memory-aware context — my first deep exploration into LLM application design.</p>
                         <!-- github-sync:card-links:Mybuddy:start -->
                         <div class="fp-links">
-                            <a href="https://github.com/Soham-o/Mybuddy" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o/Mybuddy" target="_blank" class="btn-visit">View Project</a>
+                            
+                            <span class="btn-visit" aria-disabled="true">Source repository is private</span>
                         </div>
                         <!-- github-sync:card-links:Mybuddy:end -->
                     </div>
@@ -361,7 +361,7 @@
                                 <rect x="4" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
                                 <text x="54" y="62" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Newsletters</text>
                                 <text x="54" y="76" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">RSS / IMAP</text>
-                                <text x="54" y="90" text-anchor="middle" fill="var(--primary)" font-size="8" font-family="Montserrat,sans-serif">10+ sources</text>
+                                <text x="54" y="90" text-anchor="middle" fill="var(--primary)" font-size="8" font-family="Montserrat,sans-serif">RSS / IMAP</text>
                                 <line x1="104" y1="70" x2="122" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a3)"/>
                                 <!-- Node 2 -->
                                 <rect x="124" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
@@ -387,28 +387,28 @@
                                 <text x="530" y="76" text-anchor="middle" fill="var(--bg-color)" font-size="8" font-family="Montserrat,sans-serif">Morning</text>
                                 <text x="530" y="90" text-anchor="middle" fill="var(--bg-color)" font-size="8" font-family="Montserrat,sans-serif">☕ Briefing</text>
                                 <!-- Footer note -->
-                                <text x="290" y="126" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.4">Orchestrated by GitHub Actions — runs daily at 7:00 AM</text>
+                                <text x="290" y="126" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.4">Workflow: scheduled processing and Telegram delivery</text>
                             </svg>
                         </div>
                     </div>
 
                     <div class="fp-content">
-                        <span class="fp-type">AI Automation · Intelligence Pipeline · Live</span>
-                        <a href="https://github.com/Soham-o" class="fp-title"><h2>AI Newsletter Digest System</h2></a>
-                        <p class="fp-desc">Staying current across AI and tech newsletters meant spending 30–45 minutes every morning scanning emails. 90% of that time was noise — preambles, ads, repeated announcements. This pipeline ingests 10+ newsletters via RSS and IMAP, strips boilerplate using a normalisation layer, extracts key insights with an LLM, and delivers a concise 5-minute morning briefing to Telegram. Runs every day at 7 AM via GitHub Actions, costs nothing to operate, and has not required manual intervention since deployment.</p>
+                        <span class="fp-type">AI & Automation · Digest Workflow</span>
+                        <div class="fp-title"><h2>AI Newsletter Digest System</h2></div>
+                        <p class="fp-desc">The AI Newsletter Digest project explores collecting newsletter content through RSS or IMAP, normalizing HTML, summarizing key points with an LLM, and delivering a briefing through Telegram. The page avoids unverified counts, schedules, time-saved estimates, and claims of uninterrupted operation.</p>
 
                         <div class="case-grid">
                             <div class="case-cell">
                                 <span class="case-label">Problem</span>
-                                <span class="case-val">30–45 min wasted daily reading newsletters for ~5 min of genuinely useful information</span>
+                                <span class="case-val">Long newsletters can be difficult to scan efficiently</span>
                             </div>
                             <div class="case-cell">
                                 <span class="case-label">Key Challenge</span>
-                                <span class="case-val">Inconsistent HTML across newsletter sources — solved with a normalisation layer before LLM, rather than relying on the model to parse messy markup</span>
+                                <span class="case-val">Normalizing different HTML layouts before summarization</span>
                             </div>
                             <div class="case-cell">
                                 <span class="case-label">Impact</span>
-                                <span class="case-val">10+ newsletters → 1 briefing · 30–45 min saved daily · Zero manual effort since launch</span>
+                                <span class="case-val">RSS / IMAP · content cleanup · summary · Telegram delivery</span>
                             </div>
                         </div>
 
@@ -422,8 +422,8 @@
                         </div>
 
                         <div class="fp-links">
-                            <a href="https://github.com/Soham-o" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o" target="_blank" class="btn-visit">View on GitHub</a>
+                            
+                            <span class="btn-visit" aria-disabled="true">Public source link unavailable</span>
                         </div>
                     </div>
                 </article>

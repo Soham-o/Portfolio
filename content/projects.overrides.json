@@ -15,25 +15,49 @@
       "curated": true,
       "category": "Productivity Tool",
       "image": "Image-Doc/p1.png",
-      "summary": "A clean, responsive task management interface built with HTML, CSS, and JavaScript. Focused on frictionless UX — add, complete, and clear tasks without page reloads."
+      "summary": "A task-management web app with list and board views for adding, editing, and organizing tasks."
     },
     "PersonaLearn": {
       "curated": true,
       "category": "ML · Adaptive Learning",
       "image": "Image-Doc/p2.png",
-      "summary": "ML-powered system that personalises content delivery based on learner behaviour patterns. Adapts difficulty and format dynamically — built with Python and Streamlit."
+      "summary": "A Streamlit study assistant that explains topics using analogies based on a learner's selected interests, then generates a quiz."
     },
     "Movie_Recommender_System": {
       "curated": true,
       "category": "ML · Recommender System",
       "image": "Image-Doc/p4.png",
-      "summary": "Content-based recommendation engine using cosine similarity on TF-IDF vectors. Built with Python, scikit-learn, and Streamlit — surfaces relevant titles from a dataset of 5,000+ films."
+      "summary": "A content-based movie recommender using TF-IDF features and cosine similarity, with a Streamlit interface and the TMDB 5000 dataset."
     },
     "Mybuddy": {
       "curated": true,
       "category": "Personal AI · LLM",
       "image": "Image-Doc/p3.png",
-      "summary": "An early personal LLM assistant built before agentic frameworks made this pattern mainstream. Conversational AI with a custom system prompt and memory-aware context — my first deep exploration into LLM application design."
+      "summary": "A personal assistant project exploring conversational AI and custom system prompts."
+    },
+    "autonomous-driving-system": {
+      "summary": "A modular autonomous-driving simulation project combining perception, decision logic, path planning, vehicle control, and a Streamlit dashboard. It is a simulation project, not a road-ready autonomous vehicle."
+    },
+    "AirTwin-X": {
+      "summary": "An air-quality decision-support prototype combining source attribution, intervention ranking, and scenario simulation. It includes documented fallbacks when live data sources are not configured."
+    },
+    "kinesis_prototype": {
+      "summary": "A Streamlit prototype for exploring crowd-behavior scenarios through simulation and data-driven scoring. See the repository README for the exact inputs and limitations."
+    },
+    "Fake-News-Detection-": {
+      "summary": "A scikit-learn notebook that uses TF-IDF text features and Logistic Regression for fake-news classification."
+    },
+    "MLmini_Projects": {
+      "summary": "A collection of introductory machine-learning notebooks, including a California housing-price prediction exercise. See the README for the current project list."
+    },
+    "cursor_bite": {
+      "summary": "A Windows desktop assistant that opens an action menu near the cursor and offers text-processing tools. The repository README distinguishes implemented actions from planned ones."
+    },
+    "Spotify_Songs_Genre_Segmentation": {
+      "summary": "A data-science notebook that explores audio features of Spotify tracks and groups songs using machine-learning techniques."
+    },
+    "voteros": {
+      "summary": "An interactive civic-information project focused on explaining electoral processes and helping users explore election-related information."
     }
   }
 }
