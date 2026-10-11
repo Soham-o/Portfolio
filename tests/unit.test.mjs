@@ -6,7 +6,7 @@ import { processReadme, makeUrlResolver, isBadgeUrl, classifySection, resanitize
 import { detectTech, parseRequirements, parsePyproject } from '../tools/sync/tech.mjs';
 import { computeAchievements, longestStreak } from '../tools/sync/achievements.mjs';
 import { replaceMarker, validateMarkers } from '../tools/sync/markers.mjs';
-import { renderProjectCard, renderProjectPage, renderManualMilestones } from '../tools/sync/render.mjs';
+import { renderProjectCard, renderProjectPage, renderManualMilestones, renderCuratedLinks } from '../tools/sync/render.mjs';
 import { eligibility, sortProjects, prettyName } from '../tools/sync/sync.mjs';
 import { slugify, safeUrl, truncate } from '../tools/sync/util.mjs';
 
@@ -263,6 +263,12 @@ test('render: all repository-controlled text is escaped in cards and pages', () 
   assert.match(page, /<link rel="canonical" href="https:\/\/u\.github\.io\/site\/projects\/evil\.html">/);
   assert.match(page, /application\/ld\+json/);
   assert.doesNotMatch(page.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1], /</);
+});
+
+test('render: curated cards never guess a URL when the source repo is not public', () => {
+  const html = renderCuratedLinks('Mybuddy', null);
+  assert.match(html, /Source repository for Mybuddy is not publicly available/);
+  assert.doesNotMatch(html, /<a\b|href=/i);
 });
 
 test('render: manual milestones reproduce the original timeline markup', () => {

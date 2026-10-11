@@ -176,13 +176,12 @@ ${cards}
         </section>`;
 }
 
-export function renderCuratedLinks(name, project, config) {
+export function renderCuratedLinks(name, project) {
   const indent = '                        ';
   if (!project) {
-    const url = `https://github.com/${config.github.username}/${name}`;
+    // Never guess a repository URL: the project may be private, renamed, or no longer public.
     return `${indent}<div class="fp-links">
-${indent}    <a href="${esc(url)}" target="_blank"><i class="fab fa-github"></i></a>
-${indent}    <a href="${esc(url)}" target="_blank" class="btn-visit">View Project</a>
+${indent}    <span class="btn-visit" aria-disabled="true">Source repository for ${esc(name)} is not publicly available</span>
 ${indent}</div>`;
   }
   return linksBlock(project, '', indent);
@@ -608,7 +607,7 @@ export async function renderAll({ paths, config, model }) {
   projectsHtml = replaceMarker(projectsHtml, 'projects', renderProjectsSection(model));
   for (const m of listMarkers(projectsHtml)) {
     const cm = m.match(/^card-links:(.+)$/);
-    if (cm) projectsHtml = replaceMarker(projectsHtml, m, renderCuratedLinks(cm[1], byName.get(cm[1].toLowerCase()), config));
+    if (cm) projectsHtml = replaceMarker(projectsHtml, m, renderCuratedLinks(cm[1], byName.get(cm[1].toLowerCase())));
   }
   files.set(paths.projectsHtml, projectsHtml);
 
