@@ -1,11 +1,11 @@
 {
   "id": 1358825462,
   "name": "cursor_bite",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-10-10T05:26:20Z",
   "updatedAt": "2026-10-10T05:26:24Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -123,11 +123,14 @@
       "firstImage": "https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png",
       "demoLinks": [],
       "highlights": {
-        "overview": "Intelligence at your cursor.",
+        "overview": "A privacy-first, local-first Windows assistant that appears around your mouse cursor when you press a hotkey — translate, explain, summarize, rewrite, ask AI, search, or pull text off the screen, without leaving whatever you're already looking at.",
         "problem": "Every one of these actions already exists somewhere — a translator site, a chat app, a search bar. What doesn't exist is one of them appearing exactly where your mouse already is, the instant you ask for it, without a tab switch, a paste, or an account. Select some text — a browser, a PDF, an IDE, a chat window…",
         "features": []
       },
-      "excerpt": "Intelligence at your cursor.",
+      "excerpt": "A privacy-first, local-first Windows assistant that appears around your mouse cursor when you press a hotkey — translate, explain, summarize, rewrite, ask AI, search, or pull text off the screen, without leaving…",
+      "summary": "A privacy-first, local-first Windows assistant that appears around your mouse cursor when you press a hotkey — translate, explain, summarize, rewrite, ask AI, search, or pull text off the screen, without leaving whatever you're already looking at.",
+      "summaryFrom": "overview",
+      "tagline": "Intelligence at your cursor.",
       "truncated": false
     },
     "languages": {

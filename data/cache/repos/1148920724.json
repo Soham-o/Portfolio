@@ -1,0 +1,93 @@
+{
+  "id": 1148920724,
+  "name": "Portfolio",
+  "processorVersion": 5,
+  "pushedAt": "2026-10-11T04:19:16Z",
+  "updatedAt": "2026-10-11T04:19:20Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "138d2ad0dc1d45f1dedb811b6f09f152312dfca2",
+      "htmlUrl": "https://github.com/Soham-o/Portfolio/blob/main/README.md",
+      "title": "Portfolio",
+      "overviewHtml": "<div align=\"center\">\n  <img src=\"https://capsule-render.vercel.app/api?type=waving&amp;color=auto&amp;height=200&amp;section=header&amp;text=Hi%20there,%20I%27m%20Soham%20Panda!&amp;fontSize=70&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=AIML%20Data%20Engineer%20%E2%80%A2%20Web%20Developer&amp;descAlignY=51&amp;descAlign=50\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</div>\n\n<div align=\"center\">\n  <h3>Transforming Data into Actionable Insights &amp; Building Modern Web Experiences</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://www.linkedin.com/in/soham-panda-a90720336/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"mailto:sohampanda95599@gmail.com\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://soham-o.github.io/Portfolio/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Portfolio-FFC107?style=for-the-badge&amp;logo=google-chrome&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n</div>\n\n<hr />",
+      "sections": [
+        {
+          "id": "readme--about-me",
+          "title": "👨‍💻 About Me",
+          "kind": "about",
+          "html": "<h2 id=\"readme--about-me\">👨‍💻 About Me</h2>\n<p>I am a <strong>Computer Science Student</strong> at <strong>SGTU</strong> (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.</p>\n<ul>\n<li>🔭 I’m currently working on <strong>Data Engineering Pipelines &amp; Full Stack Web Apps</strong>.</li>\n<li>🌱 I’m currently learning <strong>Advanced Neural Networks &amp; System Design</strong>.</li>\n<li>👯 I’m looking to collaborate on <strong>Open Source AI Projects</strong>.</li>\n<li>💬 Ask me about <strong>React, Python, Data Analysis, and UI/UX</strong>.</li>\n</ul>\n<hr />"
+        },
+        {
+          "id": "readme--tech-stack",
+          "title": "🛠️ Tech Stack",
+          "kind": "stack",
+          "html": "<h2 id=\"readme--tech-stack\">🛠️ Tech Stack</h2>\n<div align=\"center\">\n\n<p><strong>Languages</strong><br />\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Frontend</strong><br />\n<img src=\"https://img.shields.io/badge/React-20232A?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Data &amp; AI</strong><br />\n<img src=\"https://img.shields.io/badge/Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/NumPy-013243?style=for-the-badge&amp;logo=numpy&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&amp;logo=tensorflow&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Tools</strong><br />\n<img src=\"https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n</div>\n\n<hr />"
+        },
+        {
+          "id": "readme--github-stats",
+          "title": "📊 GitHub Stats",
+          "kind": "other",
+          "html": "<h2 id=\"readme--github-stats\">📊 GitHub Stats</h2>\n<div align=\"center\">\n  <img src=\"https://github-readme-stats.vercel.app/api?username=Soham-o&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117\" alt=\"Soham's Stats\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <br />\n  <img src=\"https://github-readme-streak-stats.herokuapp.com/?user=Soham-o&amp;theme=tokyonight&amp;hide_border=true&amp;background=0D1117\" alt=\"Soham's Streak\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <br />\n  <img src=\"https://github-readme-stats.vercel.app/api/top-langs/?username=Soham-o&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117\" alt=\"Top Langs\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</div>\n\n<hr />"
+        },
+        {
+          "id": "readme--featured-projects",
+          "title": "🚀 Featured Projects",
+          "kind": "features",
+          "html": "<h2 id=\"readme--featured-projects\">🚀 Featured Projects</h2>\n<table>\n<thead>\n<tr>\n<th align=\"left\">Project</th>\n<th align=\"left\">Description</th>\n<th align=\"left\">Tech Stack</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong><a href=\"https://github.com/Soham-o/Mybuddy\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">MyBuddy</a></strong></td>\n<td align=\"left\">A personalized companion app or utility tool designed to assist users with daily tasks.</td>\n<td align=\"left\"><code>Python</code></td>\n</tr>\n<tr>\n<td align=\"left\"><strong><a href=\"https://github.com/Soham-o/Portfolio\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Personal Portfolio</a></strong></td>\n<td align=\"left\">A modern, responsive developer portfolio with 3D animations and theme switching.</td>\n<td align=\"left\"><code>HTML</code> <code>CSS</code> <code>JS</code></td>\n</tr>\n</tbody></table>\n<hr />\n<div align=\"center\">\n  Built with ❤️ by Soham Panda\n</div>\n\n<hr />"
+        },
+        {
+          "id": "readme--how-this-portfolio-updates-itself",
+          "title": "⚙️ How this portfolio updates itself",
+          "kind": "other",
+          "html": "<h2 id=\"readme--how-this-portfolio-updates-itself\">⚙️ How this portfolio updates itself</h2>\n<p>Projects, project pages, GitHub stats and verified milestones are synced automatically from my public\nGitHub repositories by a GitHub Actions workflow (hourly, plus on demand), then redeployed to GitHub Pages.\nMake a repository public and it shows up here on its own. Setup, configuration and troubleshooting:\n<a href=\"https://github.com/Soham-o/Portfolio/blob/main/docs/AUTOMATION.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">docs/AUTOMATION.md</a>.</p>"
+        }
+      ],
+      "images": [],
+      "firstImage": null,
+      "demoLinks": [
+        {
+          "url": "https://soham-o.github.io/Portfolio/",
+          "text": ""
+        }
+      ],
+      "highlights": {
+        "overview": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
+        "problem": "",
+        "features": []
+      },
+      "excerpt": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
+      "summary": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
+      "summaryFrom": "👨‍💻 About Me",
+      "tagline": "",
+      "truncated": false
+    },
+    "languages": {
+      "HTML": 440525,
+      "JavaScript": 226990,
+      "CSS": 49826,
+      "Shell": 2182
+    },
+    "tech": [
+      {
+        "name": "HTML",
+        "source": "language"
+      },
+      {
+        "name": "JavaScript",
+        "source": "language"
+      },
+      {
+        "name": "CSS",
+        "source": "language"
+      },
+      {
+        "name": "GitHub Actions",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}

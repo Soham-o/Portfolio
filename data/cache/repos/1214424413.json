@@ -1,11 +1,11 @@
 {
   "id": 1214424413,
   "name": "kinesis_prototype",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-04-18T15:01:10Z",
   "updatedAt": "2026-04-19T19:02:37Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -55,6 +55,9 @@
         ]
       },
       "excerpt": "Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.",
+      "summary": "Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.",
+      "summaryFrom": "Overview",
+      "tagline": "",
       "truncated": false
     },
     "languages": {

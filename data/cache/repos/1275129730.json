@@ -1,11 +1,11 @@
 {
   "id": 1275129730,
   "name": "EarthShare",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-10-10T05:26:26Z",
   "updatedAt": "2026-10-10T05:26:31Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -114,11 +114,14 @@
       "firstImage": "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/dashboard.png",
       "demoLinks": [],
       "highlights": {
-        "overview": "Carbon ownership, not carbon awareness.",
+        "overview": "A full-stack carbon-footprint prototype with a deterministic accounting engine, a FastAPI backend and a Next.js frontend. The repository includes security and accessibility tests; this is a student project, not a security-audited production service.",
         "problem": "Individual emissions are a meaningful slice of the climate problem, but they are largely invisible to the people producing them. People want to act, but they have no reliable, low-friction way to (a) measure their impact, (b) understand what's driving it, and (c) actually neutralize it. The result is a gap between…",
         "features": []
       },
-      "excerpt": "Carbon ownership, not carbon awareness.",
+      "excerpt": "A full-stack carbon-footprint prototype with a deterministic accounting engine, a FastAPI backend and a Next.js frontend. The repository includes security and accessibility tests; this is a student project, not a…",
+      "summary": "A full-stack carbon-footprint prototype with a deterministic accounting engine, a FastAPI backend and a Next.js frontend. The repository includes security and accessibility tests; this is a student project, not a security-audited production service.",
+      "summaryFrom": "overview",
+      "tagline": "Carbon ownership, not carbon awareness.",
       "truncated": false
     },
     "languages": {

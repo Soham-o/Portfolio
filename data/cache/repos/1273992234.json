@@ -1,11 +1,11 @@
 {
   "id": 1273992234,
   "name": "CalmReader",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-06-19T14:55:10Z",
   "updatedAt": "2026-06-19T14:55:16Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -98,11 +98,14 @@
       "firstImage": "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/import.png",
       "demoLinks": [],
       "highlights": {
-        "overview": "Read deeply. Think clearly. Remember what matters.",
+        "overview": "Most reading tools are built to keep you reading more. CalmReader is built to help you understand better — one passage at a time, without notifications, streaks, or noise.",
         "problem": "Most reading software optimizes for one metric: time on screen. The result is an environment filled with progress bars, streaks, recommendation feeds, and pop-up encouragement — tools designed to retain your attention, not support your comprehension.",
         "features": []
       },
-      "excerpt": "Read deeply. Think clearly. Remember what matters.",
+      "excerpt": "Most reading tools are built to keep you reading more. CalmReader is built to help you understand better — one passage at a time, without notifications, streaks, or noise.",
+      "summary": "Most reading tools are built to keep you reading more. CalmReader is built to help you understand better — one passage at a time, without notifications, streaks, or noise.",
+      "summaryFrom": "overview",
+      "tagline": "Read deeply. Think clearly. Remember what matters.",
       "truncated": false
     },
     "languages": {

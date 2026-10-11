@@ -1,11 +1,11 @@
 {
   "id": 1026537848,
   "name": "Movie_Recommender_System",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-02-15T05:16:31Z",
   "updatedAt": "2026-02-15T05:16:34Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -39,11 +39,14 @@
       "firstImage": "https://cdn-icons-png.flaticon.com/512/2503/2503508.png",
       "demoLinks": [],
       "highlights": {
-        "overview": "This project is a Content-Based Recommendation System built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the TMDB 5000 Movie Dataset to suggest movies that share narrative, thematic, or production similarities with a user's selection.",
+        "overview": "A Content-Based Machine Learning System that recommends movies similar to your favorites.",
         "problem": "",
         "features": []
       },
-      "excerpt": "This project is a Content-Based Recommendation System built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the TMDB 5000 Movie Dataset to suggest movies that share…",
+      "excerpt": "A Content-Based Machine Learning System that recommends movies similar to your favorites.",
+      "summary": "A Content-Based Machine Learning System that recommends movies similar to your favorites.",
+      "summaryFrom": "overview",
+      "tagline": "",
       "truncated": false
     },
     "languages": {

@@ -1,11 +1,11 @@
 {
   "id": 1260140601,
   "name": "autonomous-driving-system",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-06-05T07:41:33Z",
   "updatedAt": "2026-06-05T07:41:37Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -109,11 +109,14 @@
       "firstImage": null,
       "demoLinks": [],
       "highlights": {
-        "overview": "This project implements a complete, modular autonomous driving pipeline capable of:",
+        "overview": "Industry-grade autonomous vehicle simulation system integrating deep-learning perception, rule-based + RL decision making, classical path planning, PID vehicle control, and a real-time Streamlit dashboard.",
         "problem": "",
         "features": []
       },
-      "excerpt": "This project implements a complete, modular autonomous driving pipeline capable of:",
+      "excerpt": "Industry-grade autonomous vehicle simulation system integrating deep-learning perception, rule-based + RL decision making, classical path planning, PID vehicle control, and a real-time Streamlit dashboard.",
+      "summary": "Industry-grade autonomous vehicle simulation system integrating deep-learning perception, rule-based + RL decision making, classical path planning, PID vehicle control, and a real-time Streamlit dashboard.",
+      "summaryFrom": "overview",
+      "tagline": "",
       "truncated": false
     },
     "languages": {

@@ -1,11 +1,11 @@
 {
   "id": 1147679907,
   "name": "MLmini_Projects",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-02-02T04:55:25Z",
   "updatedAt": "2026-02-02T04:55:29Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -18,11 +18,14 @@
       "firstImage": null,
       "demoLinks": [],
       "highlights": {
-        "overview": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to handle mixed data types (numerical and categorical) within a single processing pipeline.",
+        "overview": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features.",
         "problem": "",
         "features": []
       },
-      "excerpt": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to…",
+      "excerpt": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features.",
+      "summary": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features.",
+      "summaryFrom": "overview",
+      "tagline": "",
       "truncated": false
     },
     "languages": {

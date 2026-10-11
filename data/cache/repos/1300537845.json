@@ -1,11 +1,11 @@
 {
   "id": 1300537845,
   "name": "AirTwin-X",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-10-10T05:26:23Z",
   "updatedAt": "2026-10-10T05:26:27Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -23,7 +23,7 @@
         {
           "id": "readme-the-idea",
           "title": "The idea",
-          "kind": "other",
+          "kind": "about",
           "html": "<h2 id=\"readme-the-idea\">The idea</h2>\n<p>Most city AQI dashboards report a number and a generic warning, then stop.\nThey describe the problem but don't help anyone decide what to do about it.\nSimply wrapping a large language model around a sensor feed doesn't fix that\neither: a generative model can produce confident but untraceable impact\nestimates, and will often add intervention effects together as if they were\nindependent.</p>\n<p>AirTwin X treats the problem as a <strong>decision pipeline</strong> instead:</p>\n<ul>\n<li>When two interventions target the same pollution source, their effects\n<strong>compound</strong> rather than add: the remaining share of a source is\n<code>Π (1 − effectiveness_i)</code>, and the combined reduction is capped.</li>\n<li>Every number the Copilot reports comes from an upstream module's output.\nIt does not generate free-form text from a language model.</li>\n</ul>"
         },
         {
@@ -79,11 +79,14 @@
       "firstImage": null,
       "demoLinks": [],
       "highlights": {
-        "overview": "A Streamlit decision-support prototype for urban air-quality interventions",
+        "overview": "AirTwin X takes a city's current air-quality reading and walks it through a pipeline: estimate which sources are driving the pollution, rank a fixed set of municipal interventions, simulate what combining them would do, and translate the predicted improvement into health and economic estimates.",
         "problem": "",
         "features": []
       },
-      "excerpt": "A Streamlit decision-support prototype for urban air-quality interventions",
+      "excerpt": "AirTwin X takes a city's current air-quality reading and walks it through a pipeline: estimate which sources are driving the pollution, rank a fixed set of municipal interventions, simulate what combining them would…",
+      "summary": "AirTwin X takes a city's current air-quality reading and walks it through a pipeline: estimate which sources are driving the pollution, rank a fixed set of municipal interventions, simulate what combining them would do, and translate the predicted improvement into health and economic estimates.",
+      "summaryFrom": "overview",
+      "tagline": "A Streamlit decision-support prototype for urban air-quality interventions",
       "truncated": false
     },
     "languages": {

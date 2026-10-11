@@ -1,11 +1,11 @@
 {
   "id": 1031344132,
   "name": "Spotify_Songs_Genre_Segmentation",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-02-15T13:40:41Z",
   "updatedAt": "2026-02-15T13:40:45Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -45,11 +45,14 @@
       "firstImage": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png",
       "demoLinks": [],
       "highlights": {
-        "overview": "This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness).",
+        "overview": "An Unsupervised Machine Learning project that clusters songs based on audio features and builds a recommendation engine.",
         "problem": "",
         "features": []
       },
-      "excerpt": "This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness).",
+      "excerpt": "An Unsupervised Machine Learning project that clusters songs based on audio features and builds a recommendation engine.",
+      "summary": "An Unsupervised Machine Learning project that clusters songs based on audio features and builds a recommendation engine.",
+      "summaryFrom": "overview",
+      "tagline": "",
       "truncated": false
     },
     "languages": {

@@ -1,11 +1,11 @@
 {
   "id": 1136219572,
   "name": "PersonaLearn",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-10-10T02:56:31Z",
   "updatedAt": "2026-10-10T02:56:35Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -77,7 +77,7 @@
       "firstImage": "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122655.png",
       "demoLinks": [],
       "highlights": {
-        "overview": "",
+        "overview": "A Streamlit prototype that explains study topics through analogies drawn from a learner's interests (Minecraft, Marvel, Cricket, Cooking, K-Pop), then quizzes them in the same context.",
         "problem": "New ideas are easier to remember when they are tied to something you already know well. Standard textbooks explain every topic the same way for every reader.",
         "features": [
           "Preset syllabi: Topic lists for School, SSC, UPSC, and General Knowledge.",
@@ -87,7 +87,10 @@
           "Scoring: Running score and quiz count for the current session."
         ]
       },
-      "excerpt": "",
+      "excerpt": "A Streamlit prototype that explains study topics through analogies drawn from a learner's interests (Minecraft, Marvel, Cricket, Cooking, K-Pop), then quizzes them in the same context.",
+      "summary": "A Streamlit prototype that explains study topics through analogies drawn from a learner's interests (Minecraft, Marvel, Cricket, Cooking, K-Pop), then quizzes them in the same context.",
+      "summaryFrom": "overview",
+      "tagline": "",
       "truncated": false
     },
     "languages": {

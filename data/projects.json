@@ -1,7 +1,146 @@
 {
-  "generatedAt": "2026-10-11T03:17:08.329Z",
+  "generatedAt": "2026-10-11T04:19:38.161Z",
   "username": "Soham-o",
   "projects": [
+    {
+      "id": 1148920724,
+      "slug": "portfolio",
+      "name": "Portfolio",
+      "displayName": "Portfolio",
+      "fullName": "Soham-o/Portfolio",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/Portfolio",
+      "description": "",
+      "summary": "",
+      "summaryText": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
+      "summarySource": "readme",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "HTML",
+      "languages": [
+        {
+          "name": "HTML",
+          "bytes": 440525,
+          "pct": 61.2
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 226990,
+          "pct": 31.5
+        },
+        {
+          "name": "CSS",
+          "bytes": 49826,
+          "pct": 6.9
+        },
+        {
+          "name": "Shell",
+          "bytes": 2182,
+          "pct": 0.3
+        }
+      ],
+      "tech": [
+        {
+          "name": "HTML",
+          "source": "language"
+        },
+        {
+          "name": "JavaScript",
+          "source": "language"
+        },
+        {
+          "name": "CSS",
+          "source": "language"
+        },
+        {
+          "name": "GitHub Actions",
+          "source": "file"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 2,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-02-03T14:20:18Z",
+      "updatedAt": "2026-10-11T04:19:20Z",
+      "pushedAt": "2026-10-11T04:19:16Z",
+      "homepage": "",
+      "demo": {
+        "url": "https://soham-o.github.io/Portfolio/",
+        "source": "readme"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/02da64abea49ed45/Soham-o/Portfolio",
+        "source": "social"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/Portfolio/blob/main/README.md",
+        "overviewHtml": "<div align=\"center\">\n  <img src=\"https://capsule-render.vercel.app/api?type=waving&amp;color=auto&amp;height=200&amp;section=header&amp;text=Hi%20there,%20I%27m%20Soham%20Panda!&amp;fontSize=70&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=AIML%20Data%20Engineer%20%E2%80%A2%20Web%20Developer&amp;descAlignY=51&amp;descAlign=50\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</div>\n\n<div align=\"center\">\n  <h3>Transforming Data into Actionable Insights &amp; Building Modern Web Experiences</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://www.linkedin.com/in/soham-panda-a90720336/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"mailto:sohampanda95599@gmail.com\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://soham-o.github.io/Portfolio/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Portfolio-FFC107?style=for-the-badge&amp;logo=google-chrome&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n</div>\n\n<hr />",
+        "sections": [
+          {
+            "id": "readme--about-me",
+            "title": "👨‍💻 About Me",
+            "kind": "about",
+            "html": "<h2 id=\"readme--about-me\">👨‍💻 About Me</h2>\n<p>I am a <strong>Computer Science Student</strong> at <strong>SGTU</strong> (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.</p>\n<ul>\n<li>🔭 I’m currently working on <strong>Data Engineering Pipelines &amp; Full Stack Web Apps</strong>.</li>\n<li>🌱 I’m currently learning <strong>Advanced Neural Networks &amp; System Design</strong>.</li>\n<li>👯 I’m looking to collaborate on <strong>Open Source AI Projects</strong>.</li>\n<li>💬 Ask me about <strong>React, Python, Data Analysis, and UI/UX</strong>.</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme--tech-stack",
+            "title": "🛠️ Tech Stack",
+            "kind": "stack",
+            "html": "<h2 id=\"readme--tech-stack\">🛠️ Tech Stack</h2>\n<div align=\"center\">\n\n<p><strong>Languages</strong><br />\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Frontend</strong><br />\n<img src=\"https://img.shields.io/badge/React-20232A?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Data &amp; AI</strong><br />\n<img src=\"https://img.shields.io/badge/Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/NumPy-013243?style=for-the-badge&amp;logo=numpy&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&amp;logo=tensorflow&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Tools</strong><br />\n<img src=\"https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n</div>\n\n<hr />"
+          },
+          {
+            "id": "readme--github-stats",
+            "title": "📊 GitHub Stats",
+            "kind": "other",
+            "html": "<h2 id=\"readme--github-stats\">📊 GitHub Stats</h2>\n<div align=\"center\">\n  <img src=\"https://github-readme-stats.vercel.app/api?username=Soham-o&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117\" alt=\"Soham's Stats\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <br />\n  <img src=\"https://github-readme-streak-stats.herokuapp.com/?user=Soham-o&amp;theme=tokyonight&amp;hide_border=true&amp;background=0D1117\" alt=\"Soham's Streak\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <br />\n  <img src=\"https://github-readme-stats.vercel.app/api/top-langs/?username=Soham-o&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117\" alt=\"Top Langs\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</div>\n\n<hr />"
+          },
+          {
+            "id": "readme--featured-projects",
+            "title": "🚀 Featured Projects",
+            "kind": "features",
+            "html": "<h2 id=\"readme--featured-projects\">🚀 Featured Projects</h2>\n<table>\n<thead>\n<tr>\n<th align=\"left\">Project</th>\n<th align=\"left\">Description</th>\n<th align=\"left\">Tech Stack</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong><a href=\"https://github.com/Soham-o/Mybuddy\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">MyBuddy</a></strong></td>\n<td align=\"left\">A personalized companion app or utility tool designed to assist users with daily tasks.</td>\n<td align=\"left\"><code>Python</code></td>\n</tr>\n<tr>\n<td align=\"left\"><strong><a href=\"https://github.com/Soham-o/Portfolio\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Personal Portfolio</a></strong></td>\n<td align=\"left\">A modern, responsive developer portfolio with 3D animations and theme switching.</td>\n<td align=\"left\"><code>HTML</code> <code>CSS</code> <code>JS</code></td>\n</tr>\n</tbody></table>\n<hr />\n<div align=\"center\">\n  Built with ❤️ by Soham Panda\n</div>\n\n<hr />"
+          },
+          {
+            "id": "readme--how-this-portfolio-updates-itself",
+            "title": "⚙️ How this portfolio updates itself",
+            "kind": "other",
+            "html": "<h2 id=\"readme--how-this-portfolio-updates-itself\">⚙️ How this portfolio updates itself</h2>\n<p>Projects, project pages, GitHub stats and verified milestones are synced automatically from my public\nGitHub repositories by a GitHub Actions workflow (hourly, plus on demand), then redeployed to GitHub Pages.\nMake a repository public and it shows up here on its own. Setup, configuration and troubleshooting:\n<a href=\"https://github.com/Soham-o/Portfolio/blob/main/docs/AUTOMATION.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">docs/AUTOMATION.md</a>.</p>"
+          }
+        ],
+        "highlights": {
+          "overview": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
+        "truncated": false,
+        "demoLinks": [
+          {
+            "url": "https://soham-o.github.io/Portfolio/",
+            "text": ""
+          }
+        ],
+        "summary": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
+        "summaryFrom": "👨‍💻 About Me",
+        "tagline": "",
+        "images": []
+      },
+      "nameHistory": []
+    },
     {
       "id": 1275129730,
       "slug": "earthshare",
@@ -12,6 +151,8 @@
       "url": "https://github.com/Soham-o/EarthShare",
       "description": "",
       "summary": "",
+      "summaryText": "A full-stack carbon-footprint prototype with a deterministic accounting engine, a FastAPI backend and a Next.js frontend. The repository includes security and accessibility tests; this is a student project, not a security-audited production service.",
+      "summarySource": "readme",
       "category": "",
       "featured": false,
       "curated": false,
@@ -180,13 +321,16 @@
           }
         ],
         "highlights": {
-          "overview": "Carbon ownership, not carbon awareness.",
+          "overview": "A full-stack carbon-footprint prototype with a deterministic accounting engine, a FastAPI backend and a Next.js frontend. The repository includes security and accessibility tests; this is a student project, not a security-audited production service.",
           "problem": "Individual emissions are a meaningful slice of the climate problem, but they are largely invisible to the people producing them. People want to act, but they have no reliable, low-friction way to (a) measure their impact, (b) understand what's driving it, and (c) actually neutralize it. The result is a gap between…",
           "features": []
         },
-        "excerpt": "Carbon ownership, not carbon awareness.",
+        "excerpt": "A full-stack carbon-footprint prototype with a deterministic accounting engine, a FastAPI backend and a Next.js frontend. The repository includes security and accessibility tests; this is a student project, not a…",
         "truncated": false,
         "demoLinks": [],
+        "summary": "A full-stack carbon-footprint prototype with a deterministic accounting engine, a FastAPI backend and a Next.js frontend. The repository includes security and accessibility tests; this is a student project, not a security-audited production service.",
+        "summaryFrom": "overview",
+        "tagline": "Carbon ownership, not carbon awareness.",
         "images": [
           "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/dashboard.png",
           "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/insights.png",
@@ -206,6 +350,8 @@
       "url": "https://github.com/Soham-o/AirTwin-X",
       "description": "",
       "summary": "",
+      "summaryText": "AirTwin X takes a city's current air-quality reading and walks it through a pipeline: estimate which sources are driving the pollution, rank a fixed set of municipal interventions, simulate what combining them would do, and translate the predicted improvement into health and economic estimates.",
+      "summarySource": "readme",
       "category": "",
       "featured": false,
       "curated": false,
@@ -304,7 +450,7 @@
           {
             "id": "readme-the-idea",
             "title": "The idea",
-            "kind": "other",
+            "kind": "about",
             "html": "<h2 id=\"readme-the-idea\">The idea</h2>\n<p>Most city AQI dashboards report a number and a generic warning, then stop.\nThey describe the problem but don't help anyone decide what to do about it.\nSimply wrapping a large language model around a sensor feed doesn't fix that\neither: a generative model can produce confident but untraceable impact\nestimates, and will often add intervention effects together as if they were\nindependent.</p>\n<p>AirTwin X treats the problem as a <strong>decision pipeline</strong> instead:</p>\n<ul>\n<li>When two interventions target the same pollution source, their effects\n<strong>compound</strong> rather than add: the remaining share of a source is\n<code>Π (1 − effectiveness_i)</code>, and the combined reduction is capped.</li>\n<li>Every number the Copilot reports comes from an upstream module's output.\nIt does not generate free-form text from a language model.</li>\n</ul>"
           },
           {
@@ -357,13 +503,16 @@
           }
         ],
         "highlights": {
-          "overview": "A Streamlit decision-support prototype for urban air-quality interventions",
+          "overview": "AirTwin X takes a city's current air-quality reading and walks it through a pipeline: estimate which sources are driving the pollution, rank a fixed set of municipal interventions, simulate what combining them would do, and translate the predicted improvement into health and economic estimates.",
           "problem": "",
           "features": []
         },
-        "excerpt": "A Streamlit decision-support prototype for urban air-quality interventions",
+        "excerpt": "AirTwin X takes a city's current air-quality reading and walks it through a pipeline: estimate which sources are driving the pollution, rank a fixed set of municipal interventions, simulate what combining them would…",
         "truncated": false,
         "demoLinks": [],
+        "summary": "AirTwin X takes a city's current air-quality reading and walks it through a pipeline: estimate which sources are driving the pollution, rank a fixed set of municipal interventions, simulate what combining them would do, and translate the predicted improvement into health and economic estimates.",
+        "summaryFrom": "overview",
+        "tagline": "A Streamlit decision-support prototype for urban air-quality interventions",
         "images": []
       },
       "nameHistory": []
@@ -378,6 +527,8 @@
       "url": "https://github.com/Soham-o/cursor_bite",
       "description": "Cursor Bite - Modern AI-powered context-aware assistant",
       "summary": "",
+      "summaryText": "Cursor Bite - Modern AI-powered context-aware assistant",
+      "summarySource": "description",
       "category": "",
       "featured": false,
       "curated": false,
@@ -574,13 +725,16 @@
           }
         ],
         "highlights": {
-          "overview": "Intelligence at your cursor.",
+          "overview": "A privacy-first, local-first Windows assistant that appears around your mouse cursor when you press a hotkey — translate, explain, summarize, rewrite, ask AI, search, or pull text off the screen, without leaving whatever you're already looking at.",
           "problem": "Every one of these actions already exists somewhere — a translator site, a chat app, a search bar. What doesn't exist is one of them appearing exactly where your mouse already is, the instant you ask for it, without a tab switch, a paste, or an account. Select some text — a browser, a PDF, an IDE, a chat window…",
           "features": []
         },
-        "excerpt": "Intelligence at your cursor.",
+        "excerpt": "A privacy-first, local-first Windows assistant that appears around your mouse cursor when you press a hotkey — translate, explain, summarize, rewrite, ask AI, search, or pull text off the screen, without leaving…",
         "truncated": false,
         "demoLinks": [],
+        "summary": "A privacy-first, local-first Windows assistant that appears around your mouse cursor when you press a hotkey — translate, explain, summarize, rewrite, ask AI, search, or pull text off the screen, without leaving whatever you're already looking at.",
+        "summaryFrom": "overview",
+        "tagline": "Intelligence at your cursor.",
         "images": [
           "https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png"
         ]
@@ -597,6 +751,8 @@
       "url": "https://github.com/Soham-o/PersonaLearn",
       "description": "",
       "summary": "ML-powered system that personalises content delivery based on learner behaviour patterns. Adapts difficulty and format dynamically — built with Python and Streamlit.",
+      "summaryText": "ML-powered system that personalises content delivery based on learner behaviour patterns. Adapts difficulty and format dynamically — built with Python and Streamlit.",
+      "summarySource": "override",
       "category": "ML · Adaptive Learning",
       "featured": false,
       "curated": true,
@@ -707,7 +863,7 @@
           }
         ],
         "highlights": {
-          "overview": "",
+          "overview": "A Streamlit prototype that explains study topics through analogies drawn from a learner's interests (Minecraft, Marvel, Cricket, Cooking, K-Pop), then quizzes them in the same context.",
           "problem": "New ideas are easier to remember when they are tied to something you already know well. Standard textbooks explain every topic the same way for every reader.",
           "features": [
             "Preset syllabi: Topic lists for School, SSC, UPSC, and General Knowledge.",
@@ -717,9 +873,12 @@
             "Scoring: Running score and quiz count for the current session."
           ]
         },
-        "excerpt": "",
+        "excerpt": "A Streamlit prototype that explains study topics through analogies drawn from a learner's interests (Minecraft, Marvel, Cricket, Cooking, K-Pop), then quizzes them in the same context.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "A Streamlit prototype that explains study topics through analogies drawn from a learner's interests (Minecraft, Marvel, Cricket, Cooking, K-Pop), then quizzes them in the same context.",
+        "summaryFrom": "overview",
+        "tagline": "",
         "images": [
           "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122655.png",
           "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122834.png",
@@ -738,6 +897,8 @@
       "url": "https://github.com/Soham-o/CalmReader",
       "description": "",
       "summary": "",
+      "summaryText": "Most reading tools are built to keep you reading more. CalmReader is built to help you understand better — one passage at a time, without notifications, streaks, or noise.",
+      "summarySource": "readme",
       "category": "",
       "featured": false,
       "curated": false,
@@ -874,13 +1035,16 @@
           }
         ],
         "highlights": {
-          "overview": "Read deeply. Think clearly. Remember what matters.",
+          "overview": "Most reading tools are built to keep you reading more. CalmReader is built to help you understand better — one passage at a time, without notifications, streaks, or noise.",
           "problem": "Most reading software optimizes for one metric: time on screen. The result is an environment filled with progress bars, streaks, recommendation feeds, and pop-up encouragement — tools designed to retain your attention, not support your comprehension.",
           "features": []
         },
-        "excerpt": "Read deeply. Think clearly. Remember what matters.",
+        "excerpt": "Most reading tools are built to keep you reading more. CalmReader is built to help you understand better — one passage at a time, without notifications, streaks, or noise.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "Most reading tools are built to keep you reading more. CalmReader is built to help you understand better — one passage at a time, without notifications, streaks, or noise.",
+        "summaryFrom": "overview",
+        "tagline": "Read deeply. Think clearly. Remember what matters.",
         "images": [
           "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/import.png",
           "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/reading.png",
@@ -902,6 +1066,8 @@
       "url": "https://github.com/Soham-o/autonomous-driving-system",
       "description": "",
       "summary": "",
+      "summaryText": "Industry-grade autonomous vehicle simulation system integrating deep-learning perception, rule-based + RL decision making, classical path planning, PID vehicle control, and a real-time Streamlit dashboard.",
+      "summarySource": "readme",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1040,13 +1206,16 @@
           }
         ],
         "highlights": {
-          "overview": "This project implements a complete, modular autonomous driving pipeline capable of:",
+          "overview": "Industry-grade autonomous vehicle simulation system integrating deep-learning perception, rule-based + RL decision making, classical path planning, PID vehicle control, and a real-time Streamlit dashboard.",
           "problem": "",
           "features": []
         },
-        "excerpt": "This project implements a complete, modular autonomous driving pipeline capable of:",
+        "excerpt": "Industry-grade autonomous vehicle simulation system integrating deep-learning perception, rule-based + RL decision making, classical path planning, PID vehicle control, and a real-time Streamlit dashboard.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "Industry-grade autonomous vehicle simulation system integrating deep-learning perception, rule-based + RL decision making, classical path planning, PID vehicle control, and a real-time Streamlit dashboard.",
+        "summaryFrom": "overview",
+        "tagline": "",
         "images": []
       },
       "nameHistory": []
@@ -1061,6 +1230,8 @@
       "url": "https://github.com/Soham-o/voteros",
       "description": "",
       "summary": "",
+      "summaryText": "VoterOS is an interactive, AI-powered system designed to demystify the electoral process. It shifts civic engagement from reactive searching to proactive orchestration.",
+      "summarySource": "readme",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1140,7 +1311,7 @@
           {
             "id": "readme--the-vision",
             "title": "🎯 The Vision",
-            "kind": "other",
+            "kind": "about",
             "html": "<h2 id=\"readme--the-vision\">🎯 The Vision</h2>\n<p><strong>VoterOS</strong> is an interactive, AI-powered system designed to demystify the electoral process. It shifts civic engagement from reactive searching to <strong>proactive orchestration</strong>. By combining a predictive rules engine with <strong>Google Gemini’s</strong> natural language reasoning, VoterOS provides every citizen with a personalized, visual, and highly actionable voting roadmap.</p>\n<blockquote>\n<p><strong>Hackathon Alignment:</strong> We built an assistant that doesn't just answer questions, but helps users <em>understand</em> the election process, timelines, and steps through an interactive, visual, and easy-to-follow dashboard.</p>\n</blockquote>\n<hr />"
           },
           {
@@ -1163,7 +1334,7 @@
           }
         ],
         "highlights": {
-          "overview": "Live Demo on Cloud Run • Watch the Pitch Video • Read the Docs",
+          "overview": "VoterOS is an interactive, AI-powered system designed to demystify the electoral process. It shifts civic engagement from reactive searching to proactive orchestration.",
           "problem": "Standard AI chatbots fail in civic tech because they rely on the user to know what to ask. VoterOS flips the script:",
           "features": [
             "📉 \"What if I miss the registration deadline?\" → Explains immediate disqualification.",
@@ -1171,9 +1342,12 @@
             "🪪 \"What if I lost my EPIC card?\" → Highlights alternative verification paths without resetting progress."
           ]
         },
-        "excerpt": "Live Demo on Cloud Run • Watch the Pitch Video • Read the Docs",
+        "excerpt": "VoterOS is an interactive, AI-powered system designed to demystify the electoral process. It shifts civic engagement from reactive searching to proactive orchestration.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "VoterOS is an interactive, AI-powered system designed to demystify the electoral process. It shifts civic engagement from reactive searching to proactive orchestration.",
+        "summaryFrom": "🎯 The Vision",
+        "tagline": "The Civic Journey Engine",
         "images": [
           "https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine"
         ]
@@ -1190,6 +1364,8 @@
       "url": "https://github.com/Soham-o/kinesis_prototype",
       "description": "Kinesis is an AI-driven system that predicts and manages crowd behavior in real time using simulation, biometrics, and natural language control.",
       "summary": "",
+      "summaryText": "Kinesis is an AI-driven system that predicts and manages crowd behavior in real time using simulation, biometrics, and natural language control.",
+      "summarySource": "description",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1295,6 +1471,9 @@
         "excerpt": "Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.",
+        "summaryFrom": "Overview",
+        "tagline": "",
         "images": []
       },
       "nameHistory": []
@@ -1309,6 +1488,8 @@
       "url": "https://github.com/Soham-o/Task_Manager",
       "description": "Turn your to-do list into a command center with My Tasks.  After a quick sign-up, your personal dashboard is ready for you to add, edit, and organize your tasks. The magic is in the perspective: get a clean summary with the List View, or map out your strategy on the visual Board View. Switch between them anytime to match your workflow.",
       "summary": "A clean, responsive task management interface built with HTML, CSS, and JavaScript. Focused on frictionless UX — add, complete, and clear tasks without page reloads.",
+      "summaryText": "A clean, responsive task management interface built with HTML, CSS, and JavaScript. Focused on frictionless UX — add, complete, and clear tasks without page reloads.",
+      "summarySource": "override",
       "category": "Productivity Tool",
       "featured": false,
       "curated": true,
@@ -1387,13 +1568,16 @@
           }
         ],
         "highlights": {
-          "overview": "⚡ Quick Start • ✨ Features • 🔧 Under the Hood",
+          "overview": "We stripped away the bloat. No servers. No cloud syncing lag. Just you and your productivity.",
           "problem": "",
           "features": []
         },
-        "excerpt": "⚡ Quick Start • ✨ Features • 🔧 Under the Hood",
+        "excerpt": "We stripped away the bloat. No servers. No cloud syncing lag. Just you and your productivity.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "We stripped away the bloat. No servers. No cloud syncing lag. Just you and your productivity.",
+        "summaryFrom": "✨ Features",
+        "tagline": "A privacy-first, zero-latency task manager that lives entirely in your browser.",
         "images": []
       },
       "nameHistory": []
@@ -1408,6 +1592,8 @@
       "url": "https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation",
       "description": "The project blends music and data science, offering an engaging way to apply machine learning in a real-world context. It’s perfect for data enthusiasts who want to work with tangible and relatable data while also exploring how algorithms interpret patterns in music.  Using Python Pandas, NumPy, Matplotlib, Seaborn ,Scikit-learn in Jupyter Notebook",
       "summary": "",
+      "summaryText": "The project blends music and data science, offering an engaging way to apply machine learning in a real-world context. It’s perfect for data enthusiasts who want to work with tangible and relatable data while also exploring how algorithms interpret patterns in music. Using Python Pandas, NumPy, Matplotlib, Seaborn ,Scikit-learn in Jupyter Notebook",
+      "summarySource": "description",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1480,13 +1666,16 @@
           }
         ],
         "highlights": {
-          "overview": "This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness).",
+          "overview": "An Unsupervised Machine Learning project that clusters songs based on audio features and builds a recommendation engine.",
           "problem": "",
           "features": []
         },
-        "excerpt": "This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness).",
+        "excerpt": "An Unsupervised Machine Learning project that clusters songs based on audio features and builds a recommendation engine.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "An Unsupervised Machine Learning project that clusters songs based on audio features and builds a recommendation engine.",
+        "summaryFrom": "overview",
+        "tagline": "",
         "images": [
           "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
         ]
@@ -1503,6 +1692,8 @@
       "url": "https://github.com/Soham-o/Movie_Recommender_System",
       "description": "A movie recommendation system built using Python and Streamlit library.",
       "summary": "Content-based recommendation engine using cosine similarity on TF-IDF vectors. Built with Python, scikit-learn, and Streamlit — surfaces relevant titles from a dataset of 5,000+ films.",
+      "summaryText": "Content-based recommendation engine using cosine similarity on TF-IDF vectors. Built with Python, scikit-learn, and Streamlit — surfaces relevant titles from a dataset of 5,000+ films.",
+      "summarySource": "override",
       "category": "ML · Recommender System",
       "featured": false,
       "curated": true,
@@ -1574,13 +1765,16 @@
           }
         ],
         "highlights": {
-          "overview": "This project is a Content-Based Recommendation System built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the TMDB 5000 Movie Dataset to suggest movies that share narrative, thematic, or production similarities with a user's selection.",
+          "overview": "A Content-Based Machine Learning System that recommends movies similar to your favorites.",
           "problem": "",
           "features": []
         },
-        "excerpt": "This project is a Content-Based Recommendation System built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the TMDB 5000 Movie Dataset to suggest movies that share…",
+        "excerpt": "A Content-Based Machine Learning System that recommends movies similar to your favorites.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "A Content-Based Machine Learning System that recommends movies similar to your favorites.",
+        "summaryFrom": "overview",
+        "tagline": "",
         "images": [
           "https://cdn-icons-png.flaticon.com/512/2503/2503508.png"
         ]
@@ -1597,6 +1791,8 @@
       "url": "https://github.com/Soham-o/Fake-News-Detection-",
       "description": "",
       "summary": "",
+      "summaryText": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for classification, offering high accuracy with minimal computational cost.",
+      "summarySource": "readme",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1688,6 +1884,9 @@
         "excerpt": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for…",
         "truncated": false,
         "demoLinks": [],
+        "summary": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for classification, offering high accuracy with minimal computational cost.",
+        "summaryFrom": "overview",
+        "tagline": "",
         "images": []
       },
       "nameHistory": []
@@ -1702,6 +1901,8 @@
       "url": "https://github.com/Soham-o/MLmini_Projects",
       "description": "",
       "summary": "",
+      "summaryText": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features.",
+      "summarySource": "readme",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1749,13 +1950,16 @@
         "overviewHtml": "<p>🏠 Project 1: California Housing Price Predictor (hpd.ipynb)\nA linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to handle mixed data types (numerical and categorical) within a single processing pipeline.</p>\n<p>🛠️ Key Technical Features\nData Handling: Implements a HousingModel class structure for modularity.</p>\n<p>Advanced Preprocessing: Uses ColumnTransformer to apply different transformations to specific subsets of features:</p>\n<p>Numerical Data: Median imputation for missing values followed by Standard Scaling.</p>\n<p>Categorical Data: One-Hot Encoding (with handle_unknown='ignore') for the ocean_proximity feature.</p>\n<p>Model: Linear Regression.</p>\n<p>📊 Performance\nThe model was evaluated on a 20% test split: | Metric | Value | | :--- | :--- | | RMSE | ~$70,059 | | R² Score | 0.6254 |</p>\n<p>📧 Project 2: Spam Mail Classifier (smd.ipynb)\nA Natural Language Processing (NLP) classifier capable of distinguishing between \"Spam\" and \"Ham\" (legitimate) emails. This project moves beyond simple structured data into text mining and probability-based classification.</p>\n<p>🛠️ Key Technical Features\nText Cleaning: Custom Regex implementation to remove non-alphabetic characters.</p>\n<p>NLP Pipeline:</p>\n<p>Tokenization &amp; Lowercasing.</p>\n<p>Stopword Removal: Utilizing NLTK's corpus to remove noise words.</p>\n<p>Stemming: Applied PorterStemmer to reduce words to their root form.</p>\n<p>Vectorization: transformed text data using TfidfVectorizer (Term Frequency-Inverse Document Frequency).</p>\n<p>Model: Multinomial Naive Bayes (MultinomialNB), chosen for its efficiency in high-dimensional text data.</p>\n<p>Stratification: Utilized stratified splitting to maintain class balance in the test set.</p>\n<p>📊 Performance\nThe model achieved high accuracy on the test dataset: | Metric | Value | | :--- | :--- | | Accuracy | 98.12% | | Precision (Class 0) | 1.00 | | Recall (Class 1) | 1.00 |</p>\n<p>💻 Installation &amp; Usage\nTo run these notebooks locally, ensure you have the required dependencies installed.</p>\n<ol>\n<li>Clone the Repository\nBash\ngit clone <a href=\"https://github.com/Soham-o/MLmini_Projects.git\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/yourusername/mini-ml-projects.git</a>\ncd MLmini_Projects</li>\n<li>Install Dependencies\nYou can install the necessary libraries using pip:</li>\n</ol>\n<p>Bash\npip install pandas numpy scikit-learn nltk matplotlib\n3. Run the Projects\nLaunch Jupyter Notebook to view and run the analysis:</p>\n<p>Bash\njupyter notebook\nOpen hpd.ipynb for the Housing Regression model.</p>\n<p>Open smd.ipynb for the Spam Classification model.</p>\n<p>📂 Repository Structure\nPlaintext\n├── hpd.ipynb        # Housing Price Prediction (Source Code)\n├── smd.ipynb        # Spam Mail Detection (Source Code)\n├── house.csv        # Dataset for Housing Project (Required)\n├── es_data.csv      # Dataset for Spam Project (Required)\n└── README.md        # Project Documentation\n🚀 Future Improvements\nHousing Model: Experiment with RandomForestRegressor or XGBoost to capture non-linear relationships and improve the R² score.</p>\n<p>Spam Model: Implement Deep Learning techniques (LSTM or BERT) to improve context understanding for edge cases where Naive Bayes might fail.</p>\n<p>Deployment: Wrap the models in a Flask/FastAPI backend for real-time inference.</p>",
         "sections": [],
         "highlights": {
-          "overview": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to handle mixed data types (numerical and categorical) within a single processing pipeline.",
+          "overview": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features.",
           "problem": "",
           "features": []
         },
-        "excerpt": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to…",
+        "excerpt": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features.",
         "truncated": false,
         "demoLinks": [],
+        "summary": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features.",
+        "summaryFrom": "overview",
+        "tagline": "",
         "images": []
       },
       "nameHistory": []
@@ -1770,6 +1974,8 @@
       "url": "https://github.com/Soham-o/Employee-Analysis",
       "description": "Project Employee Analysis",
       "summary": "",
+      "summaryText": "No summary yet — see the README below for details.",
+      "summarySource": "none",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1817,13 +2023,16 @@
         "overviewHtml": "<p>Project Employee Analysis</p>",
         "sections": [],
         "highlights": {
-          "overview": "Project Employee Analysis",
+          "overview": "",
           "problem": "",
           "features": []
         },
-        "excerpt": "Project Employee Analysis",
+        "excerpt": "",
         "truncated": false,
         "demoLinks": [],
+        "summary": "",
+        "summaryFrom": "",
+        "tagline": "Project Employee Analysis",
         "images": []
       },
       "nameHistory": []

@@ -1,11 +1,11 @@
 {
   "id": 1157662701,
   "name": "Fake-News-Detection-",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-02-14T05:33:51Z",
   "updatedAt": "2026-02-14T05:33:54Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -60,6 +60,9 @@
         "features": []
       },
       "excerpt": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for…",
+      "summary": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for classification, offering high accuracy with minimal computational cost.",
+      "summaryFrom": "overview",
+      "tagline": "",
       "truncated": false
     },
     "languages": {

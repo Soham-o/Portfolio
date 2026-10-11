@@ -1,11 +1,11 @@
 {
   "id": 1068386786,
   "name": "Task_Manager",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2026-02-15T13:54:51Z",
   "updatedAt": "2026-02-15T13:54:54Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -31,11 +31,14 @@
       "firstImage": null,
       "demoLinks": [],
       "highlights": {
-        "overview": "⚡ Quick Start • ✨ Features • 🔧 Under the Hood",
+        "overview": "We stripped away the bloat. No servers. No cloud syncing lag. Just you and your productivity.",
         "problem": "",
         "features": []
       },
-      "excerpt": "⚡ Quick Start • ✨ Features • 🔧 Under the Hood",
+      "excerpt": "We stripped away the bloat. No servers. No cloud syncing lag. Just you and your productivity.",
+      "summary": "We stripped away the bloat. No servers. No cloud syncing lag. Just you and your productivity.",
+      "summaryFrom": "✨ Features",
+      "tagline": "A privacy-first, zero-latency task manager that lives entirely in your browser.",
       "truncated": false
     },
     "languages": {

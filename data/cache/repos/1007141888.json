@@ -1,11 +1,11 @@
 {
   "id": 1007141888,
   "name": "Employee-Analysis",
-  "processorVersion": 4,
+  "processorVersion": 5,
   "pushedAt": "2025-06-23T14:24:29Z",
   "updatedAt": "2025-06-23T14:24:32Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:17:08.329Z",
+  "fetchedAt": "2026-10-11T04:19:38.161Z",
   "details": {
     "readme": {
       "path": "README.md",
@@ -18,11 +18,14 @@
       "firstImage": null,
       "demoLinks": [],
       "highlights": {
-        "overview": "Project Employee Analysis",
+        "overview": "",
         "problem": "",
         "features": []
       },
-      "excerpt": "Project Employee Analysis",
+      "excerpt": "",
+      "summary": "",
+      "summaryFrom": "",
+      "tagline": "Project Employee Analysis",
       "truncated": false
     },
     "languages": {
