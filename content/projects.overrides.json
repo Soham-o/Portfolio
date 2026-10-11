@@ -3,7 +3,7 @@
   "$fields": {
     "featured": "true → shown first, in the large card layout",
     "hidden": "true → never shown on the site (the repo stays public on GitHub)",
-    "curated": "true → the repo already has a hand-written card on projects.html, so it is not duplicated in the auto-synced grid",
+    "curated": "true → the repo already has a hand-written card on projects.html, so it is not duplicated in the auto-synced grid; if a matching public repository cannot be verified, the card shows no source link instead of guessing a URL",
     "category": "label shown above the title (defaults to primary language)",
     "summary": "your own one-paragraph summary (defaults to the GitHub description / README)",
     "image": "path or https URL of a cover image (defaults to the first README image, then GitHub's social preview)",
