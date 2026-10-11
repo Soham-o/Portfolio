@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T03:10:41.457Z",
+  "generatedAt": "2026-10-11T03:13:50.028Z",
   "username": "Soham-o",
   "projects": [
     {
@@ -1425,10 +1425,6 @@
         {
           "name": "Jupyter Notebook",
           "source": "language"
-        },
-        {
-          "name": "Jupyter",
-          "source": "file"
         }
       ],
       "license": null,
@@ -1529,10 +1525,6 @@
         {
           "name": "Jupyter Notebook",
           "source": "language"
-        },
-        {
-          "name": "Jupyter",
-          "source": "file"
         }
       ],
       "license": null,
@@ -1622,10 +1614,6 @@
         {
           "name": "Jupyter Notebook",
           "source": "language"
-        },
-        {
-          "name": "Jupyter",
-          "source": "file"
         }
       ],
       "license": null,
@@ -1731,10 +1719,6 @@
         {
           "name": "Jupyter Notebook",
           "source": "language"
-        },
-        {
-          "name": "Jupyter",
-          "source": "file"
         }
       ],
       "license": null,
@@ -1803,10 +1787,6 @@
         {
           "name": "Jupyter Notebook",
           "source": "language"
-        },
-        {
-          "name": "Jupyter",
-          "source": "file"
         }
       ],
       "license": null,

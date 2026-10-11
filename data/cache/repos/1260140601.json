@@ -1,11 +1,11 @@
 {
   "id": 1260140601,
   "name": "autonomous-driving-system",
-  "processorVersion": 3,
+  "processorVersion": 4,
   "pushedAt": "2026-06-05T07:41:33Z",
   "updatedAt": "2026-06-05T07:41:37Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "fetchedAt": "2026-10-11T03:13:50.028Z",
   "details": {
     "readme": {
       "path": "README.md",

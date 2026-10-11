@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T03:10:41.457Z",
+  "generatedAt": "2026-10-11T03:13:50.028Z",
   "rules": "See docs/AUTOMATION.md#achievements",
   "items": [
     {
@@ -11,16 +11,6 @@
       "when": "Latest Oct 2026",
       "description": "Pull requests merged into 2 public projects owned by others, including 1jehuang/jcode, hermes-labs-ai/lintlang.",
       "url": "https://github.com/search?q=type%3Apr%20is%3Amerged%20author%3ASoham-o%20-user%3ASoham-o&type=pullrequests"
-    },
-    {
-      "id": "breadth:4",
-      "type": "breadth",
-      "title": "Projects in 4 Languages",
-      "org": "— Breadth",
-      "date": "2026-06-19T04:44:06Z",
-      "when": "Jun 2026",
-      "description": "Primary languages across public projects: Jupyter Notebook, HTML, Python, JavaScript.",
-      "url": "https://github.com/Soham-o?tab=repositories"
     },
     {
       "id": "count:10",

@@ -1,11 +1,11 @@
 {
   "id": 1275129730,
   "name": "EarthShare",
-  "processorVersion": 3,
+  "processorVersion": 4,
   "pushedAt": "2026-10-10T05:26:26Z",
   "updatedAt": "2026-10-10T05:26:31Z",
   "defaultBranch": "main",
-  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "fetchedAt": "2026-10-11T03:13:50.028Z",
   "details": {
     "readme": {
       "path": "README.md",
