@@ -43,7 +43,7 @@ jobs:
         with:
           ref: ${{ inputs.ref || github.sha }}
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Assemble site
         # Publish the website only — tooling, tests and the sync cache stay out of the public site.
         run: |
