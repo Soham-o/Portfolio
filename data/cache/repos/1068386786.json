@@ -1,0 +1,62 @@
+{
+  "id": 1068386786,
+  "name": "Task_Manager",
+  "processorVersion": 3,
+  "pushedAt": "2026-02-15T13:54:51Z",
+  "updatedAt": "2026-02-15T13:54:54Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "9ad90d9de0e6e644153d084fa83b189b13671568",
+      "htmlUrl": "https://github.com/Soham-o/Task_Manager/blob/main/README.md",
+      "title": null,
+      "overviewHtml": "<div align=\"center\">\n\n  <h1>\n    M Y _ T A S K S\n  </h1>\n\n  <p>\n    <em>A privacy-first, zero-latency task manager that lives entirely in your browser.</em>\n  </p>\n\n  <p>\n    <img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n    <img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n    <img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n    <img src=\"https://img.shields.io/badge/Storage-Local_Only-lightgrey?style=for-the-badge&amp;logo=database&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </p>\n\n  <br />\n\n<p>  <a href=\"#readme--quick-start\"><strong>⚡ Quick Start</strong></a>\n  <span>  •  </span>\n  <a href=\"#readme--features\"><strong>✨ Features</strong></a>\n  <span>  •  </span>\n  <a href=\"#readme--under-the-hood\"><strong>🔧 Under the Hood</strong></a></p>\n</div>\n\n<br />",
+      "sections": [
+        {
+          "id": "readme--features",
+          "title": "✨ Features",
+          "kind": "features",
+          "html": "<h2 id=\"readme--features\">✨ Features</h2>\n<p>We stripped away the bloat. No servers. No cloud syncing lag. Just you and your productivity.</p>\n<table>\n<thead>\n<tr>\n<th align=\"left\">Feature</th>\n<th align=\"left\">Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>🎨 Dual Views</strong></td>\n<td align=\"left\">Switch instantly between a standard <strong>List View</strong> and a Kanban-style <strong>Board View</strong> (Todo / Doing / Done).</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>🔐 Local Auth</strong></td>\n<td align=\"left\">A simulated authentication system that keeps user data compartmentalized in <code>localStorage</code>.</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>💾 Data Sovereignty</strong></td>\n<td align=\"left\">Your data never leaves your device. Export your tasks to <strong>CSV</strong> for backup, or Import them back in seconds.</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>⚡ Zero Latency</strong></td>\n<td align=\"left\">Built with Vanilla JS. No frameworks, no loading spinners, no API wait times.</td>\n</tr>\n</tbody></table>\n<hr />"
+        },
+        {
+          "id": "readme--under-the-hood",
+          "title": "🔧 Under the Hood",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme--under-the-hood\">🔧 Under the Hood</h2>\n<p>This project is a masterclass in <strong>Vanilla JavaScript</strong> state management.</p>\n<h3 id=\"readme-1-the-serverless-database\">1. The \"Serverless\" Database</h3>\n<p>Instead of a backend database, we utilize the browser's <code>localStorage</code> as a persistent data store.</p>\n<ul>\n<li><strong>User Data:</strong> Stored as JSON strings keyed by user email (e.g., <code>tasks_user@example.com</code>).</li>\n<li><strong>Session Management:</strong> The app checks for a <code>currentUser</code> object on load. If missing, it guards the route and redirects to <code>auth_page.html</code>.</li>\n</ul>\n<h3 id=\"readme-2-csv-importexport-engine\">2. CSV Import/Export Engine</h3>\n<p>The application includes a custom parser to handle data portability.</p>\n<pre><code class=\"language-javascript\">// From script.js\nescapeCSV(text) {\n    return text.replace(/\"/g, '\"\"'); // Handles escaped quotes automatically\n}\n</code></pre>\n<p>Quick Start\nSince this is a client-side only application, deployment is instant.</p>\n<p>Clone the Repo</p>\n<p>Bash\ngit clone <a href=\"https://github.com/Soham-o/Task_Manager/blob/main/%5Bhttps%3A//github.com/yourusername/my-tasks.git%5D(https%3A//github.com/Soham-o/Task_Manager.git)\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/yourusername/my-tasks.git</a>\nLaunch\nSimply double-click index.html to open it in your browser.</p>\n<p>Note: The app will automatically redirect you to auth_page.html if you aren't logged in.</p>\n<p>Create an Account</p>\n<p>Use any email/password (Data is stored locally on your machine).</p>\n<p>Start adding tasks!</p>\n<p>📂 Project Structure</p>\n<p>Plaintext\n.\n├── auth_page.html      # Login &amp; Signup interface</p>\n<p>├── index.html          # Main Task Dashboard (List &amp; Board views)</p>\n<p>├── script.js           # Core logic (Auth guard, CRUD operations, CSV handling)</p>\n<p>└── styles.css          # Custom styling (Protest Guerrilla font, Responsive grid)</p>\n<div align=\"center\">\n<sub>Built with Vanilla JS • No Frameworks Required</sub>\n</div>"
+        }
+      ],
+      "images": [],
+      "firstImage": null,
+      "demoLinks": [],
+      "highlights": {
+        "overview": "⚡ Quick Start • ✨ Features • 🔧 Under the Hood",
+        "problem": "",
+        "features": []
+      },
+      "excerpt": "⚡ Quick Start • ✨ Features • 🔧 Under the Hood",
+      "truncated": false
+    },
+    "languages": {
+      "HTML": 22411,
+      "JavaScript": 17511,
+      "CSS": 13883
+    },
+    "tech": [
+      {
+        "name": "HTML",
+        "source": "language"
+      },
+      {
+        "name": "JavaScript",
+        "source": "language"
+      },
+      {
+        "name": "CSS",
+        "source": "language"
+      }
+    ]
+  },
+  "releases": []
+}

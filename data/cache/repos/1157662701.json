@@ -1,0 +1,80 @@
+{
+  "id": 1157662701,
+  "name": "Fake-News-Detection-",
+  "processorVersion": 3,
+  "pushedAt": "2026-02-14T05:33:51Z",
+  "updatedAt": "2026-02-14T05:33:54Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "dfea90633288f9cc7a2b77327488d8febe037f1e",
+      "htmlUrl": "https://github.com/Soham-o/Fake-News-Detection-/blob/main/README.md",
+      "title": "📰 Fake News Detection (TF-IDF & Logistic Regression)",
+      "overviewHtml": "<p>A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses <strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong> for feature extraction and <strong>Logistic Regression</strong> for classification, offering high accuracy with minimal computational cost.</p>",
+      "sections": [
+        {
+          "id": "readme--project-overview",
+          "title": "🚀 Project Overview",
+          "kind": "about",
+          "html": "<h2 id=\"readme--project-overview\">🚀 Project Overview</h2>\n<p>Misinformation is a growing problem in the digital age. This project builds a binary classifier to distinguish between:</p>\n<ul>\n<li><strong>Real News:</strong> Verified articles from legitimate sources.</li>\n<li><strong>Fake News:</strong> Fabricated stories intended to deceive.</li>\n</ul>"
+        },
+        {
+          "id": "readme--tech-stack",
+          "title": "🛠️ Tech Stack",
+          "kind": "stack",
+          "html": "<h2 id=\"readme--tech-stack\">🛠️ Tech Stack</h2>\n<ul>\n<li><strong>Python 3.x</strong></li>\n<li><strong>Pandas &amp; NumPy:</strong> For efficient data manipulation.</li>\n<li><strong>Scikit-Learn:</strong><ul>\n<li><code>TfidfVectorizer</code>: Converts text into numerical vectors based on word importance.</li>\n<li><code>LogisticRegression</code>: A robust linear model for binary classification.</li>\n<li><code>Pipeline</code>: Streamlines the training process.</li>\n</ul>\n</li>\n</ul>"
+        },
+        {
+          "id": "readme--dataset-structure",
+          "title": "📂 Dataset Structure",
+          "kind": "other",
+          "html": "<h2 id=\"readme--dataset-structure\">📂 Dataset Structure</h2>\n<p>The project expects two CSV files in the root directory:\n<a href=\"https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset</a></p>\n<p><em>Note: The dataset is typically sourced from the ISOT Fake News Dataset or Kaggle.</em></p>"
+        },
+        {
+          "id": "readme--installation",
+          "title": "⚙️ Installation",
+          "kind": "setup",
+          "html": "<h2 id=\"readme--installation\">⚙️ Installation</h2>\n<ol>\n<li><p><strong>Clone the repository</strong></p>\n<pre><code class=\"language-bash\">[git clone [https://github.com/Soham-o/fake-news-detection.git](https://github.com/Soham-o/fake-news-detection.git)\ncd fake-news-detection](https://github.com/Soham-o/Fake-News-Detection-.git)\n</code></pre>\n</li>\n<li><p><strong>Install Dependencies</strong>\nYou can install the required libraries using pip:</p>\n<pre><code class=\"language-bash\">pip install pandas numpy scikit-learn\n</code></pre>\n</li>\n</ol>"
+        },
+        {
+          "id": "readme--how-it-works",
+          "title": "🧠 How It Works",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme--how-it-works\">🧠 How It Works</h2>\n<p>The code follows a clean 4-step pipeline:</p>\n<ol>\n<li><strong>Data Loading &amp; Cleaning:</strong><ul>\n<li>Loads the raw CSV files.</li>\n<li>Assigns labels (1 for True, 0 for Fake).</li>\n<li>Combines, shuffles, and removes duplicate entries to prevent data leakage.</li>\n</ul>\n</li>\n<li><strong>Preprocessing (TF-IDF):</strong><ul>\n<li>Converts raw text into a matrix of TF-IDF features.</li>\n<li>This statistically measures how important a word is to a document in the corpus.</li>\n</ul>\n</li>\n<li><strong>Model Training:</strong><ul>\n<li>The processed vectors are fed into a <strong>Logistic Regression</strong> classifier.</li>\n</ul>\n</li>\n<li><strong>Evaluation:</strong><ul>\n<li>Outputs the accuracy score and a detailed classification report (Precision, Recall, F1-Score).</li>\n</ul>\n</li>\n</ol>"
+        },
+        {
+          "id": "readme--usage",
+          "title": "🏃‍♂️ Usage",
+          "kind": "usage",
+          "html": "<h2 id=\"readme--usage\">🏃‍♂️ Usage</h2>\n<p>To run the project, simply execute the python script:</p>\n<pre><code class=\"language-bash\">python main.ipynb\n</code></pre>"
+        }
+      ],
+      "images": [],
+      "firstImage": null,
+      "demoLinks": [],
+      "highlights": {
+        "overview": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for classification, offering high accuracy with minimal computational cost.",
+        "problem": "",
+        "features": []
+      },
+      "excerpt": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for…",
+      "truncated": false
+    },
+    "languages": {
+      "Jupyter Notebook": 86623
+    },
+    "tech": [
+      {
+        "name": "Jupyter Notebook",
+        "source": "language"
+      },
+      {
+        "name": "Jupyter",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}

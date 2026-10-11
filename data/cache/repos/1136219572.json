@@ -1,0 +1,112 @@
+{
+  "id": 1136219572,
+  "name": "PersonaLearn",
+  "processorVersion": 3,
+  "pushedAt": "2026-10-10T02:56:31Z",
+  "updatedAt": "2026-10-10T02:56:35Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "d8d06d4b2185e5269a19ac354d40836754311734",
+      "htmlUrl": "https://github.com/Soham-o/PersonaLearn/blob/main/README.md",
+      "title": "🧠 PersonaLearn: The Adaptive AI Tutor",
+      "overviewHtml": "<blockquote>\n<p>A Streamlit prototype that explains study topics through analogies drawn\nfrom a learner's interests (Minecraft, Marvel, Cricket, Cooking, K-Pop),\nthen quizzes them in the same context. Built by Team Innovsphere during a\n3-hour team sprint.</p>\n</blockquote>\n<p><img src=\"https://img.shields.io/badge/Python-3.9%2B-blue\" alt=\"Python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/Streamlit-App-ff4b4b\" alt=\"Streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/AI-Google%20Gemini-8E75B2\" alt=\"Gemini\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/status-prototype-orange\" alt=\"Status\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>",
+      "sections": [
+        {
+          "id": "readme--the-problem",
+          "title": "💡 The Problem",
+          "kind": "problem",
+          "html": "<h2 id=\"readme--the-problem\">💡 The Problem</h2>\n<p>New ideas are easier to remember when they are tied to something you already\nknow well. Standard textbooks explain every topic the same way for every\nreader.</p>"
+        },
+        {
+          "id": "readme--the-solution",
+          "title": "🛠️ The Solution",
+          "kind": "other",
+          "html": "<h2 id=\"readme--the-solution\">🛠️ The Solution</h2>\n<p><strong>PersonaLearn</strong> sends each topic to Google Gemini with a prompt that asks for\nan explanation framed around the learner's chosen interest.</p>\n<ul>\n<li><strong>Don't understand Trigonometry?</strong> Read an explanation based on Cricket.</li>\n<li><strong>Confused by Blockchain?</strong> Learn it through Minecraft block analogies.</li>\n</ul>"
+        },
+        {
+          "id": "readme--key-features",
+          "title": "✨ Key Features",
+          "kind": "features",
+          "html": "<h2 id=\"readme--key-features\">✨ Key Features</h2>\n<ul>\n<li><strong>Preset syllabi:</strong> Topic lists for School, SSC, UPSC, and General Knowledge.</li>\n<li><strong>Interest mapping:</strong> Choose an analogy theme (Minecraft, Cricket, Marvel, Cooking, K-Pop) plus length and complexity.</li>\n<li><strong>Two views:</strong><ul>\n<li>🎓 <strong>Student view:</strong> Learn topics, mark them complete, and see a quiz score.</li>\n<li>👨‍🏫 <strong>Professor view:</strong> Add or remove syllabus topics.</li>\n</ul>\n</li>\n<li><strong>AI quiz generator:</strong> Generates a multiple-choice question from the explanation that was just shown.</li>\n<li><strong>Scoring:</strong> Running score and quiz count for the current session.</li>\n</ul>"
+        },
+        {
+          "id": "readme--quick-start",
+          "title": "🚀 Quick Start",
+          "kind": "setup",
+          "html": "<h2 id=\"readme--quick-start\">🚀 Quick Start</h2>\n<h3 id=\"readme-prerequisites\">Prerequisites</h3>\n<ul>\n<li>Python 3.9+</li>\n<li>A Google Gemini API key (<a href=\"https://aistudio.google.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google AI Studio</a>)</li>\n</ul>\n<h3 id=\"readme-installation\">Installation</h3>\n<ol>\n<li><p><strong>Clone the repository</strong></p>\n<pre><code class=\"language-bash\">git clone https://github.com/Soham-o/PersonaLearn.git\ncd PersonaLearn\n</code></pre>\n</li>\n<li><p><strong>Install dependencies</strong></p>\n<pre><code class=\"language-bash\">pip install -r requirements.txt\n</code></pre>\n</li>\n<li><p><strong>Set up credentials</strong>\nCreate a <code>.env</code> file in the root directory (do not commit it):</p>\n<pre><code class=\"language-bash\">GOOGLE_API_KEY=your_api_key_here\n</code></pre>\n<p>If no key is set, the sidebar asks for one when the app starts.</p>\n</li>\n<li><p><strong>Run the app</strong></p>\n<pre><code class=\"language-bash\">streamlit run main.py\n</code></pre>\n</li>\n</ol>"
+        },
+        {
+          "id": "readme--screenshots",
+          "title": "📸 Screenshots",
+          "kind": "demo",
+          "html": "<h2 id=\"readme--screenshots\">📸 Screenshots</h2>\n<p><img src=\"https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122655.png\" alt=\"PersonaLearn landing page\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122834.png\" alt=\"PersonaLearn explaining Trigonometry through a Cricket analogy\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>"
+        },
+        {
+          "id": "readme--how-it-works",
+          "title": "🏗️ How it Works",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme--how-it-works\">🏗️ How it Works</h2>\n<ol>\n<li><strong>Input:</strong> The user picks a topic (e.g., \"Photosynthesis\") and an interest (e.g., \"Marvel\").</li>\n<li><strong>Processing:</strong> The app builds a prompt and sends it to Gemini through the <code>google-generativeai</code> SDK (<code>gemini-2.5-flash</code>).</li>\n<li><strong>Output:</strong> The interest-based explanation is displayed.</li>\n<li><strong>Assessment:</strong> Gemini generates a quiz question based on that explanation.</li>\n</ol>\n<p><img src=\"https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20123003.png\" alt=\"PersonaLearn multiple-choice quiz generated from the Cricket explanation, answered correctly\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>"
+        },
+        {
+          "id": "readme--limitations",
+          "title": "⚠️ Limitations",
+          "kind": "other",
+          "html": "<h2 id=\"readme--limitations\">⚠️ Limitations</h2>\n<ul>\n<li><strong>Prototype:</strong> built in a short sprint; there are no automated tests.</li>\n<li><strong>No accounts or persistence:</strong> Student/Professor is a view toggle, not a login, and progress, scores and syllabus edits are lost when the session ends.</li>\n<li><strong>Deprecated SDK:</strong> <code>google-generativeai</code> no longer receives updates. Migrating to Google's <code>google-genai</code> package is recommended.</li>\n<li><strong>AI output is not fact-checked:</strong> explanations and quiz answers come straight from the model.</li>\n</ul>"
+        },
+        {
+          "id": "readme--team-innovsphere",
+          "title": "👥 Team Innovsphere",
+          "kind": "other",
+          "html": "<h2 id=\"readme--team-innovsphere\">👥 Team Innovsphere</h2>\n<p>Built during a 3-hour rapid development sprint by:</p>\n<ul>\n<li><strong>Chaitanya</strong></li>\n<li><strong>Nishant</strong></li>\n<li><strong>Lavisha</strong></li>\n<li><strong>Ayush</strong></li>\n<li><strong>Soham</strong></li>\n</ul>"
+        },
+        {
+          "id": "readme--license",
+          "title": "📄 License",
+          "kind": "license",
+          "html": "<h2 id=\"readme--license\">📄 License</h2>\n<p>No license file has been added yet. Until one is, all rights are reserved by\nthe authors.</p>"
+        }
+      ],
+      "images": [
+        "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122655.png",
+        "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122834.png",
+        "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20123003.png"
+      ],
+      "firstImage": "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122655.png",
+      "demoLinks": [],
+      "highlights": {
+        "overview": "",
+        "problem": "New ideas are easier to remember when they are tied to something you already know well. Standard textbooks explain every topic the same way for every reader.",
+        "features": [
+          "Preset syllabi: Topic lists for School, SSC, UPSC, and General Knowledge.",
+          "Interest mapping: Choose an analogy theme (Minecraft, Cricket, Marvel, Cooking, K-Pop) plus length and complexity.",
+          "Two views:",
+          "AI quiz generator: Generates a multiple-choice question from the explanation that was just shown.",
+          "Scoring: Running score and quiz count for the current session."
+        ]
+      },
+      "excerpt": "",
+      "truncated": false
+    },
+    "languages": {
+      "Python": 14788
+    },
+    "tech": [
+      {
+        "name": "Python",
+        "source": "language"
+      },
+      {
+        "name": "Streamlit",
+        "source": "manifest"
+      },
+      {
+        "name": "Gemini API",
+        "source": "manifest"
+      }
+    ]
+  },
+  "releases": []
+}

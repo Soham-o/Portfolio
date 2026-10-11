@@ -1,0 +1,87 @@
+{
+  "id": 1214424413,
+  "name": "kinesis_prototype",
+  "processorVersion": 3,
+  "pushedAt": "2026-04-18T15:01:10Z",
+  "updatedAt": "2026-04-19T19:02:37Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "bb4672ce0fbb0aaa81a9736121e66d768acad53f",
+      "htmlUrl": "https://github.com/Soham-o/kinesis_prototype/blob/main/README.md",
+      "title": "Kinesis: Biometric Crowd Orchestration System",
+      "overviewHtml": "",
+      "sections": [
+        {
+          "id": "readme-overview",
+          "title": "Overview",
+          "kind": "about",
+          "html": "<h2 id=\"readme-overview\">Overview</h2>\n<p>Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.</p>"
+        },
+        {
+          "id": "readme-features",
+          "title": "Features",
+          "kind": "features",
+          "html": "<h2 id=\"readme-features\">Features</h2>\n<ul>\n<li>Real-time crowd simulation (agent-based)</li>\n<li>AI risk detection (density + velocity + panic)</li>\n<li>Biometric zone monitoring (heart rate simulation)</li>\n<li>GenAI Command Interface (natural language control)</li>\n<li>AI ON/OFF comparison (baseline vs optimized)</li>\n<li>Live visualization (heatmap, flow, predictions)</li>\n</ul>"
+        },
+        {
+          "id": "readme-tech-stack",
+          "title": "Tech Stack",
+          "kind": "stack",
+          "html": "<h2 id=\"readme-tech-stack\">Tech Stack</h2>\n<ul>\n<li>Python</li>\n<li>Streamlit</li>\n<li>NumPy</li>\n<li>Matplotlib</li>\n</ul>"
+        },
+        {
+          "id": "readme-how-to-run",
+          "title": "How to Run",
+          "kind": "usage",
+          "html": "<h2 id=\"readme-how-to-run\">How to Run</h2>\n<pre><code class=\"language-bash\">pip install -r requirements.txt\nstreamlit run main.py\n</code></pre>"
+        }
+      ],
+      "images": [],
+      "firstImage": null,
+      "demoLinks": [],
+      "highlights": {
+        "overview": "Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.",
+        "problem": "",
+        "features": [
+          "Real-time crowd simulation (agent-based)",
+          "AI risk detection (density + velocity + panic)",
+          "Biometric zone monitoring (heart rate simulation)",
+          "GenAI Command Interface (natural language control)",
+          "AI ON/OFF comparison (baseline vs optimized)",
+          "Live visualization (heatmap, flow, predictions)"
+        ]
+      },
+      "excerpt": "Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.",
+      "truncated": false
+    },
+    "languages": {
+      "Python": 23998
+    },
+    "tech": [
+      {
+        "name": "Python",
+        "source": "language"
+      },
+      {
+        "name": "Streamlit",
+        "source": "manifest"
+      },
+      {
+        "name": "NumPy",
+        "source": "manifest"
+      },
+      {
+        "name": "Matplotlib",
+        "source": "manifest"
+      },
+      {
+        "name": "SciPy",
+        "source": "manifest"
+      }
+    ]
+  },
+  "releases": []
+}

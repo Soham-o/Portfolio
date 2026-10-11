@@ -1,0 +1,128 @@
+{
+  "id": 1273992234,
+  "name": "CalmReader",
+  "processorVersion": 3,
+  "pushedAt": "2026-06-19T14:55:10Z",
+  "updatedAt": "2026-06-19T14:55:16Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "2b4eb36106ca763d7b3b05845044a8a11d71d7a1",
+      "htmlUrl": "https://github.com/Soham-o/CalmReader/blob/main/README.md",
+      "title": "CalmReader",
+      "overviewHtml": "<div align=\"center\">\n\n<p><strong>Read deeply. Think clearly. Remember what matters.</strong></p>\n<p><em>A frictionless, e-ink-inspired reading environment built for comprehension — not consumption.</em></p>\n<p><a href=\"https://github.com/Soham-o/CalmReader/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/License-MIT-6B7A5E.svg?style=flat-square\" alt=\"License: MIT\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://react.dev/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Built%20with-React-61DAFB.svg?style=flat-square&amp;logo=react&amp;logoColor=white\" alt=\"Built with React\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://vitejs.dev/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Vite-646CFF.svg?style=flat-square&amp;logo=vite&amp;logoColor=white\" alt=\"Vite\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://github.com/Soham-o/CalmReader/blob/main/CONTRIBUTING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/PRs-welcome-B5774A.svg?style=flat-square\" alt=\"PRs Welcome\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"#readme-philosophy\"><img src=\"https://img.shields.io/badge/Calm-Technology-8B8779.svg?style=flat-square\" alt=\"Calm Technology\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a></p>\n<p><a href=\"#readme-\">Live Demo</a> · <a href=\"https://github.com/Soham-o/CalmReader/blob/main/issues\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Report a Bug</a> · <a href=\"https://github.com/Soham-o/CalmReader/blob/main/issues\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Request a Feature</a> · <a href=\"#readme-roadmap\">Roadmap</a></p>\n<hr />\n</div>\n\n<blockquote>\n<p>Most reading tools are built to keep you reading <em>more</em>. CalmReader is built to help you understand <em>better</em> — one passage at a time, without notifications, streaks, or noise.</p>\n</blockquote>\n<hr />",
+      "sections": [
+        {
+          "id": "readme-table-of-contents",
+          "title": "Table of Contents",
+          "kind": "other",
+          "html": "<h2 id=\"readme-table-of-contents\">Table of Contents</h2>\n<ul>\n<li><a href=\"#readme-why-calmreader\">Why CalmReader</a></li>\n<li><a href=\"#readme-philosophy\">Philosophy</a></li>\n<li><a href=\"#readme-features\">Features</a></li>\n<li><a href=\"#readme-screenshots\">Screenshots</a></li>\n<li><a href=\"#readme-getting-started\">Getting Started</a></li>\n<li><a href=\"#readme-local-development\">Local Development</a></li>\n<li><a href=\"#readme-project-structure\">Project Structure</a></li>\n<li><a href=\"#readme-roadmap\">Roadmap</a></li>\n<li><a href=\"#readme-contributing\">Contributing</a></li>\n<li><a href=\"#readme-license\">License</a></li>\n</ul>\n<hr />"
+        },
+        {
+          "id": "readme-why-calmreader",
+          "title": "Why CalmReader",
+          "kind": "problem",
+          "html": "<h2 id=\"readme-why-calmreader\">Why CalmReader</h2>\n<p>Most reading software optimizes for one metric: time on screen. The result is an environment filled with progress bars, streaks, recommendation feeds, and pop-up encouragement — tools designed to retain your attention, not support your comprehension.</p>\n<p>The neuroscience tells a different story. Comprehension depends on working memory — a small, effortful workspace that holds ideas in active relation to each other. Every interruption taxes that workspace. Distraction isn't a minor annoyance; it's the mechanism by which understanding fails to form.</p>\n<p>CalmReader is the antithesis of that design pattern. It is a page built like a well-made notebook: it loads your text, gets out of the way, and trusts you to read slowly. When you encounter a hard concept, it surfaces a definition — inline, quietly — without sending you down a browser tab rabbit hole. When you finish a section, it asks one good question instead of offering a five-star rating prompt.</p>\n<p>It does not want you to keep using it. It wants you to finish reading.</p>\n<hr />"
+        },
+        {
+          "id": "readme-philosophy",
+          "title": "Philosophy",
+          "kind": "other",
+          "html": "<h2 id=\"readme-philosophy\">Philosophy</h2>\n<p>CalmReader is grounded in <a href=\"https://calmtech.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Calm Technology</a> principles articulated by Mark Weiser and John Seely Brown: technology should require only as much attention as it deserves, communicate information at the periphery rather than the center, and amplify the best of human capability.</p>\n<p>In practice, this means:</p>\n<ul>\n<li><strong>No feeds or discovery.</strong> You bring the text. CalmReader reads it with you.</li>\n<li><strong>No streaks, no badges, no gamification.</strong> Reading is intrinsically worth doing.</li>\n<li><strong>No notifications, ever.</strong> The page is silent unless you ask it something.</li>\n<li><strong>No tracking.</strong> Your reflections live locally, on your device, under your control.</li>\n<li><strong>Deep learning over content consumption.</strong> The goal is one idea truly understood, not thirty articles skimmed.</li>\n</ul>\n<hr />"
+        },
+        {
+          "id": "readme-features",
+          "title": "Features",
+          "kind": "features",
+          "html": "<h2 id=\"readme-features\">Features</h2>\n<h3 id=\"readme-import-anything\">Import Anything</h3>\n<p>Bring your own content. Paste raw text directly, upload a <code>.txt</code> or <code>.md</code> file, or pull in any article via URL using the Jina Reader proxy. No account required. No content library. Just your text.</p>\n<h3 id=\"readme-flow-focus\">Flow Focus</h3>\n<p>As you read, paragraphs outside your current position softly dim — reducing visual noise and keeping your working memory focused on one idea at a time. Enable it when you want it. Disable it when you don't.</p>\n<h3 id=\"readme-socratic-margin\">Socratic Margin</h3>\n<p>CalmReader doesn't summarize — it questions. When you tap a paragraph, a context-aware prompt appears in the margin: <em>\"Does the conclusion necessarily follow?\"</em> or <em>\"What would someone who disagrees say?\"</em> These aren't generic questions. They're selected based on what the paragraph is doing — making a causal claim, citing evidence, or issuing a value judgment.</p>\n<p>Your answer goes into the <strong>Wisdom Ledger</strong>. Not the AI's summary. Yours.</p>\n<h3 id=\"readme-x-ray-clarification\">X-Ray Clarification</h3>\n<p>Forty-plus academic and conceptual terms are quietly annotated beneath the surface. Tap a term — <em>neuroplasticity</em>, <em>heuristic</em>, <em>externality</em> — and its definition expands inline. Reading continues. You never leave the page.</p>\n<h3 id=\"readme-wisdom-ledger\">Wisdom Ledger</h3>\n<p>A running log of insights you've written during a session. Every entry is authored by you, not generated. The ledger is searchable, exportable, and stored locally.</p>\n<h3 id=\"readme-reflection-archive\">Reflection Archive</h3>\n<p>Every insight and Pause Point response is saved across sessions in <code>localStorage</code>/<code>IndexedDB</code>. Search your own thinking across every text you've ever read in CalmReader: type a concept and find the thought you had about it three months ago.</p>\n<h3 id=\"readme-pause-points\">Pause Points</h3>\n<p>Every six paragraphs, a quiet interstitial appears: <em>\"Without looking back — what do you remember?\"</em> A small text field invites active recall, which cognitive science identifies as one of the most reliable mechanisms for long-term retention. Not a quiz. Not a score. A question.</p>\n<h3 id=\"readme-e-ink-inspired-design\">E-ink Inspired Design</h3>\n<p>Warm paper tones (<code>#F9F6F0</code>), generous line height, and two typefaces chosen for reading: <strong>Literata</strong> for body text and <strong>Atkinson Hyperlegible</strong> for UI — a typeface designed by the Braille Institute to maximize legibility for readers with low vision.</p>\n<hr />"
+        },
+        {
+          "id": "readme-screenshots",
+          "title": "Screenshots",
+          "kind": "demo",
+          "html": "<h2 id=\"readme-screenshots\">Screenshots</h2>\n<blockquote>\n<p>Screenshots coming soon. In the meantime, try the <a href=\"#readme-\">live demo</a>.</p>\n</blockquote>\n<table>\n<thead>\n<tr>\n<th align=\"center\">Import Screen</th>\n<th align=\"center\">Reading View</th>\n<th align=\"center\">Socratic Margin</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/import.png\" alt=\"Import\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/reading.png\" alt=\"Reading\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/socratic.png\" alt=\"Socratic\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n</tr>\n</tbody></table>\n<table>\n<thead>\n<tr>\n<th align=\"center\">Wisdom Ledger</th>\n<th align=\"center\">Reflection Archive</th>\n<th align=\"center\">Mobile View</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/ledger.png\" alt=\"Ledger\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/archive.png\" alt=\"Archive\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/mobile.png\" alt=\"Mobile\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n</tr>\n</tbody></table>\n<hr />"
+        },
+        {
+          "id": "readme-getting-started",
+          "title": "Getting Started",
+          "kind": "setup",
+          "html": "<h2 id=\"readme-getting-started\">Getting Started</h2>\n<h3 id=\"readme-prerequisites\">Prerequisites</h3>\n<ul>\n<li><a href=\"https://nodejs.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Node.js</a> v18 or higher</li>\n<li><a href=\"https://pnpm.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">pnpm</a> (recommended) or npm</li>\n</ul>\n<h3 id=\"readme-quick-start\">Quick Start</h3>\n<pre><code class=\"language-bash\"># Clone the repository\ngit clone https://github.com/yourusername/calmreader.git\ncd calmreader\n\n# Install dependencies\npnpm install\n\n# Start the development server\npnpm dev\n</code></pre>\n<p>Open <a href=\"http://localhost:5173/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">http://localhost:5173</a> and paste any text to begin.</p>\n<h3 id=\"readme-build-for-production\">Build for Production</h3>\n<pre><code class=\"language-bash\">pnpm build\npnpm preview\n</code></pre>\n<p>The production build outputs to <code>dist/</code> and is deployable to any static host (Vercel, Netlify, Cloudflare Pages).</p>\n<hr />"
+        },
+        {
+          "id": "readme-local-development",
+          "title": "Local Development",
+          "kind": "other",
+          "html": "<h2 id=\"readme-local-development\">Local Development</h2>\n<h3 id=\"readme-environment\">Environment</h3>\n<p>CalmReader has no backend and requires no environment variables for local development. Everything runs in the browser.</p>\n<pre><code class=\"language-bash\"># Development server with hot module replacement\npnpm dev\n\n# Type checking (if using TypeScript migration branch)\npnpm typecheck\n\n# Lint\npnpm lint\n\n# Run all checks before committing\npnpm check\n</code></pre>\n<h3 id=\"readme-storage\">Storage</h3>\n<p>CalmReader uses two storage mechanisms:</p>\n<table>\n<thead>\n<tr>\n<th>Scope</th>\n<th>Mechanism</th>\n<th>Purpose</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Session insights</td>\n<td><code>useState</code></td>\n<td>Current reading session only</td>\n</tr>\n<tr>\n<td>Reflection archive</td>\n<td><code>localStorage</code></td>\n<td>Persists across sessions, searched globally</td>\n</tr>\n</tbody></table>\n<p>The storage layer is abstracted behind a simple adapter interface, designed for future migration to <code>IndexedDB</code> (larger archives) or native SQLite (desktop/mobile). See <a href=\"#readme-project-structure\"><code>packages/core/src/storage/</code></a> for details.</p>\n<h3 id=\"readme-url-import\">URL Import</h3>\n<p>The URL import feature proxies requests through <a href=\"https://r.jina.ai/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Jina Reader</a> (<code>https://r.jina.ai/{url}</code>). No API key is required. This makes no requests unless you explicitly use the Link tab — and it is the only network call CalmReader ever makes after the initial page load.</p>\n<hr />"
+        },
+        {
+          "id": "readme-project-structure",
+          "title": "Project Structure",
+          "kind": "other",
+          "html": "<h2 id=\"readme-project-structure\">Project Structure</h2>\n<pre><code>calmreader/\n├── src/\n│   ├── CalmReader.jsx          # Root component — all reading UI\n│   ├── main.jsx                # React entry point\n│   ├── storage/\n│   │   ├── adapter.ts          # StorageAdapter interface\n│   │   ├── idb.ts              # IndexedDB implementation\n│   │   └── index.ts            # Platform detection, exports adapter\n│   ├── lib/\n│   │   ├── parser.js           # parseImportedText, buildSegments\n│   │   ├── prompts.js          # SOCRATIC_BANK, getPromptForParagraph\n│   │   └── terms.js            # TERM_DICTIONARY (X-Ray definitions)\n│   └── assets/\n│       └── fonts/              # Bundled Literata + Atkinson Hyperlegible\n│\n├── public/\n│   ├── manifest.json           # PWA manifest\n│   └── sw.js                   # Service worker (offline support)\n│\n├── docs/\n│   └── screenshots/            # README images\n│\n├── index.html\n├── vite.config.js\n├── package.json\n└── README.md\n</code></pre>\n<h3 id=\"readme-key-design-decisions\">Key Design Decisions</h3>\n<p><strong>Single-file component architecture.</strong> <code>CalmReader.jsx</code> is intentionally large. This is not technical debt — it is a deliberate reflection of the product's philosophy. One text. One session. One file. Splitting it into twenty micro-components would add navigation overhead with no user benefit.</p>\n<p><strong>No state management library.</strong> CalmReader uses only <code>useState</code>, <code>useEffect</code>, <code>useMemo</code>, and <code>useRef</code>. The state surface is small enough that Redux or Zustand would be ceremony, not architecture.</p>\n<p><strong>No UI component library.</strong> Every visual element is hand-crafted with inline styles. This keeps the design system tight, makes the palette explicit, and means there are no Tailwind or MUI overrides to fight against.</p>\n<hr />"
+        },
+        {
+          "id": "readme-roadmap",
+          "title": "Roadmap",
+          "kind": "meta",
+          "html": "<h2 id=\"readme-roadmap\">Roadmap</h2>\n<p>CalmReader is being developed with the principles of the deployment strategy already in mind. Each platform phase shares the same core — no parallel codebases.</p>\n<h3 id=\"readme-now--v10\">Now — v1.0</h3>\n<ul>\n<li><input type=\"checkbox\" disabled checked /> Paste, file upload, URL import</li>\n<li><input type=\"checkbox\" disabled checked /> Flow Focus (Deep Focus mode)</li>\n<li><input type=\"checkbox\" disabled checked /> Socratic Margin with user-written insights</li>\n<li><input type=\"checkbox\" disabled checked /> X-Ray Clarification</li>\n<li><input type=\"checkbox\" disabled checked /> Wisdom Ledger with search</li>\n<li><input type=\"checkbox\" disabled checked /> Reflection Archive (localStorage-backed)</li>\n<li><input type=\"checkbox\" disabled checked /> Active recall Pause Points</li>\n<li><input type=\"checkbox\" disabled checked /> E-ink-inspired typography system</li>\n<li><input type=\"checkbox\" disabled checked /> PWA manifest</li>\n</ul>\n<h3 id=\"readme-next--v11\">Next — v1.1</h3>\n<ul>\n<li><input type=\"checkbox\" disabled /> Full offline support via service worker</li>\n<li><input type=\"checkbox\" disabled /> IndexedDB migration for larger archives</li>\n<li><input type=\"checkbox\" disabled /> Export archive as Markdown or JSON</li>\n<li><input type=\"checkbox\" disabled /> Custom term definitions (bring your own X-Ray glossary)</li>\n<li><input type=\"checkbox\" disabled /> Dark mode (ink-on-black, not blue-dark)</li>\n</ul>\n<h3 id=\"readme-later--v20\">Later — v2.0</h3>\n<ul>\n<li><input type=\"checkbox\" disabled /> Chrome / Edge extension with one-click \"Read in CalmReader\"</li>\n<li><input type=\"checkbox\" disabled /> Tauri desktop app (Windows, Mac, Linux) — ~8MB, launches in under 1s</li>\n<li><input type=\"checkbox\" disabled /> Android app via Capacitor</li>\n<li><input type=\"checkbox\" disabled /> iOS app via Capacitor</li>\n<li><input type=\"checkbox\" disabled /> Cross-device sync (optional, end-to-end encrypted, self-hostable)</li>\n</ul>\n<h3 id=\"readme-someday--v30\">Someday — v3.0</h3>\n<ul>\n<li><input type=\"checkbox\" disabled /> Expandable X-Ray glossary (domain-specific dictionaries)</li>\n<li><input type=\"checkbox\" disabled /> Spaced repetition surfacing from Reflection Archive</li>\n<li><input type=\"checkbox\" disabled /> Reading session statistics (time, recall score) — opt-in, local only</li>\n<li><input type=\"checkbox\" disabled /> Collaborative margin notes (book clubs)</li>\n</ul>\n<hr />"
+        },
+        {
+          "id": "readme-contributing",
+          "title": "Contributing",
+          "kind": "meta",
+          "html": "<h2 id=\"readme-contributing\">Contributing</h2>\n<p>Contributions are welcome. CalmReader is a small, focused project — please keep that spirit in mind when proposing changes.</p>\n<h3 id=\"readme-before-you-open-a-pr\">Before You Open a PR</h3>\n<ul>\n<li>Read the <a href=\"#readme-philosophy\">Philosophy</a> section. Features that add friction, gamification, or distraction will not be merged — even if they're well-implemented.</li>\n<li>Open an issue first for anything beyond a small bug fix. Discuss the shape of the change before writing code.</li>\n<li>Prefer editing existing files over adding new ones. Prefer simpler over more abstract.</li>\n</ul>\n<h3 id=\"readme-development-workflow\">Development Workflow</h3>\n<pre><code class=\"language-bash\"># Fork the repository and clone your fork\ngit clone https://github.com/yourusername/calmreader.git\n\n# Create a feature branch\ngit checkout -b feature/your-feature-name\n\n# Make your changes, then run checks\npnpm check\n\n# Commit with a clear message\ngit commit -m \"feat: add custom glossary support for X-Ray terms\"\n\n# Push and open a pull request\ngit push origin feature/your-feature-name\n</code></pre>\n<h3 id=\"readme-what-we-welcome\">What We Welcome</h3>\n<ul>\n<li>Bug fixes</li>\n<li>Accessibility improvements</li>\n<li>New X-Ray term definitions (edit <code>src/lib/terms.js</code>)</li>\n<li>New Socratic prompts (edit <code>src/lib/prompts.js</code>)</li>\n<li>Performance improvements</li>\n<li>Documentation improvements</li>\n<li>Platform-specific shell work (extension, desktop, mobile)</li>\n</ul>\n<h3 id=\"readme-what-belongs-in-a-fork\">What Belongs in a Fork</h3>\n<ul>\n<li>Sync to a cloud service (unless privacy-preserving and opt-in)</li>\n<li>Social features (sharing, public profiles)</li>\n<li>AI-generated summaries or insights</li>\n<li>Gamification of any kind</li>\n</ul>\n<hr />"
+        },
+        {
+          "id": "readme-acknowledgements",
+          "title": "Acknowledgements",
+          "kind": "meta",
+          "html": "<h2 id=\"readme-acknowledgements\">Acknowledgements</h2>\n<p>CalmReader draws on ideas from people who thought seriously about attention, typography, and the design of quiet tools:</p>\n<ul>\n<li><strong>Mark Weiser &amp; John Seely Brown</strong> — <a href=\"https://calmtech.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Calm Technology</a> (1995)</li>\n<li><strong>The Braille Institute</strong> — <a href=\"https://brailleinstitute.org/freefont\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Atkinson Hyperlegible</a> typeface</li>\n<li><strong>Google Fonts / Type Together</strong> — <a href=\"https://fonts.google.com/specimen/Literata\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Literata</a> typeface</li>\n<li><strong>Amber Thomas</strong> and the Readwise team — for proving that serious reading tools have an audience</li>\n</ul>\n<hr />"
+        },
+        {
+          "id": "readme-license",
+          "title": "License",
+          "kind": "license",
+          "html": "<h2 id=\"readme-license\">License</h2>\n<p>MIT License — see <a href=\"https://github.com/Soham-o/CalmReader/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">LICENSE</a> for details.</p>\n<p>You are free to use, modify, and distribute CalmReader. If you build something with it, the only thing we'd ask is that you keep the spirit of the project intact: no dark patterns, no engagement optimization, no noise.</p>\n<hr />\n<div align=\"center\">\n\n<p><em>\"A page that disappears is the highest compliment a reading tool can receive.\"</em></p>\n<p><strong><a href=\"#readme-\">Try CalmReader →</a></strong></p>\n</div>"
+        }
+      ],
+      "images": [
+        "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/import.png",
+        "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/reading.png",
+        "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/socratic.png",
+        "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/ledger.png",
+        "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/archive.png",
+        "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/mobile.png"
+      ],
+      "firstImage": "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/import.png",
+      "demoLinks": [],
+      "highlights": {
+        "overview": "Read deeply. Think clearly. Remember what matters.",
+        "problem": "Most reading software optimizes for one metric: time on screen. The result is an environment filled with progress bars, streaks, recommendation feeds, and pop-up encouragement — tools designed to retain your attention, not support your comprehension.",
+        "features": []
+      },
+      "excerpt": "Read deeply. Think clearly. Remember what matters.",
+      "truncated": false
+    },
+    "languages": {
+      "JavaScript": 81257,
+      "HTML": 297
+    },
+    "tech": [
+      {
+        "name": "JavaScript",
+        "source": "language"
+      },
+      {
+        "name": "React",
+        "source": "manifest"
+      },
+      {
+        "name": "Vite",
+        "source": "manifest"
+      }
+    ]
+  },
+  "releases": []
+}

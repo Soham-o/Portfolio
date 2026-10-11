@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-10-11T03:10:41.457Z",
+  "rules": "See docs/AUTOMATION.md#achievements",
+  "items": [
+    {
+      "id": "external:2",
+      "type": "external",
+      "title": "Open Source Contributions",
+      "org": "— 2 Merged PRs",
+      "date": "2026-10-04T05:14:36Z",
+      "when": "Latest Oct 2026",
+      "description": "Pull requests merged into 2 public projects owned by others, including 1jehuang/jcode, hermes-labs-ai/lintlang.",
+      "url": "https://github.com/search?q=type%3Apr%20is%3Amerged%20author%3ASoham-o%20-user%3ASoham-o&type=pullrequests"
+    },
+    {
+      "id": "breadth:4",
+      "type": "breadth",
+      "title": "Projects in 4 Languages",
+      "org": "— Breadth",
+      "date": "2026-06-19T04:44:06Z",
+      "when": "Jun 2026",
+      "description": "Primary languages across public projects: Jupyter Notebook, HTML, Python, JavaScript.",
+      "url": "https://github.com/Soham-o?tab=repositories"
+    },
+    {
+      "id": "count:10",
+      "type": "count",
+      "title": "10 Public Projects",
+      "org": "— Milestone",
+      "date": "2026-06-05T07:38:04Z",
+      "when": "Jun 2026",
+      "description": "Reached 10 public projects with Autonomous Driving System.",
+      "url": "https://github.com/Soham-o?tab=repositories"
+    },
+    {
+      "id": "streak:2026-01-29:7",
+      "type": "streak",
+      "title": "7-Day Streak",
+      "org": "— Consistency",
+      "date": "2026-02-04T00:00:00Z",
+      "when": "29 Jan 2026 – 4 Feb 2026",
+      "description": "Contributed on GitHub 7 days in a row — the longest run in the past year.",
+      "url": "https://github.com/Soham-o"
+    },
+    {
+      "id": "launch:first:1007141888",
+      "type": "launch",
+      "title": "First Public Project",
+      "org": "— Employee-Analysis",
+      "date": "2025-06-23T14:22:51Z",
+      "when": "Jun 2025 · Launch",
+      "description": "Employee-Analysis became the earliest repository in this portfolio, created 23 Jun 2025.",
+      "url": "https://github.com/Soham-o/Employee-Analysis"
+    }
+  ]
+}

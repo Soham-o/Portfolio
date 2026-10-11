@@ -1,0 +1,70 @@
+{
+  "id": 1031344132,
+  "name": "Spotify_Songs_Genre_Segmentation",
+  "processorVersion": 3,
+  "pushedAt": "2026-02-15T13:40:41Z",
+  "updatedAt": "2026-02-15T13:40:45Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "919e481dbe3092064ccde0a3139c86d117c40b85",
+      "htmlUrl": "https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation/blob/main/README.md",
+      "title": "📖 Table of Contents",
+      "overviewHtml": "<div align=\"center\">\n\n  <img src=\"https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png\" alt=\"logo\" width=\"200\" height=\"auto\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <h1>Spotify Genre Segmentation &amp; Recommendation</h1>\n  \n  <p>\n    An Unsupervised Machine Learning project that clusters songs based on audio features and builds a recommendation engine.\n  </p>\n  \n  \n<p>\n  <a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&amp;logo=python&amp;logoColor=white\" alt=\"Python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://scikit-learn.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white\" alt=\"Scikit Learn\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://seaborn.pydata.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Seaborn-Stats-blue?style=for-the-badge&amp;logo=pandas&amp;logoColor=white\" alt=\"Seaborn\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n</p>\n\n<h4>\n    <a href=\"#readme--system-architecture\">View Architecture</a>\n  <span> · </span>\n    <a href=\"#readme--installation\">Installation</a>\n  <span> · </span>\n    <a href=\"#readme--results\">View Results</a>\n</h4>\n\n</div>\n\n<br />\n\n<ul>\n<li><a href=\"#readme--overview\">📍 Overview</a></li>\n<li><a href=\"#readme--methodology\">🧠 Methodology</a></li>\n<li><a href=\"#readme--system-architecture\">📐 System Architecture</a></li>\n<li><a href=\"#readme--project-structure\">📂 Project Structure</a></li>\n<li><a href=\"#readme--installation--usage\">🚀 Installation &amp; Usage</a></li>\n<li><a href=\"#readme--visualizations\">📊 Visualizations</a></li>\n</ul>\n<hr />",
+      "sections": [
+        {
+          "id": "readme--overview",
+          "title": "📍 Overview",
+          "kind": "about",
+          "html": "<h2 id=\"readme--overview\">📍 Overview</h2>\n<p>This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness). </p>\n<p>By applying <strong>Principal Component Analysis (PCA)</strong> for dimensionality reduction and <strong>K-Means Clustering</strong>, we segment songs into groups. These clusters are then used to power a <strong>Content-Based Recommendation System</strong> that suggests songs mathematically similar to a user's input.</p>\n<h4 id=\"readme-key-features\">Key Features</h4>\n<table>\n<thead>\n<tr>\n<th align=\"left\">🔍 Exploratory Analysis</th>\n<th align=\"left\">🤖 Machine Learning</th>\n<th align=\"left\">🎵 Recommendation</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Correlation Heatmaps:</strong> <br />Identify relationships between audio features.</td>\n<td align=\"left\"><strong>PCA:</strong> <br />Reduces high-dimensional data for visualization.</td>\n<td align=\"left\"><strong>Cluster Matching:</strong> <br />Finds songs within the same geometric cluster.</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Distribution Plots:</strong> <br />Analyze the spread of genres and audio attributes.</td>\n<td align=\"left\"><strong>K-Means:</strong> <br />Segments songs into 5 distinct genre/style clusters.</td>\n<td align=\"left\"><strong>Similarity Check:</strong> <br />Filters recommendations based on feature proximity.</td>\n</tr>\n</tbody></table>\n<hr />"
+        },
+        {
+          "id": "readme--methodology",
+          "title": "🧠 Methodology",
+          "kind": "other",
+          "html": "<h2 id=\"readme--methodology\">🧠 Methodology</h2>\n<p>The project follows a standard Data Science pipeline:</p>\n<ol>\n<li><strong>Data Preprocessing:</strong> * Removal of duplicates and missing values.<ul>\n<li>Dropping non-numeric identifiers (<code>track_id</code>, <code>track_uri</code>, etc.).</li>\n</ul>\n</li>\n<li><strong>Feature Standardization:</strong> * Uses <code>StandardScaler</code> to normalize features (Mean=0, Std=1) so that high-magnitude features (like Loudness) don't dominate the distance calculations.</li>\n<li><strong>Dimensionality Reduction:</strong><ul>\n<li><strong>PCA (Principal Component Analysis)</strong> is applied to compress the 9 audio features into 2 primary components for visualization purposes.</li>\n</ul>\n</li>\n<li><strong>Clustering:</strong><ul>\n<li><strong>K-Means Algorithm</strong> groups the data into 5 clusters (<code>k=5</code>).</li>\n<li>$$\\text{Minimize } \\sum_{i=1}^{k} \\sum_{x \\in S_i} || x - \\mu_i ||^2$$</li>\n</ul>\n</li>\n</ol>\n<hr />"
+        },
+        {
+          "id": "readme--system-architecture",
+          "title": "📐 System Architecture",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme--system-architecture\">📐 System Architecture</h2>\n<pre><code class=\"language-mermaid\">flowchart LR\n    subgraph Input\n    A[Raw Dataset] --&gt; B(Data Cleaning)\n    end\n\n    subgraph Feature Engineering\n    B --&gt; C[Feature Selection]\n    C --&gt;|Danceability, Energy, etc.| D[StandardScaler]\n    end\n\n    subgraph Modeling\n    D --&gt; E[PCA Reduction]\n    D --&gt; F[K-Means Clustering]\n    E --&gt; G[2D Visualization]\n    F --&gt; H[Cluster Labels]\n    end\n\n    subgraph Output\n    H --&gt; I{Recommendation Engine}\n    I --&gt;|Input Song| J[Output Top 5 Similar Songs]\n    end\n</code></pre>\n<p>Project Structure\nPlaintext</p>\n<p>├── spotify_analysis.ipynb      # Main Jupyter Notebook (or .py script) containing all logic</p>\n<p>├── spotify dataset.csv         # Source data (ensure this is in root)</p>\n<p>├── requirements.txt            # Python dependencies</p>\n<p>└── README.md                   # Project documentation</p>\n<p>Installation &amp; Usage</p>\n<ol>\n<li>Clone the Repository\nBash\ngit clone <a href=\"https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation/blob/main/%5Bhttps%3A//github.com/your-username/spotify-genre-segmentation.git%5D(https%3A//github.com/Soham-o/Spotify_Songs_Genre_Segmentation.git)\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/your-username/spotify-genre-segmentation.git</a>\ncd spotify-genre-segmentation</li>\n<li>Install Dependencies\nBash\npip install -r requirements.txt</li>\n<li>Run the Analysis\nIf using the Python script:</li>\n</ol>\n<p>Bash\npython spotify_analysis.py\n4. Get Recommendations\nTo use the recommendation function inside the script/notebook:</p>\n<p>Python</p>"
+        },
+        {
+          "id": "readme-example-usage",
+          "title": "Example Usage",
+          "kind": "usage",
+          "html": "<h2 id=\"readme-example-usage\">Example Usage</h2>\n<p>rec = recommend_songs('Shape of You', df_final)\nprint(rec)\n📊 Visualizations\nThe script generates several key insights:</p>\n<p>Feature Distributions: Histograms showing the spread of Audio Features.</p>\n<p>Correlation Matrix: A heatmap displaying how features like Energy and Loudness are positively correlated, while Acousticness and Energy are negatively correlated.</p>\n<p>PCA Cluster Plot: A scatter plot visualizing how the K-Means algorithm has grouped the songs in 2D space.</p>\n<div align=\"center\">\n<p>\nBuilt with ❤️ using Python, Scikit-Learn, and Pandas\n</p>\n</div>"
+        }
+      ],
+      "images": [
+        "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
+      ],
+      "firstImage": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png",
+      "demoLinks": [],
+      "highlights": {
+        "overview": "This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness).",
+        "problem": "",
+        "features": []
+      },
+      "excerpt": "This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness).",
+      "truncated": false
+    },
+    "languages": {
+      "Jupyter Notebook": 755349
+    },
+    "tech": [
+      {
+        "name": "Jupyter Notebook",
+        "source": "language"
+      },
+      {
+        "name": "Jupyter",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}

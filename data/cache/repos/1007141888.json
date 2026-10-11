@@ -1,0 +1,43 @@
+{
+  "id": 1007141888,
+  "name": "Employee-Analysis",
+  "processorVersion": 3,
+  "pushedAt": "2025-06-23T14:24:29Z",
+  "updatedAt": "2025-06-23T14:24:32Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "49ed10a0b2e8733fd3636565df8f94206dbecc9d",
+      "htmlUrl": "https://github.com/Soham-o/Employee-Analysis/blob/main/README.md",
+      "title": "Employee-Analysis",
+      "overviewHtml": "<p>Project Employee Analysis</p>",
+      "sections": [],
+      "images": [],
+      "firstImage": null,
+      "demoLinks": [],
+      "highlights": {
+        "overview": "Project Employee Analysis",
+        "problem": "",
+        "features": []
+      },
+      "excerpt": "Project Employee Analysis",
+      "truncated": false
+    },
+    "languages": {
+      "Jupyter Notebook": 1298
+    },
+    "tech": [
+      {
+        "name": "Jupyter Notebook",
+        "source": "language"
+      },
+      {
+        "name": "Jupyter",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}

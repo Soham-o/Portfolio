@@ -1,0 +1,140 @@
+{
+  "id": 1300537845,
+  "name": "AirTwin-X",
+  "processorVersion": 3,
+  "pushedAt": "2026-10-10T05:26:23Z",
+  "updatedAt": "2026-10-10T05:26:27Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "2e963d0394d32d9fe7e79e293e1114e52c71d9d0",
+      "htmlUrl": "https://github.com/Soham-o/AirTwin-X/blob/main/README.md",
+      "title": "AirTwin X",
+      "overviewHtml": "<div align=\"center\">\n\n<p><strong>A Streamlit decision-support prototype for urban air-quality interventions</strong></p>\n<p><a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/python-3.10+-blue.svg?style=flat-square&amp;logo=python&amp;logoColor=white\" alt=\"Python 3.10+\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://streamlit.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/UI-Streamlit-FF4B4B?style=flat-square&amp;logo=streamlit&amp;logoColor=white\" alt=\"Streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"#readme-project-status\"><img src=\"https://img.shields.io/badge/status-prototype-orange?style=flat-square\" alt=\"Status: prototype\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://github.com/Soham-o/AirTwin-X/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square\" alt=\"License: MIT\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a></p>\n</div>\n\n<p>AirTwin X takes a city's current air-quality reading and walks it through a\npipeline: estimate which sources are driving the pollution, rank a fixed set\nof municipal interventions, simulate what combining them would do, and\ntranslate the predicted improvement into health and economic estimates. A\nrule-based \"Mayor Copilot\" answers questions using only the outputs of those\nearlier steps.</p>\n<blockquote>\n<p><strong>Screenshots / demo GIF:</strong> not yet captured. Run it locally with the\n<a href=\"#readme-quick-start\">Quick Start</a> to see the interface.</p>\n</blockquote>\n<hr />",
+      "sections": [
+        {
+          "id": "readme-contents",
+          "title": "Contents",
+          "kind": "other",
+          "html": "<h2 id=\"readme-contents\">Contents</h2>\n<ul>\n<li><a href=\"#readme-the-idea\">The idea</a></li>\n<li><a href=\"#readme-what-it-does\">What it does</a></li>\n<li><a href=\"#readme-system-architecture\">System architecture</a></li>\n<li><a href=\"#readme-quick-start\">Quick Start</a></li>\n<li><a href=\"#readme-data-sources-and-configuration\">Data sources and configuration</a></li>\n<li><a href=\"#readme-testing\">Testing</a></li>\n<li><a href=\"#readme-project-status\">Project status</a></li>\n<li><a href=\"#readme-known-limitations\">Known limitations</a></li>\n<li><a href=\"#readme-documentation\">Documentation</a></li>\n</ul>\n<hr />"
+        },
+        {
+          "id": "readme-the-idea",
+          "title": "The idea",
+          "kind": "other",
+          "html": "<h2 id=\"readme-the-idea\">The idea</h2>\n<p>Most city AQI dashboards report a number and a generic warning, then stop.\nThey describe the problem but don't help anyone decide what to do about it.\nSimply wrapping a large language model around a sensor feed doesn't fix that\neither: a generative model can produce confident but untraceable impact\nestimates, and will often add intervention effects together as if they were\nindependent.</p>\n<p>AirTwin X treats the problem as a <strong>decision pipeline</strong> instead:</p>\n<ul>\n<li>When two interventions target the same pollution source, their effects\n<strong>compound</strong> rather than add: the remaining share of a source is\n<code>Π (1 − effectiveness_i)</code>, and the combined reduction is capped.</li>\n<li>Every number the Copilot reports comes from an upstream module's output.\nIt does not generate free-form text from a language model.</li>\n</ul>"
+        },
+        {
+          "id": "readme-what-it-does",
+          "title": "What it does",
+          "kind": "features",
+          "html": "<h2 id=\"readme-what-it-does\">What it does</h2>\n<table>\n<thead>\n<tr>\n<th>Module</th>\n<th>File</th>\n<th>What is implemented</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Source attribution</strong></td>\n<td><code>attribution_engine.py</code></td>\n<td>Splits current AQI into Traffic, Construction, Industrial, Biomass Burning and Weather Amplification percentages using OpenStreetMap road data, weather telemetry and fire-hotspot data, with a confidence score and the list of data sources actually used.</td>\n</tr>\n<tr>\n<td><strong>Intervention ranking</strong></td>\n<td><code>intervention_agent.py</code></td>\n<td>Scores 8 predefined interventions with a weighted multi-criteria formula (AQI impact 0.40, cost 0.20, feasibility 0.20, confidence 0.10, speed 0.10), a simplified TOPSIS-style weighting.</td>\n</tr>\n<tr>\n<td><strong>Scenario simulation (\"digital twin\")</strong></td>\n<td><code>intervention_agent.py</code></td>\n<td><code>simulate_scenario()</code> / <code>compare_scenarios()</code> apply the overlap-compounding rule above to one or more selected interventions.</td>\n</tr>\n<tr>\n<td><strong>Health &amp; economic impact</strong></td>\n<td><code>health_economic_engine.py</code></td>\n<td>Converts a predicted PM2.5 reduction into estimated admissions avoided, DALYs and cost savings. Deterministic, with its assumptions listed in the output.</td>\n</tr>\n<tr>\n<td><strong>Mayor Copilot</strong></td>\n<td><code>mayor_copilot.py</code></td>\n<td>Deterministic keyword-based intent matching over the outputs above. No LLM.</td>\n</tr>\n<tr>\n<td><strong>Dashboard</strong></td>\n<td><code>app.py</code></td>\n<td>Streamlit UI with Folium maps and Plotly charts, an hourly AQI projection from an XGBoost model trained on synthetic data (see limitations), and route planning that uses a PPO agent if a trained model is present, falling back to Dijkstra otherwise.</td>\n</tr>\n</tbody></table>"
+        },
+        {
+          "id": "readme-system-architecture",
+          "title": "System architecture",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme-system-architecture\">System architecture</h2>\n<pre><code class=\"language-mermaid\">flowchart TD\n    subgraph Data[\"Data sources\"]\n        W[WAQI sensors]\n        M[Open-Meteo weather]\n        F[NASA FIRMS fires]\n        O[OpenStreetMap roads]\n    end\n    W -. no token .-&gt; SIM[Simulated sensor data]\n    F -. no key .-&gt; HEU[Weather-based fire heuristic]\n    Data --&gt; A[\"Source attribution&lt;br/&gt;&lt;code&gt;attribute()&lt;/code&gt;&lt;br/&gt;% by traffic, construction,&lt;br/&gt;industry, biomass, weather\"]\n    SIM --&gt; A\n    HEU --&gt; A\n    A --&gt; R[\"Intervention ranking&lt;br/&gt;&lt;code&gt;generate()&lt;/code&gt;&lt;br/&gt;8 interventions, weighted score\"]\n    R --&gt; T[\"Scenario simulation&lt;br/&gt;&lt;code&gt;simulate_scenario()&lt;/code&gt;&lt;br/&gt;effects compound, capped at 85%\"]\n    T --&gt; H[\"Health and economic impact&lt;br/&gt;&lt;code&gt;assess()&lt;/code&gt;&lt;br/&gt;admissions, DALYs, savings\"]\n    A &amp; R &amp; T &amp; H --&gt; C[\"Mayor Copilot&lt;br/&gt;&lt;code&gt;ask()&lt;/code&gt;&lt;br/&gt;rule-based answers, no LLM\"]\n    C --&gt; UI[Streamlit command center]\n</code></pre>\n<p>Each stage is a plain Python module with its own tests, and every number the\nCopilot reports comes from an earlier stage rather than a language model.\nDotted lines are the fallbacks used when a token or key is not configured.</p>\n<p>See <a href=\"https://github.com/Soham-o/AirTwin-X/blob/main/Architecture.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Architecture.md</a> for each module's inputs, outputs and\ndesign decisions.</p>"
+        },
+        {
+          "id": "readme-quick-start",
+          "title": "Quick Start",
+          "kind": "setup",
+          "html": "<h2 id=\"readme-quick-start\">Quick Start</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/Soham-o/AirTwin-X.git\ncd AirTwin-X\npython -m venv venv\nsource venv/bin/activate        # Windows: venv\\Scripts\\activate\npip install -r requirements.txt\nstreamlit run app.py\n</code></pre>\n<p>Then open <code>http://localhost:8501</code>. New Delhi is selected by default.</p>\n<p><code>requirements.txt</code> includes <code>torch</code> and <code>stable-baselines3</code>, so the first\ninstall is large. A <code>.devcontainer/</code> configuration is also included.</p>"
+        },
+        {
+          "id": "readme-data-sources-and-configuration",
+          "title": "Data sources and configuration",
+          "kind": "setup",
+          "html": "<h2 id=\"readme-data-sources-and-configuration\">Data sources and configuration</h2>\n<table>\n<thead>\n<tr>\n<th>Source</th>\n<th>Used for</th>\n<th>Configuration</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><a href=\"https://aqicn.org/api/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">WAQI</a></td>\n<td>Live sensor readings</td>\n<td>Optional <code>WAQI_TOKEN</code> in <code>.streamlit/secrets.toml</code> or as an environment variable. Without it, the app shows a warning and uses <strong>simulated</strong> sensor data.</td>\n</tr>\n<tr>\n<td><a href=\"https://open-meteo.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Open-Meteo</a></td>\n<td>Wind and temperature</td>\n<td>No key needed.</td>\n</tr>\n<tr>\n<td>OpenStreetMap (via <code>osmnx</code>)</td>\n<td>Road network for traffic attribution</td>\n<td>No key needed. <code>new_delhi_5km.graphml</code> is included as a local graph.</td>\n</tr>\n<tr>\n<td><a href=\"https://firms.modaps.eosdis.nasa.gov/api/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NASA FIRMS</a></td>\n<td>Fire hotspots for biomass attribution</td>\n<td>Optional <code>NASA_FIRMS_MAP_KEY</code> environment variable. Without a key, the app skips the request and uses the Open-Meteo-based heuristic.</td>\n</tr>\n</tbody></table>\n<p>Never commit <code>.streamlit/secrets.toml</code> or real API tokens.</p>"
+        },
+        {
+          "id": "readme-testing",
+          "title": "Testing",
+          "kind": "other",
+          "html": "<h2 id=\"readme-testing\">Testing</h2>\n<pre><code class=\"language-bash\">pip install pytest numpy requests\npython -m pytest test_airtwin.py -q\n</code></pre>\n<p><code>test_airtwin.py</code> contains 29 tests covering determinism, intervention\nranking weights, overlap-compounding bounds, CPCB AQI→PM2.5 breakpoints,\nhealth-impact monotonicity, Copilot intent routing, and missing/configured\nNASA FIRMS key behavior. They need only <code>numpy</code>, <code>requests</code> and <code>pytest</code>, not\nthe full Streamlit stack. GitHub Actions runs these regression tests on\npull requests and pushes to <code>main</code> or <code>fix/**</code> branches.</p>"
+        },
+        {
+          "id": "readme-project-status",
+          "title": "Project status",
+          "kind": "other",
+          "html": "<h2 id=\"readme-project-status\">Project status</h2>\n<p><strong>Prototype.</strong> The pipeline modules and their tests run locally. Outputs are\nmodel-based estimates for exploring policy options, not validated forecasts,\nand should not be used for real public-health or budget decisions.</p>"
+        },
+        {
+          "id": "readme-known-limitations",
+          "title": "Known limitations",
+          "kind": "other",
+          "html": "<h2 id=\"readme-known-limitations\">Known limitations</h2>\n<ul>\n<li><strong>NASA FIRMS data is optional.</strong> Set <code>NASA_FIRMS_MAP_KEY</code> in the environment to enable fire-hotspot requests. Without it, the app skips the request and uses the documented Open-Meteo-based heuristic. Do not commit the key.</li>\n<li><strong>No trained RL model is committed.</strong> <code>app.py</code> looks for a\n<code>clean_air_agent</code> PPO model; without it, routing uses Dijkstra. Train one\nwith <code>train_agent.py</code>.</li>\n<li><strong>The XGBoost AQI projection is trained on synthetic data</strong> generated in\n<code>app.py</code> (daily cycles plus noise around the current reading), not on\nhistorical sensor data.</li>\n<li><strong>Attribution weights and intervention effectiveness values are fixed\nassumptions</strong> in the source code, not values fitted to measured data.</li>\n<li><strong>Fallbacks are silent in places.</strong> If WAQI is unavailable the dashboard\nswitches to simulated data with a warning; check the data-source labels in\nthe UI before trusting a number.</li>\n<li>No license file has been added yet.</li>\n</ul>"
+        },
+        {
+          "id": "readme-documentation",
+          "title": "Documentation",
+          "kind": "other",
+          "html": "<h2 id=\"readme-documentation\">Documentation</h2>\n<ul>\n<li><a href=\"https://github.com/Soham-o/AirTwin-X/blob/main/Architecture.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Architecture.md</a> — module responsibilities and design decisions</li>\n<li><a href=\"https://github.com/Soham-o/AirTwin-X/blob/main/Demo%20guide.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Demo guide.md</a> — a five-minute walkthrough of the interface</li>\n</ul>"
+        }
+      ],
+      "images": [],
+      "firstImage": null,
+      "demoLinks": [],
+      "highlights": {
+        "overview": "A Streamlit decision-support prototype for urban air-quality interventions",
+        "problem": "",
+        "features": []
+      },
+      "excerpt": "A Streamlit decision-support prototype for urban air-quality interventions",
+      "truncated": false
+    },
+    "languages": {
+      "Python": 272903
+    },
+    "tech": [
+      {
+        "name": "Python",
+        "source": "language"
+      },
+      {
+        "name": "Streamlit",
+        "source": "manifest"
+      },
+      {
+        "name": "Requests",
+        "source": "manifest"
+      },
+      {
+        "name": "Pandas",
+        "source": "manifest"
+      },
+      {
+        "name": "NumPy",
+        "source": "manifest"
+      },
+      {
+        "name": "Plotly",
+        "source": "manifest"
+      },
+      {
+        "name": "SciPy",
+        "source": "manifest"
+      },
+      {
+        "name": "XGBoost",
+        "source": "manifest"
+      },
+      {
+        "name": "scikit-learn",
+        "source": "manifest"
+      },
+      {
+        "name": "PyTorch",
+        "source": "manifest"
+      },
+      {
+        "name": "GitHub Actions",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}

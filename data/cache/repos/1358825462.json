@@ -1,0 +1,175 @@
+{
+  "id": 1358825462,
+  "name": "cursor_bite",
+  "processorVersion": 3,
+  "pushedAt": "2026-10-10T05:26:20Z",
+  "updatedAt": "2026-10-10T05:26:24Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "7fce88bd1dbee4ba5727237631228680bc15c516",
+      "htmlUrl": "https://github.com/Soham-o/cursor_bite/blob/main/README.md",
+      "title": "Cursor Bite",
+      "overviewHtml": "<p><strong>Intelligence at your cursor.</strong></p>\n<p align=\"center\">\n  <a href=\"https://github.com/Soham-o/cursor_bite/stargazers\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/github/stars/Soham-o/cursor_bite?style=flat-square\" alt=\"GitHub stars\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://github.com/Soham-o/cursor_bite/issues\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/github/issues/Soham-o/cursor_bite?style=flat-square\" alt=\"GitHub issues\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/github/license/Soham-o/cursor_bite?style=flat-square\" alt=\"MIT License\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <img src=\"https://img.shields.io/badge/Python-3.11%2B-blue?style=flat-square\" alt=\"Python 3.11+\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/Platform-Windows-lightgrey?style=flat-square\" alt=\"Windows\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/AI-Local--First-success?style=flat-square\" alt=\"Local first AI\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</p>\n\n<p>A privacy-first, local-first Windows assistant that appears around your\nmouse cursor when you press a hotkey — translate, explain, summarize,\nrewrite, ask AI, search, or pull text off the screen, without leaving\nwhatever you're already looking at.</p>\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png\" width=\"260\" alt=\"Cursor Bite's radial menu: eight numbered sectors around a central hub, with the Translate sector highlighted\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</p>\n\n<p align=\"center\"><sub>The radial menu widget from <code>ui/radial_menu.py</code>, rendered\noffscreen by <code>scripts/render_radial_preview.py</code>. Fonts may differ\nslightly from Windows.</sub></p>\n\n<blockquote>\n<p><strong>Demo GIF:</strong> not yet captured. A recording of the full flow (hotkey →\nmenu → result panel) needs a Windows machine. The fastest way to see it is\nto run it: <a href=\"#readme-quick-start\">Quick Start</a> takes about two minutes on a machine\nthat already has Python.</p>\n</blockquote>",
+      "sections": [
+        {
+          "id": "readme-why",
+          "title": "Why",
+          "kind": "problem",
+          "html": "<h2 id=\"readme-why\">Why</h2>\n<p>Every one of these actions already exists somewhere — a translator site, a\nchat app, a search bar. What doesn't exist is one of them appearing exactly\nwhere your mouse already is, the instant you ask for it, without a tab\nswitch, a paste, or an account. Select some text — a browser, a PDF, an IDE,\na chat window — press <code>Ctrl+Alt+B</code>, and a menu appears at your cursor. Pick\nan action, and the answer opens right there.</p>"
+        },
+        {
+          "id": "readme-quick-start",
+          "title": "Quick Start",
+          "kind": "setup",
+          "html": "<h2 id=\"readme-quick-start\">Quick Start</h2>\n<pre><code class=\"language-powershell\">python -m venv venv\nvenv\\Scripts\\activate\npip install -r requirements-core.txt\npython main.py\n</code></pre>\n<p>Press <code>Ctrl+Alt+B</code> anywhere. That's the whole app — no account, no setup\nwizard, no window to find. See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/SETUP_GUIDE.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">SETUP_GUIDE.md</a> for a full\nfresh-machine walkthrough and how to add the optional engines (translation,\nAI, OCR) behind each action.</p>"
+        },
+        {
+          "id": "readme-features",
+          "title": "Features",
+          "kind": "features",
+          "html": "<h2 id=\"readme-features\">Features</h2>\n<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody><tr>\n<td>🌐 <strong>Translate</strong></td>\n<td>Offline, via Argos Translate</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>💡 <strong>Explain</strong></td>\n<td>Local AI, via Ollama</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>📑 <strong>Summarize</strong></td>\n<td>Local AI, via Ollama</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>✍️ <strong>Rewrite</strong></td>\n<td>Local AI, via Ollama</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>🤖 <strong>Ask AI</strong></td>\n<td>Local AI, contextual or freeform</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>📷 <strong>Capture Text (OCR)</strong></td>\n<td>Local, via Tesseract</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>🔍 <strong>Search Web</strong></td>\n<td>DuckDuckGo — the one action that leaves your device</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>🔊 <strong>Read Aloud</strong></td>\n<td>—</td>\n<td>Planned, not built</td>\n</tr>\n</tbody></table>\n<p>Also working: a customizable global hotkey (native <code>RegisterHotKey</code> /\n<code>WM_HOTKEY</code>, no keyboard hooks), a cursor-anchored radial menu with full\nmouse and keyboard navigation, multi-monitor and DPI-aware positioning,\nclipboard-safe selection capture, a real Settings/Privacy/Check-Components\ntray UI, and graceful degradation — every optional engine above is\nindependently optional, and a fresh install with none of them present still\nstarts and runs, disabling exactly the one action each is missing.</p>\n<p><strong>At startup, Cursor Bite performs zero network requests and initializes\nzero optional components.</strong> Nothing is imported, probed, or connected to\nuntil an action needs it.</p>"
+        },
+        {
+          "id": "readme-keyboard-reference",
+          "title": "Keyboard Reference",
+          "kind": "other",
+          "html": "<h2 id=\"readme-keyboard-reference\">Keyboard Reference</h2>\n<p>Once the radial menu is open:</p>\n<table>\n<thead>\n<tr>\n<th>Key</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>Ctrl+Alt+B</code></td>\n<td>Open Cursor Bite</td>\n</tr>\n<tr>\n<td><code>1</code></td>\n<td>Translate</td>\n</tr>\n<tr>\n<td><code>2</code></td>\n<td>Summarize</td>\n</tr>\n<tr>\n<td><code>3</code></td>\n<td>Explain</td>\n</tr>\n<tr>\n<td><code>4</code></td>\n<td>Search Web</td>\n</tr>\n<tr>\n<td><code>5</code></td>\n<td>Settings</td>\n</tr>\n<tr>\n<td><code>6</code></td>\n<td>Capture OCR</td>\n</tr>\n<tr>\n<td><code>7</code></td>\n<td>Rewrite</td>\n</tr>\n<tr>\n<td><code>8</code></td>\n<td>Ask AI</td>\n</tr>\n<tr>\n<td>Arrow keys</td>\n<td>Move between sectors</td>\n</tr>\n<tr>\n<td><code>Enter</code> / <code>Space</code></td>\n<td>Activate the highlighted sector</td>\n</tr>\n<tr>\n<td><code>Esc</code></td>\n<td>Close / cancel</td>\n</tr>\n</tbody></table>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/HOW_TO_USE.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">HOW_TO_USE.md</a> for the full walkthrough.</p>"
+        },
+        {
+          "id": "readme-privacy-model",
+          "title": "Privacy Model",
+          "kind": "other",
+          "html": "<h2 id=\"readme-privacy-model\">Privacy Model</h2>\n<pre><code class=\"language-mermaid\">flowchart TD\n    C[Selected text or screen capture] --&gt; G[Privacy gateway scans for emails, API keys,&lt;br/&gt;tokens, card numbers, private IPs, credential pairs]\n    G --&gt; Q{Does the action&lt;br/&gt;leave the device?}\n    Q --&gt;|\"No: Translate, Explain, Summarize,&lt;br/&gt;Rewrite, Ask AI, OCR\"| L[Processed locally,&lt;br/&gt;sensitive or not]\n    Q --&gt;|Yes: Search Web| E{Sensitive&lt;br/&gt;data found?}\n    E --&gt;|No| S[Sent to DuckDuckGo]\n    E --&gt;|Yes| B[Blocked, or ask consent&lt;br/&gt;with a redacted preview]\n</code></pre>\n<ul>\n<li><strong>Local first.</strong> Translation, AI, and OCR all run on your machine.\nSearch is the only action that sends anything off it, and the app tells\nyou before it does.</li>\n<li><strong>Sensitive data never leaves the device unintentionally.</strong> Detected\npatterns never block <em>local</em> processing — the text is already on your\nmachine, and blocking it there would make the app useless for the\ndocuments you most want help with. They <em>do</em> block, or require explicit\nconsent for, anything that would send them externally.</li>\n<li><strong>Your clipboard is yours.</strong> Snapshotted and restored on every path,\nincluding the ones where capture failed or was cancelled.</li>\n<li><strong>No telemetry, no keylogging, no continuous screen or clipboard\nmonitoring.</strong> Capture only happens when you explicitly invoke it.</li>\n<li><strong>No user content in the logs</strong> — action names, durations, and error\n<em>types</em>, never your text, prompts, translations, or search queries.</li>\n</ul>\n<p>The detector is regex-based and documented as a safety net, not a\nguarantee — see <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/SECURITY.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">SECURITY.md</a> for its threat model and known\nlimitations.</p>"
+        },
+        {
+          "id": "readme-architecture",
+          "title": "Architecture",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme-architecture\">Architecture</h2>\n<pre><code class=\"language-mermaid\">sequenceDiagram\n    actor U as You\n    participant H as Hotkey listener&lt;br/&gt;(RegisterHotKey)\n    participant C as Controller&lt;br/&gt;(UI thread)\n    participant W as Worker threads&lt;br/&gt;(capture, pipeline)\n    participant G as Privacy gateway\n    U-&gt;&gt;H: Ctrl+Alt+B\n    H-&gt;&gt;C: show radial menu at cursor now\n    C-)W: capture selection in parallel\n    U-&gt;&gt;C: pick an action\n    C-&gt;&gt;W: prepare()\n    W-&gt;&gt;G: evaluate(text, requires_external)\n    G--&gt;&gt;W: allow / needs consent / block\n    W--&gt;&gt;C: prepared request\n    opt needs consent (Search Web with sensitive text)\n        C-&gt;&gt;U: consent dialog with redacted preview\n        U--&gt;&gt;C: approve or decline\n    end\n    C-&gt;&gt;W: execute()\n    W--&gt;&gt;C: result\n    C-&gt;&gt;U: result panel near the cursor\n</code></pre>\n<p>Ports-and-adapters layering: <code>ui/</code> and <code>app/</code> depend on <code>domain/</code>\ninterfaces, <code>infrastructure/</code> implements them, and <code>domain/</code> depends on\nnothing else. Providers resolve lazily and fail safe, which is what makes\nthe startup and degradation guarantees above hold — see\n<code>app/pipeline.py</code>'s <code>_load()</code> for the pattern.</p>\n<p>The pipeline is split into <code>prepare()</code> (extract + privacy decision) and\n<code>execute()</code> (do the work) specifically so a consent dialog has a seam to\nsit in: it runs on the UI thread between the two phases, with the actual\nwork on either side running on a worker thread. Decline, and nothing had\nrun yet — nothing was sent.</p>\n<pre><code>cursor_bite/\n├── app/              orchestration: controller, pipeline, event bus\n├── domain/           interfaces + pure data, no infrastructure imports\n├── infrastructure/\n│   ├── ai/           Ollama\n│   ├── ocr/          Tesseract\n│   ├── os/           hotkey, cursor, clipboard, selection, screen capture\n│   ├── privacy/      sensitive-data detector, policy engine, gateway\n│   ├── search/       DuckDuckGo\n│   ├── storage/      cache (in-memory); an unused-by-default SQLite option\n│   └── translation/  Argos Translate\n├── ui/               PyQt6: radial menu, result panel, dialogs, tray\n├── config/           defaults + config.json loader\n├── utils/            logging, the run_async threading helper\n├── tests/            unit / integration / security\n├── scripts/          dev utilities (README preview render)\n└── design/           a browser-based UI/UX prototype — not the shipped app,\n                       see design/web-prototype/README.md\n</code></pre>"
+        },
+        {
+          "id": "readme-technology",
+          "title": "Technology",
+          "kind": "stack",
+          "html": "<h2 id=\"readme-technology\">Technology</h2>\n<p>Python 3.11+ · PyQt6 · pywin32 · Argos Translate (offline) · Ollama (local)\n· Tesseract (offline) · DuckDuckGo (no API key). Every dependency is free —\nno paid API, no required account, no mandatory cloud service.</p>"
+        },
+        {
+          "id": "readme-current-status",
+          "title": "Current Status",
+          "kind": "other",
+          "html": "<h2 id=\"readme-current-status\">Current Status</h2>\n<p><strong>Working today</strong>, exercised by the test suite and by running the app:\nhotkey, radial menu, tray, privacy gateway, all seven actions listed above,\nSettings/Privacy/Check-Components windows, clipboard-safe capture,\ngraceful degradation of every optional engine.</p>\n<p><strong>Experimental:</strong> DuckDuckGo search depends on an HTML endpoint DuckDuckGo\ndoesn't officially support for automation; it can return a bot-check page\nunder load, which is reported plainly rather than silently retried forever.\nLanguage auto-detection for translation uses a three-tier fallback (Unicode\nscript → statistical detection → a weak last-resort probe) that is\ndeliberately conservative about guessing a language with no real evidence —\nsee <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/CHANGELOG.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CHANGELOG.md</a> for a bug this caught.</p>\n<p><strong>Planned, not built:</strong> Read Aloud (TTS) — the interface for it\n(<code>TTSProvider</code> in <code>domain/interfaces.py</code>) exists, nothing implements it yet.\nAn installer/MSI beyond the current PyInstaller build. A packaged\n<code>.exe</code> verified end-to-end (see <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/PACKAGING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">PACKAGING.md</a> for exactly\nwhat has and hasn't been runtime-checked).</p>"
+        },
+        {
+          "id": "readme-roadmap",
+          "title": "Roadmap",
+          "kind": "meta",
+          "html": "<h2 id=\"readme-roadmap\">Roadmap</h2>\n<ul>\n<li>Read Aloud via a local TTS engine.</li>\n<li>An MSI/installer instead of a copy-the-folder EXE build.</li>\n<li>Revisit the radial menu against a compact command-bar alternative with\nreal usage data — the interaction model isn't assumed to be final.</li>\n</ul>"
+        },
+        {
+          "id": "readme-limitations",
+          "title": "Limitations",
+          "kind": "other",
+          "html": "<h2 id=\"readme-limitations\">Limitations</h2>\n<ul>\n<li>Windows only, by design.</li>\n<li>Selection capture uses a simulated Ctrl+C plus a clipboard snapshot —\nthere is no universal cross-application \"get selection\" API on Windows\nwithout deeper accessibility integration. This works in the overwhelming\nmajority of apps; a handful of unusual ones (custom-rendered canvases with\nno text layer, some elevated/protected windows) won't produce a selection\nto copy. The app tells you plainly when nothing was captured rather than\nguessing.</li>\n<li>Web search quality is bounded by an unofficial HTML endpoint — see\nCurrent Status above.</li>\n<li>The sensitive-data detector is pattern-based, not exhaustive — see\n<a href=\"https://github.com/Soham-o/cursor_bite/blob/main/SECURITY.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">SECURITY.md</a>.</li>\n</ul>"
+        },
+        {
+          "id": "readme-development",
+          "title": "Development",
+          "kind": "other",
+          "html": "<h2 id=\"readme-development\">Development</h2>\n<pre><code class=\"language-powershell\">pip install -r requirements.txt\npip install pytest ruff\npython -m pytest tests/ -q\nruff check .\n</code></pre>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/CONTRIBUTING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CONTRIBUTING.md</a> for the architectural conventions\n(lazy/fail-safe providers, no UI-thread blocking, no user content in logs)\nthis project holds itself to.</p>"
+        },
+        {
+          "id": "readme-testing",
+          "title": "Testing",
+          "kind": "other",
+          "html": "<h2 id=\"readme-testing\">Testing</h2>\n<pre><code class=\"language-powershell\">python -m pytest tests/ -q\n</code></pre>\n<p>306 tests across privacy detection and policy, every pipeline action, the\nclipboard save/restore invariant, selection-capture concurrency, the\nhotkey string parser, multi-monitor cursor geometry, search rate limiting\nand fallback tiers, graceful degradation when packages are missing, the\ntwo-phase consent seam, and radial-menu keyboard/mouse navigation. Runs\nheadless — no display, network, Ollama, Tesseract, or Argos packs required\n(one test additionally exercises a real installed Argos language pack when\none happens to be present, and degrades to its \"not installed\" branch\notherwise).</p>"
+        },
+        {
+          "id": "readme-packaging",
+          "title": "Packaging",
+          "kind": "other",
+          "html": "<h2 id=\"readme-packaging\">Packaging</h2>\n<pre><code class=\"language-powershell\">pip install pyinstaller\npyinstaller cursor_bite.spec\n</code></pre>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/PACKAGING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">PACKAGING.md</a> for what's bundled, what still needs to be\ninstalled separately on the target machine, and what has and hasn't been\nruntime-verified about the resulting build.</p>"
+        },
+        {
+          "id": "readme-contributing",
+          "title": "Contributing",
+          "kind": "meta",
+          "html": "<h2 id=\"readme-contributing\">Contributing</h2>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/CONTRIBUTING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CONTRIBUTING.md</a>. Please also read\n<a href=\"https://github.com/Soham-o/cursor_bite/blob/main/CODE_OF_CONDUCT.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CODE_OF_CONDUCT.md</a>.</p>"
+        },
+        {
+          "id": "readme-security",
+          "title": "Security",
+          "kind": "other",
+          "html": "<h2 id=\"readme-security\">Security</h2>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/SECURITY.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">SECURITY.md</a> for how to report a vulnerability. The\nsensitive-data detector is regex-based and documented as a safety net, not\na guarantee — see <code>infrastructure/privacy/detector.py</code> for exactly which\npatterns it covers.</p>"
+        },
+        {
+          "id": "readme-important-product-principle",
+          "title": "Important product principle",
+          "kind": "other",
+          "html": "<h2 id=\"readme-important-product-principle\">Important product principle</h2>\n<p>This project stays deliberately small. Before adding anything, ask whether\nit improves <em>context</em>, <em>intelligence</em>, <em>speed</em>, <em>privacy</em>, or <em>reliability</em>.\nIf not, it probably doesn't belong — a focused project is worth more than a\nlarge one.</p>"
+        },
+        {
+          "id": "readme-license",
+          "title": "License",
+          "kind": "license",
+          "html": "<h2 id=\"readme-license\">License</h2>\n<p>MIT — see <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">LICENSE</a>.</p>\n<hr />\n<p align=\"center\">\n  <strong>Built by Soham Panda</strong><br />\n  <sub>AI engineering • intelligent software • privacy-first systems</sub>\n</p>"
+        }
+      ],
+      "images": [
+        "https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png"
+      ],
+      "firstImage": "https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png",
+      "demoLinks": [],
+      "highlights": {
+        "overview": "Intelligence at your cursor.",
+        "problem": "Every one of these actions already exists somewhere — a translator site, a chat app, a search bar. What doesn't exist is one of them appearing exactly where your mouse already is, the instant you ask for it, without a tab switch, a paste, or an account. Select some text — a browser, a PDF, an IDE, a chat window…",
+        "features": []
+      },
+      "excerpt": "Intelligence at your cursor.",
+      "truncated": false
+    },
+    "languages": {
+      "Python": 648006,
+      "JavaScript": 104324,
+      "CSS": 41515,
+      "HTML": 17650
+    },
+    "tech": [
+      {
+        "name": "Python",
+        "source": "language"
+      },
+      {
+        "name": "JavaScript",
+        "source": "language"
+      },
+      {
+        "name": "CSS",
+        "source": "language"
+      },
+      {
+        "name": "HTML",
+        "source": "language"
+      },
+      {
+        "name": "Pillow",
+        "source": "manifest"
+      },
+      {
+        "name": "Requests",
+        "source": "manifest"
+      },
+      {
+        "name": "BeautifulSoup",
+        "source": "manifest"
+      },
+      {
+        "name": "GitHub Actions",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}

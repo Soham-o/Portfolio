@@ -1,0 +1,1852 @@
+{
+  "generatedAt": "2026-10-11T03:10:41.457Z",
+  "username": "Soham-o",
+  "projects": [
+    {
+      "id": 1275129730,
+      "slug": "earthshare",
+      "name": "EarthShare",
+      "displayName": "EarthShare",
+      "fullName": "Soham-o/EarthShare",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/EarthShare",
+      "description": "",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 89251,
+          "pct": 51.3
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 79475,
+          "pct": 45.7
+        },
+        {
+          "name": "CSS",
+          "bytes": 4605,
+          "pct": 2.6
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 605,
+          "pct": 0.3
+        }
+      ],
+      "tech": [
+        {
+          "name": "Python",
+          "source": "language"
+        },
+        {
+          "name": "TypeScript",
+          "source": "language"
+        },
+        {
+          "name": "CSS",
+          "source": "language"
+        },
+        {
+          "name": "GitHub Actions",
+          "source": "file"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-06-20T09:37:21Z",
+      "updatedAt": "2026-10-10T05:26:31Z",
+      "pushedAt": "2026-10-10T05:26:26Z",
+      "homepage": "https://earth-share.vercel.app/",
+      "demo": {
+        "url": "https://earth-share.vercel.app/",
+        "source": "homepage"
+      },
+      "image": {
+        "url": "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/dashboard.png",
+        "source": "readme"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/EarthShare/blob/main/README.md",
+        "overviewHtml": "<div align=\"center\">\n\n<p><strong>Carbon ownership, not carbon awareness.</strong></p>\n<p>A full-stack carbon-footprint prototype with a deterministic accounting engine, a FastAPI backend and a Next.js frontend. The repository includes security and accessibility tests; this is a student project, not a security-audited production service.</p>\n<p><img src=\"https://img.shields.io/badge/status-prototype-orange\" alt=\"Status: prototype\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/backend-FastAPI-009688\" alt=\"Backend: FastAPI\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/frontend-Next.js-black\" alt=\"Frontend: Next.js\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<a href=\"https://github.com/Soham-o/EarthShare/actions/workflows/ci.yml\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://github.com/Soham-o/EarthShare/actions/workflows/ci.yml/badge.svg\" alt=\"CI\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a></p>\n<br />\n\n<img src=\"https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/dashboard.png\" width=\"860\" alt=\"EarthShare dashboard: daily check-in, a carbon score ring at 565, monthly total of 520 kg CO2, dividend, reduction potential and yearly projections\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n\n<p><sub>The dashboard screen. More screens in the <a href=\"#readme-8-product-walkthrough\">product walkthrough</a>.</sub></p>\n</div>\n\n<hr />",
+        "sections": [
+          {
+            "id": "readme-project-summary",
+            "title": "Project summary",
+            "kind": "about",
+            "html": "<h2 id=\"readme-project-summary\">Project summary</h2>\n<blockquote>\n<p><strong>What it is:</strong> EarthShare is a carbon-footprint prototype. Users record everyday activities, receive deterministic emission estimates, view insights, and track progress by completing suggested climate actions.</p>\n<p><strong>Why it's different:</strong> Most carbon apps focus on <em>awareness</em> (charts, streaks, badges). EarthShare focuses on <em>ownership</em> (account, measure, neutralize). The behavioral model is the product.</p>\n<p><strong>Engineering:</strong> The backend includes JWT authentication, rate limiting, configurable CORS middleware, security headers, and request-schema validation. Carbon calculations are deterministic and do not use an LLM. SQLite is the local default; PostgreSQL migration and production deployment have not been verified.</p>\n</blockquote>\n<hr />"
+          },
+          {
+            "id": "readme-table-of-contents",
+            "title": "Table of Contents",
+            "kind": "other",
+            "html": "<h2 id=\"readme-table-of-contents\">Table of Contents</h2>\n<ul>\n<li><a href=\"#readme-local-setup\">Local setup</a></li>\n</ul>\n<ol>\n<li><a href=\"#readme-1-problem-statement-alignment\">Problem Statement Alignment</a></li>\n<li><a href=\"#readme-2-technical-excellence\">Technical Excellence</a></li>\n<li><a href=\"#readme-3-security\">Security</a></li>\n<li><a href=\"#readme-4-testing\">Testing</a></li>\n<li><a href=\"#readme-5-accessibility\">Accessibility</a></li>\n<li><a href=\"#readme-6-efficiency\">Efficiency</a></li>\n<li><a href=\"#readme-7-why-we-chose-this-architecture\">Why We Chose This Architecture</a></li>\n<li><a href=\"#readme-8-product-walkthrough\">Product Walkthrough</a></li>\n<li><a href=\"#readme-9-architecture-diagram\">Architecture Diagram</a></li>\n<li><a href=\"#readme-10-repository-structure\">Repository Structure</a></li>\n<li><a href=\"#readme-11-what-makes-earthshare-different\">What Makes EarthShare Different</a></li>\n<li><a href=\"#readme-12-evidence-of-engineering-quality\">Evidence of Engineering Quality</a></li>\n</ol>"
+          },
+          {
+            "id": "readme-local-setup",
+            "title": "Local setup",
+            "kind": "setup",
+            "html": "<h2 id=\"readme-local-setup\">Local setup</h2>\n<h3 id=\"readme-prerequisites\">Prerequisites</h3>\n<ul>\n<li>Python 3.11 or another version supported by the installed backend dependencies.</li>\n<li>Node.js and npm.</li>\n<li>No Gemini API key is required for local use; without one, insights use the rule-based fallback.</li>\n</ul>\n<h3 id=\"readme-backend\">Backend</h3>\n<p>From the repository root:</p>\n<pre><code class=\"language-bash\">git clone https://github.com/Soham-o/EarthShare.git\ncd EarthShare\npython -m venv backend/.venv\n# Activate the environment:\n# macOS/Linux: source backend/.venv/bin/activate\n# Windows PowerShell: .\\backend\\.venv\\Scripts\\Activate.ps1\npython -m pip install -r backend/requirements.txt\n</code></pre>\n<p>Copy <code>backend/.env.example</code> to <code>backend/.env</code>, then start the API:</p>\n<pre><code class=\"language-bash\"># macOS/Linux\ncp backend/.env.example backend/.env\n# Windows PowerShell: Copy-Item backend/.env.example backend/.env\n\ncd backend\nuvicorn app.main:app --reload\n</code></pre>\n<p>The API defaults to local SQLite and is available at <code>http://localhost:8000</code>.</p>\n<h3 id=\"readme-frontend\">Frontend</h3>\n<p>In a second terminal from the repository root:</p>\n<pre><code class=\"language-bash\">cd frontend\nnpm ci\n</code></pre>\n<p>Copy <code>frontend/.env.example</code> to <code>.env.local</code> in the <code>frontend/</code> directory, then run:</p>\n<pre><code class=\"language-bash\"># macOS/Linux\ncp .env.example .env.local\n# Windows PowerShell: Copy-Item .env.example .env.local\n\nnpm run dev\n</code></pre>\n<p>Open <code>http://localhost:3000</code>. The frontend's default API URL is <code>http://localhost:8000</code>. Never use the example JWT secret in a production deployment; configure a unique secret and explicit trusted CORS origins.</p>\n<h3 id=\"readme-tests\">Tests</h3>\n<pre><code class=\"language-bash\"># Backend (from repository root, with the Python environment active)\ncd backend\npython -m pytest -q\n\n# Frontend (in a second terminal, from repository root)\ncd frontend\nnpm ci\nnpm test\nnpm run build\n</code></pre>\n<p><a href=\"https://github.com/Soham-o/EarthShare/actions\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">GitHub Actions</a> runs backend tests, frontend tests and a frontend build for pull requests to <code>main</code> and pushes to <code>main</code> or <code>fix/**</code>.</p>\n<hr />"
+          },
+          {
+            "id": "readme-1-problem-statement-alignment",
+            "title": "1. Problem Statement Alignment",
+            "kind": "problem",
+            "html": "<h2 id=\"readme-1-problem-statement-alignment\">1. Problem Statement Alignment</h2>\n<h3 id=\"readme-why-the-challenge-exists\">Why the challenge exists</h3>\n<p>Individual emissions are a meaningful slice of the climate problem, but they are largely invisible to the people producing them. People want to act, but they have no reliable, low-friction way to (a) measure their impact, (b) understand what's driving it, and (c) actually neutralize it. The result is a gap between intent and action.</p>\n<h3 id=\"readme-why-existing-carbon-footprint-apps-fail\">Why existing carbon footprint apps fail</h3>\n<ul>\n<li><strong>Awareness without accountability.</strong> Most apps surface a number and a streak, then leave the user to feel bad. There's no mechanism to <em>close the loop</em>.</li>\n<li><strong>Opaque calculations.</strong> Estimates often come from black-box models or third-party APIs that can drift, fail, or change pricing — making results non-reproducible and hard to trust.</li>\n<li><strong>Heavy onboarding.</strong> Long questionnaires kill retention before the first insight.</li>\n<li><strong>Offsets are an afterthought.</strong> Where offsets exist, they are usually disconnected from the user's actual measured footprint.</li>\n</ul>\n<h3 id=\"readme-why-ownership-is-a-better-behavioral-model-than-awareness\">Why ownership is a better behavioral model than awareness</h3>\n<p>Awareness asks: <em>\"Do you know your number?\"</em>\nOwnership asks: <em>\"What are you going to do about your number?\"</em></p>\n<p>EarthShare is designed around a single behavioral loop:</p>\n<blockquote>\n<p><strong>Log → Measure → Understand → Reduce or Offset → Repeat.</strong></p>\n</blockquote>\n<p>Every screen, every endpoint, and every data model exists to shorten the distance between a logged activity and a neutralized footprint. Ownership is the product.</p>\n<hr />"
+          },
+          {
+            "id": "readme-2-technical-excellence",
+            "title": "2. Technical Excellence",
+            "kind": "stack",
+            "html": "<h2 id=\"readme-2-technical-excellence\">2. Technical Excellence</h2>\n<h3 id=\"readme-clean-architecture\">Clean Architecture</h3>\n<p>The backend is organized into clearly separated layers — <strong>routes → services → repositories → models</strong> — so that business rules don't depend on framework details and the framework doesn't leak into business rules. This means:</p>\n<ul>\n<li>Routes are thin: they parse, validate, and delegate.</li>\n<li>Services own business logic and orchestrate repositories.</li>\n<li>Repositories own persistence. Nothing else touches the ORM.</li>\n<li>Models are plain data definitions.</li>\n</ul>\n<h3 id=\"readme-service-layer-pattern\">Service Layer Pattern</h3>\n<p>All non-trivial logic — carbon calculation orchestration, user lifecycle, offset purchase flows, insight aggregation — lives in services. This keeps routes testable in isolation and lets us swap delivery mechanisms (HTTP today, a job runner tomorrow) without rewriting business logic.</p>\n<h3 id=\"readme-repository-pattern\">Repository Pattern</h3>\n<p>Every database read/write goes through a repository. Benefits:</p>\n<ul>\n<li>The database URL is centralized in configuration and SQLAlchemy sessions are injected; changing the database still requires a tested migration and deployment path.</li>\n<li>Tests can substitute in-memory or fake repositories trivially.</li>\n<li>Query logic is centralized and reviewable.</li>\n</ul>\n<h3 id=\"readme-dependency-separation\">Dependency Separation</h3>\n<ul>\n<li>The <strong>carbon engine</strong> depends on nothing but Python stdlib and a static emission-factor table.</li>\n<li><strong>Services</strong> depend on repository interfaces, not concrete DB classes.</li>\n<li><strong>Routes</strong> depend on services, not on the ORM.</li>\n<li>The <strong>frontend</strong> depends on a single typed API client, not on scattered <code>fetch</code> calls.</li>\n</ul>\n<p>This is what makes the codebase easy to read, easy to test, and easy to extend.</p>\n<h3 id=\"readme-api-design\">API Design</h3>\n<ul>\n<li>Versioned API routes cover authentication, onboarding, dashboard data, insights, actions, progress and daily check-ins under <code>/api/v1</code>.</li>\n<li>Consistent JSON envelopes for success and error responses.</li>\n<li>Structured HTTP responses use appropriate status codes for validation, authentication, missing resources, conflicts, rate limits and server errors.</li>\n<li>Stateless authentication via JWT bearer tokens.</li>\n</ul>\n<h3 id=\"readme-deterministic-carbon-engine\">Deterministic Carbon Engine</h3>\n<p>The core calculator is <strong>pure, deterministic, and offline</strong>. Given the same input, it always returns the same number. There is <strong>no LLM, no external API, and no randomness</strong> in the calculation path. This matters because:</p>\n<ul>\n<li>Results are <strong>reproducible</strong> — a judge can compute them by hand.</li>\n<li>Results are <strong>auditable</strong> — every factor is traceable to a source row.</li>\n<li>Results are <strong>fast</strong> — calculations are O(1) lookups + arithmetic.</li>\n<li>Results are <strong>offline-safe</strong> — no third-party outage can break the core product.</li>\n</ul>\n<p>LLMs, if used at all, are confined to <em>explanations and suggestions</em> on top of the deterministic number — never inside it.</p>\n<hr />"
+          },
+          {
+            "id": "readme-3-security",
+            "title": "3. Security",
+            "kind": "other",
+            "html": "<h2 id=\"readme-3-security\">3. Security</h2>\n<p>Security is implemented as defaults, not features.</p>\n<ul>\n<li><strong>JWT authentication.</strong> Stateless bearer tokens with signed payloads, expiry, and explicit verification on every protected route.</li>\n<li><strong>Password hashing.</strong> Passwords are stored using a modern adaptive hash (bcrypt-family) with per-user salts. Plaintext is never logged or returned.</li>\n<li><strong>Rate limiting.</strong> Sensitive endpoints (login, register, password actions) are rate-limited to blunt brute-force and credential-stuffing attempts.</li>\n<li><strong>CORS configuration.</strong> Allowed origins are loaded from the <code>CORS_ORIGINS</code> environment setting. Configure explicit trusted origins in deployments; the current configuration code does not reject a wildcard automatically.</li>\n<li><strong>Security headers.</strong> API responses include <code>Content-Security-Policy</code>, <code>X-Content-Type-Options</code>, <code>X-Frame-Options</code>, <code>Referrer-Policy</code> and <code>Permissions-Policy</code>. HSTS is enabled for production deployments.</li>\n<li><strong>Input validation.</strong> Typed request schemas validate inputs before route handlers call services. Schema-validation errors are typically returned as structured HTTP <code>422</code> responses; they should not expose stack traces.</li>\n<li><strong>Error handling.</strong> Unexpected exceptions return a generic JSON error, while the server logs the exception with the request method and path. A correlation ID is not currently implemented.</li>\n</ul>\n<p>Secrets (JWT signing key, DB URL, allowed origins) are loaded from environment variables only — never committed.</p>\n<hr />"
+          },
+          {
+            "id": "readme-4-testing",
+            "title": "4. Testing",
+            "kind": "other",
+            "html": "<h2 id=\"readme-4-testing\">4. Testing</h2>\n<h3 id=\"readme-backend-test-suite\">Backend test suite</h3>\n<ul>\n<li>Unit tests for the <strong>carbon engine</strong> (pure functions → exhaustive table-driven cases).</li>\n<li>Unit tests for <strong>services</strong> with repositories stubbed.</li>\n<li>Integration tests for <strong>routes</strong> spinning up the app against an ephemeral SQLite DB.</li>\n<li>Auth tests covering registration, login, token expiry, and protected-route rejection.</li>\n</ul>\n<h3 id=\"readme-frontend-test-suite\">Frontend test suite</h3>\n<ul>\n<li>Component tests cover the daily check-in card, emissions equity ring, form field, option grid and accessibility assertions.</li>\n<li>The current suite is not a complete end-to-end test of all user journeys; manual screen-reader and keyboard-only review has not been verified.</li>\n</ul>\n<h3 id=\"readme-continuous-integration\">Continuous integration</h3>\n<ul>\n<li><a href=\"https://github.com/Soham-o/EarthShare/actions\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">GitHub Actions</a> runs the backend test suite, frontend tests and a frontend production build on pull requests and pushes to <code>main</code> and <code>fix/**</code> branches.</li>\n<li>Latest verified run: <strong>85 backend tests passed, 1 skipped; 21 frontend tests passed; frontend build succeeded</strong>. See the <a href=\"https://github.com/Soham-o/EarthShare/actions/runs/38018851673\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CI run</a>.</li>\n</ul>\n<h3 id=\"readme-coverage-notes\">Coverage notes</h3>\n<ul>\n<li>Tests exercise the carbon engine, API routes, authentication, daily check-ins, security headers and selected frontend components.</li>\n<li>The CI suite is a useful regression baseline, not a security certification or proof that every feature is covered.</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-5-accessibility",
+            "title": "5. Accessibility",
+            "kind": "other",
+            "html": "<h2 id=\"readme-5-accessibility\">5. Accessibility</h2>\n<p>EarthShare targets a <strong>WCAG 2.1 AA</strong> mindset throughout the UI.</p>\n<ul>\n<li><strong>Keyboard navigation.</strong> Every interactive element is reachable and operable via keyboard. Logical tab order, visible focus rings, and no keyboard traps.</li>\n<li><strong>Screen reader support.</strong> Semantic HTML first (<code>&lt;button&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>). Live regions announce async results (e.g. \"Activity logged, 2.3 kg CO₂e added\").</li>\n<li><strong>ARIA labels.</strong> Used to <em>supplement</em> semantics where native HTML can't express intent (icon-only buttons, dynamic counts, modal dialogs).</li>\n<li><strong>WCAG-conscious design.</strong> Color is never the only signal; text contrast targets AA ratios; form errors are associated with their inputs via <code>aria-describedby</code>.</li>\n<li><strong>Responsive layouts.</strong> Mobile-first CSS, fluid typography, and breakpoints that keep tap targets ≥ 44px. The dashboard, insights, and marketplace are all usable on a phone in portrait.</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-6-efficiency",
+            "title": "6. Efficiency",
+            "kind": "other",
+            "html": "<h2 id=\"readme-6-efficiency\">6. Efficiency</h2>\n<h3 id=\"readme-why-deterministic-calculations-are-computationally-efficient\">Why deterministic calculations are computationally efficient</h3>\n<p>The carbon engine is a pure function over a static emission-factor table. Each calculation is effectively:</p>\n<pre><code>emissions = activity_quantity × factor[activity_type][region]\n</code></pre>\n<p>For one activity, the calculation uses a constant-time factor-table lookup and arithmetic; no performance benchmark is published in this repository.</p>\n<h3 id=\"readme-why-local-calculations-reduce-api-dependency\">Why local calculations reduce API dependency</h3>\n<p>The carbon calculation engine runs locally within the backend and uses an in-repository factor table:</p>\n<ul>\n<li>The calculation itself does not require a third-party API call.</li>\n<li>Its calculation path has no per-request model/API fee.</li>\n<li>The factor table can be inspected and versioned with the source.</li>\n<li>Optional insight generation and other app features may still use external services when configured.</li>\n</ul>\n<h3 id=\"readme-why-sqlite-was-chosen-for-hackathon-deployment-simplicity\">Why SQLite was chosen for hackathon deployment simplicity</h3>\n<ul>\n<li>Zero-ops: the database is a file. No provisioning, no separate service, no credentials to rotate during a demo.</li>\n<li>Instant local dev: clone, install, run.</li>\n<li>Trivial CI: tests run against an ephemeral in-memory DB.</li>\n<li>Automated backend tests use an in-memory SQLite database; live hosting parity has not been verified.</li>\n</ul>\n<h3 id=\"readme-database-configuration-and-migration-status\">Database configuration and migration status</h3>\n<p>The database URL is centralized in <code>backend/app/core/config.py</code>, and the app uses SQLAlchemy sessions and repository classes. SQLite is the verified local/test default. PostgreSQL migration, migrations against a PostgreSQL instance, and production deployment have not been verified, so a connection-string change alone should not be presented as a proven migration path.</p>\n<hr />"
+          },
+          {
+            "id": "readme-7-why-we-chose-this-architecture",
+            "title": "7. Why We Chose This Architecture",
+            "kind": "problem",
+            "html": "<h2 id=\"readme-7-why-we-chose-this-architecture\">7. Why We Chose This Architecture</h2>\n<blockquote>\n<p><strong>Goal:</strong> Maximize judge-perceivable quality <em>and</em> maximize how far the codebase can travel after the hackathon.</p>\n</blockquote>\n<table>\n<thead>\n<tr>\n<th>Decision</th>\n<th>Why</th>\n<th>What it buys us</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Clean Architecture (routes → services → repos → models)</strong></td>\n<td>Keeps business rules independent of framework and DB</td>\n<td>Easy to test, easy to refactor, easy to read</td>\n</tr>\n<tr>\n<td><strong>Service layer</strong></td>\n<td>One place for business logic; routes stay thin</td>\n<td>Reusable logic across HTTP, jobs, and tests</td>\n</tr>\n<tr>\n<td><strong>Repository pattern</strong></td>\n<td>One place for persistence</td>\n<td>Centralizes database access; alternate-database migration still needs validation</td>\n</tr>\n<tr>\n<td><strong>Deterministic carbon engine</strong></td>\n<td>Reproducibility and auditability beat cleverness here</td>\n<td>Repeatable calculations from a versioned factor table</td>\n</tr>\n<tr>\n<td><strong>JWT authentication</strong></td>\n<td>Uses signed bearer tokens</td>\n<td>Avoids a server-side session table for token state; production scale is not evaluated</td>\n</tr>\n<tr>\n<td><strong>SQLite for v1</strong></td>\n<td>Zero-ops for the demo</td>\n<td>Reliable hackathon-day deploy</td>\n</tr>\n<tr>\n<td><strong>Configurable database URL</strong></td>\n<td>Keeps the connection setting in one place</td>\n<td>PostgreSQL compatibility remains unverified</td>\n</tr>\n<tr>\n<td><strong>Typed API client on the frontend</strong></td>\n<td>Single source of truth for request/response shapes</td>\n<td>Fewer integration bugs, better DX</td>\n</tr>\n<tr>\n<td><strong>Accessibility tests</strong></td>\n<td>Catch selected accessibility regressions early</td>\n<td>Automated accessibility assertions exist; full WCAG conformance is not claimed</td>\n</tr>\n<tr>\n<td><strong>LLMs out of the calculation path</strong></td>\n<td>Determinism &gt; novelty for a measurement product</td>\n<td>Numbers a judge can verify by hand</td>\n</tr>\n</tbody></table>\n<p>The prototype separates routes, services, repositories, models and schemas, but production readiness, hosted deployment and database migration still need independent validation.</p>\n<hr />"
+          },
+          {
+            "id": "readme-8-product-walkthrough",
+            "title": "8. Product Walkthrough",
+            "kind": "other",
+            "html": "<h2 id=\"readme-8-product-walkthrough\">8. Product Walkthrough</h2>\n<p><strong>Dashboard</strong> — at-a-glance footprint, recent activities, and a clear next action.</p>\n<p><img src=\"https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/dashboard.png\" alt=\"Dashboard\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Insights</strong> — breakdown by category, trend over time, and the largest contributors to your footprint.</p>\n<p><img src=\"https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/insights.png\" alt=\"Insights\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Action marketplace</strong> — browse recommended climate actions, mark them complete, and see progress reflected in the app. This is not an offset-credit purchasing marketplace.</p>\n<p><img src=\"https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/marketplace.png\" alt=\"Action marketplace\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Progress</strong> — view completed actions, estimated CO₂ savings, weekly trends and badges.</p>\n<p><img src=\"https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/progress.png\" alt=\"Progress\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<hr />"
+          },
+          {
+            "id": "readme-9-architecture-diagram",
+            "title": "9. Architecture Diagram",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme-9-architecture-diagram\">9. Architecture Diagram</h2>\n<pre><code class=\"language-mermaid\">flowchart LR\n    subgraph Client[\"🖥️ Frontend\"]\n        UI[\"React UI&lt;br/&gt;WCAG-aligned\"]\n        APIClient[\"Typed API Client\"]\n    end\n\n    subgraph Edge[\"🛡️ Edge Protections\"]\n        CORS[\"CORS middleware\"]\n        RL[\"Rate Limiter\"]\n        SH[\"Secure Headers\"]\n    end\n\n    subgraph Backend[\"⚙️ Backend\"]\n        Routes[\"Routes Layer&lt;br/&gt;(thin: parse + validate)\"]\n        Services[\"Service Layer&lt;br/&gt;(business logic)\"]\n        Repos[\"Repository Layer&lt;br/&gt;(persistence)\"]\n        Engine[\"Deterministic&lt;br/&gt;Carbon Engine\"]\n        Auth[\"JWT Auth&lt;br/&gt;+ Password Hashing\"]\n    end\n\n    subgraph Data[\"💾 Data\"]\n        DB[(\"SQLite default&lt;br/&gt;PostgreSQL unverified\")]\n        Factors[\"Emission Factor Table&lt;br/&gt;(versioned in repo)\"]\n    end\n\n    UI --&gt; APIClient\n    APIClient --&gt;|HTTPS + JWT| CORS\n    CORS --&gt; RL\n    RL --&gt; SH\n    SH --&gt; Routes\n    Routes --&gt; Auth\n    Routes --&gt; Services\n    Services --&gt; Repos\n    Services --&gt; Engine\n    Repos --&gt; DB\n    Engine --&gt; Factors\n</code></pre>\n<hr />"
+          },
+          {
+            "id": "readme-10-repository-structure",
+            "title": "10. Repository Structure",
+            "kind": "other",
+            "html": "<h2 id=\"readme-10-repository-structure\">10. Repository Structure</h2>\n<pre><code>earthshare/\n├── .github/\n│   └── workflows/\n│       └── ci.yml                  # backend tests, frontend tests and build\n├── backend/\n│   ├── app/\n│   │   ├── api/v1/                 # authentication, onboarding, actions, etc.\n│   │   ├── core/                   # config, database, security and rate limits\n│   │   ├── models/\n│   │   ├── repositories/\n│   │   ├── schemas/\n│   │   ├── services/               # includes carbon_engine.py\n│   │   └── main.py\n│   ├── tests/\n│   ├── pytest.ini\n│   └── requirements.txt\n├── frontend/\n│   ├── src/\n│   │   ├── app/                    # Next.js routes and pages\n│   │   ├── components/\n│   │   └── __tests__/              # component and accessibility tests\n│   ├── package.json\n│   └── package-lock.json\n├── docs/\n│   ├── ARCHITECTURE.md\n│   ├── CARBON_METHODOLOGY.md\n│   └── DESIGN_NOTES.md\n└── README.md\n</code></pre>\n<hr />"
+          },
+          {
+            "id": "readme-11-what-makes-earthshare-different",
+            "title": "11. What Makes EarthShare Different",
+            "kind": "other",
+            "html": "<h2 id=\"readme-11-what-makes-earthshare-different\">11. What Makes EarthShare Different</h2>\n<ul>\n<li><strong>Measure clearly.</strong> The app estimates emissions from user-entered activity and an in-repository factor table.</li>\n<li><strong>Deterministic calculation.</strong> The carbon engine does not call an LLM to calculate emissions.</li>\n<li><strong>Action-oriented workflow.</strong> Suggested actions can be marked complete and reflected in progress.</li>\n<li><strong>Security and accessibility checks.</strong> The repository has automated tests for selected behaviors; it has not undergone a security audit or full accessibility conformance review.</li>\n<li><strong>Prototype status.</strong> Live deployment, production scaling and PostgreSQL migration remain unverified.</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-12-evidence-of-engineering-quality",
+            "title": "12. Evidence of Engineering Quality",
+            "kind": "other",
+            "html": "<h2 id=\"readme-12-evidence-of-engineering-quality\">12. Evidence of Engineering Quality</h2>\n<h3 id=\"readme-engineering-signals-a-reviewer-can-verify-in-minutes\">Engineering signals a reviewer can verify in minutes</h3>\n<ul>\n<li>Routes contain no business logic. Open any route file and confirm.</li>\n<li>Services contain no SQL. Open any service file and confirm.</li>\n<li>The deterministic carbon calculation is implemented in <code>backend/app/services/carbon_engine.py</code>.</li>\n<li>Authentication dependencies and security configuration live under <code>backend/app/core/</code>.</li>\n<li>The frontend API wrapper is <code>frontend/src/lib/api.ts</code>.</li>\n</ul>\n<hr />\n<div align=\"center\">\n\n<p><strong>EarthShare</strong> — <em>Own your carbon. Then neutralize it.</em></p>\n</div>"
+          }
+        ],
+        "highlights": {
+          "overview": "Carbon ownership, not carbon awareness.",
+          "problem": "Individual emissions are a meaningful slice of the climate problem, but they are largely invisible to the people producing them. People want to act, but they have no reliable, low-friction way to (a) measure their impact, (b) understand what's driving it, and (c) actually neutralize it. The result is a gap between…",
+          "features": []
+        },
+        "excerpt": "Carbon ownership, not carbon awareness.",
+        "truncated": false,
+        "demoLinks": [],
+        "images": [
+          "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/dashboard.png",
+          "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/insights.png",
+          "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/marketplace.png",
+          "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/progress.png"
+        ]
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1300537845,
+      "slug": "airtwin-x",
+      "name": "AirTwin-X",
+      "displayName": "AirTwin-X",
+      "fullName": "Soham-o/AirTwin-X",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/AirTwin-X",
+      "description": "",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 272903,
+          "pct": 100
+        }
+      ],
+      "tech": [
+        {
+          "name": "Python",
+          "source": "language"
+        },
+        {
+          "name": "Streamlit",
+          "source": "manifest"
+        },
+        {
+          "name": "Requests",
+          "source": "manifest"
+        },
+        {
+          "name": "Pandas",
+          "source": "manifest"
+        },
+        {
+          "name": "NumPy",
+          "source": "manifest"
+        },
+        {
+          "name": "Plotly",
+          "source": "manifest"
+        },
+        {
+          "name": "SciPy",
+          "source": "manifest"
+        },
+        {
+          "name": "XGBoost",
+          "source": "manifest"
+        },
+        {
+          "name": "scikit-learn",
+          "source": "manifest"
+        },
+        {
+          "name": "PyTorch",
+          "source": "manifest"
+        },
+        {
+          "name": "GitHub Actions",
+          "source": "file"
+        }
+      ],
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License"
+      },
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-07-14T13:40:04Z",
+      "updatedAt": "2026-10-10T05:26:27Z",
+      "pushedAt": "2026-10-10T05:26:23Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "https://opengraph.githubassets.com/71762c7ba2dede16/Soham-o/AirTwin-X",
+        "source": "social"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/AirTwin-X/blob/main/README.md",
+        "overviewHtml": "<div align=\"center\">\n\n<p><strong>A Streamlit decision-support prototype for urban air-quality interventions</strong></p>\n<p><a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/python-3.10+-blue.svg?style=flat-square&amp;logo=python&amp;logoColor=white\" alt=\"Python 3.10+\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://streamlit.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/UI-Streamlit-FF4B4B?style=flat-square&amp;logo=streamlit&amp;logoColor=white\" alt=\"Streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"#readme-project-status\"><img src=\"https://img.shields.io/badge/status-prototype-orange?style=flat-square\" alt=\"Status: prototype\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://github.com/Soham-o/AirTwin-X/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square\" alt=\"License: MIT\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a></p>\n</div>\n\n<p>AirTwin X takes a city's current air-quality reading and walks it through a\npipeline: estimate which sources are driving the pollution, rank a fixed set\nof municipal interventions, simulate what combining them would do, and\ntranslate the predicted improvement into health and economic estimates. A\nrule-based \"Mayor Copilot\" answers questions using only the outputs of those\nearlier steps.</p>\n<blockquote>\n<p><strong>Screenshots / demo GIF:</strong> not yet captured. Run it locally with the\n<a href=\"#readme-quick-start\">Quick Start</a> to see the interface.</p>\n</blockquote>\n<hr />",
+        "sections": [
+          {
+            "id": "readme-contents",
+            "title": "Contents",
+            "kind": "other",
+            "html": "<h2 id=\"readme-contents\">Contents</h2>\n<ul>\n<li><a href=\"#readme-the-idea\">The idea</a></li>\n<li><a href=\"#readme-what-it-does\">What it does</a></li>\n<li><a href=\"#readme-system-architecture\">System architecture</a></li>\n<li><a href=\"#readme-quick-start\">Quick Start</a></li>\n<li><a href=\"#readme-data-sources-and-configuration\">Data sources and configuration</a></li>\n<li><a href=\"#readme-testing\">Testing</a></li>\n<li><a href=\"#readme-project-status\">Project status</a></li>\n<li><a href=\"#readme-known-limitations\">Known limitations</a></li>\n<li><a href=\"#readme-documentation\">Documentation</a></li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-the-idea",
+            "title": "The idea",
+            "kind": "other",
+            "html": "<h2 id=\"readme-the-idea\">The idea</h2>\n<p>Most city AQI dashboards report a number and a generic warning, then stop.\nThey describe the problem but don't help anyone decide what to do about it.\nSimply wrapping a large language model around a sensor feed doesn't fix that\neither: a generative model can produce confident but untraceable impact\nestimates, and will often add intervention effects together as if they were\nindependent.</p>\n<p>AirTwin X treats the problem as a <strong>decision pipeline</strong> instead:</p>\n<ul>\n<li>When two interventions target the same pollution source, their effects\n<strong>compound</strong> rather than add: the remaining share of a source is\n<code>Π (1 − effectiveness_i)</code>, and the combined reduction is capped.</li>\n<li>Every number the Copilot reports comes from an upstream module's output.\nIt does not generate free-form text from a language model.</li>\n</ul>"
+          },
+          {
+            "id": "readme-what-it-does",
+            "title": "What it does",
+            "kind": "features",
+            "html": "<h2 id=\"readme-what-it-does\">What it does</h2>\n<table>\n<thead>\n<tr>\n<th>Module</th>\n<th>File</th>\n<th>What is implemented</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Source attribution</strong></td>\n<td><code>attribution_engine.py</code></td>\n<td>Splits current AQI into Traffic, Construction, Industrial, Biomass Burning and Weather Amplification percentages using OpenStreetMap road data, weather telemetry and fire-hotspot data, with a confidence score and the list of data sources actually used.</td>\n</tr>\n<tr>\n<td><strong>Intervention ranking</strong></td>\n<td><code>intervention_agent.py</code></td>\n<td>Scores 8 predefined interventions with a weighted multi-criteria formula (AQI impact 0.40, cost 0.20, feasibility 0.20, confidence 0.10, speed 0.10), a simplified TOPSIS-style weighting.</td>\n</tr>\n<tr>\n<td><strong>Scenario simulation (\"digital twin\")</strong></td>\n<td><code>intervention_agent.py</code></td>\n<td><code>simulate_scenario()</code> / <code>compare_scenarios()</code> apply the overlap-compounding rule above to one or more selected interventions.</td>\n</tr>\n<tr>\n<td><strong>Health &amp; economic impact</strong></td>\n<td><code>health_economic_engine.py</code></td>\n<td>Converts a predicted PM2.5 reduction into estimated admissions avoided, DALYs and cost savings. Deterministic, with its assumptions listed in the output.</td>\n</tr>\n<tr>\n<td><strong>Mayor Copilot</strong></td>\n<td><code>mayor_copilot.py</code></td>\n<td>Deterministic keyword-based intent matching over the outputs above. No LLM.</td>\n</tr>\n<tr>\n<td><strong>Dashboard</strong></td>\n<td><code>app.py</code></td>\n<td>Streamlit UI with Folium maps and Plotly charts, an hourly AQI projection from an XGBoost model trained on synthetic data (see limitations), and route planning that uses a PPO agent if a trained model is present, falling back to Dijkstra otherwise.</td>\n</tr>\n</tbody></table>"
+          },
+          {
+            "id": "readme-system-architecture",
+            "title": "System architecture",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme-system-architecture\">System architecture</h2>\n<pre><code class=\"language-mermaid\">flowchart TD\n    subgraph Data[\"Data sources\"]\n        W[WAQI sensors]\n        M[Open-Meteo weather]\n        F[NASA FIRMS fires]\n        O[OpenStreetMap roads]\n    end\n    W -. no token .-&gt; SIM[Simulated sensor data]\n    F -. no key .-&gt; HEU[Weather-based fire heuristic]\n    Data --&gt; A[\"Source attribution&lt;br/&gt;&lt;code&gt;attribute()&lt;/code&gt;&lt;br/&gt;% by traffic, construction,&lt;br/&gt;industry, biomass, weather\"]\n    SIM --&gt; A\n    HEU --&gt; A\n    A --&gt; R[\"Intervention ranking&lt;br/&gt;&lt;code&gt;generate()&lt;/code&gt;&lt;br/&gt;8 interventions, weighted score\"]\n    R --&gt; T[\"Scenario simulation&lt;br/&gt;&lt;code&gt;simulate_scenario()&lt;/code&gt;&lt;br/&gt;effects compound, capped at 85%\"]\n    T --&gt; H[\"Health and economic impact&lt;br/&gt;&lt;code&gt;assess()&lt;/code&gt;&lt;br/&gt;admissions, DALYs, savings\"]\n    A &amp; R &amp; T &amp; H --&gt; C[\"Mayor Copilot&lt;br/&gt;&lt;code&gt;ask()&lt;/code&gt;&lt;br/&gt;rule-based answers, no LLM\"]\n    C --&gt; UI[Streamlit command center]\n</code></pre>\n<p>Each stage is a plain Python module with its own tests, and every number the\nCopilot reports comes from an earlier stage rather than a language model.\nDotted lines are the fallbacks used when a token or key is not configured.</p>\n<p>See <a href=\"https://github.com/Soham-o/AirTwin-X/blob/main/Architecture.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Architecture.md</a> for each module's inputs, outputs and\ndesign decisions.</p>"
+          },
+          {
+            "id": "readme-quick-start",
+            "title": "Quick Start",
+            "kind": "setup",
+            "html": "<h2 id=\"readme-quick-start\">Quick Start</h2>\n<pre><code class=\"language-bash\">git clone https://github.com/Soham-o/AirTwin-X.git\ncd AirTwin-X\npython -m venv venv\nsource venv/bin/activate        # Windows: venv\\Scripts\\activate\npip install -r requirements.txt\nstreamlit run app.py\n</code></pre>\n<p>Then open <code>http://localhost:8501</code>. New Delhi is selected by default.</p>\n<p><code>requirements.txt</code> includes <code>torch</code> and <code>stable-baselines3</code>, so the first\ninstall is large. A <code>.devcontainer/</code> configuration is also included.</p>"
+          },
+          {
+            "id": "readme-data-sources-and-configuration",
+            "title": "Data sources and configuration",
+            "kind": "setup",
+            "html": "<h2 id=\"readme-data-sources-and-configuration\">Data sources and configuration</h2>\n<table>\n<thead>\n<tr>\n<th>Source</th>\n<th>Used for</th>\n<th>Configuration</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><a href=\"https://aqicn.org/api/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">WAQI</a></td>\n<td>Live sensor readings</td>\n<td>Optional <code>WAQI_TOKEN</code> in <code>.streamlit/secrets.toml</code> or as an environment variable. Without it, the app shows a warning and uses <strong>simulated</strong> sensor data.</td>\n</tr>\n<tr>\n<td><a href=\"https://open-meteo.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Open-Meteo</a></td>\n<td>Wind and temperature</td>\n<td>No key needed.</td>\n</tr>\n<tr>\n<td>OpenStreetMap (via <code>osmnx</code>)</td>\n<td>Road network for traffic attribution</td>\n<td>No key needed. <code>new_delhi_5km.graphml</code> is included as a local graph.</td>\n</tr>\n<tr>\n<td><a href=\"https://firms.modaps.eosdis.nasa.gov/api/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">NASA FIRMS</a></td>\n<td>Fire hotspots for biomass attribution</td>\n<td>Optional <code>NASA_FIRMS_MAP_KEY</code> environment variable. Without a key, the app skips the request and uses the Open-Meteo-based heuristic.</td>\n</tr>\n</tbody></table>\n<p>Never commit <code>.streamlit/secrets.toml</code> or real API tokens.</p>"
+          },
+          {
+            "id": "readme-testing",
+            "title": "Testing",
+            "kind": "other",
+            "html": "<h2 id=\"readme-testing\">Testing</h2>\n<pre><code class=\"language-bash\">pip install pytest numpy requests\npython -m pytest test_airtwin.py -q\n</code></pre>\n<p><code>test_airtwin.py</code> contains 29 tests covering determinism, intervention\nranking weights, overlap-compounding bounds, CPCB AQI→PM2.5 breakpoints,\nhealth-impact monotonicity, Copilot intent routing, and missing/configured\nNASA FIRMS key behavior. They need only <code>numpy</code>, <code>requests</code> and <code>pytest</code>, not\nthe full Streamlit stack. GitHub Actions runs these regression tests on\npull requests and pushes to <code>main</code> or <code>fix/**</code> branches.</p>"
+          },
+          {
+            "id": "readme-project-status",
+            "title": "Project status",
+            "kind": "other",
+            "html": "<h2 id=\"readme-project-status\">Project status</h2>\n<p><strong>Prototype.</strong> The pipeline modules and their tests run locally. Outputs are\nmodel-based estimates for exploring policy options, not validated forecasts,\nand should not be used for real public-health or budget decisions.</p>"
+          },
+          {
+            "id": "readme-known-limitations",
+            "title": "Known limitations",
+            "kind": "other",
+            "html": "<h2 id=\"readme-known-limitations\">Known limitations</h2>\n<ul>\n<li><strong>NASA FIRMS data is optional.</strong> Set <code>NASA_FIRMS_MAP_KEY</code> in the environment to enable fire-hotspot requests. Without it, the app skips the request and uses the documented Open-Meteo-based heuristic. Do not commit the key.</li>\n<li><strong>No trained RL model is committed.</strong> <code>app.py</code> looks for a\n<code>clean_air_agent</code> PPO model; without it, routing uses Dijkstra. Train one\nwith <code>train_agent.py</code>.</li>\n<li><strong>The XGBoost AQI projection is trained on synthetic data</strong> generated in\n<code>app.py</code> (daily cycles plus noise around the current reading), not on\nhistorical sensor data.</li>\n<li><strong>Attribution weights and intervention effectiveness values are fixed\nassumptions</strong> in the source code, not values fitted to measured data.</li>\n<li><strong>Fallbacks are silent in places.</strong> If WAQI is unavailable the dashboard\nswitches to simulated data with a warning; check the data-source labels in\nthe UI before trusting a number.</li>\n<li>No license file has been added yet.</li>\n</ul>"
+          },
+          {
+            "id": "readme-documentation",
+            "title": "Documentation",
+            "kind": "other",
+            "html": "<h2 id=\"readme-documentation\">Documentation</h2>\n<ul>\n<li><a href=\"https://github.com/Soham-o/AirTwin-X/blob/main/Architecture.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Architecture.md</a> — module responsibilities and design decisions</li>\n<li><a href=\"https://github.com/Soham-o/AirTwin-X/blob/main/Demo%20guide.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Demo guide.md</a> — a five-minute walkthrough of the interface</li>\n</ul>"
+          }
+        ],
+        "highlights": {
+          "overview": "A Streamlit decision-support prototype for urban air-quality interventions",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "A Streamlit decision-support prototype for urban air-quality interventions",
+        "truncated": false,
+        "demoLinks": [],
+        "images": []
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1358825462,
+      "slug": "cursor-bite",
+      "name": "cursor_bite",
+      "displayName": "Cursor Bite",
+      "fullName": "Soham-o/cursor_bite",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/cursor_bite",
+      "description": "Cursor Bite - Modern AI-powered context-aware assistant",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 648006,
+          "pct": 79.9
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 104324,
+          "pct": 12.9
+        },
+        {
+          "name": "CSS",
+          "bytes": 41515,
+          "pct": 5.1
+        },
+        {
+          "name": "HTML",
+          "bytes": 17650,
+          "pct": 2.2
+        }
+      ],
+      "tech": [
+        {
+          "name": "Python",
+          "source": "language"
+        },
+        {
+          "name": "JavaScript",
+          "source": "language"
+        },
+        {
+          "name": "CSS",
+          "source": "language"
+        },
+        {
+          "name": "HTML",
+          "source": "language"
+        },
+        {
+          "name": "Pillow",
+          "source": "manifest"
+        },
+        {
+          "name": "Requests",
+          "source": "manifest"
+        },
+        {
+          "name": "BeautifulSoup",
+          "source": "manifest"
+        },
+        {
+          "name": "GitHub Actions",
+          "source": "file"
+        }
+      ],
+      "license": {
+        "spdx": "MIT",
+        "name": "MIT License"
+      },
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-09-06T05:43:08Z",
+      "updatedAt": "2026-10-10T05:26:24Z",
+      "pushedAt": "2026-10-10T05:26:20Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png",
+        "source": "readme"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/cursor_bite/blob/main/README.md",
+        "overviewHtml": "<p><strong>Intelligence at your cursor.</strong></p>\n<p align=\"center\">\n  <a href=\"https://github.com/Soham-o/cursor_bite/stargazers\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/github/stars/Soham-o/cursor_bite?style=flat-square\" alt=\"GitHub stars\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://github.com/Soham-o/cursor_bite/issues\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/github/issues/Soham-o/cursor_bite?style=flat-square\" alt=\"GitHub issues\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/github/license/Soham-o/cursor_bite?style=flat-square\" alt=\"MIT License\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <img src=\"https://img.shields.io/badge/Python-3.11%2B-blue?style=flat-square\" alt=\"Python 3.11+\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/Platform-Windows-lightgrey?style=flat-square\" alt=\"Windows\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/AI-Local--First-success?style=flat-square\" alt=\"Local first AI\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</p>\n\n<p>A privacy-first, local-first Windows assistant that appears around your\nmouse cursor when you press a hotkey — translate, explain, summarize,\nrewrite, ask AI, search, or pull text off the screen, without leaving\nwhatever you're already looking at.</p>\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png\" width=\"260\" alt=\"Cursor Bite's radial menu: eight numbered sectors around a central hub, with the Translate sector highlighted\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</p>\n\n<p align=\"center\"><sub>The radial menu widget from <code>ui/radial_menu.py</code>, rendered\noffscreen by <code>scripts/render_radial_preview.py</code>. Fonts may differ\nslightly from Windows.</sub></p>\n\n<blockquote>\n<p><strong>Demo GIF:</strong> not yet captured. A recording of the full flow (hotkey →\nmenu → result panel) needs a Windows machine. The fastest way to see it is\nto run it: <a href=\"#readme-quick-start\">Quick Start</a> takes about two minutes on a machine\nthat already has Python.</p>\n</blockquote>",
+        "sections": [
+          {
+            "id": "readme-why",
+            "title": "Why",
+            "kind": "problem",
+            "html": "<h2 id=\"readme-why\">Why</h2>\n<p>Every one of these actions already exists somewhere — a translator site, a\nchat app, a search bar. What doesn't exist is one of them appearing exactly\nwhere your mouse already is, the instant you ask for it, without a tab\nswitch, a paste, or an account. Select some text — a browser, a PDF, an IDE,\na chat window — press <code>Ctrl+Alt+B</code>, and a menu appears at your cursor. Pick\nan action, and the answer opens right there.</p>"
+          },
+          {
+            "id": "readme-quick-start",
+            "title": "Quick Start",
+            "kind": "setup",
+            "html": "<h2 id=\"readme-quick-start\">Quick Start</h2>\n<pre><code class=\"language-powershell\">python -m venv venv\nvenv\\Scripts\\activate\npip install -r requirements-core.txt\npython main.py\n</code></pre>\n<p>Press <code>Ctrl+Alt+B</code> anywhere. That's the whole app — no account, no setup\nwizard, no window to find. See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/SETUP_GUIDE.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">SETUP_GUIDE.md</a> for a full\nfresh-machine walkthrough and how to add the optional engines (translation,\nAI, OCR) behind each action.</p>"
+          },
+          {
+            "id": "readme-features",
+            "title": "Features",
+            "kind": "features",
+            "html": "<h2 id=\"readme-features\">Features</h2>\n<table>\n<thead>\n<tr>\n<th></th>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody><tr>\n<td>🌐 <strong>Translate</strong></td>\n<td>Offline, via Argos Translate</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>💡 <strong>Explain</strong></td>\n<td>Local AI, via Ollama</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>📑 <strong>Summarize</strong></td>\n<td>Local AI, via Ollama</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>✍️ <strong>Rewrite</strong></td>\n<td>Local AI, via Ollama</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>🤖 <strong>Ask AI</strong></td>\n<td>Local AI, contextual or freeform</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>📷 <strong>Capture Text (OCR)</strong></td>\n<td>Local, via Tesseract</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>🔍 <strong>Search Web</strong></td>\n<td>DuckDuckGo — the one action that leaves your device</td>\n<td>Working</td>\n</tr>\n<tr>\n<td>🔊 <strong>Read Aloud</strong></td>\n<td>—</td>\n<td>Planned, not built</td>\n</tr>\n</tbody></table>\n<p>Also working: a customizable global hotkey (native <code>RegisterHotKey</code> /\n<code>WM_HOTKEY</code>, no keyboard hooks), a cursor-anchored radial menu with full\nmouse and keyboard navigation, multi-monitor and DPI-aware positioning,\nclipboard-safe selection capture, a real Settings/Privacy/Check-Components\ntray UI, and graceful degradation — every optional engine above is\nindependently optional, and a fresh install with none of them present still\nstarts and runs, disabling exactly the one action each is missing.</p>\n<p><strong>At startup, Cursor Bite performs zero network requests and initializes\nzero optional components.</strong> Nothing is imported, probed, or connected to\nuntil an action needs it.</p>"
+          },
+          {
+            "id": "readme-keyboard-reference",
+            "title": "Keyboard Reference",
+            "kind": "other",
+            "html": "<h2 id=\"readme-keyboard-reference\">Keyboard Reference</h2>\n<p>Once the radial menu is open:</p>\n<table>\n<thead>\n<tr>\n<th>Key</th>\n<th>Action</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>Ctrl+Alt+B</code></td>\n<td>Open Cursor Bite</td>\n</tr>\n<tr>\n<td><code>1</code></td>\n<td>Translate</td>\n</tr>\n<tr>\n<td><code>2</code></td>\n<td>Summarize</td>\n</tr>\n<tr>\n<td><code>3</code></td>\n<td>Explain</td>\n</tr>\n<tr>\n<td><code>4</code></td>\n<td>Search Web</td>\n</tr>\n<tr>\n<td><code>5</code></td>\n<td>Settings</td>\n</tr>\n<tr>\n<td><code>6</code></td>\n<td>Capture OCR</td>\n</tr>\n<tr>\n<td><code>7</code></td>\n<td>Rewrite</td>\n</tr>\n<tr>\n<td><code>8</code></td>\n<td>Ask AI</td>\n</tr>\n<tr>\n<td>Arrow keys</td>\n<td>Move between sectors</td>\n</tr>\n<tr>\n<td><code>Enter</code> / <code>Space</code></td>\n<td>Activate the highlighted sector</td>\n</tr>\n<tr>\n<td><code>Esc</code></td>\n<td>Close / cancel</td>\n</tr>\n</tbody></table>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/HOW_TO_USE.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">HOW_TO_USE.md</a> for the full walkthrough.</p>"
+          },
+          {
+            "id": "readme-privacy-model",
+            "title": "Privacy Model",
+            "kind": "other",
+            "html": "<h2 id=\"readme-privacy-model\">Privacy Model</h2>\n<pre><code class=\"language-mermaid\">flowchart TD\n    C[Selected text or screen capture] --&gt; G[Privacy gateway scans for emails, API keys,&lt;br/&gt;tokens, card numbers, private IPs, credential pairs]\n    G --&gt; Q{Does the action&lt;br/&gt;leave the device?}\n    Q --&gt;|\"No: Translate, Explain, Summarize,&lt;br/&gt;Rewrite, Ask AI, OCR\"| L[Processed locally,&lt;br/&gt;sensitive or not]\n    Q --&gt;|Yes: Search Web| E{Sensitive&lt;br/&gt;data found?}\n    E --&gt;|No| S[Sent to DuckDuckGo]\n    E --&gt;|Yes| B[Blocked, or ask consent&lt;br/&gt;with a redacted preview]\n</code></pre>\n<ul>\n<li><strong>Local first.</strong> Translation, AI, and OCR all run on your machine.\nSearch is the only action that sends anything off it, and the app tells\nyou before it does.</li>\n<li><strong>Sensitive data never leaves the device unintentionally.</strong> Detected\npatterns never block <em>local</em> processing — the text is already on your\nmachine, and blocking it there would make the app useless for the\ndocuments you most want help with. They <em>do</em> block, or require explicit\nconsent for, anything that would send them externally.</li>\n<li><strong>Your clipboard is yours.</strong> Snapshotted and restored on every path,\nincluding the ones where capture failed or was cancelled.</li>\n<li><strong>No telemetry, no keylogging, no continuous screen or clipboard\nmonitoring.</strong> Capture only happens when you explicitly invoke it.</li>\n<li><strong>No user content in the logs</strong> — action names, durations, and error\n<em>types</em>, never your text, prompts, translations, or search queries.</li>\n</ul>\n<p>The detector is regex-based and documented as a safety net, not a\nguarantee — see <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/SECURITY.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">SECURITY.md</a> for its threat model and known\nlimitations.</p>"
+          },
+          {
+            "id": "readme-architecture",
+            "title": "Architecture",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme-architecture\">Architecture</h2>\n<pre><code class=\"language-mermaid\">sequenceDiagram\n    actor U as You\n    participant H as Hotkey listener&lt;br/&gt;(RegisterHotKey)\n    participant C as Controller&lt;br/&gt;(UI thread)\n    participant W as Worker threads&lt;br/&gt;(capture, pipeline)\n    participant G as Privacy gateway\n    U-&gt;&gt;H: Ctrl+Alt+B\n    H-&gt;&gt;C: show radial menu at cursor now\n    C-)W: capture selection in parallel\n    U-&gt;&gt;C: pick an action\n    C-&gt;&gt;W: prepare()\n    W-&gt;&gt;G: evaluate(text, requires_external)\n    G--&gt;&gt;W: allow / needs consent / block\n    W--&gt;&gt;C: prepared request\n    opt needs consent (Search Web with sensitive text)\n        C-&gt;&gt;U: consent dialog with redacted preview\n        U--&gt;&gt;C: approve or decline\n    end\n    C-&gt;&gt;W: execute()\n    W--&gt;&gt;C: result\n    C-&gt;&gt;U: result panel near the cursor\n</code></pre>\n<p>Ports-and-adapters layering: <code>ui/</code> and <code>app/</code> depend on <code>domain/</code>\ninterfaces, <code>infrastructure/</code> implements them, and <code>domain/</code> depends on\nnothing else. Providers resolve lazily and fail safe, which is what makes\nthe startup and degradation guarantees above hold — see\n<code>app/pipeline.py</code>'s <code>_load()</code> for the pattern.</p>\n<p>The pipeline is split into <code>prepare()</code> (extract + privacy decision) and\n<code>execute()</code> (do the work) specifically so a consent dialog has a seam to\nsit in: it runs on the UI thread between the two phases, with the actual\nwork on either side running on a worker thread. Decline, and nothing had\nrun yet — nothing was sent.</p>\n<pre><code>cursor_bite/\n├── app/              orchestration: controller, pipeline, event bus\n├── domain/           interfaces + pure data, no infrastructure imports\n├── infrastructure/\n│   ├── ai/           Ollama\n│   ├── ocr/          Tesseract\n│   ├── os/           hotkey, cursor, clipboard, selection, screen capture\n│   ├── privacy/      sensitive-data detector, policy engine, gateway\n│   ├── search/       DuckDuckGo\n│   ├── storage/      cache (in-memory); an unused-by-default SQLite option\n│   └── translation/  Argos Translate\n├── ui/               PyQt6: radial menu, result panel, dialogs, tray\n├── config/           defaults + config.json loader\n├── utils/            logging, the run_async threading helper\n├── tests/            unit / integration / security\n├── scripts/          dev utilities (README preview render)\n└── design/           a browser-based UI/UX prototype — not the shipped app,\n                       see design/web-prototype/README.md\n</code></pre>"
+          },
+          {
+            "id": "readme-technology",
+            "title": "Technology",
+            "kind": "stack",
+            "html": "<h2 id=\"readme-technology\">Technology</h2>\n<p>Python 3.11+ · PyQt6 · pywin32 · Argos Translate (offline) · Ollama (local)\n· Tesseract (offline) · DuckDuckGo (no API key). Every dependency is free —\nno paid API, no required account, no mandatory cloud service.</p>"
+          },
+          {
+            "id": "readme-current-status",
+            "title": "Current Status",
+            "kind": "other",
+            "html": "<h2 id=\"readme-current-status\">Current Status</h2>\n<p><strong>Working today</strong>, exercised by the test suite and by running the app:\nhotkey, radial menu, tray, privacy gateway, all seven actions listed above,\nSettings/Privacy/Check-Components windows, clipboard-safe capture,\ngraceful degradation of every optional engine.</p>\n<p><strong>Experimental:</strong> DuckDuckGo search depends on an HTML endpoint DuckDuckGo\ndoesn't officially support for automation; it can return a bot-check page\nunder load, which is reported plainly rather than silently retried forever.\nLanguage auto-detection for translation uses a three-tier fallback (Unicode\nscript → statistical detection → a weak last-resort probe) that is\ndeliberately conservative about guessing a language with no real evidence —\nsee <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/CHANGELOG.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CHANGELOG.md</a> for a bug this caught.</p>\n<p><strong>Planned, not built:</strong> Read Aloud (TTS) — the interface for it\n(<code>TTSProvider</code> in <code>domain/interfaces.py</code>) exists, nothing implements it yet.\nAn installer/MSI beyond the current PyInstaller build. A packaged\n<code>.exe</code> verified end-to-end (see <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/PACKAGING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">PACKAGING.md</a> for exactly\nwhat has and hasn't been runtime-checked).</p>"
+          },
+          {
+            "id": "readme-roadmap",
+            "title": "Roadmap",
+            "kind": "meta",
+            "html": "<h2 id=\"readme-roadmap\">Roadmap</h2>\n<ul>\n<li>Read Aloud via a local TTS engine.</li>\n<li>An MSI/installer instead of a copy-the-folder EXE build.</li>\n<li>Revisit the radial menu against a compact command-bar alternative with\nreal usage data — the interaction model isn't assumed to be final.</li>\n</ul>"
+          },
+          {
+            "id": "readme-limitations",
+            "title": "Limitations",
+            "kind": "other",
+            "html": "<h2 id=\"readme-limitations\">Limitations</h2>\n<ul>\n<li>Windows only, by design.</li>\n<li>Selection capture uses a simulated Ctrl+C plus a clipboard snapshot —\nthere is no universal cross-application \"get selection\" API on Windows\nwithout deeper accessibility integration. This works in the overwhelming\nmajority of apps; a handful of unusual ones (custom-rendered canvases with\nno text layer, some elevated/protected windows) won't produce a selection\nto copy. The app tells you plainly when nothing was captured rather than\nguessing.</li>\n<li>Web search quality is bounded by an unofficial HTML endpoint — see\nCurrent Status above.</li>\n<li>The sensitive-data detector is pattern-based, not exhaustive — see\n<a href=\"https://github.com/Soham-o/cursor_bite/blob/main/SECURITY.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">SECURITY.md</a>.</li>\n</ul>"
+          },
+          {
+            "id": "readme-development",
+            "title": "Development",
+            "kind": "other",
+            "html": "<h2 id=\"readme-development\">Development</h2>\n<pre><code class=\"language-powershell\">pip install -r requirements.txt\npip install pytest ruff\npython -m pytest tests/ -q\nruff check .\n</code></pre>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/CONTRIBUTING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CONTRIBUTING.md</a> for the architectural conventions\n(lazy/fail-safe providers, no UI-thread blocking, no user content in logs)\nthis project holds itself to.</p>"
+          },
+          {
+            "id": "readme-testing",
+            "title": "Testing",
+            "kind": "other",
+            "html": "<h2 id=\"readme-testing\">Testing</h2>\n<pre><code class=\"language-powershell\">python -m pytest tests/ -q\n</code></pre>\n<p>306 tests across privacy detection and policy, every pipeline action, the\nclipboard save/restore invariant, selection-capture concurrency, the\nhotkey string parser, multi-monitor cursor geometry, search rate limiting\nand fallback tiers, graceful degradation when packages are missing, the\ntwo-phase consent seam, and radial-menu keyboard/mouse navigation. Runs\nheadless — no display, network, Ollama, Tesseract, or Argos packs required\n(one test additionally exercises a real installed Argos language pack when\none happens to be present, and degrades to its \"not installed\" branch\notherwise).</p>"
+          },
+          {
+            "id": "readme-packaging",
+            "title": "Packaging",
+            "kind": "other",
+            "html": "<h2 id=\"readme-packaging\">Packaging</h2>\n<pre><code class=\"language-powershell\">pip install pyinstaller\npyinstaller cursor_bite.spec\n</code></pre>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/PACKAGING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">PACKAGING.md</a> for what's bundled, what still needs to be\ninstalled separately on the target machine, and what has and hasn't been\nruntime-verified about the resulting build.</p>"
+          },
+          {
+            "id": "readme-contributing",
+            "title": "Contributing",
+            "kind": "meta",
+            "html": "<h2 id=\"readme-contributing\">Contributing</h2>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/CONTRIBUTING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CONTRIBUTING.md</a>. Please also read\n<a href=\"https://github.com/Soham-o/cursor_bite/blob/main/CODE_OF_CONDUCT.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CODE_OF_CONDUCT.md</a>.</p>"
+          },
+          {
+            "id": "readme-security",
+            "title": "Security",
+            "kind": "other",
+            "html": "<h2 id=\"readme-security\">Security</h2>\n<p>See <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/SECURITY.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">SECURITY.md</a> for how to report a vulnerability. The\nsensitive-data detector is regex-based and documented as a safety net, not\na guarantee — see <code>infrastructure/privacy/detector.py</code> for exactly which\npatterns it covers.</p>"
+          },
+          {
+            "id": "readme-important-product-principle",
+            "title": "Important product principle",
+            "kind": "other",
+            "html": "<h2 id=\"readme-important-product-principle\">Important product principle</h2>\n<p>This project stays deliberately small. Before adding anything, ask whether\nit improves <em>context</em>, <em>intelligence</em>, <em>speed</em>, <em>privacy</em>, or <em>reliability</em>.\nIf not, it probably doesn't belong — a focused project is worth more than a\nlarge one.</p>"
+          },
+          {
+            "id": "readme-license",
+            "title": "License",
+            "kind": "license",
+            "html": "<h2 id=\"readme-license\">License</h2>\n<p>MIT — see <a href=\"https://github.com/Soham-o/cursor_bite/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">LICENSE</a>.</p>\n<hr />\n<p align=\"center\">\n  <strong>Built by Soham Panda</strong><br />\n  <sub>AI engineering • intelligent software • privacy-first systems</sub>\n</p>"
+          }
+        ],
+        "highlights": {
+          "overview": "Intelligence at your cursor.",
+          "problem": "Every one of these actions already exists somewhere — a translator site, a chat app, a search bar. What doesn't exist is one of them appearing exactly where your mouse already is, the instant you ask for it, without a tab switch, a paste, or an account. Select some text — a browser, a PDF, an IDE, a chat window…",
+          "features": []
+        },
+        "excerpt": "Intelligence at your cursor.",
+        "truncated": false,
+        "demoLinks": [],
+        "images": [
+          "https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png"
+        ]
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1136219572,
+      "slug": "personalearn",
+      "name": "PersonaLearn",
+      "displayName": "PersonaLearn",
+      "fullName": "Soham-o/PersonaLearn",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/PersonaLearn",
+      "description": "",
+      "summary": "ML-powered system that personalises content delivery based on learner behaviour patterns. Adapts difficulty and format dynamically — built with Python and Streamlit.",
+      "category": "ML · Adaptive Learning",
+      "featured": false,
+      "curated": true,
+      "order": null,
+      "topics": [],
+      "language": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 14788,
+          "pct": 100
+        }
+      ],
+      "tech": [
+        {
+          "name": "Python",
+          "source": "language"
+        },
+        {
+          "name": "Streamlit",
+          "source": "manifest"
+        },
+        {
+          "name": "Gemini API",
+          "source": "manifest"
+        }
+      ],
+      "license": null,
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-01-17T09:37:38Z",
+      "updatedAt": "2026-10-10T02:56:35Z",
+      "pushedAt": "2026-10-10T02:56:31Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "Image-Doc/p2.png",
+        "source": "override"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/PersonaLearn/blob/main/README.md",
+        "overviewHtml": "<blockquote>\n<p>A Streamlit prototype that explains study topics through analogies drawn\nfrom a learner's interests (Minecraft, Marvel, Cricket, Cooking, K-Pop),\nthen quizzes them in the same context. Built by Team Innovsphere during a\n3-hour team sprint.</p>\n</blockquote>\n<p><img src=\"https://img.shields.io/badge/Python-3.9%2B-blue\" alt=\"Python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/Streamlit-App-ff4b4b\" alt=\"Streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/AI-Google%20Gemini-8E75B2\" alt=\"Gemini\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/status-prototype-orange\" alt=\"Status\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>",
+        "sections": [
+          {
+            "id": "readme--the-problem",
+            "title": "💡 The Problem",
+            "kind": "problem",
+            "html": "<h2 id=\"readme--the-problem\">💡 The Problem</h2>\n<p>New ideas are easier to remember when they are tied to something you already\nknow well. Standard textbooks explain every topic the same way for every\nreader.</p>"
+          },
+          {
+            "id": "readme--the-solution",
+            "title": "🛠️ The Solution",
+            "kind": "other",
+            "html": "<h2 id=\"readme--the-solution\">🛠️ The Solution</h2>\n<p><strong>PersonaLearn</strong> sends each topic to Google Gemini with a prompt that asks for\nan explanation framed around the learner's chosen interest.</p>\n<ul>\n<li><strong>Don't understand Trigonometry?</strong> Read an explanation based on Cricket.</li>\n<li><strong>Confused by Blockchain?</strong> Learn it through Minecraft block analogies.</li>\n</ul>"
+          },
+          {
+            "id": "readme--key-features",
+            "title": "✨ Key Features",
+            "kind": "features",
+            "html": "<h2 id=\"readme--key-features\">✨ Key Features</h2>\n<ul>\n<li><strong>Preset syllabi:</strong> Topic lists for School, SSC, UPSC, and General Knowledge.</li>\n<li><strong>Interest mapping:</strong> Choose an analogy theme (Minecraft, Cricket, Marvel, Cooking, K-Pop) plus length and complexity.</li>\n<li><strong>Two views:</strong><ul>\n<li>🎓 <strong>Student view:</strong> Learn topics, mark them complete, and see a quiz score.</li>\n<li>👨‍🏫 <strong>Professor view:</strong> Add or remove syllabus topics.</li>\n</ul>\n</li>\n<li><strong>AI quiz generator:</strong> Generates a multiple-choice question from the explanation that was just shown.</li>\n<li><strong>Scoring:</strong> Running score and quiz count for the current session.</li>\n</ul>"
+          },
+          {
+            "id": "readme--quick-start",
+            "title": "🚀 Quick Start",
+            "kind": "setup",
+            "html": "<h2 id=\"readme--quick-start\">🚀 Quick Start</h2>\n<h3 id=\"readme-prerequisites\">Prerequisites</h3>\n<ul>\n<li>Python 3.9+</li>\n<li>A Google Gemini API key (<a href=\"https://aistudio.google.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Google AI Studio</a>)</li>\n</ul>\n<h3 id=\"readme-installation\">Installation</h3>\n<ol>\n<li><p><strong>Clone the repository</strong></p>\n<pre><code class=\"language-bash\">git clone https://github.com/Soham-o/PersonaLearn.git\ncd PersonaLearn\n</code></pre>\n</li>\n<li><p><strong>Install dependencies</strong></p>\n<pre><code class=\"language-bash\">pip install -r requirements.txt\n</code></pre>\n</li>\n<li><p><strong>Set up credentials</strong>\nCreate a <code>.env</code> file in the root directory (do not commit it):</p>\n<pre><code class=\"language-bash\">GOOGLE_API_KEY=your_api_key_here\n</code></pre>\n<p>If no key is set, the sidebar asks for one when the app starts.</p>\n</li>\n<li><p><strong>Run the app</strong></p>\n<pre><code class=\"language-bash\">streamlit run main.py\n</code></pre>\n</li>\n</ol>"
+          },
+          {
+            "id": "readme--screenshots",
+            "title": "📸 Screenshots",
+            "kind": "demo",
+            "html": "<h2 id=\"readme--screenshots\">📸 Screenshots</h2>\n<p><img src=\"https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122655.png\" alt=\"PersonaLearn landing page\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122834.png\" alt=\"PersonaLearn explaining Trigonometry through a Cricket analogy\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>"
+          },
+          {
+            "id": "readme--how-it-works",
+            "title": "🏗️ How it Works",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--how-it-works\">🏗️ How it Works</h2>\n<ol>\n<li><strong>Input:</strong> The user picks a topic (e.g., \"Photosynthesis\") and an interest (e.g., \"Marvel\").</li>\n<li><strong>Processing:</strong> The app builds a prompt and sends it to Gemini through the <code>google-generativeai</code> SDK (<code>gemini-2.5-flash</code>).</li>\n<li><strong>Output:</strong> The interest-based explanation is displayed.</li>\n<li><strong>Assessment:</strong> Gemini generates a quiz question based on that explanation.</li>\n</ol>\n<p><img src=\"https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20123003.png\" alt=\"PersonaLearn multiple-choice quiz generated from the Cricket explanation, answered correctly\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>"
+          },
+          {
+            "id": "readme--limitations",
+            "title": "⚠️ Limitations",
+            "kind": "other",
+            "html": "<h2 id=\"readme--limitations\">⚠️ Limitations</h2>\n<ul>\n<li><strong>Prototype:</strong> built in a short sprint; there are no automated tests.</li>\n<li><strong>No accounts or persistence:</strong> Student/Professor is a view toggle, not a login, and progress, scores and syllabus edits are lost when the session ends.</li>\n<li><strong>Deprecated SDK:</strong> <code>google-generativeai</code> no longer receives updates. Migrating to Google's <code>google-genai</code> package is recommended.</li>\n<li><strong>AI output is not fact-checked:</strong> explanations and quiz answers come straight from the model.</li>\n</ul>"
+          },
+          {
+            "id": "readme--team-innovsphere",
+            "title": "👥 Team Innovsphere",
+            "kind": "other",
+            "html": "<h2 id=\"readme--team-innovsphere\">👥 Team Innovsphere</h2>\n<p>Built during a 3-hour rapid development sprint by:</p>\n<ul>\n<li><strong>Chaitanya</strong></li>\n<li><strong>Nishant</strong></li>\n<li><strong>Lavisha</strong></li>\n<li><strong>Ayush</strong></li>\n<li><strong>Soham</strong></li>\n</ul>"
+          },
+          {
+            "id": "readme--license",
+            "title": "📄 License",
+            "kind": "license",
+            "html": "<h2 id=\"readme--license\">📄 License</h2>\n<p>No license file has been added yet. Until one is, all rights are reserved by\nthe authors.</p>"
+          }
+        ],
+        "highlights": {
+          "overview": "",
+          "problem": "New ideas are easier to remember when they are tied to something you already know well. Standard textbooks explain every topic the same way for every reader.",
+          "features": [
+            "Preset syllabi: Topic lists for School, SSC, UPSC, and General Knowledge.",
+            "Interest mapping: Choose an analogy theme (Minecraft, Cricket, Marvel, Cooking, K-Pop) plus length and complexity.",
+            "Two views:",
+            "AI quiz generator: Generates a multiple-choice question from the explanation that was just shown.",
+            "Scoring: Running score and quiz count for the current session."
+          ]
+        },
+        "excerpt": "",
+        "truncated": false,
+        "demoLinks": [],
+        "images": [
+          "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122655.png",
+          "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20122834.png",
+          "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20123003.png"
+        ]
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1273992234,
+      "slug": "calmreader",
+      "name": "CalmReader",
+      "displayName": "CalmReader",
+      "fullName": "Soham-o/CalmReader",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/CalmReader",
+      "description": "",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "JavaScript",
+      "languages": [
+        {
+          "name": "JavaScript",
+          "bytes": 81257,
+          "pct": 99.6
+        },
+        {
+          "name": "HTML",
+          "bytes": 297,
+          "pct": 0.4
+        }
+      ],
+      "tech": [
+        {
+          "name": "JavaScript",
+          "source": "language"
+        },
+        {
+          "name": "React",
+          "source": "manifest"
+        },
+        {
+          "name": "Vite",
+          "source": "manifest"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-06-19T04:44:06Z",
+      "updatedAt": "2026-06-19T14:55:16Z",
+      "pushedAt": "2026-06-19T14:55:10Z",
+      "homepage": "https://calm-reader-delta.vercel.app/",
+      "demo": {
+        "url": "https://calm-reader-delta.vercel.app/",
+        "source": "homepage"
+      },
+      "image": {
+        "url": "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/import.png",
+        "source": "readme"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/CalmReader/blob/main/README.md",
+        "overviewHtml": "<div align=\"center\">\n\n<p><strong>Read deeply. Think clearly. Remember what matters.</strong></p>\n<p><em>A frictionless, e-ink-inspired reading environment built for comprehension — not consumption.</em></p>\n<p><a href=\"https://github.com/Soham-o/CalmReader/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/License-MIT-6B7A5E.svg?style=flat-square\" alt=\"License: MIT\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://react.dev/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Built%20with-React-61DAFB.svg?style=flat-square&amp;logo=react&amp;logoColor=white\" alt=\"Built with React\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://vitejs.dev/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Vite-646CFF.svg?style=flat-square&amp;logo=vite&amp;logoColor=white\" alt=\"Vite\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"https://github.com/Soham-o/CalmReader/blob/main/CONTRIBUTING.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/PRs-welcome-B5774A.svg?style=flat-square\" alt=\"PRs Welcome\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n<a href=\"#readme-philosophy\"><img src=\"https://img.shields.io/badge/Calm-Technology-8B8779.svg?style=flat-square\" alt=\"Calm Technology\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a></p>\n<p><a href=\"#readme-\">Live Demo</a> · <a href=\"https://github.com/Soham-o/CalmReader/blob/main/issues\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Report a Bug</a> · <a href=\"https://github.com/Soham-o/CalmReader/blob/main/issues\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Request a Feature</a> · <a href=\"#readme-roadmap\">Roadmap</a></p>\n<hr />\n</div>\n\n<blockquote>\n<p>Most reading tools are built to keep you reading <em>more</em>. CalmReader is built to help you understand <em>better</em> — one passage at a time, without notifications, streaks, or noise.</p>\n</blockquote>\n<hr />",
+        "sections": [
+          {
+            "id": "readme-table-of-contents",
+            "title": "Table of Contents",
+            "kind": "other",
+            "html": "<h2 id=\"readme-table-of-contents\">Table of Contents</h2>\n<ul>\n<li><a href=\"#readme-why-calmreader\">Why CalmReader</a></li>\n<li><a href=\"#readme-philosophy\">Philosophy</a></li>\n<li><a href=\"#readme-features\">Features</a></li>\n<li><a href=\"#readme-screenshots\">Screenshots</a></li>\n<li><a href=\"#readme-getting-started\">Getting Started</a></li>\n<li><a href=\"#readme-local-development\">Local Development</a></li>\n<li><a href=\"#readme-project-structure\">Project Structure</a></li>\n<li><a href=\"#readme-roadmap\">Roadmap</a></li>\n<li><a href=\"#readme-contributing\">Contributing</a></li>\n<li><a href=\"#readme-license\">License</a></li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-why-calmreader",
+            "title": "Why CalmReader",
+            "kind": "problem",
+            "html": "<h2 id=\"readme-why-calmreader\">Why CalmReader</h2>\n<p>Most reading software optimizes for one metric: time on screen. The result is an environment filled with progress bars, streaks, recommendation feeds, and pop-up encouragement — tools designed to retain your attention, not support your comprehension.</p>\n<p>The neuroscience tells a different story. Comprehension depends on working memory — a small, effortful workspace that holds ideas in active relation to each other. Every interruption taxes that workspace. Distraction isn't a minor annoyance; it's the mechanism by which understanding fails to form.</p>\n<p>CalmReader is the antithesis of that design pattern. It is a page built like a well-made notebook: it loads your text, gets out of the way, and trusts you to read slowly. When you encounter a hard concept, it surfaces a definition — inline, quietly — without sending you down a browser tab rabbit hole. When you finish a section, it asks one good question instead of offering a five-star rating prompt.</p>\n<p>It does not want you to keep using it. It wants you to finish reading.</p>\n<hr />"
+          },
+          {
+            "id": "readme-philosophy",
+            "title": "Philosophy",
+            "kind": "other",
+            "html": "<h2 id=\"readme-philosophy\">Philosophy</h2>\n<p>CalmReader is grounded in <a href=\"https://calmtech.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Calm Technology</a> principles articulated by Mark Weiser and John Seely Brown: technology should require only as much attention as it deserves, communicate information at the periphery rather than the center, and amplify the best of human capability.</p>\n<p>In practice, this means:</p>\n<ul>\n<li><strong>No feeds or discovery.</strong> You bring the text. CalmReader reads it with you.</li>\n<li><strong>No streaks, no badges, no gamification.</strong> Reading is intrinsically worth doing.</li>\n<li><strong>No notifications, ever.</strong> The page is silent unless you ask it something.</li>\n<li><strong>No tracking.</strong> Your reflections live locally, on your device, under your control.</li>\n<li><strong>Deep learning over content consumption.</strong> The goal is one idea truly understood, not thirty articles skimmed.</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-features",
+            "title": "Features",
+            "kind": "features",
+            "html": "<h2 id=\"readme-features\">Features</h2>\n<h3 id=\"readme-import-anything\">Import Anything</h3>\n<p>Bring your own content. Paste raw text directly, upload a <code>.txt</code> or <code>.md</code> file, or pull in any article via URL using the Jina Reader proxy. No account required. No content library. Just your text.</p>\n<h3 id=\"readme-flow-focus\">Flow Focus</h3>\n<p>As you read, paragraphs outside your current position softly dim — reducing visual noise and keeping your working memory focused on one idea at a time. Enable it when you want it. Disable it when you don't.</p>\n<h3 id=\"readme-socratic-margin\">Socratic Margin</h3>\n<p>CalmReader doesn't summarize — it questions. When you tap a paragraph, a context-aware prompt appears in the margin: <em>\"Does the conclusion necessarily follow?\"</em> or <em>\"What would someone who disagrees say?\"</em> These aren't generic questions. They're selected based on what the paragraph is doing — making a causal claim, citing evidence, or issuing a value judgment.</p>\n<p>Your answer goes into the <strong>Wisdom Ledger</strong>. Not the AI's summary. Yours.</p>\n<h3 id=\"readme-x-ray-clarification\">X-Ray Clarification</h3>\n<p>Forty-plus academic and conceptual terms are quietly annotated beneath the surface. Tap a term — <em>neuroplasticity</em>, <em>heuristic</em>, <em>externality</em> — and its definition expands inline. Reading continues. You never leave the page.</p>\n<h3 id=\"readme-wisdom-ledger\">Wisdom Ledger</h3>\n<p>A running log of insights you've written during a session. Every entry is authored by you, not generated. The ledger is searchable, exportable, and stored locally.</p>\n<h3 id=\"readme-reflection-archive\">Reflection Archive</h3>\n<p>Every insight and Pause Point response is saved across sessions in <code>localStorage</code>/<code>IndexedDB</code>. Search your own thinking across every text you've ever read in CalmReader: type a concept and find the thought you had about it three months ago.</p>\n<h3 id=\"readme-pause-points\">Pause Points</h3>\n<p>Every six paragraphs, a quiet interstitial appears: <em>\"Without looking back — what do you remember?\"</em> A small text field invites active recall, which cognitive science identifies as one of the most reliable mechanisms for long-term retention. Not a quiz. Not a score. A question.</p>\n<h3 id=\"readme-e-ink-inspired-design\">E-ink Inspired Design</h3>\n<p>Warm paper tones (<code>#F9F6F0</code>), generous line height, and two typefaces chosen for reading: <strong>Literata</strong> for body text and <strong>Atkinson Hyperlegible</strong> for UI — a typeface designed by the Braille Institute to maximize legibility for readers with low vision.</p>\n<hr />"
+          },
+          {
+            "id": "readme-screenshots",
+            "title": "Screenshots",
+            "kind": "demo",
+            "html": "<h2 id=\"readme-screenshots\">Screenshots</h2>\n<blockquote>\n<p>Screenshots coming soon. In the meantime, try the <a href=\"#readme-\">live demo</a>.</p>\n</blockquote>\n<table>\n<thead>\n<tr>\n<th align=\"center\">Import Screen</th>\n<th align=\"center\">Reading View</th>\n<th align=\"center\">Socratic Margin</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/import.png\" alt=\"Import\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/reading.png\" alt=\"Reading\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/socratic.png\" alt=\"Socratic\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n</tr>\n</tbody></table>\n<table>\n<thead>\n<tr>\n<th align=\"center\">Wisdom Ledger</th>\n<th align=\"center\">Reflection Archive</th>\n<th align=\"center\">Mobile View</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/ledger.png\" alt=\"Ledger\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/archive.png\" alt=\"Archive\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n<td align=\"center\"><img src=\"https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/mobile.png\" alt=\"Mobile\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme-getting-started",
+            "title": "Getting Started",
+            "kind": "setup",
+            "html": "<h2 id=\"readme-getting-started\">Getting Started</h2>\n<h3 id=\"readme-prerequisites\">Prerequisites</h3>\n<ul>\n<li><a href=\"https://nodejs.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Node.js</a> v18 or higher</li>\n<li><a href=\"https://pnpm.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">pnpm</a> (recommended) or npm</li>\n</ul>\n<h3 id=\"readme-quick-start\">Quick Start</h3>\n<pre><code class=\"language-bash\"># Clone the repository\ngit clone https://github.com/yourusername/calmreader.git\ncd calmreader\n\n# Install dependencies\npnpm install\n\n# Start the development server\npnpm dev\n</code></pre>\n<p>Open <a href=\"http://localhost:5173/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">http://localhost:5173</a> and paste any text to begin.</p>\n<h3 id=\"readme-build-for-production\">Build for Production</h3>\n<pre><code class=\"language-bash\">pnpm build\npnpm preview\n</code></pre>\n<p>The production build outputs to <code>dist/</code> and is deployable to any static host (Vercel, Netlify, Cloudflare Pages).</p>\n<hr />"
+          },
+          {
+            "id": "readme-local-development",
+            "title": "Local Development",
+            "kind": "other",
+            "html": "<h2 id=\"readme-local-development\">Local Development</h2>\n<h3 id=\"readme-environment\">Environment</h3>\n<p>CalmReader has no backend and requires no environment variables for local development. Everything runs in the browser.</p>\n<pre><code class=\"language-bash\"># Development server with hot module replacement\npnpm dev\n\n# Type checking (if using TypeScript migration branch)\npnpm typecheck\n\n# Lint\npnpm lint\n\n# Run all checks before committing\npnpm check\n</code></pre>\n<h3 id=\"readme-storage\">Storage</h3>\n<p>CalmReader uses two storage mechanisms:</p>\n<table>\n<thead>\n<tr>\n<th>Scope</th>\n<th>Mechanism</th>\n<th>Purpose</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Session insights</td>\n<td><code>useState</code></td>\n<td>Current reading session only</td>\n</tr>\n<tr>\n<td>Reflection archive</td>\n<td><code>localStorage</code></td>\n<td>Persists across sessions, searched globally</td>\n</tr>\n</tbody></table>\n<p>The storage layer is abstracted behind a simple adapter interface, designed for future migration to <code>IndexedDB</code> (larger archives) or native SQLite (desktop/mobile). See <a href=\"#readme-project-structure\"><code>packages/core/src/storage/</code></a> for details.</p>\n<h3 id=\"readme-url-import\">URL Import</h3>\n<p>The URL import feature proxies requests through <a href=\"https://r.jina.ai/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Jina Reader</a> (<code>https://r.jina.ai/{url}</code>). No API key is required. This makes no requests unless you explicitly use the Link tab — and it is the only network call CalmReader ever makes after the initial page load.</p>\n<hr />"
+          },
+          {
+            "id": "readme-project-structure",
+            "title": "Project Structure",
+            "kind": "other",
+            "html": "<h2 id=\"readme-project-structure\">Project Structure</h2>\n<pre><code>calmreader/\n├── src/\n│   ├── CalmReader.jsx          # Root component — all reading UI\n│   ├── main.jsx                # React entry point\n│   ├── storage/\n│   │   ├── adapter.ts          # StorageAdapter interface\n│   │   ├── idb.ts              # IndexedDB implementation\n│   │   └── index.ts            # Platform detection, exports adapter\n│   ├── lib/\n│   │   ├── parser.js           # parseImportedText, buildSegments\n│   │   ├── prompts.js          # SOCRATIC_BANK, getPromptForParagraph\n│   │   └── terms.js            # TERM_DICTIONARY (X-Ray definitions)\n│   └── assets/\n│       └── fonts/              # Bundled Literata + Atkinson Hyperlegible\n│\n├── public/\n│   ├── manifest.json           # PWA manifest\n│   └── sw.js                   # Service worker (offline support)\n│\n├── docs/\n│   └── screenshots/            # README images\n│\n├── index.html\n├── vite.config.js\n├── package.json\n└── README.md\n</code></pre>\n<h3 id=\"readme-key-design-decisions\">Key Design Decisions</h3>\n<p><strong>Single-file component architecture.</strong> <code>CalmReader.jsx</code> is intentionally large. This is not technical debt — it is a deliberate reflection of the product's philosophy. One text. One session. One file. Splitting it into twenty micro-components would add navigation overhead with no user benefit.</p>\n<p><strong>No state management library.</strong> CalmReader uses only <code>useState</code>, <code>useEffect</code>, <code>useMemo</code>, and <code>useRef</code>. The state surface is small enough that Redux or Zustand would be ceremony, not architecture.</p>\n<p><strong>No UI component library.</strong> Every visual element is hand-crafted with inline styles. This keeps the design system tight, makes the palette explicit, and means there are no Tailwind or MUI overrides to fight against.</p>\n<hr />"
+          },
+          {
+            "id": "readme-roadmap",
+            "title": "Roadmap",
+            "kind": "meta",
+            "html": "<h2 id=\"readme-roadmap\">Roadmap</h2>\n<p>CalmReader is being developed with the principles of the deployment strategy already in mind. Each platform phase shares the same core — no parallel codebases.</p>\n<h3 id=\"readme-now--v10\">Now — v1.0</h3>\n<ul>\n<li><input type=\"checkbox\" disabled checked /> Paste, file upload, URL import</li>\n<li><input type=\"checkbox\" disabled checked /> Flow Focus (Deep Focus mode)</li>\n<li><input type=\"checkbox\" disabled checked /> Socratic Margin with user-written insights</li>\n<li><input type=\"checkbox\" disabled checked /> X-Ray Clarification</li>\n<li><input type=\"checkbox\" disabled checked /> Wisdom Ledger with search</li>\n<li><input type=\"checkbox\" disabled checked /> Reflection Archive (localStorage-backed)</li>\n<li><input type=\"checkbox\" disabled checked /> Active recall Pause Points</li>\n<li><input type=\"checkbox\" disabled checked /> E-ink-inspired typography system</li>\n<li><input type=\"checkbox\" disabled checked /> PWA manifest</li>\n</ul>\n<h3 id=\"readme-next--v11\">Next — v1.1</h3>\n<ul>\n<li><input type=\"checkbox\" disabled /> Full offline support via service worker</li>\n<li><input type=\"checkbox\" disabled /> IndexedDB migration for larger archives</li>\n<li><input type=\"checkbox\" disabled /> Export archive as Markdown or JSON</li>\n<li><input type=\"checkbox\" disabled /> Custom term definitions (bring your own X-Ray glossary)</li>\n<li><input type=\"checkbox\" disabled /> Dark mode (ink-on-black, not blue-dark)</li>\n</ul>\n<h3 id=\"readme-later--v20\">Later — v2.0</h3>\n<ul>\n<li><input type=\"checkbox\" disabled /> Chrome / Edge extension with one-click \"Read in CalmReader\"</li>\n<li><input type=\"checkbox\" disabled /> Tauri desktop app (Windows, Mac, Linux) — ~8MB, launches in under 1s</li>\n<li><input type=\"checkbox\" disabled /> Android app via Capacitor</li>\n<li><input type=\"checkbox\" disabled /> iOS app via Capacitor</li>\n<li><input type=\"checkbox\" disabled /> Cross-device sync (optional, end-to-end encrypted, self-hostable)</li>\n</ul>\n<h3 id=\"readme-someday--v30\">Someday — v3.0</h3>\n<ul>\n<li><input type=\"checkbox\" disabled /> Expandable X-Ray glossary (domain-specific dictionaries)</li>\n<li><input type=\"checkbox\" disabled /> Spaced repetition surfacing from Reflection Archive</li>\n<li><input type=\"checkbox\" disabled /> Reading session statistics (time, recall score) — opt-in, local only</li>\n<li><input type=\"checkbox\" disabled /> Collaborative margin notes (book clubs)</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-contributing",
+            "title": "Contributing",
+            "kind": "meta",
+            "html": "<h2 id=\"readme-contributing\">Contributing</h2>\n<p>Contributions are welcome. CalmReader is a small, focused project — please keep that spirit in mind when proposing changes.</p>\n<h3 id=\"readme-before-you-open-a-pr\">Before You Open a PR</h3>\n<ul>\n<li>Read the <a href=\"#readme-philosophy\">Philosophy</a> section. Features that add friction, gamification, or distraction will not be merged — even if they're well-implemented.</li>\n<li>Open an issue first for anything beyond a small bug fix. Discuss the shape of the change before writing code.</li>\n<li>Prefer editing existing files over adding new ones. Prefer simpler over more abstract.</li>\n</ul>\n<h3 id=\"readme-development-workflow\">Development Workflow</h3>\n<pre><code class=\"language-bash\"># Fork the repository and clone your fork\ngit clone https://github.com/yourusername/calmreader.git\n\n# Create a feature branch\ngit checkout -b feature/your-feature-name\n\n# Make your changes, then run checks\npnpm check\n\n# Commit with a clear message\ngit commit -m \"feat: add custom glossary support for X-Ray terms\"\n\n# Push and open a pull request\ngit push origin feature/your-feature-name\n</code></pre>\n<h3 id=\"readme-what-we-welcome\">What We Welcome</h3>\n<ul>\n<li>Bug fixes</li>\n<li>Accessibility improvements</li>\n<li>New X-Ray term definitions (edit <code>src/lib/terms.js</code>)</li>\n<li>New Socratic prompts (edit <code>src/lib/prompts.js</code>)</li>\n<li>Performance improvements</li>\n<li>Documentation improvements</li>\n<li>Platform-specific shell work (extension, desktop, mobile)</li>\n</ul>\n<h3 id=\"readme-what-belongs-in-a-fork\">What Belongs in a Fork</h3>\n<ul>\n<li>Sync to a cloud service (unless privacy-preserving and opt-in)</li>\n<li>Social features (sharing, public profiles)</li>\n<li>AI-generated summaries or insights</li>\n<li>Gamification of any kind</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-acknowledgements",
+            "title": "Acknowledgements",
+            "kind": "meta",
+            "html": "<h2 id=\"readme-acknowledgements\">Acknowledgements</h2>\n<p>CalmReader draws on ideas from people who thought seriously about attention, typography, and the design of quiet tools:</p>\n<ul>\n<li><strong>Mark Weiser &amp; John Seely Brown</strong> — <a href=\"https://calmtech.com/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Calm Technology</a> (1995)</li>\n<li><strong>The Braille Institute</strong> — <a href=\"https://brailleinstitute.org/freefont\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Atkinson Hyperlegible</a> typeface</li>\n<li><strong>Google Fonts / Type Together</strong> — <a href=\"https://fonts.google.com/specimen/Literata\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Literata</a> typeface</li>\n<li><strong>Amber Thomas</strong> and the Readwise team — for proving that serious reading tools have an audience</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme-license",
+            "title": "License",
+            "kind": "license",
+            "html": "<h2 id=\"readme-license\">License</h2>\n<p>MIT License — see <a href=\"https://github.com/Soham-o/CalmReader/blob/main/LICENSE\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">LICENSE</a> for details.</p>\n<p>You are free to use, modify, and distribute CalmReader. If you build something with it, the only thing we'd ask is that you keep the spirit of the project intact: no dark patterns, no engagement optimization, no noise.</p>\n<hr />\n<div align=\"center\">\n\n<p><em>\"A page that disappears is the highest compliment a reading tool can receive.\"</em></p>\n<p><strong><a href=\"#readme-\">Try CalmReader →</a></strong></p>\n</div>"
+          }
+        ],
+        "highlights": {
+          "overview": "Read deeply. Think clearly. Remember what matters.",
+          "problem": "Most reading software optimizes for one metric: time on screen. The result is an environment filled with progress bars, streaks, recommendation feeds, and pop-up encouragement — tools designed to retain your attention, not support your comprehension.",
+          "features": []
+        },
+        "excerpt": "Read deeply. Think clearly. Remember what matters.",
+        "truncated": false,
+        "demoLinks": [],
+        "images": [
+          "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/import.png",
+          "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/reading.png",
+          "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/socratic.png",
+          "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/ledger.png",
+          "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/archive.png",
+          "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/mobile.png"
+        ]
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1260140601,
+      "slug": "autonomous-driving-system",
+      "name": "autonomous-driving-system",
+      "displayName": "Autonomous Driving System",
+      "fullName": "Soham-o/autonomous-driving-system",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/autonomous-driving-system",
+      "description": "",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 278534,
+          "pct": 100
+        }
+      ],
+      "tech": [
+        {
+          "name": "Python",
+          "source": "language"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-06-05T07:38:04Z",
+      "updatedAt": "2026-06-05T07:41:37Z",
+      "pushedAt": "2026-06-05T07:41:33Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "https://opengraph.githubassets.com/77c714bc2a1bad9c/Soham-o/autonomous-driving-system",
+        "source": "social"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/autonomous-driving-system/blob/main/README.md",
+        "overviewHtml": "<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&amp;logo=python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/PyTorch-2.1+-EE4C2C?style=for-the-badge&amp;logo=pytorch\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/CARLA-0.9.15+-00B5E2?style=for-the-badge\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/YOLOv11-Ultralytics-purple?style=for-the-badge\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/Stable--Baselines3-PPO-green?style=for-the-badge\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <img src=\"https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=for-the-badge&amp;logo=streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</p>\n\n<blockquote>\n<p><strong>Industry-grade autonomous vehicle simulation system</strong> integrating\ndeep-learning perception, rule-based + RL decision making, classical\npath planning, PID vehicle control, and a real-time Streamlit dashboard.\nBuilt as an AI/Autonomous Systems internship capstone portfolio project.</p>\n</blockquote>\n<hr />",
+        "sections": [
+          {
+            "id": "readme--table-of-contents",
+            "title": "📋 Table of Contents",
+            "kind": "other",
+            "html": "<h2 id=\"readme--table-of-contents\">📋 Table of Contents</h2>\n<ol>\n<li><a href=\"#readme--project-overview\">Project Overview</a></li>\n<li><a href=\"#readme--system-architecture\">System Architecture</a></li>\n<li><a href=\"#readme--module-breakdown\">Module Breakdown</a></li>\n<li><a href=\"#readme--installation\">Installation</a></li>\n<li><a href=\"#readme--dataset-setup\">Dataset Setup</a></li>\n<li><a href=\"#readme--running-the-system\">Running the System</a></li>\n<li><a href=\"#readme--training-the-rl-agent\">Training the RL Agent</a></li>\n<li><a href=\"#readme--evaluation\">Evaluation</a></li>\n<li><a href=\"#readme--dashboard-usage\">Dashboard Usage</a></li>\n<li><a href=\"#readme--evaluation-metrics\">Evaluation Metrics</a></li>\n<li><a href=\"#readme--results\">Results</a></li>\n<li><a href=\"#readme--project-structure\">Project Structure</a></li>\n<li><a href=\"#readme--future-improvements\">Future Improvements</a></li>\n<li><a href=\"#readme--references\">References</a></li>\n</ol>\n<hr />"
+          },
+          {
+            "id": "readme--project-overview",
+            "title": "🎯 Project Overview",
+            "kind": "about",
+            "html": "<h2 id=\"readme--project-overview\">🎯 Project Overview</h2>\n<p>This project implements a <strong>complete, modular autonomous driving pipeline</strong>\ncapable of:</p>\n<table>\n<thead>\n<tr>\n<th>Capability</th>\n<th>Implementation</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Lane detection</td>\n<td>Hough Transform + temporal smoothing</td>\n</tr>\n<tr>\n<td>Object detection</td>\n<td>YOLOv11 (Ultralytics) + ByteTracker</td>\n</tr>\n<tr>\n<td>Traffic sign recognition</td>\n<td>YOLO + fine-grained CNN classifier</td>\n</tr>\n<tr>\n<td>Depth estimation</td>\n<td>Intel MiDaS (DPT_Large)</td>\n</tr>\n<tr>\n<td>Driving decisions</td>\n<td>Rule-based FSM + Behaviour Planner</td>\n</tr>\n<tr>\n<td>Global path planning</td>\n<td>A* search on occupancy grid</td>\n</tr>\n<tr>\n<td>Local path planning</td>\n<td>Pure Pursuit + potential fields</td>\n</tr>\n<tr>\n<td>Vehicle control</td>\n<td>PID + Stanley controller + AEB</td>\n</tr>\n<tr>\n<td>End-to-end RL driving</td>\n<td>PPO (Stable-Baselines3)</td>\n</tr>\n<tr>\n<td>Simulation</td>\n<td>CARLA 0.9.15+ (5 scenarios)</td>\n</tr>\n<tr>\n<td>Monitoring</td>\n<td>Streamlit real-time dashboard</td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--system-architecture",
+            "title": "🏗 System Architecture",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--system-architecture\">🏗 System Architecture</h2>\n<pre><code>┌─────────────────────────────────────────────────────────────────┐\n│                        CARLA Simulator                           │\n│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────────┐  │\n│  │  RGB Camera  │  │  Depth Cam   │  │  LiDAR / GNSS / IMU  │  │\n│  └──────┬───────┘  └──────┬───────┘  └──────────┬───────────┘  │\n└─────────┼─────────────────┼────────────────────  ┼─────────────┘\n          │                 │                       │\n          ▼                 ▼                       ▼\n┌─────────────────────────────────────────────────────────────────┐\n│                      PERCEPTION LAYER                            │\n│  ┌───────────────┐ ┌──────────────┐ ┌──────────┐ ┌──────────┐ │\n│  │ Lane Detection│ │Object Detect │ │Sign Detec│ │  Depth   │ │\n│  │ (Hough+CV2)   │ │ (YOLOv11)    │ │(YOLO+CNN)│ │ (MiDaS)  │ │\n│  └───────┬───────┘ └──────┬───────┘ └────┬─────┘ └────┬─────┘ │\n└──────────┼────────────────┼──────────────┼─────────────┼───────┘\n           │                │              │             │\n           └────────────────┼──────────────┼─────────────┘\n                            ▼              ▼\n┌─────────────────────────────────────────────────────────────────┐\n│                      PLANNING LAYER                              │\n│  ┌──────────────────┐      ┌──────────────────────────────────┐ │\n│  │  Decision Engine │      │      Behavior Planner (FSM)      │ │\n│  │  (Rule-based)    │      │  IDLE→LANE_FOLLOWING→INTERSECT.. │ │\n│  └────────┬─────────┘      └──────────────┬───────────────────┘ │\n│           │        ┌───────────────────────┘                     │\n│           ▼        ▼                                             │\n│  ┌──────────────────────────────────────────────────────────┐   │\n│  │  Path Planner: A* Global + Pure Pursuit Local            │   │\n│  └────────────────────────────┬─────────────────────────────┘   │\n└───────────────────────────────┼─────────────────────────────────┘\n                                ▼\n┌─────────────────────────────────────────────────────────────────┐\n│                      CONTROL LAYER                               │\n│  ┌───────────────────┐  ┌──────────────────┐  ┌─────────────┐  │\n│  │ Steering (PID+    │  │  Throttle (PID)  │  │  AEB        │  │\n│  │ Stanley)          │  │  Speed control   │  │  Emergency  │  │\n│  └───────────────────┘  └──────────────────┘  └─────────────┘  │\n└─────────────────────────────────────────────────────────────────┘\n                                ▼\n                    ┌───────────────────────┐\n                    │   RL Agent (PPO)      │ ← Optional end-to-end\n                    │   Stable-Baselines3   │\n                    └───────────────────────┘\n                                ▼\n                    ┌───────────────────────┐\n                    │ Streamlit Dashboard   │\n                    │ (Live monitoring)     │\n                    └───────────────────────┘\n</code></pre>\n<hr />"
+          },
+          {
+            "id": "readme--module-breakdown",
+            "title": "🔩 Module Breakdown",
+            "kind": "other",
+            "html": "<h2 id=\"readme--module-breakdown\">🔩 Module Breakdown</h2>\n<h3 id=\"readme-perception-perception\">Perception (<code>perception/</code>)</h3>\n<table>\n<thead>\n<tr>\n<th>File</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>lane_detection.py</code></td>\n<td>Canny + Hough lane detection, temporal smoothing, lane-centre computation</td>\n</tr>\n<tr>\n<td><code>object_detection.py</code></td>\n<td>YOLOv11 wrapper, distance estimation, threat classification, ByteTrack</td>\n</tr>\n<tr>\n<td><code>traffic_sign_detection.py</code></td>\n<td>Two-stage YOLO+CNN, HSV traffic-light colour parsing</td>\n</tr>\n<tr>\n<td><code>depth_estimation.py</code></td>\n<td>MiDaS monocular depth, per-object distance enrichment</td>\n</tr>\n</tbody></table>\n<h3 id=\"readme-planning-planning\">Planning (<code>planning/</code>)</h3>\n<table>\n<thead>\n<tr>\n<th>File</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>decision_engine.py</code></td>\n<td>Prioritised rule-stack: emergency brake → red light → pedestrian → follow → cruise</td>\n</tr>\n<tr>\n<td><code>behavior_planner.py</code></td>\n<td>Hierarchical FSM with 9 states + lane-change logic</td>\n</tr>\n<tr>\n<td><code>path_planner.py</code></td>\n<td>A* global planner on occupancy grid + Pure Pursuit local planner</td>\n</tr>\n</tbody></table>\n<h3 id=\"readme-control-control\">Control (<code>control/</code>)</h3>\n<table>\n<thead>\n<tr>\n<th>File</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>pid_controller.py</code></td>\n<td>Generic PID with anti-windup, derivative filter, gain scheduling</td>\n</tr>\n<tr>\n<td><code>steering_control.py</code></td>\n<td>PID + Stanley controller fusion for lateral control</td>\n</tr>\n<tr>\n<td><code>throttle_control.py</code></td>\n<td>PID longitudinal control + Automatic Emergency Braking (AEB)</td>\n</tr>\n</tbody></table>\n<h3 id=\"readme-simulation-simulation\">Simulation (<code>simulation/</code>)</h3>\n<table>\n<thead>\n<tr>\n<th>File</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>carla_env.py</code></td>\n<td>Gymnasium-compatible CARLA environment, 5 scenarios, reward shaping</td>\n</tr>\n<tr>\n<td><code>sensors.py</code></td>\n<td>Thread-safe sensor manager: RGB, depth, semantic, LiDAR, GNSS/IMU</td>\n</tr>\n</tbody></table>\n<h3 id=\"readme-rl-agent-rlagent\">RL Agent (<code>rl_agent/</code>)</h3>\n<table>\n<thead>\n<tr>\n<th>File</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><code>train.py</code></td>\n<td>PPO trainer with custom CNN feature extractor, EvalCallback, W&amp;B logging</td>\n</tr>\n<tr>\n<td><code>evaluate.py</code></td>\n<td>Structured evaluation across all scenarios, JSON/CSV report generation</td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--installation",
+            "title": "⚙️ Installation",
+            "kind": "setup",
+            "html": "<h2 id=\"readme--installation\">⚙️ Installation</h2>\n<h3 id=\"readme-prerequisites\">Prerequisites</h3>\n<ul>\n<li>Ubuntu 20.04+ or Windows 10/11</li>\n<li>Python 3.11+</li>\n<li>NVIDIA GPU with CUDA 11.8+ (recommended; CPU fallback available)</li>\n<li>CARLA 0.9.15 (<a href=\"https://github.com/carla-simulator/carla/releases\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">download</a>)</li>\n</ul>\n<h3 id=\"readme-step-1--clone--create-environment\">Step 1 — Clone &amp; Create Environment</h3>\n<pre><code class=\"language-bash\">git clone https://github.com/yourusername/autonomous-driving-system.git\ncd autonomous-driving-system\n\npython -m venv .venv\nsource .venv/bin/activate        # Windows: .venv\\Scripts\\activate\n</code></pre>\n<h3 id=\"readme-step-2--install-python-dependencies\">Step 2 — Install Python Dependencies</h3>\n<pre><code class=\"language-bash\">pip install --upgrade pip\npip install -r requirements.txt\n</code></pre>\n<h3 id=\"readme-step-3--install-carla-python-client\">Step 3 — Install CARLA Python Client</h3>\n<pre><code class=\"language-bash\"># For CARLA 0.9.15\npip install carla==0.9.15\n\n# OR install from the CARLA PythonAPI egg (if server is local)\ncd /opt/carla/PythonAPI/carla/dist\npip install carla-0.9.15-cp311-cp311-linux_x86_64.whl\n</code></pre>\n<h3 id=\"readme-step-4--download-yolo-weights\">Step 4 — Download YOLO Weights</h3>\n<pre><code class=\"language-bash\"># YOLOv8n (auto-downloads on first run)\npython -c \"from ultralytics import YOLO; YOLO('yolov8n.pt')\"\n\n# Or for YOLOv11:\npython -c \"from ultralytics import YOLO; YOLO('yolo11n.pt')\"\n</code></pre>\n<h3 id=\"readme-step-5--verify-installation\">Step 5 — Verify Installation</h3>\n<pre><code class=\"language-bash\">python main.py --mode benchmark\n</code></pre>\n<hr />"
+          },
+          {
+            "id": "readme--dataset-setup",
+            "title": "📦 Dataset Setup",
+            "kind": "setup",
+            "html": "<h2 id=\"readme--dataset-setup\">📦 Dataset Setup</h2>\n<h3 id=\"readme-carla--no-dataset-download-needed\">CARLA — No dataset download needed</h3>\n<p>The CARLA simulator generates synthetic sensor data in real-time.\nStart the server and the system auto-collects training data.</p>\n<h3 id=\"readme-optional-pre-trained-sign-classifier\">Optional: Pre-trained Sign Classifier</h3>\n<p>For enhanced traffic-sign classification, train the CNN on:</p>\n<table>\n<thead>\n<tr>\n<th>Dataset</th>\n<th>Classes</th>\n<th>Link</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>German Traffic Sign (GTSRB)</td>\n<td>43</td>\n<td><a href=\"https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Kaggle</a></td>\n</tr>\n<tr>\n<td>LISA Traffic Sign Dataset</td>\n<td>47</td>\n<td><a href=\"http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">UCSD</a></td>\n</tr>\n</tbody></table>\n<pre><code class=\"language-bash\"># Prepare dataset\nmkdir -p datasets/traffic_signs\n# Download and extract to datasets/traffic_signs/\n# Expected structure:\n#   datasets/traffic_signs/\n#     train/  (class_0/, class_1/, ...)\n#     val/\n#     test/\n</code></pre>\n<p>Train the sign classifier:</p>\n<pre><code class=\"language-bash\">python scripts/train_sign_classifier.py \\\n  --data datasets/traffic_signs \\\n  --epochs 50 \\\n  --output models/sign_classifier.pt\n</code></pre>\n<hr />"
+          },
+          {
+            "id": "readme--running-the-system",
+            "title": "🚀 Running the System",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--running-the-system\">🚀 Running the System</h2>\n<h3 id=\"readme-1-start-carla-server-separate-terminal\">1. Start CARLA Server (separate terminal)</h3>\n<pre><code class=\"language-bash\"># Linux\ncd /opt/carla\n./CarlaUE4.sh -carla-server -fps=20 -ResX=1280 -ResY=720\n\n# Windows\nCarlaUE4.exe -carla-server -fps=20\n</code></pre>\n<h3 id=\"readme-2-rule-based-agent\">2. Rule-Based Agent</h3>\n<pre><code class=\"language-bash\"># Default straight road scenario\npython main.py --mode rule --scenario STRAIGHT_ROAD\n\n# Urban traffic scenario\npython main.py --mode rule --scenario DENSE_URBAN --steps 3000\n\n# Night driving\npython main.py --mode rule --scenario NIGHT_DRIVING --device cuda\n</code></pre>\n<h3 id=\"readme-3-rl-agent-inference\">3. RL Agent Inference</h3>\n<pre><code class=\"language-bash\">python main.py --mode rl \\\n  --model models/ppo_autonomous_driver_final \\\n  --scenario INTERSECTION\n</code></pre>\n<h3 id=\"readme-4-all-5-scenarios-sequential\">4. All 5 Scenarios (Sequential)</h3>\n<pre><code class=\"language-bash\">for SCENARIO in STRAIGHT_ROAD INTERSECTION PEDESTRIAN_CROSS DENSE_URBAN NIGHT_DRIVING; do\n  python main.py --mode rule --scenario $SCENARIO --steps 1000\ndone\n</code></pre>\n<hr />"
+          },
+          {
+            "id": "readme--training-the-rl-agent",
+            "title": "🧠 Training the RL Agent",
+            "kind": "other",
+            "html": "<h2 id=\"readme--training-the-rl-agent\">🧠 Training the RL Agent</h2>\n<pre><code class=\"language-bash\"># Quick training (testing)\npython main.py --mode train --timesteps 50000 --scenario STRAIGHT_ROAD\n\n# Full training\npython main.py --mode train --timesteps 500000 --scenario DENSE_URBAN\n\n# OR via the training script directly (more options)\npython rl_agent/train.py \\\n  --timesteps 500000 \\\n  --scenario INTERSECTION\n\n# Resume from checkpoint\npython rl_agent/train.py \\\n  --resume models/ppo_autonomous_driver_100000_steps.zip \\\n  --timesteps 400000\n\n# Monitor with TensorBoard\ntensorboard --logdir results/rl_logs\n</code></pre>\n<h3 id=\"readme-reward-function\">Reward Function</h3>\n<table>\n<thead>\n<tr>\n<th>Event</th>\n<th>Reward</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Lane keeping (offset &lt; 0.5 m)</td>\n<td>+1.0</td>\n</tr>\n<tr>\n<td>Progress toward destination</td>\n<td>+2.0 × delta</td>\n</tr>\n<tr>\n<td>Speed compliance</td>\n<td>+0.5</td>\n</tr>\n<tr>\n<td>Smooth steering</td>\n<td>+0.2</td>\n</tr>\n<tr>\n<td>Collision</td>\n<td><strong>−5.0</strong> + episode end</td>\n</tr>\n<tr>\n<td>Lane departure</td>\n<td><strong>−3.0</strong></td>\n</tr>\n<tr>\n<td>Accident (major)</td>\n<td><strong>−10.0</strong></td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--evaluation",
+            "title": "📊 Evaluation",
+            "kind": "other",
+            "html": "<h2 id=\"readme--evaluation\">📊 Evaluation</h2>\n<pre><code class=\"language-bash\"># Evaluate all 5 scenarios (5 episodes each)\npython main.py --mode eval \\\n  --model models/ppo_autonomous_driver_final \\\n  --episodes 5\n\n# Evaluate single scenario\npython rl_agent/evaluate.py \\\n  --model models/ppo_autonomous_driver_final \\\n  --scenario INTERSECTION \\\n  --episodes 10\n\n# Perception latency benchmark\npython main.py --mode benchmark\n\n# View results\ncat results/evaluation_report.json\n</code></pre>\n<p>Evaluation output: <code>results/evaluation_report.json</code>, <code>results/evaluation_metrics.csv</code>,<br /><code>results/episode_details.csv</code></p>\n<hr />"
+          },
+          {
+            "id": "readme--dashboard-usage",
+            "title": "📺 Dashboard Usage",
+            "kind": "usage",
+            "html": "<h2 id=\"readme--dashboard-usage\">📺 Dashboard Usage</h2>\n<pre><code class=\"language-bash\">streamlit run dashboard/app.py\n# Opens at http://localhost:8501\n</code></pre>\n<h3 id=\"readme-dashboard-features\">Dashboard Features</h3>\n<table>\n<thead>\n<tr>\n<th>Panel</th>\n<th>Content</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Live Feed</strong></td>\n<td>Front camera with lane + detection overlays</td>\n</tr>\n<tr>\n<td><strong>Speed Gauge</strong></td>\n<td>Real-time speedometer (0–120 km/h)</td>\n</tr>\n<tr>\n<td><strong>Steering Gauge</strong></td>\n<td>Steering angle indicator (±1.0)</td>\n</tr>\n<tr>\n<td><strong>Warning Panel</strong></td>\n<td>AEB, collision, lane departure, overspeed alerts</td>\n</tr>\n<tr>\n<td><strong>Drive State</strong></td>\n<td>Current FSM state (CRUISING / EMERGENCY_BRAKE / ...)</td>\n</tr>\n<tr>\n<td><strong>Metrics Tab</strong></td>\n<td>Rolling speed, steer, reward, FPS time-series charts</td>\n</tr>\n<tr>\n<td><strong>Detections Tab</strong></td>\n<td>Live detection table + class distribution chart</td>\n</tr>\n<tr>\n<td><strong>Evaluation Tab</strong></td>\n<td>Loaded evaluation report with scenario bar charts</td>\n</tr>\n<tr>\n<td><strong>System Info Tab</strong></td>\n<td>Architecture overview, quick-start guide</td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--evaluation-metrics",
+            "title": "📈 Evaluation Metrics",
+            "kind": "other",
+            "html": "<h2 id=\"readme--evaluation-metrics\">📈 Evaluation Metrics</h2>\n<table>\n<thead>\n<tr>\n<th>Metric</th>\n<th>Formula</th>\n<th>Target</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><strong>Collision Rate</strong></td>\n<td>Collisions / episode</td>\n<td>&lt; 0.1</td>\n</tr>\n<tr>\n<td><strong>Lane Keeping Accuracy</strong></td>\n<td>Steps within 0.5m / total steps</td>\n<td>&gt; 85%</td>\n</tr>\n<tr>\n<td><strong>Success Rate</strong></td>\n<td>Episodes without collision &amp; &gt; 80% route</td>\n<td>&gt; 70%</td>\n</tr>\n<tr>\n<td><strong>Route Completion</strong></td>\n<td>Steps completed / max steps</td>\n<td>&gt; 80%</td>\n</tr>\n<tr>\n<td><strong>Average Speed</strong></td>\n<td>Mean speed (km/h) during episode</td>\n<td>≈ cruise target</td>\n</tr>\n<tr>\n<td><strong>Inference Latency</strong></td>\n<td>Per-module forward pass (ms)</td>\n<td>&lt; 50ms/frame</td>\n</tr>\n<tr>\n<td><strong>Detection mAP</strong></td>\n<td>YOLO <a href=\"mailto:mAP@0.5\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">mAP@0.5</a> on test set</td>\n<td>&gt; 0.75</td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--project-structure",
+            "title": "📁 Project Structure",
+            "kind": "other",
+            "html": "<h2 id=\"readme--project-structure\">📁 Project Structure</h2>\n<pre><code>autonomous_driving/\n│\n├── perception/                 # Sensing &amp; interpretation\n│   ├── lane_detection.py       # Hough-transform lane detector\n│   ├── object_detection.py     # YOLOv11 multi-class detector\n│   ├── traffic_sign_detection.py # YOLO + CNN sign classifier\n│   └── depth_estimation.py    # MiDaS monocular depth\n│\n├── planning/                   # Intelligence layer\n│   ├── decision_engine.py      # Rule-based priority engine\n│   ├── behavior_planner.py     # FSM behavior planner\n│   └── path_planner.py         # A* + Pure Pursuit planner\n│\n├── control/                    # Actuation\n│   ├── pid_controller.py       # Generic PID controller\n│   └── steering_control.py     # Steering + Throttle + AEB\n│\n├── simulation/                 # CARLA interface\n│   ├── carla_env.py            # Gymnasium environment\n│   └── sensors.py              # Sensor manager\n│\n├── rl_agent/                   # Reinforcement learning\n│   ├── train.py                # PPO training pipeline\n│   └── evaluate.py             # Evaluation &amp; benchmarking\n│\n├── dashboard/                  # Monitoring\n│   └── app.py                  # Streamlit dashboard\n│\n├── configs/\n│   └── config.yaml             # Central configuration\n│\n├── models/                     # Trained weights\n├── datasets/                   # Training data\n├── results/                    # Logs, reports, checkpoints\n│\n├── main.py                     # System orchestrator + CLI\n├── requirements.txt\n└── README.md\n</code></pre>\n<hr />"
+          },
+          {
+            "id": "readme--future-improvements",
+            "title": "🔮 Future Improvements",
+            "kind": "other",
+            "html": "<h2 id=\"readme--future-improvements\">🔮 Future Improvements</h2>\n<ul>\n<li><input type=\"checkbox\" disabled /> <strong>Semantic Segmentation</strong> — Replace Hough lanes with DeepLabV3+/SegFormer drivable-area mask</li>\n<li><input type=\"checkbox\" disabled /> <strong>Transformer Perception</strong> — DETR / BEVFormer for multi-view object detection</li>\n<li><input type=\"checkbox\" disabled /> <strong>Multi-Camera Fusion</strong> — 360° surround-view with BEV projection</li>\n<li><input type=\"checkbox\" disabled /> <strong>LiDAR Integration</strong> — PointPillar / VoxelNet for LiDAR object detection</li>\n<li><input type=\"checkbox\" disabled /> <strong>HD Map Integration</strong> — OpenDRIVE map parsing for precise path planning</li>\n<li><input type=\"checkbox\" disabled /> <strong>V2X Communication</strong> — Vehicle-to-infrastructure signal simulation</li>\n<li><input type=\"checkbox\" disabled /> <strong>Driver Monitoring</strong> — Drowsiness / distraction detection</li>\n<li><input type=\"checkbox\" disabled /> <strong>Imitation Learning</strong> — Pre-training from expert CARLA demonstrations</li>\n<li><input type=\"checkbox\" disabled /> <strong>Uncertainty Estimation</strong> — Bayesian detection confidence for safety</li>\n<li><input type=\"checkbox\" disabled /> <strong>Real-world Deployment</strong> — ROS2 + Autoware.Universe integration</li>\n</ul>\n<hr />"
+          },
+          {
+            "id": "readme--references",
+            "title": "📚 References",
+            "kind": "other",
+            "html": "<h2 id=\"readme--references\">📚 References</h2>\n<ol>\n<li>Dosovitskiy et al. (2017) — <a href=\"https://arxiv.org/abs/1711.03938\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">CARLA: An Open Urban Driving Simulator</a></li>\n<li>Redmon et al. — <a href=\"https://arxiv.org/abs/1506.02640\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">YOLO: Real-Time Object Detection</a></li>\n<li>Ranftl et al. (2021) — <a href=\"https://arxiv.org/abs/2103.13413\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Vision Transformers for Dense Prediction (MiDaS)</a></li>\n<li>Schulman et al. (2017) — <a href=\"https://arxiv.org/abs/1707.06347\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Proximal Policy Optimization</a></li>\n<li>Coulter (1992) — Pure Pursuit Path Tracking</li>\n<li>Hart, Nilsson, Raphael (1968) — A* Search Algorithm</li>\n</ol>\n<hr />"
+          },
+          {
+            "id": "readme--author",
+            "title": "👨‍💻 Author",
+            "kind": "meta",
+            "html": "<h2 id=\"readme--author\">👨‍💻 Author</h2>\n<p>Built as an <strong>AI/Autonomous Systems Internship Capstone Project</strong>.<br />Demonstrates mastery of: deep learning · computer vision · robotics · reinforcement learning · simulation · software engineering.</p>\n<p><strong>Tech Stack:</strong> Python · PyTorch · OpenCV · Ultralytics YOLOv11 · MiDaS · Stable-Baselines3 · CARLA · Streamlit · NumPy · Pandas</p>\n<hr />\n<p align=\"center\">\n  ⭐ Star this repo if it helped you! · 🍴 Fork it for your own project\n</p>"
+          }
+        ],
+        "highlights": {
+          "overview": "This project implements a complete, modular autonomous driving pipeline capable of:",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "This project implements a complete, modular autonomous driving pipeline capable of:",
+        "truncated": false,
+        "demoLinks": [],
+        "images": []
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1222658746,
+      "slug": "voteros",
+      "name": "voteros",
+      "displayName": "Voteros",
+      "fullName": "Soham-o/voteros",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/voteros",
+      "description": "",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 23989,
+          "pct": 98.7
+        },
+        {
+          "name": "Dockerfile",
+          "bytes": 184,
+          "pct": 0.8
+        },
+        {
+          "name": "CSS",
+          "bytes": 135,
+          "pct": 0.6
+        }
+      ],
+      "tech": [
+        {
+          "name": "Python",
+          "source": "language"
+        },
+        {
+          "name": "Streamlit",
+          "source": "manifest"
+        },
+        {
+          "name": "Matplotlib",
+          "source": "manifest"
+        },
+        {
+          "name": "NumPy",
+          "source": "manifest"
+        },
+        {
+          "name": "Gemini API",
+          "source": "manifest"
+        },
+        {
+          "name": "Docker",
+          "source": "file"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-04-27T15:23:40Z",
+      "updatedAt": "2026-04-27T15:37:50Z",
+      "pushedAt": "2026-04-27T15:37:46Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine",
+        "source": "readme"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/voteros/blob/main/README.md",
+        "overviewHtml": "<div align=\"center\">\n  \n  <img src=\"https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine\" alt=\"VoterOS Banner\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n\n  <h1>🗳️ VoterOS</h1>\n  <p><b>The Civic Journey Engine</b></p>\n  <p><em>\"Elections are not failing due to a lack of systems, but due to a lack of clarity.\"</em></p>\n\n<p>  <a href=\"https://ai.google.dev/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&amp;logo=google&amp;logoColor=white\" alt=\"Google Gemini\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://cloud.google.com/run\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Google_Cloud_Run-4285F4?style=for-the-badge&amp;logo=googlecloud&amp;logoColor=white\" alt=\"Google Cloud Run\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://streamlit.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&amp;logo=streamlit&amp;logoColor=white\" alt=\"Streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://python.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Python_3.9+-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white\" alt=\"Python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a></p>\n  <br />\n\n<p>  <strong><a href=\"#readme-\">Live Demo on Cloud Run</a> • <a href=\"#readme-\">Watch the Pitch Video</a> • <a href=\"#readme-\">Read the Docs</a></strong></p>\n</div>\n\n<hr />",
+        "sections": [
+          {
+            "id": "readme--the-vision",
+            "title": "🎯 The Vision",
+            "kind": "other",
+            "html": "<h2 id=\"readme--the-vision\">🎯 The Vision</h2>\n<p><strong>VoterOS</strong> is an interactive, AI-powered system designed to demystify the electoral process. It shifts civic engagement from reactive searching to <strong>proactive orchestration</strong>. By combining a predictive rules engine with <strong>Google Gemini’s</strong> natural language reasoning, VoterOS provides every citizen with a personalized, visual, and highly actionable voting roadmap.</p>\n<blockquote>\n<p><strong>Hackathon Alignment:</strong> We built an assistant that doesn't just answer questions, but helps users <em>understand</em> the election process, timelines, and steps through an interactive, visual, and easy-to-follow dashboard.</p>\n</blockquote>\n<hr />"
+          },
+          {
+            "id": "readme--why-voteros-is-not-a-chatbot",
+            "title": "🛑 Why VoterOS is NOT a Chatbot",
+            "kind": "problem",
+            "html": "<h2 id=\"readme--why-voteros-is-not-a-chatbot\">🛑 Why VoterOS is NOT a Chatbot</h2>\n<p>Standard AI chatbots fail in civic tech because they rely on the user to know what to ask. VoterOS flips the script:</p>\n<table>\n<thead>\n<tr>\n<th align=\"left\">Feature</th>\n<th align=\"left\">Standard Chatbot</th>\n<th align=\"left\">VoterOS 🚀</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Interaction Flow</strong></td>\n<td align=\"left\">Waits for the user to ask the right question</td>\n<td align=\"left\"><strong>Proactively guides</strong> the user to ensure critical steps aren't missed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Data Delivery</strong></td>\n<td align=\"left\">Pastes links to heavy FAQ PDFs</td>\n<td align=\"left\">Distills rules into <strong>decision support</strong> (e.g., \"Submit Form 8\")</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Learning Style</strong></td>\n<td align=\"left\">Relies on walls of text</td>\n<td align=\"left\">Uses <strong>visual learning</strong> (progress bars, traffic curves, checklists)</td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--core-features",
+            "title": "✨ Core Features",
+            "kind": "features",
+            "html": "<h2 id=\"readme--core-features\">✨ Core Features</h2>\n<h3 id=\"readme--1-the-scenario-simulator-what-if\">🧪 1. The Scenario Simulator (\"What if...?\")</h3>\n<p>The standout feature. Users can test edge cases in a safe, visual environment:</p>\n<ul>\n<li>📉 <strong>\"What if I miss the registration deadline?\"</strong> → Explains immediate disqualification.</li>\n<li>⏰ <strong>\"What if I go at 10 AM?\"</strong> → Triggers peak-hour congestion warnings &amp; suggests alternatives.</li>\n<li>🪪 <strong>\"What if I lost my EPIC card?\"</strong> → Highlights alternative verification paths without resetting progress.</li>\n</ul>\n<h3 id=\"readme--2-hybrid-ai-copilot-gemini-powered\">🧠 2. Hybrid AI Copilot (Gemini-Powered)</h3>\n<p>A conversational interface that feels human but acts systematically. It parses user intent, cross-references it with electoral rules, and guides the user forward.</p>\n<h3 id=\"readme--3-dynamic-voting-timeline\">🚇 3. Dynamic Voting Timeline</h3>\n<p>A visual flowchart (Subway Map) that maps the user's journey. It highlights the current step and visually branches when alternative paths (like Form 8 for relocation) are required.</p>\n<h3 id=\"readme--4-voter-readiness--confidence-engine\">📊 4. Voter Readiness &amp; Confidence Engine</h3>\n<p>A real-time progress metric (0-100%). The system explicitly flags missing requirements (e.g., <em>Address Verification Pending</em>) and provides the immediate next action.</p>\n<h3 id=\"readme--5-smart-form-recommender--id-builder\">📑 5. Smart Form Recommender &amp; ID Builder</h3>\n<p>Dynamically advises users on the exact documentation needed. Automatically detects if a user requires <strong>Form 6</strong> (New Voter), <strong>Form 8</strong> (Relocation), or <strong>Form 6A</strong> (Overseas Indian).</p>\n<h3 id=\"readme--6-crowd-prediction-engine\">📈 6. Crowd Prediction Engine</h3>\n<p>A predictive bimodal curve highlighting anticipated peak wait times at the polling booth, recommending personalized \"Green Zone\" voting windows.</p>\n<hr />"
+          },
+          {
+            "id": "readme--system-architecture",
+            "title": "🏗️ System Architecture",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--system-architecture\">🏗️ System Architecture</h2>\n<p>VoterOS utilizes a <strong>Hybrid Intelligence Architecture</strong> to guarantee enterprise-grade stability during critical civic events.</p>\n<pre><code class=\"language-mermaid\">graph TD;\n    A[User Input] --&gt; B[Streamlit UI];\n    B --&gt; C{Hybrid Engine};\n    C --&gt;|State &amp; Routing| D[Rule-Based Python Engine];\n    C --&gt;|Natural Conversation| E[Google Gemini Pro API];\n    D --&gt; F[Visual Dashboard Update];\n    E --&gt; G[Chat Copilot Update];\n</code></pre>\n<p>Rule-Based Decision Engine (llm_logic.py): Acts as the \"Safety Net.\" It strictly governs state updates (Progress, Milestones, Forms) to ensure the UI never hallucinates or crashes due to LLM unpredictability.</p>\n<p>Google Vertex AI / Gemini Integration: Acts as the \"Voice.\" It ingests the structured system context and generates natural, empathetic, and highly clear user-facing responses.</p>\n<p>Streamlit Frontend: A highly modular, responsive dashboard utilizing custom HTML/CSS for premium visual components.</p>\n<p>🔍 Sample Use Cases\n📍 The Relocation Scenario</p>\n<p>User: \"I just moved to a new city.\"</p>\n<p>VoterOS: Detects the constituency mismatch. Halts the standard timeline. Triggers an \"Alternate Path Activated\" alert. Instructs the user to submit Form 8 before attempting to vote.</p>\n<p>🪪 The Missing Document Scenario</p>\n<p>User: \"I don't have my Voter ID.\"</p>\n<p>VoterOS: Blocks the Readiness Score from reaching 100%. Generates a visual warning and lists approved alternative IDs (Aadhaar, Passport, PAN) required for the Presiding Officer.</p>\n<p>🛠️ Quick Start (Run Locally)\nPrerequisites: Python 3.9+ and a Google Gemini API Key.</p>\n<ol>\n<li>Clone the repository:</li>\n</ol>\n<p>Bash\ngit clone <a href=\"https://github.com/yourusername/voter_os_project.git\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/yourusername/voter_os_project.git</a>\ncd voter_os_project\n2. Install dependencies:</p>\n<p>Bash\npip install -r requirements.txt\n3. Configure API Keys:\nCreate a .streamlit/secrets.toml file in the root directory and add your Gemini key:</p>\n<p>Ini, TOML\nGEMINI_API_KEY = \"your_actual_api_key_here\"\n4. Run the application:</p>\n<p>Bash\nstreamlit run main.py\n☁️ Deployment\nVoterOS is containerized and deployed via Google Cloud Run for high availability and scalable performance during high-traffic election cycles.</p>\n<p><a href=\"https://voteros-app-805910938723.asia-south1.run.app/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">(See Dockerfile for containerization specifics).</a></p>"
+          }
+        ],
+        "highlights": {
+          "overview": "Live Demo on Cloud Run • Watch the Pitch Video • Read the Docs",
+          "problem": "Standard AI chatbots fail in civic tech because they rely on the user to know what to ask. VoterOS flips the script:",
+          "features": [
+            "📉 \"What if I miss the registration deadline?\" → Explains immediate disqualification.",
+            "⏰ \"What if I go at 10 AM?\" → Triggers peak-hour congestion warnings & suggests alternatives.",
+            "🪪 \"What if I lost my EPIC card?\" → Highlights alternative verification paths without resetting progress."
+          ]
+        },
+        "excerpt": "Live Demo on Cloud Run • Watch the Pitch Video • Read the Docs",
+        "truncated": false,
+        "demoLinks": [],
+        "images": [
+          "https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine"
+        ]
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1214424413,
+      "slug": "kinesis-prototype",
+      "name": "kinesis_prototype",
+      "displayName": "Kinesis Prototype",
+      "fullName": "Soham-o/kinesis_prototype",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/kinesis_prototype",
+      "description": "Kinesis is an AI-driven system that predicts and manages crowd behavior in real time using simulation, biometrics, and natural language control.",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Python",
+      "languages": [
+        {
+          "name": "Python",
+          "bytes": 23998,
+          "pct": 100
+        }
+      ],
+      "tech": [
+        {
+          "name": "Python",
+          "source": "language"
+        },
+        {
+          "name": "Streamlit",
+          "source": "manifest"
+        },
+        {
+          "name": "NumPy",
+          "source": "manifest"
+        },
+        {
+          "name": "Matplotlib",
+          "source": "manifest"
+        },
+        {
+          "name": "SciPy",
+          "source": "manifest"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-04-18T15:01:04Z",
+      "updatedAt": "2026-04-19T19:02:37Z",
+      "pushedAt": "2026-04-18T15:01:10Z",
+      "homepage": "https://kinesisprototype-jseg3lt8dtaoghgwebzra7.streamlit.app/",
+      "demo": {
+        "url": "https://kinesisprototype-jseg3lt8dtaoghgwebzra7.streamlit.app/",
+        "source": "homepage"
+      },
+      "image": {
+        "url": "https://opengraph.githubassets.com/056c651a66f940af/Soham-o/kinesis_prototype",
+        "source": "social"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/kinesis_prototype/blob/main/README.md",
+        "overviewHtml": "",
+        "sections": [
+          {
+            "id": "readme-overview",
+            "title": "Overview",
+            "kind": "about",
+            "html": "<h2 id=\"readme-overview\">Overview</h2>\n<p>Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.</p>"
+          },
+          {
+            "id": "readme-features",
+            "title": "Features",
+            "kind": "features",
+            "html": "<h2 id=\"readme-features\">Features</h2>\n<ul>\n<li>Real-time crowd simulation (agent-based)</li>\n<li>AI risk detection (density + velocity + panic)</li>\n<li>Biometric zone monitoring (heart rate simulation)</li>\n<li>GenAI Command Interface (natural language control)</li>\n<li>AI ON/OFF comparison (baseline vs optimized)</li>\n<li>Live visualization (heatmap, flow, predictions)</li>\n</ul>"
+          },
+          {
+            "id": "readme-tech-stack",
+            "title": "Tech Stack",
+            "kind": "stack",
+            "html": "<h2 id=\"readme-tech-stack\">Tech Stack</h2>\n<ul>\n<li>Python</li>\n<li>Streamlit</li>\n<li>NumPy</li>\n<li>Matplotlib</li>\n</ul>"
+          },
+          {
+            "id": "readme-how-to-run",
+            "title": "How to Run",
+            "kind": "usage",
+            "html": "<h2 id=\"readme-how-to-run\">How to Run</h2>\n<pre><code class=\"language-bash\">pip install -r requirements.txt\nstreamlit run main.py\n</code></pre>"
+          }
+        ],
+        "highlights": {
+          "overview": "Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.",
+          "problem": "",
+          "features": [
+            "Real-time crowd simulation (agent-based)",
+            "AI risk detection (density + velocity + panic)",
+            "Biometric zone monitoring (heart rate simulation)",
+            "GenAI Command Interface (natural language control)",
+            "AI ON/OFF comparison (baseline vs optimized)",
+            "Live visualization (heatmap, flow, predictions)"
+          ]
+        },
+        "excerpt": "Kinesis is an AI-driven system that simulates and manages crowd behavior in large-scale stadium environments using real-time data, predictive modeling, and intelligent intervention.",
+        "truncated": false,
+        "demoLinks": [],
+        "images": []
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1068386786,
+      "slug": "task-manager",
+      "name": "Task_Manager",
+      "displayName": "Task Manager",
+      "fullName": "Soham-o/Task_Manager",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/Task_Manager",
+      "description": "Turn your to-do list into a command center with My Tasks.  After a quick sign-up, your personal dashboard is ready for you to add, edit, and organize your tasks. The magic is in the perspective: get a clean summary with the List View, or map out your strategy on the visual Board View. Switch between them anytime to match your workflow.",
+      "summary": "A clean, responsive task management interface built with HTML, CSS, and JavaScript. Focused on frictionless UX — add, complete, and clear tasks without page reloads.",
+      "category": "Productivity Tool",
+      "featured": false,
+      "curated": true,
+      "order": null,
+      "topics": [],
+      "language": "HTML",
+      "languages": [
+        {
+          "name": "HTML",
+          "bytes": 22411,
+          "pct": 41.7
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 17511,
+          "pct": 32.5
+        },
+        {
+          "name": "CSS",
+          "bytes": 13883,
+          "pct": 25.8
+        }
+      ],
+      "tech": [
+        {
+          "name": "HTML",
+          "source": "language"
+        },
+        {
+          "name": "JavaScript",
+          "source": "language"
+        },
+        {
+          "name": "CSS",
+          "source": "language"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2025-10-02T09:59:58Z",
+      "updatedAt": "2026-02-15T13:54:54Z",
+      "pushedAt": "2026-02-15T13:54:51Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "Image-Doc/p1.png",
+        "source": "override"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/Task_Manager/blob/main/README.md",
+        "overviewHtml": "<div align=\"center\">\n\n  <h1>\n    M Y _ T A S K S\n  </h1>\n\n  <p>\n    <em>A privacy-first, zero-latency task manager that lives entirely in your browser.</em>\n  </p>\n\n  <p>\n    <img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n    <img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n    <img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n    <img src=\"https://img.shields.io/badge/Storage-Local_Only-lightgrey?style=for-the-badge&amp;logo=database&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </p>\n\n  <br />\n\n<p>  <a href=\"#readme--quick-start\"><strong>⚡ Quick Start</strong></a>\n  <span>  •  </span>\n  <a href=\"#readme--features\"><strong>✨ Features</strong></a>\n  <span>  •  </span>\n  <a href=\"#readme--under-the-hood\"><strong>🔧 Under the Hood</strong></a></p>\n</div>\n\n<br />",
+        "sections": [
+          {
+            "id": "readme--features",
+            "title": "✨ Features",
+            "kind": "features",
+            "html": "<h2 id=\"readme--features\">✨ Features</h2>\n<p>We stripped away the bloat. No servers. No cloud syncing lag. Just you and your productivity.</p>\n<table>\n<thead>\n<tr>\n<th align=\"left\">Feature</th>\n<th align=\"left\">Description</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>🎨 Dual Views</strong></td>\n<td align=\"left\">Switch instantly between a standard <strong>List View</strong> and a Kanban-style <strong>Board View</strong> (Todo / Doing / Done).</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>🔐 Local Auth</strong></td>\n<td align=\"left\">A simulated authentication system that keeps user data compartmentalized in <code>localStorage</code>.</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>💾 Data Sovereignty</strong></td>\n<td align=\"left\">Your data never leaves your device. Export your tasks to <strong>CSV</strong> for backup, or Import them back in seconds.</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>⚡ Zero Latency</strong></td>\n<td align=\"left\">Built with Vanilla JS. No frameworks, no loading spinners, no API wait times.</td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--under-the-hood",
+            "title": "🔧 Under the Hood",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--under-the-hood\">🔧 Under the Hood</h2>\n<p>This project is a masterclass in <strong>Vanilla JavaScript</strong> state management.</p>\n<h3 id=\"readme-1-the-serverless-database\">1. The \"Serverless\" Database</h3>\n<p>Instead of a backend database, we utilize the browser's <code>localStorage</code> as a persistent data store.</p>\n<ul>\n<li><strong>User Data:</strong> Stored as JSON strings keyed by user email (e.g., <code>tasks_user@example.com</code>).</li>\n<li><strong>Session Management:</strong> The app checks for a <code>currentUser</code> object on load. If missing, it guards the route and redirects to <code>auth_page.html</code>.</li>\n</ul>\n<h3 id=\"readme-2-csv-importexport-engine\">2. CSV Import/Export Engine</h3>\n<p>The application includes a custom parser to handle data portability.</p>\n<pre><code class=\"language-javascript\">// From script.js\nescapeCSV(text) {\n    return text.replace(/\"/g, '\"\"'); // Handles escaped quotes automatically\n}\n</code></pre>\n<p>Quick Start\nSince this is a client-side only application, deployment is instant.</p>\n<p>Clone the Repo</p>\n<p>Bash\ngit clone <a href=\"https://github.com/Soham-o/Task_Manager/blob/main/%5Bhttps%3A//github.com/yourusername/my-tasks.git%5D(https%3A//github.com/Soham-o/Task_Manager.git)\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/yourusername/my-tasks.git</a>\nLaunch\nSimply double-click index.html to open it in your browser.</p>\n<p>Note: The app will automatically redirect you to auth_page.html if you aren't logged in.</p>\n<p>Create an Account</p>\n<p>Use any email/password (Data is stored locally on your machine).</p>\n<p>Start adding tasks!</p>\n<p>📂 Project Structure</p>\n<p>Plaintext\n.\n├── auth_page.html      # Login &amp; Signup interface</p>\n<p>├── index.html          # Main Task Dashboard (List &amp; Board views)</p>\n<p>├── script.js           # Core logic (Auth guard, CRUD operations, CSV handling)</p>\n<p>└── styles.css          # Custom styling (Protest Guerrilla font, Responsive grid)</p>\n<div align=\"center\">\n<sub>Built with Vanilla JS • No Frameworks Required</sub>\n</div>"
+          }
+        ],
+        "highlights": {
+          "overview": "⚡ Quick Start • ✨ Features • 🔧 Under the Hood",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "⚡ Quick Start • ✨ Features • 🔧 Under the Hood",
+        "truncated": false,
+        "demoLinks": [],
+        "images": []
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1031344132,
+      "slug": "spotify-songs-genre-segmentation",
+      "name": "Spotify_Songs_Genre_Segmentation",
+      "displayName": "Spotify Songs Genre Segmentation",
+      "fullName": "Soham-o/Spotify_Songs_Genre_Segmentation",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation",
+      "description": "The project blends music and data science, offering an engaging way to apply machine learning in a real-world context. It’s perfect for data enthusiasts who want to work with tangible and relatable data while also exploring how algorithms interpret patterns in music.  Using Python Pandas, NumPy, Matplotlib, Seaborn ,Scikit-learn in Jupyter Notebook",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Jupyter Notebook",
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "bytes": 755349,
+          "pct": 100
+        }
+      ],
+      "tech": [
+        {
+          "name": "Jupyter Notebook",
+          "source": "language"
+        },
+        {
+          "name": "Jupyter",
+          "source": "file"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2025-08-03T14:45:54Z",
+      "updatedAt": "2026-02-15T13:40:45Z",
+      "pushedAt": "2026-02-15T13:40:41Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png",
+        "source": "readme"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation/blob/main/README.md",
+        "overviewHtml": "<div align=\"center\">\n\n  <img src=\"https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png\" alt=\"logo\" width=\"200\" height=\"auto\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <h1>Spotify Genre Segmentation &amp; Recommendation</h1>\n  \n  <p>\n    An Unsupervised Machine Learning project that clusters songs based on audio features and builds a recommendation engine.\n  </p>\n  \n  \n<p>\n  <a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&amp;logo=python&amp;logoColor=white\" alt=\"Python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://scikit-learn.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white\" alt=\"Scikit Learn\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://seaborn.pydata.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Seaborn-Stats-blue?style=for-the-badge&amp;logo=pandas&amp;logoColor=white\" alt=\"Seaborn\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n</p>\n\n<h4>\n    <a href=\"#readme--system-architecture\">View Architecture</a>\n  <span> · </span>\n    <a href=\"#readme--installation\">Installation</a>\n  <span> · </span>\n    <a href=\"#readme--results\">View Results</a>\n</h4>\n\n</div>\n\n<br />\n\n<ul>\n<li><a href=\"#readme--overview\">📍 Overview</a></li>\n<li><a href=\"#readme--methodology\">🧠 Methodology</a></li>\n<li><a href=\"#readme--system-architecture\">📐 System Architecture</a></li>\n<li><a href=\"#readme--project-structure\">📂 Project Structure</a></li>\n<li><a href=\"#readme--installation--usage\">🚀 Installation &amp; Usage</a></li>\n<li><a href=\"#readme--visualizations\">📊 Visualizations</a></li>\n</ul>\n<hr />",
+        "sections": [
+          {
+            "id": "readme--overview",
+            "title": "📍 Overview",
+            "kind": "about",
+            "html": "<h2 id=\"readme--overview\">📍 Overview</h2>\n<p>This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness). </p>\n<p>By applying <strong>Principal Component Analysis (PCA)</strong> for dimensionality reduction and <strong>K-Means Clustering</strong>, we segment songs into groups. These clusters are then used to power a <strong>Content-Based Recommendation System</strong> that suggests songs mathematically similar to a user's input.</p>\n<h4 id=\"readme-key-features\">Key Features</h4>\n<table>\n<thead>\n<tr>\n<th align=\"left\">🔍 Exploratory Analysis</th>\n<th align=\"left\">🤖 Machine Learning</th>\n<th align=\"left\">🎵 Recommendation</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Correlation Heatmaps:</strong> <br />Identify relationships between audio features.</td>\n<td align=\"left\"><strong>PCA:</strong> <br />Reduces high-dimensional data for visualization.</td>\n<td align=\"left\"><strong>Cluster Matching:</strong> <br />Finds songs within the same geometric cluster.</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Distribution Plots:</strong> <br />Analyze the spread of genres and audio attributes.</td>\n<td align=\"left\"><strong>K-Means:</strong> <br />Segments songs into 5 distinct genre/style clusters.</td>\n<td align=\"left\"><strong>Similarity Check:</strong> <br />Filters recommendations based on feature proximity.</td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--methodology",
+            "title": "🧠 Methodology",
+            "kind": "other",
+            "html": "<h2 id=\"readme--methodology\">🧠 Methodology</h2>\n<p>The project follows a standard Data Science pipeline:</p>\n<ol>\n<li><strong>Data Preprocessing:</strong> * Removal of duplicates and missing values.<ul>\n<li>Dropping non-numeric identifiers (<code>track_id</code>, <code>track_uri</code>, etc.).</li>\n</ul>\n</li>\n<li><strong>Feature Standardization:</strong> * Uses <code>StandardScaler</code> to normalize features (Mean=0, Std=1) so that high-magnitude features (like Loudness) don't dominate the distance calculations.</li>\n<li><strong>Dimensionality Reduction:</strong><ul>\n<li><strong>PCA (Principal Component Analysis)</strong> is applied to compress the 9 audio features into 2 primary components for visualization purposes.</li>\n</ul>\n</li>\n<li><strong>Clustering:</strong><ul>\n<li><strong>K-Means Algorithm</strong> groups the data into 5 clusters (<code>k=5</code>).</li>\n<li>$$\\text{Minimize } \\sum_{i=1}^{k} \\sum_{x \\in S_i} || x - \\mu_i ||^2$$</li>\n</ul>\n</li>\n</ol>\n<hr />"
+          },
+          {
+            "id": "readme--system-architecture",
+            "title": "📐 System Architecture",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--system-architecture\">📐 System Architecture</h2>\n<pre><code class=\"language-mermaid\">flowchart LR\n    subgraph Input\n    A[Raw Dataset] --&gt; B(Data Cleaning)\n    end\n\n    subgraph Feature Engineering\n    B --&gt; C[Feature Selection]\n    C --&gt;|Danceability, Energy, etc.| D[StandardScaler]\n    end\n\n    subgraph Modeling\n    D --&gt; E[PCA Reduction]\n    D --&gt; F[K-Means Clustering]\n    E --&gt; G[2D Visualization]\n    F --&gt; H[Cluster Labels]\n    end\n\n    subgraph Output\n    H --&gt; I{Recommendation Engine}\n    I --&gt;|Input Song| J[Output Top 5 Similar Songs]\n    end\n</code></pre>\n<p>Project Structure\nPlaintext</p>\n<p>├── spotify_analysis.ipynb      # Main Jupyter Notebook (or .py script) containing all logic</p>\n<p>├── spotify dataset.csv         # Source data (ensure this is in root)</p>\n<p>├── requirements.txt            # Python dependencies</p>\n<p>└── README.md                   # Project documentation</p>\n<p>Installation &amp; Usage</p>\n<ol>\n<li>Clone the Repository\nBash\ngit clone <a href=\"https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation/blob/main/%5Bhttps%3A//github.com/your-username/spotify-genre-segmentation.git%5D(https%3A//github.com/Soham-o/Spotify_Songs_Genre_Segmentation.git)\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/your-username/spotify-genre-segmentation.git</a>\ncd spotify-genre-segmentation</li>\n<li>Install Dependencies\nBash\npip install -r requirements.txt</li>\n<li>Run the Analysis\nIf using the Python script:</li>\n</ol>\n<p>Bash\npython spotify_analysis.py\n4. Get Recommendations\nTo use the recommendation function inside the script/notebook:</p>\n<p>Python</p>"
+          },
+          {
+            "id": "readme-example-usage",
+            "title": "Example Usage",
+            "kind": "usage",
+            "html": "<h2 id=\"readme-example-usage\">Example Usage</h2>\n<p>rec = recommend_songs('Shape of You', df_final)\nprint(rec)\n📊 Visualizations\nThe script generates several key insights:</p>\n<p>Feature Distributions: Histograms showing the spread of Audio Features.</p>\n<p>Correlation Matrix: A heatmap displaying how features like Energy and Loudness are positively correlated, while Acousticness and Energy are negatively correlated.</p>\n<p>PCA Cluster Plot: A scatter plot visualizing how the K-Means algorithm has grouped the songs in 2D space.</p>\n<div align=\"center\">\n<p>\nBuilt with ❤️ using Python, Scikit-Learn, and Pandas\n</p>\n</div>"
+          }
+        ],
+        "highlights": {
+          "overview": "This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness).",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "This project analyzes a dataset of Spotify tracks to identify distinct clusters of songs based on their audio characteristics (e.g., danceability, energy, acousticness).",
+        "truncated": false,
+        "demoLinks": [],
+        "images": [
+          "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
+        ]
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1026537848,
+      "slug": "movie-recommender-system",
+      "name": "Movie_Recommender_System",
+      "displayName": "Movie Recommender System",
+      "fullName": "Soham-o/Movie_Recommender_System",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/Movie_Recommender_System",
+      "description": "A movie recommendation system built using Python and Streamlit library.",
+      "summary": "Content-based recommendation engine using cosine similarity on TF-IDF vectors. Built with Python, scikit-learn, and Streamlit — surfaces relevant titles from a dataset of 5,000+ films.",
+      "category": "ML · Recommender System",
+      "featured": false,
+      "curated": true,
+      "order": null,
+      "topics": [],
+      "language": "Jupyter Notebook",
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "bytes": 930646,
+          "pct": 99.8
+        },
+        {
+          "name": "Python",
+          "bytes": 1924,
+          "pct": 0.2
+        }
+      ],
+      "tech": [
+        {
+          "name": "Jupyter Notebook",
+          "source": "language"
+        },
+        {
+          "name": "Jupyter",
+          "source": "file"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2025-07-26T05:00:34Z",
+      "updatedAt": "2026-02-15T05:16:34Z",
+      "pushedAt": "2026-02-15T05:16:31Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "Image-Doc/p4.png",
+        "source": "override"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/Movie_Recommender_System/blob/main/README.md",
+        "overviewHtml": "<div align=\"center\">\n\n  <img src=\"https://cdn-icons-png.flaticon.com/512/2503/2503508.png\" alt=\"logo\" width=\"100\" height=\"auto\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <h1>Movie Recommendation Engine</h1>\n  \n  <p>\n    A Content-Based Machine Learning System that recommends movies similar to your favorites.\n  </p>\n  \n  \n<p>\n  <a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&amp;logo=python&amp;logoColor=white\" alt=\"Python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://streamlit.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&amp;logo=streamlit&amp;logoColor=white\" alt=\"Streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://scikit-learn.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white\" alt=\"Scikit Learn\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://pandas.pydata.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white\" alt=\"Pandas\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n</p>\n\n<h4>\n    <a href=\"#readme--system-architecture\">View Architecture</a>\n  <span> · </span>\n    <a href=\"#readme--installation\">Installation</a>\n  <span> · </span>\n    <a href=\"#readme--demo\">View Demo</a>\n</h4>\n\n</div>\n\n<br />\n\n<hr />",
+        "sections": [
+          {
+            "id": "readme--overview",
+            "title": "📍 Overview",
+            "kind": "about",
+            "html": "<h2 id=\"readme--overview\">📍 Overview</h2>\n<p>This project is a <strong>Content-Based Recommendation System</strong> built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the <strong>TMDB 5000 Movie Dataset</strong> to suggest movies that share narrative, thematic, or production similarities with a user's selection.</p>\n<h4 id=\"readme-key-features\">Key Features</h4>\n<table>\n<thead>\n<tr>\n<th align=\"left\">🚀 Performance</th>\n<th align=\"left\">🎨 UX/UI</th>\n<th align=\"left\">🔧 Engineering</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Instant Results:</strong> <br />Generates 5 recommendations in milliseconds using pre-computed similarity matrices.</td>\n<td align=\"left\"><strong>Visual Posters:</strong> <br />Fetches high-res movie posters dynamically via the TMDB API.</td>\n<td align=\"left\"><strong>Vectorization:</strong> <br />Uses <code>CountVectorizer</code> to convert text data into numerical vectors.</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Smart Filtering:</strong> <br />Filters based on a combined logic of Cast, Crew, Keywords, and Genres.</td>\n<td align=\"left\"><strong>Responsive Design:</strong> <br />Clean, mobile-friendly interface powered by Streamlit.</td>\n<td align=\"left\"><strong>Cosine Similarity:</strong> <br />Computes the geometric distance between movie vectors to find matches.</td>\n</tr>\n</tbody></table>\n<hr />"
+          },
+          {
+            "id": "readme--how-it-works",
+            "title": "🧠 How It Works",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--how-it-works\">🧠 How It Works</h2>\n<p>The engine uses <strong>Cosine Similarity</strong> to measure the distance between movies in a multi-dimensional space.</p>\n<ol>\n<li><strong>Data Cleaning:</strong> We merge the <code>Credits</code> and <code>Movies</code> datasets.</li>\n<li><strong>Feature Engineering:</strong> We create a unified <code>tags</code> column by concatenating:<ul>\n<li>Movie Overview</li>\n<li>Genres</li>\n<li>Keywords</li>\n<li>Top 3 Cast Members</li>\n<li>Director</li>\n</ul>\n</li>\n<li><strong>Vectorization:</strong> We remove stop words and apply stemming, then convert the text tags into 5000-dimensional vectors.</li>\n<li><strong>Similarity Metric:</strong> We calculate the cosine of the angle between vectors. A smaller angle implies higher similarity.</li>\n</ol>\n<p>$$\\text{Cosine Similarity}(A, B) = \\frac{A \\cdot B}{|A| |B|}$$</p>\n<hr />"
+          },
+          {
+            "id": "readme--system-architecture",
+            "title": "📐 System Architecture",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--system-architecture\">📐 System Architecture</h2>\n<p>Below is the high-level data flow pipeline, from raw CSV ingestion to frontend display.</p>\n<pre><code class=\"language-mermaid\">flowchart LR\n    subgraph Data Processing\n    A[Raw CSVs] --&gt;|Pandas| B(Data Cleaning)\n    B --&gt;|Feature Extraction| C{Tags Creation}\n    end\n\n    subgraph Model Building\n    C --&gt;|CountVectorizer| D[Vector Space]\n    D --&gt;|Cosine Similarity| E[Similarity Matrix]\n    E --&gt;|Pickle Dump| F[(Model Files)]\n    end\n\n    subgraph Frontend\n    G[User Input] --&gt;|Select Movie| H[Streamlit App]\n    H --&gt;|Load .pkl| F\n    H --&gt;|API Call| I[TMDB API]\n    I --&gt;|Return Poster| H\n    H --&gt;|Display| J[Recommendations]\n    end\n</code></pre>\n<p>├── movies_recommendation_system.ipynb  # Jupyter notebook for data training</p>\n<p>├── movies_rs.py                        # Main Streamlit application</p>\n<p>├── tmdb_5000_credits.csv               # Dataset 1: Credits</p>\n<p>├── tmdb_5000_movies.csv                # Dataset 2: Movies metadata</p>\n<p>├── movies.pkl                          # Processed dataframe (generated)</p>\n<p>├── similarity.pkl                      # Similarity matrix (generated)</p>\n<p>├── requirements.txt                    # List of dependencies</p>\n<p>└── README.md                           # Project documentation</p>\n<p>Installation &amp; Setup\nFollow these steps to set up the project locally.</p>\n<ol>\n<li>Clone the Repository\nBash\ngit clone <a href=\"https://github.com/Soham-o/Movie_Recommender_System.git\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/Soham-o/Movie_Recommender_System.git</a>.</li>\n</ol>\n<p>cd movie-recommender</p>\n<ol start=\"2\">\n<li><p>Install Dependencies\nBash\npip install -r requirements.txt</p>\n</li>\n<li><p>Generate the Models\nNote: Due to file size limits, the model files are not included in the repo. You must generate them.</p>\n</li>\n</ol>\n<p>Open movies_recommendation_system.ipynb in Jupyter Notebook.</p>\n<p>Run all cells.</p>\n<p>This will generate movies.pkl and similarity.pkl in your directory.</p>\n<ol start=\"4\">\n<li>Run the App\nBash\nstreamlit run movies_rs.py</li>\n</ol>\n<div align=\"center\">\n<p>\nBuilt with ❤️ using Python and Streamlit\n</p>\n<p>\n<a href=\"https://www.themoviedb.org/documentation/api\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TMDB API</a> •\n<a href=\"https://streamlit.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Streamlit Docs</a>\n</p>\n</div>\n\n\n<h4 id=\"readme-how-to-use-this\">How to use this:</h4>\n<ol>\n<li><strong>Create a file</strong> named <code>README.md</code> in your project folder.</li>\n<li><strong>Paste</strong> the code block above into that file.</li>\n<li><strong>Customize:</strong><ul>\n<li>Replace <code>https://github.com/Soham-o/movie-recommender.git</code> with your actual repo URL.</li>\n<li>If you have screenshots of your app running, replace the <code>https://via.placeholder.com...</code> links with the actual paths to your images.</li>\n<li>Move your <code>.pkl</code> files to a <code>models/</code> folder if you want to match the structure in the readme, or update the text to match your current flat file structure.</li>\n</ul>\n</li>\n</ol>"
+          }
+        ],
+        "highlights": {
+          "overview": "This project is a Content-Based Recommendation System built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the TMDB 5000 Movie Dataset to suggest movies that share narrative, thematic, or production similarities with a user's selection.",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "This project is a Content-Based Recommendation System built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the TMDB 5000 Movie Dataset to suggest movies that share…",
+        "truncated": false,
+        "demoLinks": [],
+        "images": [
+          "https://cdn-icons-png.flaticon.com/512/2503/2503508.png"
+        ]
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1157662701,
+      "slug": "fake-news-detection",
+      "name": "Fake-News-Detection-",
+      "displayName": "Fake-News-Detection",
+      "fullName": "Soham-o/Fake-News-Detection-",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/Fake-News-Detection-",
+      "description": "",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Jupyter Notebook",
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "bytes": 86623,
+          "pct": 100
+        }
+      ],
+      "tech": [
+        {
+          "name": "Jupyter Notebook",
+          "source": "language"
+        },
+        {
+          "name": "Jupyter",
+          "source": "file"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-02-14T05:18:58Z",
+      "updatedAt": "2026-02-14T05:33:54Z",
+      "pushedAt": "2026-02-14T05:33:51Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "https://opengraph.githubassets.com/52c7d12b67b69fd5/Soham-o/Fake-News-Detection-",
+        "source": "social"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/Fake-News-Detection-/blob/main/README.md",
+        "overviewHtml": "<p>A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses <strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong> for feature extraction and <strong>Logistic Regression</strong> for classification, offering high accuracy with minimal computational cost.</p>",
+        "sections": [
+          {
+            "id": "readme--project-overview",
+            "title": "🚀 Project Overview",
+            "kind": "about",
+            "html": "<h2 id=\"readme--project-overview\">🚀 Project Overview</h2>\n<p>Misinformation is a growing problem in the digital age. This project builds a binary classifier to distinguish between:</p>\n<ul>\n<li><strong>Real News:</strong> Verified articles from legitimate sources.</li>\n<li><strong>Fake News:</strong> Fabricated stories intended to deceive.</li>\n</ul>"
+          },
+          {
+            "id": "readme--tech-stack",
+            "title": "🛠️ Tech Stack",
+            "kind": "stack",
+            "html": "<h2 id=\"readme--tech-stack\">🛠️ Tech Stack</h2>\n<ul>\n<li><strong>Python 3.x</strong></li>\n<li><strong>Pandas &amp; NumPy:</strong> For efficient data manipulation.</li>\n<li><strong>Scikit-Learn:</strong><ul>\n<li><code>TfidfVectorizer</code>: Converts text into numerical vectors based on word importance.</li>\n<li><code>LogisticRegression</code>: A robust linear model for binary classification.</li>\n<li><code>Pipeline</code>: Streamlines the training process.</li>\n</ul>\n</li>\n</ul>"
+          },
+          {
+            "id": "readme--dataset-structure",
+            "title": "📂 Dataset Structure",
+            "kind": "other",
+            "html": "<h2 id=\"readme--dataset-structure\">📂 Dataset Structure</h2>\n<p>The project expects two CSV files in the root directory:\n<a href=\"https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset</a></p>\n<p><em>Note: The dataset is typically sourced from the ISOT Fake News Dataset or Kaggle.</em></p>"
+          },
+          {
+            "id": "readme--installation",
+            "title": "⚙️ Installation",
+            "kind": "setup",
+            "html": "<h2 id=\"readme--installation\">⚙️ Installation</h2>\n<ol>\n<li><p><strong>Clone the repository</strong></p>\n<pre><code class=\"language-bash\">[git clone [https://github.com/Soham-o/fake-news-detection.git](https://github.com/Soham-o/fake-news-detection.git)\ncd fake-news-detection](https://github.com/Soham-o/Fake-News-Detection-.git)\n</code></pre>\n</li>\n<li><p><strong>Install Dependencies</strong>\nYou can install the required libraries using pip:</p>\n<pre><code class=\"language-bash\">pip install pandas numpy scikit-learn\n</code></pre>\n</li>\n</ol>"
+          },
+          {
+            "id": "readme--how-it-works",
+            "title": "🧠 How It Works",
+            "kind": "architecture",
+            "html": "<h2 id=\"readme--how-it-works\">🧠 How It Works</h2>\n<p>The code follows a clean 4-step pipeline:</p>\n<ol>\n<li><strong>Data Loading &amp; Cleaning:</strong><ul>\n<li>Loads the raw CSV files.</li>\n<li>Assigns labels (1 for True, 0 for Fake).</li>\n<li>Combines, shuffles, and removes duplicate entries to prevent data leakage.</li>\n</ul>\n</li>\n<li><strong>Preprocessing (TF-IDF):</strong><ul>\n<li>Converts raw text into a matrix of TF-IDF features.</li>\n<li>This statistically measures how important a word is to a document in the corpus.</li>\n</ul>\n</li>\n<li><strong>Model Training:</strong><ul>\n<li>The processed vectors are fed into a <strong>Logistic Regression</strong> classifier.</li>\n</ul>\n</li>\n<li><strong>Evaluation:</strong><ul>\n<li>Outputs the accuracy score and a detailed classification report (Precision, Recall, F1-Score).</li>\n</ul>\n</li>\n</ol>"
+          },
+          {
+            "id": "readme--usage",
+            "title": "🏃‍♂️ Usage",
+            "kind": "usage",
+            "html": "<h2 id=\"readme--usage\">🏃‍♂️ Usage</h2>\n<p>To run the project, simply execute the python script:</p>\n<pre><code class=\"language-bash\">python main.ipynb\n</code></pre>"
+          }
+        ],
+        "highlights": {
+          "overview": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for classification, offering high accuracy with minimal computational cost.",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for…",
+        "truncated": false,
+        "demoLinks": [],
+        "images": []
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1147679907,
+      "slug": "mlmini-projects",
+      "name": "MLmini_Projects",
+      "displayName": "MLmini Projects",
+      "fullName": "Soham-o/MLmini_Projects",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/MLmini_Projects",
+      "description": "",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Jupyter Notebook",
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "bytes": 13398,
+          "pct": 100
+        }
+      ],
+      "tech": [
+        {
+          "name": "Jupyter Notebook",
+          "source": "language"
+        },
+        {
+          "name": "Jupyter",
+          "source": "file"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2026-02-02T04:35:16Z",
+      "updatedAt": "2026-02-02T04:55:29Z",
+      "pushedAt": "2026-02-02T04:55:25Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "https://opengraph.githubassets.com/cada0620687c60fc/Soham-o/MLmini_Projects",
+        "source": "social"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/MLmini_Projects/blob/main/README.md",
+        "overviewHtml": "<p>🏠 Project 1: California Housing Price Predictor (hpd.ipynb)\nA linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to handle mixed data types (numerical and categorical) within a single processing pipeline.</p>\n<p>🛠️ Key Technical Features\nData Handling: Implements a HousingModel class structure for modularity.</p>\n<p>Advanced Preprocessing: Uses ColumnTransformer to apply different transformations to specific subsets of features:</p>\n<p>Numerical Data: Median imputation for missing values followed by Standard Scaling.</p>\n<p>Categorical Data: One-Hot Encoding (with handle_unknown='ignore') for the ocean_proximity feature.</p>\n<p>Model: Linear Regression.</p>\n<p>📊 Performance\nThe model was evaluated on a 20% test split: | Metric | Value | | :--- | :--- | | RMSE | ~$70,059 | | R² Score | 0.6254 |</p>\n<p>📧 Project 2: Spam Mail Classifier (smd.ipynb)\nA Natural Language Processing (NLP) classifier capable of distinguishing between \"Spam\" and \"Ham\" (legitimate) emails. This project moves beyond simple structured data into text mining and probability-based classification.</p>\n<p>🛠️ Key Technical Features\nText Cleaning: Custom Regex implementation to remove non-alphabetic characters.</p>\n<p>NLP Pipeline:</p>\n<p>Tokenization &amp; Lowercasing.</p>\n<p>Stopword Removal: Utilizing NLTK's corpus to remove noise words.</p>\n<p>Stemming: Applied PorterStemmer to reduce words to their root form.</p>\n<p>Vectorization: transformed text data using TfidfVectorizer (Term Frequency-Inverse Document Frequency).</p>\n<p>Model: Multinomial Naive Bayes (MultinomialNB), chosen for its efficiency in high-dimensional text data.</p>\n<p>Stratification: Utilized stratified splitting to maintain class balance in the test set.</p>\n<p>📊 Performance\nThe model achieved high accuracy on the test dataset: | Metric | Value | | :--- | :--- | | Accuracy | 98.12% | | Precision (Class 0) | 1.00 | | Recall (Class 1) | 1.00 |</p>\n<p>💻 Installation &amp; Usage\nTo run these notebooks locally, ensure you have the required dependencies installed.</p>\n<ol>\n<li>Clone the Repository\nBash\ngit clone <a href=\"https://github.com/Soham-o/MLmini_Projects.git\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/yourusername/mini-ml-projects.git</a>\ncd MLmini_Projects</li>\n<li>Install Dependencies\nYou can install the necessary libraries using pip:</li>\n</ol>\n<p>Bash\npip install pandas numpy scikit-learn nltk matplotlib\n3. Run the Projects\nLaunch Jupyter Notebook to view and run the analysis:</p>\n<p>Bash\njupyter notebook\nOpen hpd.ipynb for the Housing Regression model.</p>\n<p>Open smd.ipynb for the Spam Classification model.</p>\n<p>📂 Repository Structure\nPlaintext\n├── hpd.ipynb        # Housing Price Prediction (Source Code)\n├── smd.ipynb        # Spam Mail Detection (Source Code)\n├── house.csv        # Dataset for Housing Project (Required)\n├── es_data.csv      # Dataset for Spam Project (Required)\n└── README.md        # Project Documentation\n🚀 Future Improvements\nHousing Model: Experiment with RandomForestRegressor or XGBoost to capture non-linear relationships and improve the R² score.</p>\n<p>Spam Model: Implement Deep Learning techniques (LSTM or BERT) to improve context understanding for edge cases where Naive Bayes might fail.</p>\n<p>Deployment: Wrap the models in a Flask/FastAPI backend for real-time inference.</p>",
+        "sections": [],
+        "highlights": {
+          "overview": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to handle mixed data types (numerical and categorical) within a single processing pipeline.",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to…",
+        "truncated": false,
+        "demoLinks": [],
+        "images": []
+      },
+      "nameHistory": []
+    },
+    {
+      "id": 1007141888,
+      "slug": "employee-analysis",
+      "name": "Employee-Analysis",
+      "displayName": "Employee-Analysis",
+      "fullName": "Soham-o/Employee-Analysis",
+      "owner": "Soham-o",
+      "url": "https://github.com/Soham-o/Employee-Analysis",
+      "description": "Project Employee Analysis",
+      "summary": "",
+      "category": "",
+      "featured": false,
+      "curated": false,
+      "order": null,
+      "topics": [],
+      "language": "Jupyter Notebook",
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "bytes": 1298,
+          "pct": 100
+        }
+      ],
+      "tech": [
+        {
+          "name": "Jupyter Notebook",
+          "source": "language"
+        },
+        {
+          "name": "Jupyter",
+          "source": "file"
+        }
+      ],
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "hasIssues": true,
+      "archived": false,
+      "isTemplate": false,
+      "fork": false,
+      "defaultBranch": "main",
+      "createdAt": "2025-06-23T14:22:51Z",
+      "updatedAt": "2025-06-23T14:24:32Z",
+      "pushedAt": "2025-06-23T14:24:29Z",
+      "homepage": "",
+      "demo": null,
+      "image": {
+        "url": "https://opengraph.githubassets.com/22740deabdf8df45/Soham-o/Employee-Analysis",
+        "source": "social"
+      },
+      "releases": [],
+      "latestRelease": null,
+      "readmeStatus": "ok",
+      "readme": {
+        "path": "README.md",
+        "htmlUrl": "https://github.com/Soham-o/Employee-Analysis/blob/main/README.md",
+        "overviewHtml": "<p>Project Employee Analysis</p>",
+        "sections": [],
+        "highlights": {
+          "overview": "Project Employee Analysis",
+          "problem": "",
+          "features": []
+        },
+        "excerpt": "Project Employee Analysis",
+        "truncated": false,
+        "demoLinks": [],
+        "images": []
+      },
+      "nameHistory": []
+    }
+  ]
+}

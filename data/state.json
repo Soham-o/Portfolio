@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "repos": {
+    "922378611": {
+      "id": 922378611,
+      "name": "Soham-o",
+      "fullName": "Soham-o/Soham-o",
+      "slug": null,
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "excluded",
+      "excludedReason": "config-exclude"
+    },
+    "1007141888": {
+      "id": 1007141888,
+      "name": "Employee-Analysis",
+      "fullName": "Soham-o/Employee-Analysis",
+      "slug": "employee-analysis",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1026537848": {
+      "id": 1026537848,
+      "name": "Movie_Recommender_System",
+      "fullName": "Soham-o/Movie_Recommender_System",
+      "slug": "movie-recommender-system",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1031344132": {
+      "id": 1031344132,
+      "name": "Spotify_Songs_Genre_Segmentation",
+      "fullName": "Soham-o/Spotify_Songs_Genre_Segmentation",
+      "slug": "spotify-songs-genre-segmentation",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1068386786": {
+      "id": 1068386786,
+      "name": "Task_Manager",
+      "fullName": "Soham-o/Task_Manager",
+      "slug": "task-manager",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1136219572": {
+      "id": 1136219572,
+      "name": "PersonaLearn",
+      "fullName": "Soham-o/PersonaLearn",
+      "slug": "personalearn",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1147679907": {
+      "id": 1147679907,
+      "name": "MLmini_Projects",
+      "fullName": "Soham-o/MLmini_Projects",
+      "slug": "mlmini-projects",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1157662701": {
+      "id": 1157662701,
+      "name": "Fake-News-Detection-",
+      "fullName": "Soham-o/Fake-News-Detection-",
+      "slug": "fake-news-detection",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1202472927": {
+      "id": 1202472927,
+      "name": "openclaw",
+      "fullName": "Soham-o/openclaw",
+      "slug": null,
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "excluded",
+      "excludedReason": "fork"
+    },
+    "1207539046": {
+      "id": 1207539046,
+      "name": "awesome-agent-skills",
+      "fullName": "Soham-o/awesome-agent-skills",
+      "slug": null,
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "excluded",
+      "excludedReason": "fork"
+    },
+    "1214424413": {
+      "id": 1214424413,
+      "name": "kinesis_prototype",
+      "fullName": "Soham-o/kinesis_prototype",
+      "slug": "kinesis-prototype",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1222658746": {
+      "id": 1222658746,
+      "name": "voteros",
+      "fullName": "Soham-o/voteros",
+      "slug": "voteros",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1260140601": {
+      "id": 1260140601,
+      "name": "autonomous-driving-system",
+      "fullName": "Soham-o/autonomous-driving-system",
+      "slug": "autonomous-driving-system",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1273992234": {
+      "id": 1273992234,
+      "name": "CalmReader",
+      "fullName": "Soham-o/CalmReader",
+      "slug": "calmreader",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1275129730": {
+      "id": 1275129730,
+      "name": "EarthShare",
+      "fullName": "Soham-o/EarthShare",
+      "slug": "earthshare",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1300537845": {
+      "id": 1300537845,
+      "name": "AirTwin-X",
+      "fullName": "Soham-o/AirTwin-X",
+      "slug": "airtwin-x",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1358825462": {
+      "id": 1358825462,
+      "name": "cursor_bite",
+      "fullName": "Soham-o/cursor_bite",
+      "slug": "cursor-bite",
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "active",
+      "lastSeenAt": "2026-10-11T03:10:41.457Z"
+    },
+    "1367906916": {
+      "id": 1367906916,
+      "name": "lintlang",
+      "fullName": "Soham-o/lintlang",
+      "slug": null,
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "excluded",
+      "excludedReason": "fork"
+    },
+    "1370887546": {
+      "id": 1370887546,
+      "name": "LibrEd",
+      "fullName": "Soham-o/LibrEd",
+      "slug": null,
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "excluded",
+      "excludedReason": "fork"
+    },
+    "1374277921": {
+      "id": 1374277921,
+      "name": "openless",
+      "fullName": "Soham-o/openless",
+      "slug": null,
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "excluded",
+      "excludedReason": "fork"
+    },
+    "1401911634": {
+      "id": 1401911634,
+      "name": "jcode",
+      "fullName": "Soham-o/jcode",
+      "slug": null,
+      "slugHistory": [],
+      "nameHistory": [],
+      "firstSeenAt": "2026-10-11T03:10:41.457Z",
+      "status": "excluded",
+      "excludedReason": "fork"
+    }
+  },
+  "milestones": {},
+  "firstSyncAt": "2026-10-11T03:10:41.457Z",
+  "lastFullRefreshAt": "2026-10-11T03:10:41.457Z"
+}

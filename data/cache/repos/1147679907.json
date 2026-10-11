@@ -1,0 +1,43 @@
+{
+  "id": 1147679907,
+  "name": "MLmini_Projects",
+  "processorVersion": 3,
+  "pushedAt": "2026-02-02T04:55:25Z",
+  "updatedAt": "2026-02-02T04:55:29Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "0d2ac6dc46f1f587fa28ad711cd031744335a5bf",
+      "htmlUrl": "https://github.com/Soham-o/MLmini_Projects/blob/main/README.md",
+      "title": null,
+      "overviewHtml": "<p>🏠 Project 1: California Housing Price Predictor (hpd.ipynb)\nA linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to handle mixed data types (numerical and categorical) within a single processing pipeline.</p>\n<p>🛠️ Key Technical Features\nData Handling: Implements a HousingModel class structure for modularity.</p>\n<p>Advanced Preprocessing: Uses ColumnTransformer to apply different transformations to specific subsets of features:</p>\n<p>Numerical Data: Median imputation for missing values followed by Standard Scaling.</p>\n<p>Categorical Data: One-Hot Encoding (with handle_unknown='ignore') for the ocean_proximity feature.</p>\n<p>Model: Linear Regression.</p>\n<p>📊 Performance\nThe model was evaluated on a 20% test split: | Metric | Value | | :--- | :--- | | RMSE | ~$70,059 | | R² Score | 0.6254 |</p>\n<p>📧 Project 2: Spam Mail Classifier (smd.ipynb)\nA Natural Language Processing (NLP) classifier capable of distinguishing between \"Spam\" and \"Ham\" (legitimate) emails. This project moves beyond simple structured data into text mining and probability-based classification.</p>\n<p>🛠️ Key Technical Features\nText Cleaning: Custom Regex implementation to remove non-alphabetic characters.</p>\n<p>NLP Pipeline:</p>\n<p>Tokenization &amp; Lowercasing.</p>\n<p>Stopword Removal: Utilizing NLTK's corpus to remove noise words.</p>\n<p>Stemming: Applied PorterStemmer to reduce words to their root form.</p>\n<p>Vectorization: transformed text data using TfidfVectorizer (Term Frequency-Inverse Document Frequency).</p>\n<p>Model: Multinomial Naive Bayes (MultinomialNB), chosen for its efficiency in high-dimensional text data.</p>\n<p>Stratification: Utilized stratified splitting to maintain class balance in the test set.</p>\n<p>📊 Performance\nThe model achieved high accuracy on the test dataset: | Metric | Value | | :--- | :--- | | Accuracy | 98.12% | | Precision (Class 0) | 1.00 | | Recall (Class 1) | 1.00 |</p>\n<p>💻 Installation &amp; Usage\nTo run these notebooks locally, ensure you have the required dependencies installed.</p>\n<ol>\n<li>Clone the Repository\nBash\ngit clone <a href=\"https://github.com/Soham-o/MLmini_Projects.git\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/yourusername/mini-ml-projects.git</a>\ncd MLmini_Projects</li>\n<li>Install Dependencies\nYou can install the necessary libraries using pip:</li>\n</ol>\n<p>Bash\npip install pandas numpy scikit-learn nltk matplotlib\n3. Run the Projects\nLaunch Jupyter Notebook to view and run the analysis:</p>\n<p>Bash\njupyter notebook\nOpen hpd.ipynb for the Housing Regression model.</p>\n<p>Open smd.ipynb for the Spam Classification model.</p>\n<p>📂 Repository Structure\nPlaintext\n├── hpd.ipynb        # Housing Price Prediction (Source Code)\n├── smd.ipynb        # Spam Mail Detection (Source Code)\n├── house.csv        # Dataset for Housing Project (Required)\n├── es_data.csv      # Dataset for Spam Project (Required)\n└── README.md        # Project Documentation\n🚀 Future Improvements\nHousing Model: Experiment with RandomForestRegressor or XGBoost to capture non-linear relationships and improve the R² score.</p>\n<p>Spam Model: Implement Deep Learning techniques (LSTM or BERT) to improve context understanding for edge cases where Naive Bayes might fail.</p>\n<p>Deployment: Wrap the models in a Flask/FastAPI backend for real-time inference.</p>",
+      "sections": [],
+      "images": [],
+      "firstImage": null,
+      "demoLinks": [],
+      "highlights": {
+        "overview": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to handle mixed data types (numerical and categorical) within a single processing pipeline.",
+        "problem": "",
+        "features": []
+      },
+      "excerpt": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features. This project demonstrates how to…",
+      "truncated": false
+    },
+    "languages": {
+      "Jupyter Notebook": 13398
+    },
+    "tech": [
+      {
+        "name": "Jupyter Notebook",
+        "source": "language"
+      },
+      {
+        "name": "Jupyter",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}

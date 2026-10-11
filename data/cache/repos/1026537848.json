@@ -1,0 +1,65 @@
+{
+  "id": 1026537848,
+  "name": "Movie_Recommender_System",
+  "processorVersion": 3,
+  "pushedAt": "2026-02-15T05:16:31Z",
+  "updatedAt": "2026-02-15T05:16:34Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "a5863767daa2e5dfecaee013c6186ecc1e9200ea",
+      "htmlUrl": "https://github.com/Soham-o/Movie_Recommender_System/blob/main/README.md",
+      "title": null,
+      "overviewHtml": "<div align=\"center\">\n\n  <img src=\"https://cdn-icons-png.flaticon.com/512/2503/2503508.png\" alt=\"logo\" width=\"100\" height=\"auto\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <h1>Movie Recommendation Engine</h1>\n  \n  <p>\n    A Content-Based Machine Learning System that recommends movies similar to your favorites.\n  </p>\n  \n  \n<p>\n  <a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&amp;logo=python&amp;logoColor=white\" alt=\"Python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://streamlit.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&amp;logo=streamlit&amp;logoColor=white\" alt=\"Streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://scikit-learn.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&amp;logo=scikit-learn&amp;logoColor=white\" alt=\"Scikit Learn\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://pandas.pydata.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white\" alt=\"Pandas\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n</p>\n\n<h4>\n    <a href=\"#readme--system-architecture\">View Architecture</a>\n  <span> · </span>\n    <a href=\"#readme--installation\">Installation</a>\n  <span> · </span>\n    <a href=\"#readme--demo\">View Demo</a>\n</h4>\n\n</div>\n\n<br />\n\n<hr />",
+      "sections": [
+        {
+          "id": "readme--overview",
+          "title": "📍 Overview",
+          "kind": "about",
+          "html": "<h2 id=\"readme--overview\">📍 Overview</h2>\n<p>This project is a <strong>Content-Based Recommendation System</strong> built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the <strong>TMDB 5000 Movie Dataset</strong> to suggest movies that share narrative, thematic, or production similarities with a user's selection.</p>\n<h4 id=\"readme-key-features\">Key Features</h4>\n<table>\n<thead>\n<tr>\n<th align=\"left\">🚀 Performance</th>\n<th align=\"left\">🎨 UX/UI</th>\n<th align=\"left\">🔧 Engineering</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Instant Results:</strong> <br />Generates 5 recommendations in milliseconds using pre-computed similarity matrices.</td>\n<td align=\"left\"><strong>Visual Posters:</strong> <br />Fetches high-res movie posters dynamically via the TMDB API.</td>\n<td align=\"left\"><strong>Vectorization:</strong> <br />Uses <code>CountVectorizer</code> to convert text data into numerical vectors.</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Smart Filtering:</strong> <br />Filters based on a combined logic of Cast, Crew, Keywords, and Genres.</td>\n<td align=\"left\"><strong>Responsive Design:</strong> <br />Clean, mobile-friendly interface powered by Streamlit.</td>\n<td align=\"left\"><strong>Cosine Similarity:</strong> <br />Computes the geometric distance between movie vectors to find matches.</td>\n</tr>\n</tbody></table>\n<hr />"
+        },
+        {
+          "id": "readme--how-it-works",
+          "title": "🧠 How It Works",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme--how-it-works\">🧠 How It Works</h2>\n<p>The engine uses <strong>Cosine Similarity</strong> to measure the distance between movies in a multi-dimensional space.</p>\n<ol>\n<li><strong>Data Cleaning:</strong> We merge the <code>Credits</code> and <code>Movies</code> datasets.</li>\n<li><strong>Feature Engineering:</strong> We create a unified <code>tags</code> column by concatenating:<ul>\n<li>Movie Overview</li>\n<li>Genres</li>\n<li>Keywords</li>\n<li>Top 3 Cast Members</li>\n<li>Director</li>\n</ul>\n</li>\n<li><strong>Vectorization:</strong> We remove stop words and apply stemming, then convert the text tags into 5000-dimensional vectors.</li>\n<li><strong>Similarity Metric:</strong> We calculate the cosine of the angle between vectors. A smaller angle implies higher similarity.</li>\n</ol>\n<p>$$\\text{Cosine Similarity}(A, B) = \\frac{A \\cdot B}{|A| |B|}$$</p>\n<hr />"
+        },
+        {
+          "id": "readme--system-architecture",
+          "title": "📐 System Architecture",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme--system-architecture\">📐 System Architecture</h2>\n<p>Below is the high-level data flow pipeline, from raw CSV ingestion to frontend display.</p>\n<pre><code class=\"language-mermaid\">flowchart LR\n    subgraph Data Processing\n    A[Raw CSVs] --&gt;|Pandas| B(Data Cleaning)\n    B --&gt;|Feature Extraction| C{Tags Creation}\n    end\n\n    subgraph Model Building\n    C --&gt;|CountVectorizer| D[Vector Space]\n    D --&gt;|Cosine Similarity| E[Similarity Matrix]\n    E --&gt;|Pickle Dump| F[(Model Files)]\n    end\n\n    subgraph Frontend\n    G[User Input] --&gt;|Select Movie| H[Streamlit App]\n    H --&gt;|Load .pkl| F\n    H --&gt;|API Call| I[TMDB API]\n    I --&gt;|Return Poster| H\n    H --&gt;|Display| J[Recommendations]\n    end\n</code></pre>\n<p>├── movies_recommendation_system.ipynb  # Jupyter notebook for data training</p>\n<p>├── movies_rs.py                        # Main Streamlit application</p>\n<p>├── tmdb_5000_credits.csv               # Dataset 1: Credits</p>\n<p>├── tmdb_5000_movies.csv                # Dataset 2: Movies metadata</p>\n<p>├── movies.pkl                          # Processed dataframe (generated)</p>\n<p>├── similarity.pkl                      # Similarity matrix (generated)</p>\n<p>├── requirements.txt                    # List of dependencies</p>\n<p>└── README.md                           # Project documentation</p>\n<p>Installation &amp; Setup\nFollow these steps to set up the project locally.</p>\n<ol>\n<li>Clone the Repository\nBash\ngit clone <a href=\"https://github.com/Soham-o/Movie_Recommender_System.git\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/Soham-o/Movie_Recommender_System.git</a>.</li>\n</ol>\n<p>cd movie-recommender</p>\n<ol start=\"2\">\n<li><p>Install Dependencies\nBash\npip install -r requirements.txt</p>\n</li>\n<li><p>Generate the Models\nNote: Due to file size limits, the model files are not included in the repo. You must generate them.</p>\n</li>\n</ol>\n<p>Open movies_recommendation_system.ipynb in Jupyter Notebook.</p>\n<p>Run all cells.</p>\n<p>This will generate movies.pkl and similarity.pkl in your directory.</p>\n<ol start=\"4\">\n<li>Run the App\nBash\nstreamlit run movies_rs.py</li>\n</ol>\n<div align=\"center\">\n<p>\nBuilt with ❤️ using Python and Streamlit\n</p>\n<p>\n<a href=\"https://www.themoviedb.org/documentation/api\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">TMDB API</a> •\n<a href=\"https://streamlit.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Streamlit Docs</a>\n</p>\n</div>\n\n\n<h4 id=\"readme-how-to-use-this\">How to use this:</h4>\n<ol>\n<li><strong>Create a file</strong> named <code>README.md</code> in your project folder.</li>\n<li><strong>Paste</strong> the code block above into that file.</li>\n<li><strong>Customize:</strong><ul>\n<li>Replace <code>https://github.com/Soham-o/movie-recommender.git</code> with your actual repo URL.</li>\n<li>If you have screenshots of your app running, replace the <code>https://via.placeholder.com...</code> links with the actual paths to your images.</li>\n<li>Move your <code>.pkl</code> files to a <code>models/</code> folder if you want to match the structure in the readme, or update the text to match your current flat file structure.</li>\n</ul>\n</li>\n</ol>"
+        }
+      ],
+      "images": [
+        "https://cdn-icons-png.flaticon.com/512/2503/2503508.png"
+      ],
+      "firstImage": "https://cdn-icons-png.flaticon.com/512/2503/2503508.png",
+      "demoLinks": [],
+      "highlights": {
+        "overview": "This project is a Content-Based Recommendation System built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the TMDB 5000 Movie Dataset to suggest movies that share narrative, thematic, or production similarities with a user's selection.",
+        "problem": "",
+        "features": []
+      },
+      "excerpt": "This project is a Content-Based Recommendation System built using Python and Streamlit. It solves the problem of \"choice paralysis\" by analyzing metadata from the TMDB 5000 Movie Dataset to suggest movies that share…",
+      "truncated": false
+    },
+    "languages": {
+      "Jupyter Notebook": 930646,
+      "Python": 1924
+    },
+    "tech": [
+      {
+        "name": "Jupyter Notebook",
+        "source": "language"
+      },
+      {
+        "name": "Jupyter",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}

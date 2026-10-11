@@ -1,0 +1,92 @@
+{
+  "id": 1222658746,
+  "name": "voteros",
+  "processorVersion": 3,
+  "pushedAt": "2026-04-27T15:37:46Z",
+  "updatedAt": "2026-04-27T15:37:50Z",
+  "defaultBranch": "main",
+  "fetchedAt": "2026-10-11T03:10:41.457Z",
+  "details": {
+    "readme": {
+      "path": "README.md",
+      "sha": "9be24d7163020bcad6e66e8f4d8f56edcd22c229",
+      "htmlUrl": "https://github.com/Soham-o/voteros/blob/main/README.md",
+      "title": null,
+      "overviewHtml": "<div align=\"center\">\n  \n  <img src=\"https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine\" alt=\"VoterOS Banner\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n\n  <h1>🗳️ VoterOS</h1>\n  <p><b>The Civic Journey Engine</b></p>\n  <p><em>\"Elections are not failing due to a lack of systems, but due to a lack of clarity.\"</em></p>\n\n<p>  <a href=\"https://ai.google.dev/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&amp;logo=google&amp;logoColor=white\" alt=\"Google Gemini\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://cloud.google.com/run\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Google_Cloud_Run-4285F4?style=for-the-badge&amp;logo=googlecloud&amp;logoColor=white\" alt=\"Google Cloud Run\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://streamlit.io/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&amp;logo=streamlit&amp;logoColor=white\" alt=\"Streamlit\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a>\n  <a href=\"https://python.org/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\"><img src=\"https://img.shields.io/badge/Python_3.9+-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white\" alt=\"Python\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></a></p>\n  <br />\n\n<p>  <strong><a href=\"#readme-\">Live Demo on Cloud Run</a> • <a href=\"#readme-\">Watch the Pitch Video</a> • <a href=\"#readme-\">Read the Docs</a></strong></p>\n</div>\n\n<hr />",
+      "sections": [
+        {
+          "id": "readme--the-vision",
+          "title": "🎯 The Vision",
+          "kind": "other",
+          "html": "<h2 id=\"readme--the-vision\">🎯 The Vision</h2>\n<p><strong>VoterOS</strong> is an interactive, AI-powered system designed to demystify the electoral process. It shifts civic engagement from reactive searching to <strong>proactive orchestration</strong>. By combining a predictive rules engine with <strong>Google Gemini’s</strong> natural language reasoning, VoterOS provides every citizen with a personalized, visual, and highly actionable voting roadmap.</p>\n<blockquote>\n<p><strong>Hackathon Alignment:</strong> We built an assistant that doesn't just answer questions, but helps users <em>understand</em> the election process, timelines, and steps through an interactive, visual, and easy-to-follow dashboard.</p>\n</blockquote>\n<hr />"
+        },
+        {
+          "id": "readme--why-voteros-is-not-a-chatbot",
+          "title": "🛑 Why VoterOS is NOT a Chatbot",
+          "kind": "problem",
+          "html": "<h2 id=\"readme--why-voteros-is-not-a-chatbot\">🛑 Why VoterOS is NOT a Chatbot</h2>\n<p>Standard AI chatbots fail in civic tech because they rely on the user to know what to ask. VoterOS flips the script:</p>\n<table>\n<thead>\n<tr>\n<th align=\"left\">Feature</th>\n<th align=\"left\">Standard Chatbot</th>\n<th align=\"left\">VoterOS 🚀</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong>Interaction Flow</strong></td>\n<td align=\"left\">Waits for the user to ask the right question</td>\n<td align=\"left\"><strong>Proactively guides</strong> the user to ensure critical steps aren't missed</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Data Delivery</strong></td>\n<td align=\"left\">Pastes links to heavy FAQ PDFs</td>\n<td align=\"left\">Distills rules into <strong>decision support</strong> (e.g., \"Submit Form 8\")</td>\n</tr>\n<tr>\n<td align=\"left\"><strong>Learning Style</strong></td>\n<td align=\"left\">Relies on walls of text</td>\n<td align=\"left\">Uses <strong>visual learning</strong> (progress bars, traffic curves, checklists)</td>\n</tr>\n</tbody></table>\n<hr />"
+        },
+        {
+          "id": "readme--core-features",
+          "title": "✨ Core Features",
+          "kind": "features",
+          "html": "<h2 id=\"readme--core-features\">✨ Core Features</h2>\n<h3 id=\"readme--1-the-scenario-simulator-what-if\">🧪 1. The Scenario Simulator (\"What if...?\")</h3>\n<p>The standout feature. Users can test edge cases in a safe, visual environment:</p>\n<ul>\n<li>📉 <strong>\"What if I miss the registration deadline?\"</strong> → Explains immediate disqualification.</li>\n<li>⏰ <strong>\"What if I go at 10 AM?\"</strong> → Triggers peak-hour congestion warnings &amp; suggests alternatives.</li>\n<li>🪪 <strong>\"What if I lost my EPIC card?\"</strong> → Highlights alternative verification paths without resetting progress.</li>\n</ul>\n<h3 id=\"readme--2-hybrid-ai-copilot-gemini-powered\">🧠 2. Hybrid AI Copilot (Gemini-Powered)</h3>\n<p>A conversational interface that feels human but acts systematically. It parses user intent, cross-references it with electoral rules, and guides the user forward.</p>\n<h3 id=\"readme--3-dynamic-voting-timeline\">🚇 3. Dynamic Voting Timeline</h3>\n<p>A visual flowchart (Subway Map) that maps the user's journey. It highlights the current step and visually branches when alternative paths (like Form 8 for relocation) are required.</p>\n<h3 id=\"readme--4-voter-readiness--confidence-engine\">📊 4. Voter Readiness &amp; Confidence Engine</h3>\n<p>A real-time progress metric (0-100%). The system explicitly flags missing requirements (e.g., <em>Address Verification Pending</em>) and provides the immediate next action.</p>\n<h3 id=\"readme--5-smart-form-recommender--id-builder\">📑 5. Smart Form Recommender &amp; ID Builder</h3>\n<p>Dynamically advises users on the exact documentation needed. Automatically detects if a user requires <strong>Form 6</strong> (New Voter), <strong>Form 8</strong> (Relocation), or <strong>Form 6A</strong> (Overseas Indian).</p>\n<h3 id=\"readme--6-crowd-prediction-engine\">📈 6. Crowd Prediction Engine</h3>\n<p>A predictive bimodal curve highlighting anticipated peak wait times at the polling booth, recommending personalized \"Green Zone\" voting windows.</p>\n<hr />"
+        },
+        {
+          "id": "readme--system-architecture",
+          "title": "🏗️ System Architecture",
+          "kind": "architecture",
+          "html": "<h2 id=\"readme--system-architecture\">🏗️ System Architecture</h2>\n<p>VoterOS utilizes a <strong>Hybrid Intelligence Architecture</strong> to guarantee enterprise-grade stability during critical civic events.</p>\n<pre><code class=\"language-mermaid\">graph TD;\n    A[User Input] --&gt; B[Streamlit UI];\n    B --&gt; C{Hybrid Engine};\n    C --&gt;|State &amp; Routing| D[Rule-Based Python Engine];\n    C --&gt;|Natural Conversation| E[Google Gemini Pro API];\n    D --&gt; F[Visual Dashboard Update];\n    E --&gt; G[Chat Copilot Update];\n</code></pre>\n<p>Rule-Based Decision Engine (llm_logic.py): Acts as the \"Safety Net.\" It strictly governs state updates (Progress, Milestones, Forms) to ensure the UI never hallucinates or crashes due to LLM unpredictability.</p>\n<p>Google Vertex AI / Gemini Integration: Acts as the \"Voice.\" It ingests the structured system context and generates natural, empathetic, and highly clear user-facing responses.</p>\n<p>Streamlit Frontend: A highly modular, responsive dashboard utilizing custom HTML/CSS for premium visual components.</p>\n<p>🔍 Sample Use Cases\n📍 The Relocation Scenario</p>\n<p>User: \"I just moved to a new city.\"</p>\n<p>VoterOS: Detects the constituency mismatch. Halts the standard timeline. Triggers an \"Alternate Path Activated\" alert. Instructs the user to submit Form 8 before attempting to vote.</p>\n<p>🪪 The Missing Document Scenario</p>\n<p>User: \"I don't have my Voter ID.\"</p>\n<p>VoterOS: Blocks the Readiness Score from reaching 100%. Generates a visual warning and lists approved alternative IDs (Aadhaar, Passport, PAN) required for the Presiding Officer.</p>\n<p>🛠️ Quick Start (Run Locally)\nPrerequisites: Python 3.9+ and a Google Gemini API Key.</p>\n<ol>\n<li>Clone the repository:</li>\n</ol>\n<p>Bash\ngit clone <a href=\"https://github.com/yourusername/voter_os_project.git\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">https://github.com/yourusername/voter_os_project.git</a>\ncd voter_os_project\n2. Install dependencies:</p>\n<p>Bash\npip install -r requirements.txt\n3. Configure API Keys:\nCreate a .streamlit/secrets.toml file in the root directory and add your Gemini key:</p>\n<p>Ini, TOML\nGEMINI_API_KEY = \"your_actual_api_key_here\"\n4. Run the application:</p>\n<p>Bash\nstreamlit run main.py\n☁️ Deployment\nVoterOS is containerized and deployed via Google Cloud Run for high availability and scalable performance during high-traffic election cycles.</p>\n<p><a href=\"https://voteros-app-805910938723.asia-south1.run.app/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">(See Dockerfile for containerization specifics).</a></p>"
+        }
+      ],
+      "images": [
+        "https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine"
+      ],
+      "firstImage": "https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine",
+      "demoLinks": [],
+      "highlights": {
+        "overview": "Live Demo on Cloud Run • Watch the Pitch Video • Read the Docs",
+        "problem": "Standard AI chatbots fail in civic tech because they rely on the user to know what to ask. VoterOS flips the script:",
+        "features": [
+          "📉 \"What if I miss the registration deadline?\" → Explains immediate disqualification.",
+          "⏰ \"What if I go at 10 AM?\" → Triggers peak-hour congestion warnings & suggests alternatives.",
+          "🪪 \"What if I lost my EPIC card?\" → Highlights alternative verification paths without resetting progress."
+        ]
+      },
+      "excerpt": "Live Demo on Cloud Run • Watch the Pitch Video • Read the Docs",
+      "truncated": false
+    },
+    "languages": {
+      "Python": 23989,
+      "Dockerfile": 184,
+      "CSS": 135
+    },
+    "tech": [
+      {
+        "name": "Python",
+        "source": "language"
+      },
+      {
+        "name": "Streamlit",
+        "source": "manifest"
+      },
+      {
+        "name": "Matplotlib",
+        "source": "manifest"
+      },
+      {
+        "name": "NumPy",
+        "source": "manifest"
+      },
+      {
+        "name": "Gemini API",
+        "source": "manifest"
+      },
+      {
+        "name": "Docker",
+        "source": "file"
+      }
+    ]
+  },
+  "releases": []
+}
