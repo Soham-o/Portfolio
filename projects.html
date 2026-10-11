@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Soham Panda</title>
+    <meta name="description" content="Projects by Soham Panda — autonomous AI pipelines and every public GitHub repository, synced automatically.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -22,6 +23,7 @@
                 <a href="index.html" class="link">Home</a>
                 <a href="about.html" class="link">About</a>
                 <a href="projects.html" class="link active">Projects</a>
+                <a href="journey.html" class="link">Journey</a>
             </div>
             
             <div class="nav-logo">
@@ -49,29 +51,112 @@
 
     <main class="projects-page">
         <div class="title-section">
-            <h1 class="big-text">Imagination Trumps Knowledge!</h1>
+            <h1 class="big-text">Systems That Run Themselves.</h1>
+            <p class="projects-subtitle">Every project below solves a real problem I got tired of solving manually. Each one runs autonomously on free infrastructure — no subscription, no babysitting required.</p>
         </div>
 
         <div class="projects-grid">
-            
+
+            <!-- ══════════════════════════════════════════
+                 FEATURED: InternPilot AI
+            ══════════════════════════════════════════ -->
             <div class="col-12">
                 <article class="featured-project">
                     <div class="card-bg"></div>
+
+                    <!-- Architecture Diagram as visual -->
                     <div class="fp-image">
-                        <img src="./Image-Doc/p35.png" alt="Portfolio">
+                        <div class="arch-diagram-wrap">
+                            <p class="arch-label">System Architecture</p>
+                            <svg viewBox="0 0 580 140" xmlns="http://www.w3.org/2000/svg" class="arch-svg">
+                                <defs>
+                                    <marker id="a1" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto">
+                                        <path d="M0,0 L0,5 L7,2.5 z" fill="var(--primary)"/>
+                                    </marker>
+                                </defs>
+                                <!-- Node 1 -->
+                                <rect x="4" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--primary)" stroke-width="2"/>
+                                <text x="54" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">GitHub</text>
+                                <text x="54" y="79" text-anchor="middle" fill="var(--text-color)" font-size="9" font-family="Montserrat,sans-serif">Actions</text>
+                                <text x="54" y="91" text-anchor="middle" fill="var(--primary)" font-size="8" font-family="Montserrat,sans-serif">Cron ⏰</text>
+                                <!-- Arrow -->
+                                <line x1="104" y1="70" x2="122" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a1)"/>
+                                <!-- Node 2 -->
+                                <rect x="124" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="174" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Multi-Source</text>
+                                <text x="174" y="79" text-anchor="middle" fill="var(--text-color)" font-size="9" font-family="Montserrat,sans-serif">Scraper</text>
+                                <text x="174" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">+ Deduplicator</text>
+                                <!-- Arrow -->
+                                <line x1="224" y1="70" x2="242" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a1)"/>
+                                <!-- Node 3 -->
+                                <rect x="244" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="294" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Groq LLM</text>
+                                <text x="294" y="79" text-anchor="middle" fill="var(--text-color)" font-size="9" font-family="Montserrat,sans-serif">Scam Detect</text>
+                                <text x="294" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">+ Rank</text>
+                                <!-- Arrow -->
+                                <line x1="344" y1="70" x2="362" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a1)"/>
+                                <!-- Node 4 -->
+                                <rect x="364" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="414" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Digest</text>
+                                <text x="414" y="79" text-anchor="middle" fill="var(--text-color)" font-size="9" font-family="Montserrat,sans-serif">Formatter</text>
+                                <text x="414" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">&amp; Ranker</text>
+                                <!-- Arrow -->
+                                <line x1="464" y1="70" x2="482" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a1)"/>
+                                <!-- Node 5 -->
+                                <rect x="484" y="44" width="92" height="52" rx="10" fill="var(--primary)" stroke="var(--primary)" stroke-width="2"/>
+                                <text x="530" y="65" text-anchor="middle" fill="var(--bg-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Telegram</text>
+                                <text x="530" y="79" text-anchor="middle" fill="var(--bg-color)" font-size="9" font-family="Montserrat,sans-serif">Daily Digest</text>
+                                <text x="530" y="91" text-anchor="middle" fill="var(--bg-color)" font-size="8" font-family="Montserrat,sans-serif">📬 Delivery</text>
+                                <!-- Free labels -->
+                                <text x="54" y="115" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.45">Free tier</text>
+                                <text x="294" y="115" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.45">Free tier</text>
+                                <text x="530" y="115" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.45">Free tier</text>
+                            </svg>
+                        </div>
                     </div>
+
                     <div class="fp-content">
-                        <span class="fp-type">Portfolio Website</span>
-                        <a href="#" class="fp-title"><h2>Portfolio Website</h2></a>
-                        <p class="fp-desc">A professional portfolio website using HTML,CSS,JS, and Styled-components. It has smooth page transitions, cool background effects, unique design and it is mobile responsive.</p>
+                        <span class="fp-type">AI Automation · Live Pipeline</span>
+                        <a href="https://github.com/Soham-o" class="fp-title"><h2>InternPilot AI</h2></a>
+                        <p class="fp-desc">I was spending 2–3 hours daily searching for internships across five platforms, manually deduplicating listings, and still missing the good ones. So I built a system to do it instead. InternPilot AI discovers opportunities automatically, runs scam detection using Groq LLM, deduplicates across sources, ranks by fit, and delivers a personalised Telegram digest every morning — all orchestrated by GitHub Actions at zero cost.</p>
+
+                        <!-- Case study breakdown -->
+                        <div class="case-grid">
+                            <div class="case-cell">
+                                <span class="case-label">Problem</span>
+                                <span class="case-val">Hours wasted daily on manual internship hunting across fragmented platforms</span>
+                            </div>
+                            <div class="case-cell">
+                                <span class="case-label">Key Challenge</span>
+                                <span class="case-val">Deduplication across inconsistent source formats — solved via fuzzy matching before LLM ranking to keep API cost at zero</span>
+                            </div>
+                            <div class="case-cell">
+                                <span class="case-label">Impact</span>
+                                <span class="case-val">~2–3 hrs saved daily · $0 infra cost · Ranked digest delivered every morning autonomously</span>
+                            </div>
+                        </div>
+
+                        <!-- Tech tags -->
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Groq LLM</span>
+                            <span class="tech-tag">BeautifulSoup</span>
+                            <span class="tech-tag">Telegram API</span>
+                            <span class="tech-tag">Zero-Cost Infra</span>
+                        </div>
+
                         <div class="fp-links">
-                            <a href="https://github.com/Soham-o/Portfolio.git"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o/Portfolio.git" class="btn-visit">Visit Project</a>
+                            <a href="https://github.com/Soham-o" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/Soham-o" target="_blank" class="btn-visit">View on GitHub</a>
                         </div>
                     </div>
                 </article>
             </div>
 
+            <!-- ══════════════════════════════════════════
+                 SMALL: Task Manager + PersonaLearn
+            ══════════════════════════════════════════ -->
             <div class="col-6">
                 <article class="small-project">
                     <div class="card-bg"></div>
@@ -79,12 +164,15 @@
                         <img src="./Image-Doc/p1.png" alt="Task Manager">
                     </div>
                     <div class="sp-content">
-                        <span class="fp-type">Website Template</span>
-                        <a href="#" class="fp-title"><h2>Task Manager</h2></a>
+                        <span class="fp-type">Productivity Tool</span>
+                        <a href="https://github.com/Soham-o/Task_Manager.git" class="fp-title"><h2>Task Manager</h2></a>
+                        <p class="fp-desc">A clean, responsive task management interface built with HTML, CSS, and JavaScript. Focused on frictionless UX — add, complete, and clear tasks without page reloads.</p>
+                        <!-- github-sync:card-links:Task_Manager:start -->
                         <div class="fp-links">
-                            <a href="https://github.com/Soham-o/Task_Manager.git"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o/Task_Manager.git" class="btn-visit">Visit Project</a>                            
+                            <a href="https://github.com/Soham-o/Task_Manager" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/Soham-o/Task_Manager" target="_blank" class="btn-visit">View Project</a>
                         </div>
+                        <!-- github-sync:card-links:Task_Manager:end -->
                     </div>
                 </article>
             </div>
@@ -96,30 +184,139 @@
                         <img src="./Image-Doc/p2.png" alt="PersonaLearn">
                     </div>
                     <div class="sp-content">
-                        <span class="fp-type">Ml Based</span>
-                        <a href="#" class="fp-title"><h2>PersonaLearn</h2></a>
+                        <span class="fp-type">ML · Adaptive Learning</span>
+                        <a href="https://github.com/Soham-o/PersonaLearn.git" class="fp-title"><h2>PersonaLearn</h2></a>
+                        <p class="fp-desc">ML-powered system that personalises content delivery based on learner behaviour patterns. Adapts difficulty and format dynamically — built with Python and Streamlit.</p>
+                        <!-- github-sync:card-links:PersonaLearn:start -->
                         <div class="fp-links">
-                            <a href="https://github.com/Soham-o/PersonaLearn.git"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o/PersonaLearn.git" class="btn-visit">Visit Project</a>                            
+                            <a href="https://github.com/Soham-o/PersonaLearn" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/Soham-o/PersonaLearn" target="_blank" class="btn-visit">View Project</a>
+                        </div>
+                        <!-- github-sync:card-links:PersonaLearn:end -->
+                    </div>
+                </article>
+            </div>
+
+            <!-- ══════════════════════════════════════════
+                 FEATURED: PVCA 1.0
+            ══════════════════════════════════════════ -->
+            <div class="col-12">
+                <article class="featured-project">
+                    <div class="card-bg"></div>
+
+                    <div class="fp-image">
+                        <div class="arch-diagram-wrap">
+                            <p class="arch-label">Call Flow Architecture</p>
+                            <svg viewBox="0 0 620 140" xmlns="http://www.w3.org/2000/svg" class="arch-svg">
+                                <defs>
+                                    <marker id="a2" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto">
+                                        <path d="M0,0 L0,5 L7,2.5 z" fill="var(--primary)"/>
+                                    </marker>
+                                </defs>
+                                <!-- Caller -->
+                                <circle cx="46" cy="70" r="34" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="46" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Caller</text>
+                                <text x="46" y="79" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">(Missed)</text>
+                                <!-- Arrow -->
+                                <line x1="80" y1="70" x2="98" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a2)"/>
+                                <text x="89" y="62" text-anchor="middle" fill="var(--text-color)" font-size="7" font-family="Montserrat,sans-serif" opacity="0.5">forward</text>
+                                <!-- Twilio -->
+                                <rect x="100" y="44" width="90" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="145" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Twilio</text>
+                                <text x="145" y="79" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Call</text>
+                                <text x="145" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Forwarding</text>
+                                <!-- Arrow -->
+                                <line x1="190" y1="70" x2="208" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a2)"/>
+                                <!-- Dograh AI -->
+                                <rect x="210" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="260" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Dograh AI</text>
+                                <text x="260" y="79" text-anchor="middle" fill="var(--text-color)" font-size="9" font-family="Montserrat,sans-serif">Voice Agent</text>
+                                <text x="260" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Interview</text>
+                                <!-- Arrow -->
+                                <line x1="310" y1="70" x2="328" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a2)"/>
+                                <text x="319" y="62" text-anchor="middle" fill="var(--text-color)" font-size="7" font-family="Montserrat,sans-serif" opacity="0.5">webhook</text>
+                                <!-- Flask HF -->
+                                <rect x="330" y="36" width="110" height="68" rx="10" fill="var(--bg-color)" stroke="var(--primary)" stroke-width="2"/>
+                                <text x="385" y="58" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Flask / HF Spaces</text>
+                                <text x="385" y="72" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Groq LLM Summary</text>
+                                <text x="385" y="84" text-anchor="middle" fill="var(--primary)" font-size="7.5" font-family="Montserrat,sans-serif">async · non-blocking</text>
+                                <text x="385" y="96" text-anchor="middle" fill="var(--text-color)" font-size="7" font-family="Montserrat,sans-serif" opacity="0.5">returns 200 instantly</text>
+                                <!-- Arrow -->
+                                <line x1="440" y1="70" x2="458" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a2)"/>
+                                <!-- Telegram -->
+                                <rect x="460" y="44" width="90" height="52" rx="10" fill="var(--primary)" stroke="var(--primary)" stroke-width="2"/>
+                                <text x="505" y="65" text-anchor="middle" fill="var(--bg-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Telegram</text>
+                                <text x="505" y="79" text-anchor="middle" fill="var(--bg-color)" font-size="9" font-family="Montserrat,sans-serif">Instant</text>
+                                <text x="505" y="91" text-anchor="middle" fill="var(--bg-color)" font-size="8" font-family="Montserrat,sans-serif">📲 Alert</text>
+                                <!-- Arrow -->
+                                <line x1="550" y1="70" x2="570" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a2)"/>
+                                <!-- You -->
+                                <circle cx="592" cy="70" r="24" fill="var(--bg-color)" stroke="var(--primary)" stroke-width="2"/>
+                                <text x="592" y="66" text-anchor="middle" fill="var(--text-color)" font-size="8" font-weight="700" font-family="Montserrat,sans-serif">You</text>
+                                <text x="592" y="79" text-anchor="middle" fill="var(--primary)" font-size="7.5" font-family="Montserrat,sans-serif">✓ notified</text>
+                                <!-- Timing -->
+                                <text x="310" y="128" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.4">⚡ End-to-end: caller info in Telegram in under 15 seconds</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="fp-content">
+                        <span class="fp-type">Voice AI · Autonomous Agent · Live</span>
+                        <a href="https://github.com/Soham-o" class="fp-title"><h2>PVCA 1.0 — Personal Voice Call Assistant</h2></a>
+                        <p class="fp-desc">I missed an important call. An hour later I still didn't know who called or why. PVCA 1.0 was built in response. When a call is missed, Twilio forwards it to a Dograh AI voice agent that collects the caller's name, reason, and urgency. The data hits a Flask webhook on Hugging Face Spaces, gets summarised by Groq, and lands in Telegram in under 15 seconds. The trickiest part: Twilio demands a response within 5 seconds — so the webhook returns 200 immediately and processes async in a background thread. Entire stack costs $0/month.</p>
+
+                        <div class="case-grid">
+                            <div class="case-cell">
+                                <span class="case-label">Problem</span>
+                                <span class="case-val">No way to know who called, why, or how urgent — without calling back manually</span>
+                            </div>
+                            <div class="case-cell">
+                                <span class="case-label">Key Challenge</span>
+                                <span class="case-val">Twilio's 5-second webhook timeout — solved with async fire-and-forget: return 200 instantly, summarise in background thread</span>
+                            </div>
+                            <div class="case-cell">
+                                <span class="case-label">Impact</span>
+                                <span class="case-val">Caller info in Telegram in &lt;15s · 24/7 autonomous receptionist · $0 infrastructure cost</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-tags">
+                            <span class="tech-tag">Twilio</span>
+                            <span class="tech-tag">Dograh AI</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Hugging Face Spaces</span>
+                            <span class="tech-tag">Groq</span>
+                            <span class="tech-tag">Telegram API</span>
+                            <span class="tech-tag">Async Webhooks</span>
+                        </div>
+
+                        <div class="fp-links">
+                            <a href="https://github.com/Soham-o" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/Soham-o" target="_blank" class="btn-visit">View on GitHub</a>
                         </div>
                     </div>
                 </article>
             </div>
 
-            <div class="col-12">
-                <article class="featured-project">
+            <!-- ══════════════════════════════════════════
+                 SMALL: Movie Recommender + Mybuddy
+            ══════════════════════════════════════════ -->
+            <div class="col-6">
+                <article class="small-project">
                     <div class="card-bg"></div>
-                    <div class="fp-image">
-                        <img src="" alt="">
+                    <div class="sp-image">
+                        <img src="./Image-Doc/p4.png" alt="Movie Recommender System">
                     </div>
-                    <div class="fp-content">
-                        <span class="fp-type"></span>
-                        <a href="#" class="fp-title"><h2>Very soon</h2></a>
-                        <p class="fp-desc"></p>
+                    <div class="sp-content">
+                        <span class="fp-type">ML · Recommender System</span>
+                        <a href="https://github.com/Soham-o/Movie_Recommender_System.git" class="fp-title"><h2>Movie Recommender System</h2></a>
+                        <p class="fp-desc">Content-based recommendation engine using cosine similarity on TF-IDF vectors. Built with Python, scikit-learn, and Streamlit — surfaces relevant titles from a dataset of 5,000+ films.</p>
+                        <!-- github-sync:card-links:Movie_Recommender_System:start -->
                         <div class="fp-links">
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#" class="btn-visit">Visit Project</a>
+                            <a href="https://github.com/Soham-o/Movie_Recommender_System" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/Soham-o/Movie_Recommender_System" target="_blank" class="btn-visit">View Project</a>
                         </div>
+                        <!-- github-sync:card-links:Movie_Recommender_System:end -->
                     </div>
                 </article>
             </div>
@@ -128,64 +325,136 @@
                 <article class="small-project">
                     <div class="card-bg"></div>
                     <div class="sp-image">
-                        <img src="./Image-Doc/p4.png" alt="MRS">
+                        <img src="./Image-Doc/p3.png" alt="Mybuddy">
                     </div>
                     <div class="sp-content">
-                        <span class="fp-type">Streamlit Website</span>
-                        <a href="#" class="fp-title"><h2>Movie Recommender System</h2></a>
+                        <span class="fp-type">Personal AI · LLM</span>
+                        <a href="https://github.com/Soham-o/Mybuddy.git" class="fp-title"><h2>Mybuddy</h2></a>
+                        <p class="fp-desc">An early personal LLM assistant built before agentic frameworks made this pattern mainstream. Conversational AI with a custom system prompt and memory-aware context — my first deep exploration into LLM application design.</p>
+                        <!-- github-sync:card-links:Mybuddy:start -->
                         <div class="fp-links">
-                            <a href="https://github.com/Soham-o/Movie_Recommender_System.git"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o/Movie_Recommender_System.git" class="btn-visit">Visit Project</a>                           
+                            <a href="https://github.com/Soham-o/Mybuddy" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/Soham-o/Mybuddy" target="_blank" class="btn-visit">View Project</a>
                         </div>
+                        <!-- github-sync:card-links:Mybuddy:end -->
                     </div>
                 </article>
             </div>
 
-            <div class="col-6">
-                <article class="small-project">
-                    <div class="card-bg"></div>
-                    <div class="sp-image">
-                        <img src="./Image-Doc/p3.png" alt="DevDreaming">
-                    </div>
-                    <div class="sp-content">
-                        <span class="fp-type">Personal AI</span>
-                        <a href="#" class="fp-title"><h2>Mybuddy</h2></a>
-                        <div class="fp-links">
-                            <a href="https://github.com/Soham-o/Mybuddy.git"><i class="fab fa-github"></i></a>
-                            <a href="https://github.com/Soham-o/Mybuddy.git" class="btn-visit">Visit Project</a>                           
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <!-- ══════════════════════════════════════════
+                 FEATURED: AI Newsletter Digest
+            ══════════════════════════════════════════ -->
             <div class="col-12">
                 <article class="featured-project">
                     <div class="card-bg"></div>
+
                     <div class="fp-image">
-                        <img src="" alt="">
+                        <div class="arch-diagram-wrap">
+                            <p class="arch-label">Pipeline Architecture</p>
+                            <svg viewBox="0 0 580 140" xmlns="http://www.w3.org/2000/svg" class="arch-svg">
+                                <defs>
+                                    <marker id="a3" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto">
+                                        <path d="M0,0 L0,5 L7,2.5 z" fill="var(--primary)"/>
+                                    </marker>
+                                </defs>
+                                <!-- Node 1 -->
+                                <rect x="4" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="54" y="62" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Newsletters</text>
+                                <text x="54" y="76" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">RSS / IMAP</text>
+                                <text x="54" y="90" text-anchor="middle" fill="var(--primary)" font-size="8" font-family="Montserrat,sans-serif">10+ sources</text>
+                                <line x1="104" y1="70" x2="122" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a3)"/>
+                                <!-- Node 2 -->
+                                <rect x="124" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="174" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Text Extractor</text>
+                                <text x="174" y="79" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">HTML Normaliser</text>
+                                <text x="174" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Boilerplate Strip</text>
+                                <line x1="224" y1="70" x2="242" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a3)"/>
+                                <!-- Node 3 -->
+                                <rect x="244" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--primary)" stroke-width="2"/>
+                                <text x="294" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">LLM Summariser</text>
+                                <text x="294" y="79" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Key Insight</text>
+                                <text x="294" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Extractor</text>
+                                <line x1="344" y1="70" x2="362" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a3)"/>
+                                <!-- Node 4 -->
+                                <rect x="364" y="44" width="100" height="52" rx="10" fill="var(--bg-color)" stroke="var(--text-color)" stroke-width="1.5" stroke-dasharray="4,2"/>
+                                <text x="414" y="65" text-anchor="middle" fill="var(--text-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Digest Builder</text>
+                                <text x="414" y="79" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">Format</text>
+                                <text x="414" y="91" text-anchor="middle" fill="var(--text-color)" font-size="8" font-family="Montserrat,sans-serif">&amp; Rank</text>
+                                <line x1="464" y1="70" x2="482" y2="70" stroke="var(--primary)" stroke-width="2" marker-end="url(#a3)"/>
+                                <!-- Node 5 -->
+                                <rect x="484" y="44" width="92" height="52" rx="10" fill="var(--primary)" stroke="var(--primary)" stroke-width="2"/>
+                                <text x="530" y="62" text-anchor="middle" fill="var(--bg-color)" font-size="9" font-weight="700" font-family="Montserrat,sans-serif">Telegram</text>
+                                <text x="530" y="76" text-anchor="middle" fill="var(--bg-color)" font-size="8" font-family="Montserrat,sans-serif">Morning</text>
+                                <text x="530" y="90" text-anchor="middle" fill="var(--bg-color)" font-size="8" font-family="Montserrat,sans-serif">☕ Briefing</text>
+                                <!-- Footer note -->
+                                <text x="290" y="126" text-anchor="middle" fill="var(--text-color)" font-size="7.5" font-family="Montserrat,sans-serif" opacity="0.4">Orchestrated by GitHub Actions — runs daily at 7:00 AM</text>
+                            </svg>
+                        </div>
                     </div>
+
                     <div class="fp-content">
-                        <span class="fp-type"></span>
-                        <a href="#" class="fp-title"><h2>Very soon</h2></a>
-                        <p class="fp-desc"></p>
+                        <span class="fp-type">AI Automation · Intelligence Pipeline · Live</span>
+                        <a href="https://github.com/Soham-o" class="fp-title"><h2>AI Newsletter Digest System</h2></a>
+                        <p class="fp-desc">Staying current across AI and tech newsletters meant spending 30–45 minutes every morning scanning emails. 90% of that time was noise — preambles, ads, repeated announcements. This pipeline ingests 10+ newsletters via RSS and IMAP, strips boilerplate using a normalisation layer, extracts key insights with an LLM, and delivers a concise 5-minute morning briefing to Telegram. Runs every day at 7 AM via GitHub Actions, costs nothing to operate, and has not required manual intervention since deployment.</p>
+
+                        <div class="case-grid">
+                            <div class="case-cell">
+                                <span class="case-label">Problem</span>
+                                <span class="case-val">30–45 min wasted daily reading newsletters for ~5 min of genuinely useful information</span>
+                            </div>
+                            <div class="case-cell">
+                                <span class="case-label">Key Challenge</span>
+                                <span class="case-val">Inconsistent HTML across newsletter sources — solved with a normalisation layer before LLM, rather than relying on the model to parse messy markup</span>
+                            </div>
+                            <div class="case-cell">
+                                <span class="case-label">Impact</span>
+                                <span class="case-val">10+ newsletters → 1 briefing · 30–45 min saved daily · Zero manual effort since launch</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">LLM Summarisation</span>
+                            <span class="tech-tag">IMAP / RSS</span>
+                            <span class="tech-tag">Telegram API</span>
+                            <span class="tech-tag">HTML Parsing</span>
+                        </div>
+
                         <div class="fp-links">
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#" class="btn-visit">Visit Project</a>
+                            <a href="https://github.com/Soham-o" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/Soham-o" target="_blank" class="btn-visit">View on GitHub</a>
                         </div>
                     </div>
                 </article>
             </div>
 
         </div>
+
+        <!-- github-sync:projects:start -->
+        <section class="sync-projects" id="all-projects" aria-labelledby="all-projects-title">
+            <div class="sync-projects-head">
+                <h2 class="section-heading" id="all-projects-title">Everything Else I've Shipped</h2>
+                <p class="projects-subtitle">Every public repository on my GitHub, pulled in automatically — each with its own detail page built from the README.</p>
+                <p class="sync-status " data-sync-status><span class="sync-dot" aria-hidden="true"></span><span class="sync-status-text">Waiting for the first GitHub sync</span></p>
+            </div>
+            <div class="projects-grid sync-grid" id="sync-grid">
+
+            </div>
+            <p class="sync-empty" data-sync-empty>Public repositories will appear here automatically after the first GitHub sync.</p>
+        </section>
+        <!-- github-sync:projects:end -->
     </main>
 
     <footer class="footer">
         <div class="footer-content">
-            <span>2024 &copy; All Rights Reserved.</span>
+            <span><span id="footer-year"></span> &copy; All Rights Reserved.copy; All Rights Reserved.</span>
             <div class="built-by">Built with <span class="heart">♡</span> by <a href="#">Soham Panda</a></div>
-            <a href="mailto:hello@example.com">Say Hello</a>
+            <a href="mailto:sohampanda95599@gmail.com">Say Hello</a>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="github-sync.js"></script>
 </body>
 </html>

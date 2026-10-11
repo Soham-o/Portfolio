@@ -1,0 +1,39 @@
+{
+  "$comment": "Optional per-repository overrides, keyed by repository name (renames are followed automatically). Every field is optional. The sync never writes to this file.",
+  "$fields": {
+    "featured": "true → shown first, in the large card layout",
+    "hidden": "true → never shown on the site (the repo stays public on GitHub)",
+    "curated": "true → the repo already has a hand-written card on projects.html, so it is not duplicated in the auto-synced grid",
+    "category": "label shown above the title (defaults to primary language)",
+    "summary": "your own one-paragraph summary (defaults to the GitHub description / README)",
+    "image": "path or https URL of a cover image (defaults to the first README image, then GitHub's social preview)",
+    "demo": "live demo URL (defaults to the repo homepage, GitHub Pages, or a demo link found in the README)",
+    "order": "number; lower sorts earlier among featured projects"
+  },
+  "projects": {
+    "Task_Manager": {
+      "curated": true,
+      "category": "Productivity Tool",
+      "image": "Image-Doc/p1.png",
+      "summary": "A clean, responsive task management interface built with HTML, CSS, and JavaScript. Focused on frictionless UX — add, complete, and clear tasks without page reloads."
+    },
+    "PersonaLearn": {
+      "curated": true,
+      "category": "ML · Adaptive Learning",
+      "image": "Image-Doc/p2.png",
+      "summary": "ML-powered system that personalises content delivery based on learner behaviour patterns. Adapts difficulty and format dynamically — built with Python and Streamlit."
+    },
+    "Movie_Recommender_System": {
+      "curated": true,
+      "category": "ML · Recommender System",
+      "image": "Image-Doc/p4.png",
+      "summary": "Content-based recommendation engine using cosine similarity on TF-IDF vectors. Built with Python, scikit-learn, and Streamlit — surfaces relevant titles from a dataset of 5,000+ films."
+    },
+    "Mybuddy": {
+      "curated": true,
+      "category": "Personal AI · LLM",
+      "image": "Image-Doc/p3.png",
+      "summary": "An early personal LLM assistant built before agentic frameworks made this pattern mainstream. Conversational AI with a custom system prompt and memory-aware context — my first deep exploration into LLM application design."
+    }
+  }
+}

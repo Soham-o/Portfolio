@@ -83,3 +83,12 @@ I am a **Computer Science Student** at **SGTU** (Batch of 2028) with a passion f
 <div align="center">
   <small>Built with ❤️ by Soham Panda</small>
 </div>
+
+---
+
+### ⚙️ How this portfolio updates itself
+
+Projects, project pages, GitHub stats and verified milestones are synced automatically from my public
+GitHub repositories by a GitHub Actions workflow (hourly, plus on demand), then redeployed to GitHub Pages.
+Make a repository public and it shows up here on its own. Setup, configuration and troubleshooting:
+[docs/AUTOMATION.md](docs/AUTOMATION.md).

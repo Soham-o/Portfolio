@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soham Panda | Portfolio</title>
+    <meta name="description" content="Soham Panda – AI Automation Engineer who builds autonomous pipelines, LLM-powered agents, and workflow systems that run without human intervention.">
+    <title>Soham Panda | AI Automation Engineer</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -22,17 +23,14 @@
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
-                <a href="#" style="opacity: 0.5; pointer-events: none;">Journey</a>
+                <a href="journey.html">Journey</a>
             </div>
-            
             <div class="nav-logo">
                 <div class="logo-circle">SP</div>
             </div>
-
             <div class="nav-socials">
                 <a href="https://github.com/Soham-o" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/soham-panda-a90720336/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                
                 <button id="theme-switcher" class="theme-btn">
                     <div class="sun-container">
                         <div class="sun-core"></div>
@@ -48,17 +46,18 @@
         </nav>
     </header>
 
+    <!-- ── HERO: image left / text right — original composition ── -->
     <main class="hero-section">
         <div class="layout-grid">
             <div class="col-image">
                 <img src="./Image-Doc/dev1 (2).png" alt="Soham" class="hero-img">
             </div>
             <div class="col-text">
-                <h1>Transforming Data into Actionable Insights</h1>
-                <p>I bring a unique mix of analytical thinking and community leadership to the table. I am passionate about digital awareness and enjoy collaborating on tech initiatives that drive real-world innovation.</p>
+                <h1>I Build AI Systems That Work While You Sleep</h1>
+                <p>I design autonomous pipelines and LLM-powered agents that handle repetitive workflows end-to-end — missed call handling, internship discovery, newsletter intelligence — all on zero-cost infrastructure, running 24/7 without intervention.</p>
                 <div class="btn-group">
                     <a href="./Image-Doc/resume.pdf" target="_blank" class="btn-primary">Resume <i class="fas fa-external-link-alt"></i></a>
-                    <a href="mailto:sohampanda95599@gmail.com" class="btn-text">Contact</a>
+                    <a href="projects.html" class="btn-text">View Systems <span class="btn-arrow">→</span></a>
                 </div>
             </div>
         </div>
@@ -67,18 +66,41 @@
             <div class="spinning-text">
                 <svg viewBox="0 0 100 100" width="100" height="100">
                     <defs><path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" /></defs>
-                    <text font-size="11.5"><textPath xlink:href="#circle">AIML-Data-Engineer • Web-Developer •</textPath></text>
+                    <text font-size="10"><textPath xlink:href="#circle">AI-Automation-Engineer • Autonomous-Systems •</textPath></text>
                 </svg>
             </div>
-            <a href="#" class="hire-me-btn">Hire Me</a>
+            <a href="mailto:sohampanda95599@gmail.com" class="hire-me-btn">Hire Me</a>
         </div>
-        
+
         <div class="lightbulb-icon"><i class="fas fa-lightbulb"></i></div>
     </main>
 
+    <!-- ── STATS: scroll below hero — separate section ── -->
+    <section class="hero-stats-strip">
+        <div class="hstat">
+            <span class="hstat-num">3+</span>
+            <span class="hstat-label">Autonomous Systems Built</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+            <span class="hstat-num">$0</span>
+            <span class="hstat-label">Infrastructure Cost</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+            <span class="hstat-num">24/7</span>
+            <span class="hstat-label">Pipelines Running</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+            <span class="hstat-num">Hrs</span>
+            <span class="hstat-label">Saved Every Week</span>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer-content">
-            <span>2024 &copy; All Rights Reserved.</span>
+            <span><span id="footer-year"></span> &copy; All Rights Reserved.copy; All Rights Reserved.</span>
             <div class="built-by">Built with <span class="heart">♡</span> by <a href="#">Soham Panda</a></div>
             <a href="mailto:sohampanda95599@gmail.com">Say Hello</a>
         </div>

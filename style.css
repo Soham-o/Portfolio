@@ -615,8 +615,8 @@ body.dark-mode .moon-stars {
 
 .frame-bg {
     position: absolute;
-    top: 1.5rem;
-    right: -1.5rem;
+    top: 0.8rem;
+    right: -0.8rem;
     width: 100%;
     height: 100%;
     background-color: var(--text-color);
@@ -1405,3 +1405,673 @@ body.dark-mode .moon-stars {
         text-align: center;
     }
 }
+
+
+
+
+
+/* ════════════════════════════════════════════════════════════
+   PORTFOLIO UPGRADE — APPENDED STYLES (v3)
+   All additions only. No existing rules modified above.
+   ════════════════════════════════════════════════════════════ */
+
+
+/* ── ISSUE 1: btn-text — refined secondary CTA ──────────────
+   Apple-style: arrow shifts, underline expands, brightness
+   lifts. Minimal. Elegant. No recoloring.                    */
+.btn-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;          /* own underline system below */
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    opacity: 0.85;
+    transition: opacity 0.25s ease;
+}
+/* Expanding underline */
+.btn-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1.5px;
+    background: var(--text-color);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-text:hover {
+    opacity: 1;
+}
+.btn-text:hover::after {
+    width: 100%;
+}
+/* Arrow character — shift on hover via JS class or CSS sibling.
+   We use a span.btn-arrow injected by JS in script.js.       */
+.btn-arrow {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-text:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+
+/* ── ISSUE 2 & 3: hero-stats-strip — spacing + no borders ──
+   margin-top: 3rem gives breathing room below btn-group.
+   Borders removed. Vertical dividers very subtle (10%).      */
+.hero-stats-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 860px;
+    margin: 3rem auto 5rem;          /* ISSUE 2: breathing room */
+    padding: 2rem 4rem;
+    border-top: none;                /* ISSUE 3: heavy borders gone */
+    border-bottom: none;
+}
+.hstat {
+    text-align: center;
+    flex: 1;
+    min-width: 130px;
+    padding: 0.5rem 0.75rem;
+    transition: transform 0.25s ease;   /* ISSUE 7: hover micro */
+}
+.hstat:hover {
+    transform: scale(1.04);
+}
+.hstat:hover .hstat-num {
+    opacity: 1;
+}
+.hstat-num {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
+    opacity: 0.9;
+    transition: opacity 0.25s ease;
+}
+.hstat-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    opacity: 0.48;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+/* ISSUE 3: subtle vertical dividers at 10% opacity only */
+.hstat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(128, 128, 128, 0.12);
+    flex-shrink: 0;
+}
+@media (max-width: 768px) {
+    .hero-stats-strip {
+        padding: 1.5rem 2rem;
+        margin: 2rem auto 3rem;
+    }
+    .hstat-divider { display: none; }
+    .hstat { min-width: 100px; }
+}
+@media (max-width: 480px) {
+    .hero-stats-strip {
+        gap: 1.2rem;
+        padding: 1rem 0;
+    }
+}
+
+
+/* ── ISSUE 4: frame-bg — responsive offset with clamp() ─────
+   Replaces fixed 1.5rem offset. Scales cleanly across
+   desktop → tablet → mobile without drifting.               */
+.frame-bg {
+    position: absolute;
+    top: clamp(0.5rem, 1.2vw, 0.9rem);
+    right: clamp(-0.9rem, -1.2vw, -0.5rem);
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-color);
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+
+/* ── ISSUE 5: skills — expanded, same pill styling ──────────
+   Category structure unchanged. Only new skill-item content
+   added in about.html.                                       */
+.skills-section {
+    margin: 3rem 0 4rem;
+}
+.section-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0 0 1.5rem;
+}
+.skills-category {
+    margin-bottom: 1.8rem;
+}
+.skills-cat-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 0.7rem;
+    opacity: 0.9;
+}
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+/* ISSUE 7: skill pill micro-interactions */
+.skill-item {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    border: 1.5px solid rgba(128, 128, 128, 0.22);
+    background: rgba(128, 128, 128, 0.05);
+    cursor: default;
+    transition: border-color 0.22s ease,
+                background   0.22s ease,
+                transform    0.22s ease;
+}
+.skill-item:hover {
+    border-color: var(--primary);
+    background: rgba(128, 128, 128, 0.1);
+    transform: translateY(-2px);    /* subtle lift */
+}
+
+
+/* ── projects.html: page subtitle — centered ───────────── */
+.projects-subtitle {
+    font-size: 1rem;
+    opacity: 0.58;
+    line-height: 1.75;
+    max-width: 580px;
+    margin: 0.75rem auto 0;
+    text-align: center;
+}
+
+
+/* ── projects.html: case study breakdown ───────────────── */
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.85rem;
+    margin: 1.4rem 0 1.2rem;
+}
+.case-cell {
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.15);
+    background: rgba(128, 128, 128, 0.04);
+}
+.case-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 0.35rem;
+}
+.case-val {
+    font-size: 0.83rem;
+    line-height: 1.6;
+    opacity: 0.78;
+}
+
+
+/* ── projects.html: tech tags ──────────────────────────── */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin: 1rem 0 0.5rem;
+}
+.tech-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.25rem 0.72rem;
+    border-radius: 20px;
+    border: 1.5px solid rgba(128, 128, 128, 0.2);
+    background: rgba(128, 128, 128, 0.05);
+    color: var(--primary);
+    letter-spacing: 0.02em;
+}
+
+
+/* ── projects.html: architecture SVG wrapper ───────────── */
+.arch-diagram-wrap {
+    width: 100%;
+    padding: 1.2rem 1rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.arch-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.35;
+    margin: 0 0 0.8rem;
+    color: var(--text-color);
+}
+.arch-svg {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ── ISSUE 6 & 7: footer link micro-interactions ───────────
+   Hover: underline reveal + tiny rightward shift.           */
+.footer-content a {
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    display: inline-block;
+}
+.footer-content a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background: var(--text-color);
+    transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-content a:hover {
+    opacity: 0.75;
+    transform: translateX(2px);
+}
+.footer-content a:hover::after {
+    width: 100%;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   JOURNEY PAGE — reuses .about-page + timeline classes.
+   ════════════════════════════════════════════════════════════ */
+.journey-human {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+    margin-bottom: 5rem;
+}
+@media (max-width: 900px) {
+    .journey-human { grid-template-columns: 1fr; }
+}
+.journey-closing-block {
+    margin-bottom: 4rem;
+}
+.journey-closing-quote {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.85;
+    opacity: 0.82;
+    max-width: 720px;
+    margin: 0 auto;
+    border-left: 3px solid var(--primary);
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   GITHUB SYNC — generated project listings, project pages and
+   "Built in Public" stats. Appended only; nothing above changed.
+   Uses the existing tokens: --bg-color, --text-color, --primary.
+   ════════════════════════════════════════════════════════════ */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0);
+    white-space: nowrap; border: 0;
+}
+
+/* ── Sync health indicator ─────────────────────────────── */
+.sync-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0.55;
+    margin: 1rem 0 0;
+    letter-spacing: 0.02em;
+}
+.sync-status.is-centered { display: flex; justify-content: center; margin: 3rem auto 0; }
+.sync-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #3fb950;
+    box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.15);
+    flex-shrink: 0;
+}
+.sync-status.is-partial .sync-dot { background: var(--primary); box-shadow: 0 0 0 3px rgba(128, 128, 128, 0.15); }
+.sync-status.is-stale { opacity: 0.8; }
+.sync-status.is-stale .sync-dot { background: #e5534b; box-shadow: 0 0 0 3px rgba(229, 83, 75, 0.15); }
+.sync-status:not([data-synced-at]) .sync-dot { background: rgba(128, 128, 128, 0.5); box-shadow: none; }
+
+/* ── projects.html: auto-synced section ────────────────── */
+.sync-projects { margin-top: 2rem; }
+.sync-projects-head { text-align: center; margin-bottom: 2.5rem; }
+.sync-projects-head .section-heading { margin-bottom: 0.5rem; }
+
+.sync-toolbar {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto 1rem;
+    max-width: 720px;
+}
+.sync-search,
+.sync-select {
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background: rgba(128, 128, 128, 0.06);
+    border: 1.5px solid rgba(128, 128, 128, 0.25);
+    border-radius: 30px;
+    padding: 0.65rem 1.2rem;
+    transition: border-color 0.22s ease;
+}
+.sync-search { flex: 1 1 280px; min-width: 0; }
+.sync-select { cursor: pointer; }
+.sync-select option { color: #1b1b1b; }
+.sync-search:focus,
+.sync-select:focus { outline: none; border-color: var(--primary); }
+
+.sync-filters { justify-content: center; margin-bottom: 3.5rem; }
+button.sync-filter {
+    font-family: inherit;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.sync-filter.is-active {
+    border-color: var(--primary);
+    background: rgba(128, 128, 128, 0.14);
+}
+.sync-count { opacity: 0.5; font-size: 0.75em; margin-left: 0.15rem; }
+.skill-item:focus-visible,
+.sync-card a:focus-visible,
+.btn-visit:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
+
+.sync-card .sp-image,
+.sync-card .fp-image { display: block; }
+.sync-card .sp-image img,
+.sync-card .fp-image img {
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    background: rgba(128, 128, 128, 0.08);
+}
+.sync-card .fp-title h2 { overflow-wrap: anywhere; }
+.sync-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1.1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.6;
+    margin: 0.6rem 0 1.6rem;
+}
+.sync-meta i { color: var(--primary); margin-right: 0.2rem; }
+.sync-empty {
+    text-align: center;
+    opacity: 0.6;
+    font-weight: 600;
+    padding: 2rem 0 4rem;
+}
+.sync-grid { margin-bottom: 4rem; }
+.sync-grid:empty { display: none; }
+
+/* ── journey.html: Built in Public ─────────────────────── */
+.sync-github { margin: 0 auto 6rem; text-align: center; }
+.sync-github .section-heading { margin-bottom: 0.5rem; }
+.sync-github .projects-subtitle a { color: inherit; }
+.sync-stats { margin-top: 1.5rem; margin-bottom: 2rem; }
+.sync-panels {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.sync-panel {
+    text-align: left;
+    padding: 1.5rem 1.6rem;
+    border-radius: 1.2rem;
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    background: rgba(128, 128, 128, 0.04);
+    min-width: 0;
+}
+.sync-panel + .sync-panel { margin-top: 0; }
+.sync-github > .sync-panel { margin-bottom: 1.5rem; }
+.sync-panel .skills-cat-label { margin-bottom: 1rem; }
+
+.sync-langs { list-style: none; display: grid; gap: 0.65rem; }
+.sync-lang {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr 3.2rem;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.sync-lang-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sync-lang-bar {
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(128, 128, 128, 0.15);
+    overflow: hidden;
+}
+.sync-lang-bar > span {
+    display: block;
+    height: 100%;
+    border-radius: 3px;
+    background: var(--primary);
+}
+.sync-lang-pct { text-align: right; opacity: 0.6; font-variant-numeric: tabular-nums; }
+.sync-langs-compact { width: 100%; max-width: 520px; margin: 0.5rem auto 1.5rem; }
+
+.sync-heatmap { width: 100%; height: auto; display: block; }
+.sync-heatmap .hm-l0 { fill: rgba(128, 128, 128, 0.14); }
+.sync-heatmap .hm-l1 { fill: var(--primary); opacity: 0.3; }
+.sync-heatmap .hm-l2 { fill: var(--primary); opacity: 0.55; }
+.sync-heatmap .hm-l3 { fill: var(--primary); opacity: 0.78; }
+.sync-heatmap .hm-l4 { fill: var(--primary); }
+.sync-heatmap .hm-label { fill: var(--text-color); opacity: 0.5; font-size: 9px; font-family: Montserrat, sans-serif; font-weight: 600; }
+
+.sync-caption { font-size: 0.78rem; font-weight: 600; opacity: 0.55; margin-top: 0.8rem; line-height: 1.6; }
+.sync-caption-left { text-align: left; margin: 0 0 2rem; }
+.sync-caption a { color: inherit; }
+.sync-unavailable { font-size: 0.85rem; font-weight: 600; opacity: 0.55; line-height: 1.6; list-style: none; }
+
+.sync-activity { list-style: none; display: grid; gap: 0.2rem; }
+.sync-activity li {
+    display: grid;
+    grid-template-columns: 1.4rem 1fr auto;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.12);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.sync-activity li:last-child { border-bottom: none; }
+.sync-activity i { color: var(--primary); font-size: 0.8rem; }
+.sync-activity a { color: var(--text-color); font-weight: 700; text-decoration-color: rgba(128, 128, 128, 0.4); }
+.sync-activity a:hover { color: var(--primary); }
+.sync-activity time { font-size: 0.75rem; opacity: 0.5; font-weight: 600; white-space: nowrap; }
+
+.sync-growth-row { display: flex; gap: 2rem; flex-wrap: wrap; }
+.sync-growth-row figure { flex: 1 1 200px; }
+.sync-spark { width: 100%; height: 44px; display: block; }
+.sync-spark polyline { fill: none; stroke: var(--primary); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.sync-growth-row figcaption { font-size: 0.75rem; font-weight: 600; opacity: 0.6; margin-top: 0.4rem; }
+
+.sync-verify {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+}
+.sync-verify:hover { text-decoration: underline; }
+#journey-github .sync-caption-left { margin-bottom: 2.5rem; }
+#journey-github .sync-status { margin-top: 0; }
+
+/* ── Generated project pages ───────────────────────────── */
+.project-detail .title-section { margin-bottom: 4rem; }
+.sync-breadcrumb { margin-bottom: 2.5rem; }
+.sync-breadcrumb .btn-text { font-size: 1rem; }
+.project-title .fp-type { display: block; margin-bottom: 1rem; }
+.project-title h1.big-text {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    overflow-wrap: anywhere;
+}
+.project-title .projects-subtitle { max-width: 720px; font-size: 1.1rem; opacity: 0.75; }
+.sync-pills { justify-content: center; margin-top: 1.5rem; }
+
+.project-hero { margin-bottom: 4rem; }
+.project-hero .fp-image img { max-height: 520px; object-fit: contain; background: rgba(128, 128, 128, 0.06); }
+.project-hero .case-grid { width: 100%; text-align: left; }
+.project-hero .fp-links { flex-wrap: wrap; margin-top: 1rem; }
+.sync-btn-alt { background: transparent; color: var(--text-color); }
+.sync-btn-alt:hover { background: var(--text-color); color: var(--bg-color); }
+
+.sync-glance {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+.sync-glance .case-val { font-size: 0.95rem; opacity: 0.85; }
+.sync-glance .case-val ul { padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+
+.project-body {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 3.5rem;
+    align-items: start;
+    margin-bottom: 5rem;
+}
+.project-body.no-toc { grid-template-columns: minmax(0, 1fr); max-width: 860px; margin-left: auto; margin-right: auto; }
+.project-toc {
+    position: sticky;
+    top: 7rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+}
+.project-toc ol { list-style: none; display: grid; gap: 0.55rem; margin-bottom: 1.2rem; }
+.project-toc a:not(.sync-verify) { color: var(--text-color); opacity: 0.65; text-decoration: none; transition: opacity 0.2s, color 0.2s; }
+.project-toc a:not(.sync-verify):hover { opacity: 1; color: var(--primary); }
+
+/* README typography */
+.readme-body { font-size: 1.02rem; line-height: 1.75; font-weight: 500; overflow-wrap: break-word; min-width: 0; }
+.readme-body > * + *,
+.readme-section > * + * { margin-top: 1rem; }
+.readme-section { margin-top: 2.5rem; }
+.readme-body h2 {
+    font-size: 1.7rem; font-weight: 800; line-height: 1.25;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    scroll-margin-top: 7rem;
+}
+.readme-body h3 { font-size: 1.25rem; font-weight: 700; margin-top: 2rem; scroll-margin-top: 7rem; }
+.readme-body h4, .readme-body h5, .readme-body h6 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5rem; scroll-margin-top: 7rem; }
+.readme-body a { color: var(--primary); text-underline-offset: 2px; }
+.readme-body ul, .readme-body ol { padding-left: 1.5rem; }
+.readme-body li + li { margin-top: 0.3rem; }
+.readme-body li > input[type="checkbox"] { margin-right: 0.4rem; accent-color: var(--primary); }
+.readme-body img { max-width: 100%; height: auto; border-radius: 0.6rem; vertical-align: middle; }
+.readme-body p[align="center"], .readme-body div[align="center"] { text-align: center; }
+.readme-body code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    padding: 0.15em 0.4em;
+    border-radius: 6px;
+    background: rgba(128, 128, 128, 0.14);
+}
+.readme-body pre {
+    padding: 1.1rem 1.25rem;
+    border-radius: 0.9rem;
+    background: rgba(128, 128, 128, 0.1);
+    border: 1px solid rgba(128, 128, 128, 0.18);
+    overflow-x: auto;
+    line-height: 1.55;
+}
+.readme-body pre code { padding: 0; background: none; font-size: 0.85rem; }
+.readme-body blockquote {
+    border-left: 3px solid var(--primary);
+    padding: 0.2rem 0 0.2rem 1.2rem;
+    opacity: 0.85;
+}
+.readme-body table {
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    max-width: 100%;
+}
+.readme-body th, .readme-body td { padding: 0.55rem 0.9rem; border: 1px solid rgba(128, 128, 128, 0.22); text-align: left; }
+.readme-body th { background: rgba(128, 128, 128, 0.08); font-weight: 700; }
+.readme-body hr { border: none; border-top: 1px solid rgba(128, 128, 128, 0.2); margin: 2rem 0; }
+.readme-body details { border: 1px solid rgba(128, 128, 128, 0.2); border-radius: 0.8rem; padding: 0.8rem 1rem; }
+.readme-body summary { cursor: pointer; font-weight: 700; }
+.readme-body kbd { font-size: 0.8em; padding: 0.1em 0.45em; border: 1px solid rgba(128, 128, 128, 0.4); border-radius: 4px; }
+
+.sync-notice {
+    max-width: 760px;
+    margin: 0 auto 4rem;
+    padding: 1.2rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px dashed rgba(128, 128, 128, 0.35);
+    text-align: center;
+    font-weight: 600;
+    opacity: 0.8;
+    line-height: 1.7;
+}
+.sync-notice a { color: var(--primary); }
+.sync-resources { text-align: center; margin-bottom: 2rem; }
+.sync-resources .skills-wrapper { justify-content: center; }
+.sync-resources a.skill-item { text-decoration: none; }
+#project-releases .timeline-item { margin-bottom: 2.5rem; }
+
+@media (max-width: 1024px) {
+    .sync-panels { grid-template-columns: 1fr; }
+    .project-body { grid-template-columns: 1fr; gap: 2rem; }
+    .project-toc { position: static; max-height: none; padding: 1.2rem 1.4rem; border-radius: 1rem; border: 1px solid rgba(128, 128, 128, 0.18); }
+}
+@media (max-width: 768px) {
+    .sync-panel { padding: 1.2rem; }
+    .sync-lang { grid-template-columns: 6rem 1fr 3rem; }
+    .sync-activity li { grid-template-columns: 1.2rem 1fr; }
+    .sync-activity time { grid-column: 2; }
+    .project-hero { padding: 1.5rem; }
+    .sync-filters { margin-bottom: 2.5rem; }
+}
+.sync-card .case-grid { width: 100%; text-align: left; }

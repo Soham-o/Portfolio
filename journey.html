@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey | Soham Panda</title>
+    <meta name="description" content="Soham Panda's journey building AI systems — milestones, and live, verified activity from GitHub.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+
+    <div class="transition-loader">
+        <div class="layer layer-1"></div>
+        <div class="layer layer-2"></div>
+        <div class="layer layer-3"></div>
+    </div>
+
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="link">Home</a>
+                <a href="about.html" class="link">About</a>
+                <a href="projects.html" class="link">Projects</a>
+                <a href="journey.html" class="link active">Journey</a>
+            </div>
+            <div class="nav-logo">
+                <div class="logo-circle">SP</div>
+            </div>
+            <div class="nav-socials">
+                <a href="https://github.com/Soham-o" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/soham-panda-a90720336/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <button id="theme-switcher" class="theme-btn">
+                    <div class="sun-container">
+                        <div class="sun-core"></div>
+                        <div class="sun-rays"></div>
+                    </div>
+                    <div class="moon-stars">
+                        <div class="moon"></div>
+                        <div class="star s1"></div>
+                        <div class="star s2"></div>
+                    </div>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!--
+        Uses .about-page for identical padding/max-width.
+        Uses .timeline-section / .timeline-container / .scroll-line-bg /
+        .scroll-line-progress / .timeline-list / .timeline-item / .li-icon /
+        .timeline-content / .company / .time  —  all identical to About page.
+        script.js calls setupTimeline() for each section ID.
+    -->
+    <main class="about-page">
+
+        <div class="title-section">
+            <h1 class="big-text">The Road to Building AI Systems.</h1>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════
+             TIMELINE 1 — THE STORY
+        ══════════════════════════════════════════════════ -->
+        <div class="timeline-section" id="journey-story">
+            <h2 class="section-heading">The Story So Far</h2>
+            <div class="timeline-container">
+                <div class="scroll-line-bg"></div>
+                <div class="scroll-line-progress"></div>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Early Curiosity <span class="company">— Before College</span></h3>
+                            <span class="time">The Beginning</span>
+                            <p>I didn't fall in love with coding because of algorithms or theory. I fell in love with it the first time I wrote something that replaced a task I was doing manually. That moment — realising a computer could just do this for me — was a pivot I couldn't un-see. Everything after was chasing the same feeling: find the repetitive thing, eliminate it, move on.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Discovering AI <span class="company">— 2023</span></h3>
+                            <span class="time">From "How Does This Work?" to "What Can I Build?"</span>
+                            <p>Started with the standard path — linear regression, decision trees, the ML textbook. But when LLMs arrived and I could describe something in plain English and it just <em>worked</em>, the question shifted completely. Not "how does this function?" but "what can I eliminate with this?" That shift from learner to builder is when things actually got interesting.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Builder Phase <span class="company">— 2024</span></h3>
+                            <span class="time">The Internship Search That Became a Pipeline</span>
+                            <p>I was spending hours daily searching for internships across five platforms, deduplicating manually, and still missing good opportunities. One evening I thought: this is just a pattern — it's a solvable problem. Three weeks later, InternPilot AI was running and I deleted all those bookmarks. That was the moment I committed to the builder identity over the student one.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Going Deeper <span class="company">— 2024–2025</span></h3>
+                            <span class="time">PVCA: When AI Answers Your Phone</span>
+                            <p>PVCA 1.0 started as a half-serious idea: "what if my phone had an AI receptionist?" Six days later it was live — Twilio forwarding missed calls to a Dograh AI voice agent, which collected caller info and pushed a Telegram summary in under 15 seconds. The constraint (Twilio's 5-second webhook timeout) required async-first design and made the engineering sharper. Constraints are features.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Current Phase <span class="company">— 2025</span></h3>
+                            <span class="time">CS Student by Day. AI Systems Builder by Night.</span>
+                            <p>Currently in my second year at SGTU studying Computer Science, building autonomous pipelines on the side. Selected for the Microsoft Elevate AI program. Internships at Unified Mentor (data analysis) and Edunet Foundation (frontend development) grounded what I was learning in real delivery expectations. The dissertation is next — so is whatever workflow annoys me this month.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Future Vision <span class="company">— What's Next</span></h3>
+                            <span class="time">Agents That Reason, Not Just Execute</span>
+                            <p>The next chapter is more sophisticated — multi-step reasoning, persistent memory, tool use, real-world integrations that handle edge cases gracefully. I want to build systems that don't just automate tasks but make intelligent decisions in context. The goal isn't automation for its own sake. It's giving people back hours they're spending on things that shouldn't require a human.</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════
+             TIMELINE 2 — MILESTONES / ACHIEVEMENTS
+        ══════════════════════════════════════════════════ -->
+        <div class="timeline-section" id="journey-milestones">
+            <h2 class="section-heading">Milestones</h2>
+            <div class="timeline-container">
+                <div class="scroll-line-bg"></div>
+                <div class="scroll-line-progress"></div>
+
+                <!-- github-sync:milestones:start -->
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Microsoft Elevate <span class="company">AI Program</span></h3>
+                            <span class="time">2025</span>
+                            <p>Selected for Microsoft&#39;s AI internship initiative — gaining industry exposure to practical AI applications, product thinking, and collaborative engineering alongside Microsoft professionals.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>InternPilot AI <span class="company">— Shipped</span></h3>
+                            <span class="time">2024 · Autonomous Pipeline</span>
+                            <p>Built and deployed a fully autonomous internship discovery system. Running daily on free infrastructure — GitHub Actions + Groq + Telegram — delivering ranked digests without any manual intervention.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>PVCA 1.0 <span class="company">— Shipped</span></h3>
+                            <span class="time">2024 · Voice AI System</span>
+                            <p>Designed and deployed an AI voice receptionist end-to-end — missed call to Telegram notification in under 15 seconds. Full stack: Twilio, Dograh AI, Flask on Hugging Face Spaces, Groq. Total cost: $0/month.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>IEEE Research Paper <span class="company">— Published</span></h3>
+                            <span class="time">2025 · Academic</span>
+                            <p>Authored a full research paper on Digital Data Pollution, covering AI, ML, and deep learning mitigation strategies — written and formatted to IEEE standards as part of my dissertation work.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Data Analyst <span class="company">@Unified Mentor</span></h3>
+                            <span class="time">May – Jul 2025 · Internship</span>
+                            <p>Transformed raw business data into decision-ready pipelines using Python and Power BI. First professional experience grounding AI skills in real organisational constraints and delivery expectations.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="timeline-list">
+                    <li class="timeline-item">
+                        <div class="li-icon"><div class="inner-dot"></div></div>
+                        <div class="timeline-content">
+                            <h3>Frontend Developer <span class="company">@Edunet Foundation</span></h3>
+                            <span class="time">Aug – Oct 2025 · Internship</span>
+                            <p>Built responsive, production-grade web interfaces for educational platforms — developing the discipline of shipping clean, user-facing code that works reliably at scale.</p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- github-sync:milestones:end -->
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════
+             BUILT IN PUBLIC — generated from GitHub by tools/sync
+             (content between the github-sync markers is replaced
+              automatically; edit content/*.json instead)
+        ══════════════════════════════════════════════════ -->
+        <!-- github-sync:github:start -->
+        <div class="sync-github" id="built-in-public">
+            <h2 class="section-heading">Built in Public</h2>
+            <p class="sync-status is-centered" data-sync-status><span class="sync-dot" aria-hidden="true"></span><span class="sync-status-text">Waiting for the first GitHub sync</span></p>
+        </div>
+        <!-- github-sync:github:end -->
+
+        <!-- ══════════════════════════════════════════════════
+             VALUES — reuses skills-section + skills-wrapper
+        ══════════════════════════════════════════════════ -->
+        <div class="skills-section">
+            <h2 class="section-heading">What Guides the Work</h2>
+            <div class="skills-wrapper">
+                <div class="skill-item">Build for real problems, not demos</div>
+                <div class="skill-item">$0 infra sharpens design</div>
+                <div class="skill-item">Self-running systems are worth building twice</div>
+                <div class="skill-item">Failed experiments = research</div>
+                <div class="skill-item">Reliability over features</div>
+                <div class="skill-item">Automation gives time back</div>
+                <div class="skill-item">README-first development</div>
+                <div class="skill-item">Async and non-blocking by default</div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════
+             HUMAN SIDE — reuses top-layout + bio-container
+        ══════════════════════════════════════════════════ -->
+        <div class="top-layout journey-human">
+            <div class="bio-container">
+                <h3>THINGS I ENJOY</h3>
+                <p>Exploring new AI tools before they're mainstream. Turning "what if I automated this?" into a weekend project. Reading about agentic AI and multi-model reasoning. Finding the laziest — most elegant — solution to any problem. Explaining AI to people who assumed it was magic.</p>
+                <p>I have a running list of "repetitive things that should be automated." It is always longer than my project backlog. Always.</p>
+            </div>
+            <div class="bio-container">
+                <h3>HOW I WORK</h3>
+                <p>Prototype fast, then engineer properly. README-first: if I can't explain it, I don't fully understand it. Async and non-blocking wherever possible. Late-night debugging is often the most productive time.</p>
+                <p>My benchmark for a good system: if it breaks silently at 3 AM and nobody notices until morning, it was working correctly.</p>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════
+             CLOSING — reuses title-section centering
+        ══════════════════════════════════════════════════ -->
+        <div class="title-section journey-closing-block">
+            <blockquote class="journey-closing-quote">
+                "I'm still early in this journey — but every system I ship is another proof that intelligent automation doesn't need a budget, a team, or a deadline. It needs a problem worth solving and the stubbornness to see it through."
+            </blockquote>
+            <div class="btn-group" style="justify-content:center; margin-top: 2.5rem;">
+                <a href="projects.html" class="btn-primary">See What I've Built <i class="fas fa-arrow-right"></i></a>
+                <a href="mailto:sohampanda95599@gmail.com" class="btn-text">Let's Talk <span class="btn-arrow">→</span></a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <span><span id="footer-year"></span> &copy; All Rights Reserved.copy; All Rights Reserved.</span>
+            <div class="built-by">Built with <span class="heart">♡</span> by <a href="#">Soham Panda</a></div>
+            <a href="mailto:sohampanda95599@gmail.com">Say Hello</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="github-sync.js"></script>
+</body>
+</html>

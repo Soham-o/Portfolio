@@ -1,0 +1,10 @@
+# Copy to wrangler.toml to deploy the optional relay on Cloudflare Workers (free tier):
+#   npx wrangler deploy
+#   npx wrangler secret put WEBHOOK_SECRET
+#   npx wrangler secret put DISPATCH_TOKEN
+name = "portfolio-sync-relay"
+main = "worker.mjs"
+compatibility_date = "2025-01-01"
+
+[vars]
+TARGET_REPO = "Soham-o/Portfolio"

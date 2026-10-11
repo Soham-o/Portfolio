@@ -1,0 +1,21 @@
+{
+  "name": "soham-portfolio",
+  "private": true,
+  "description": "Static portfolio with automated GitHub synchronization",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "sync": "node tools/sync/cli.mjs",
+    "sync:full": "node tools/sync/cli.mjs --full",
+    "render": "node tools/sync/cli.mjs --render-only",
+    "check": "node tools/sync/cli.mjs --check",
+    "test": "node --test tests/*.test.mjs",
+    "lint": "node tools/lint.mjs"
+  },
+  "devDependencies": {
+    "marked": "15.0.12",
+    "sanitize-html": "2.18.0"
+  }
+}

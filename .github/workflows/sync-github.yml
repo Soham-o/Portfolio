@@ -1,0 +1,128 @@
+# Keeps the portfolio in sync with public GitHub repositories.
+#
+# When it runs:
+#   • every 3 hours at :17 (scheduled reconciliation — GitHub may delay scheduled runs by several minutes).
+#     3h keeps a PRIVATE repo well inside the Free plan's 2,000 Actions minutes/month (~8 runs/day,
+#     ~2 billed minutes each). Public repos get unlimited minutes — change to "17 * * * *" for hourly.
+#   • when you push edits to content/ or templates/ (re-renders immediately)
+#   • manually from the Actions tab ("Run workflow"; tick "full" to re-fetch every README)
+#   • instantly-ish, if the optional webhook relay (relay/) sends a `github-sync` repository_dispatch
+#
+# What it does: fetch public repo data → regenerate data/, projects/, projects.html, journey.html →
+# run tests → commit only if something meaningful changed (or the daily heartbeat is due) → deploy Pages.
+# If anything fails, nothing is committed and the currently deployed site stays live.
+name: Sync GitHub projects
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  push:
+    branches: ["main"]
+    paths: ["content/**", "templates/**"]
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Full refresh (re-fetch every README and manifest)"
+        type: boolean
+        default: false
+  repository_dispatch:
+    types: [github-sync]
+
+permissions:
+  contents: read
+
+# One sync at a time; a newer trigger waits (and supersedes any older queued one) instead of racing.
+concurrency:
+  group: github-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write   # only used by the final "Commit" step
+      pages: read       # lets configure-pages report the site URL for canonical links
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+      sha: ${{ steps.commit.outputs.sha }}
+      pages: ${{ steps.pages.outcome }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false   # the sync step never sees a write-capable credential
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci --no-audit --no-fund
+
+      - name: Test
+        run: npm test
+
+      # Fails (harmlessly) while GitHub Pages is not enabled for this repository; the deploy job is then skipped.
+      - name: Detect Pages URL
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
+      - name: Sync from GitHub
+        id: sync
+        env:
+          # Read-only. Optional PORTFOLIO_SYNC_TOKEN (fine-grained, public read-only) raises rate limits;
+          # otherwise the workflow's own GITHUB_TOKEN is used.
+          GITHUB_TOKEN: ${{ secrets.PORTFOLIO_SYNC_TOKEN || github.token }}
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          SYNC_FULL: ${{ inputs.full == true || github.event.client_payload.full == true }}
+        run: npm run sync
+
+      - name: Verify generated files
+        if: steps.sync.outputs.changed == 'true'
+        run: npm run check
+
+      - name: Commit
+        id: commit
+        env:
+          PUSH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          if [ "${{ steps.sync.outputs.changed }}" != "true" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data projects projects.html journey.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # [skip ci] stops the push trigger of static.yml; the deploy job below publishes instead.
+          git commit -q -m "chore(sync): update portfolio from GitHub [skip ci]"
+          git remote set-url origin "https://x-access-token:${PUSH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          for i in 1 2 3; do
+            if git push -q origin "HEAD:${BRANCH}"; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            echo "Push rejected (someone pushed meanwhile); rebasing and retrying ($i/3)"
+            git pull -q --rebase origin "${BRANCH}"
+          done
+          echo "::error::Could not push synced data; the next run will retry."
+          exit 1
+
+  deploy:
+    needs: sync
+    # Deploy only when something was committed AND GitHub Pages is enabled for this repository.
+    if: needs.sync.outputs.changed == 'true' && needs.sync.outputs.pages == 'success'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/static.yml
+    with:
+      ref: ${{ needs.sync.outputs.sha }}

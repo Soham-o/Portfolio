@@ -1,0 +1,36 @@
+{
+  "$comment": "Settings for the automated GitHub sync. Safe to edit by hand; the sync never writes to this file.",
+  "github": {
+    "username": "Soham-o",
+    "includeForks": false,
+    "includeArchived": true,
+    "excludeRepos": ["Soham-o"],
+    "excludeTopics": ["portfolio-hide"],
+    "requireDescriptionOrReadme": false
+  },
+  "site": {
+    "url": "https://soham-o.github.io/Portfolio/",
+    "ownerName": "Soham Panda",
+    "linkedin": "https://www.linkedin.com/in/soham-panda-a90720336/",
+    "email": "sohampanda95599@gmail.com"
+  },
+  "sync": {
+    "staleAfterHours": 36,
+    "heartbeatHours": 24,
+    "fullRefreshHours": 24,
+    "maxReadmeBytes": 300000,
+    "maxManifestBytes": 200000,
+    "fetchContributions": true,
+    "fetchExternalContributions": true
+  },
+  "achievements": {
+    "repoStarMilestones": [10, 25, 50, 100, 250, 500, 1000],
+    "repoForkMilestones": [5, 10, 25, 50, 100],
+    "totalStarMilestones": [10, 25, 50, 100, 250, 500, 1000, 2500],
+    "publicRepoMilestones": [5, 10, 25, 50, 100],
+    "minStreakDays": 7,
+    "minLanguagesForBreadth": 3,
+    "maxItems": 12,
+    "maxPerType": 4
+  }
+}

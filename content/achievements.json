@@ -1,0 +1,48 @@
+{
+  "$comment": "Hand-maintained accomplishments outside GitHub (certifications, awards, hackathons, academic work, roles). Rendered into the Milestones timeline on journey.html in this order. The GitHub sync only reads this file and never modifies it.",
+  "$fields": {
+    "title": "required",
+    "org": "highlighted text after the title (e.g. '@Company' or '— Shipped')",
+    "when": "date / period label shown under the title",
+    "description": "one or two sentences",
+    "url": "optional link to a certificate, paper or announcement"
+  },
+  "items": [
+    {
+      "title": "Microsoft Elevate",
+      "org": "AI Program",
+      "when": "2025",
+      "description": "Selected for Microsoft's AI internship initiative — gaining industry exposure to practical AI applications, product thinking, and collaborative engineering alongside Microsoft professionals."
+    },
+    {
+      "title": "InternPilot AI",
+      "org": "— Shipped",
+      "when": "2024 · Autonomous Pipeline",
+      "description": "Built and deployed a fully autonomous internship discovery system. Running daily on free infrastructure — GitHub Actions + Groq + Telegram — delivering ranked digests without any manual intervention."
+    },
+    {
+      "title": "PVCA 1.0",
+      "org": "— Shipped",
+      "when": "2024 · Voice AI System",
+      "description": "Designed and deployed an AI voice receptionist end-to-end — missed call to Telegram notification in under 15 seconds. Full stack: Twilio, Dograh AI, Flask on Hugging Face Spaces, Groq. Total cost: $0/month."
+    },
+    {
+      "title": "IEEE Research Paper",
+      "org": "— Published",
+      "when": "2025 · Academic",
+      "description": "Authored a full research paper on Digital Data Pollution, covering AI, ML, and deep learning mitigation strategies — written and formatted to IEEE standards as part of my dissertation work."
+    },
+    {
+      "title": "Data Analyst",
+      "org": "@Unified Mentor",
+      "when": "May – Jul 2025 · Internship",
+      "description": "Transformed raw business data into decision-ready pipelines using Python and Power BI. First professional experience grounding AI skills in real organisational constraints and delivery expectations."
+    },
+    {
+      "title": "Frontend Developer",
+      "org": "@Edunet Foundation",
+      "when": "Aug – Oct 2025 · Internship",
+      "description": "Built responsive, production-grade web interfaces for educational platforms — developing the discipline of shipping clean, user-facing code that works reliably at scale."
+    }
+  ]
+}
