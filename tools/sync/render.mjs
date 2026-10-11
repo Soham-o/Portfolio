@@ -274,9 +274,11 @@ export function renderGithubSection(model) {
   }
 
   const statItems = [];
+  const minStars = model.minStarsToShow ?? 10;
   statItems.push([formatCount(stats.projects), 'Public Projects']);
-  statItems.push([formatCount(stats.stars), 'GitHub Stars']);
-  if (stats.forks > 0) statItems.push([formatCount(stats.forks), 'Forks']);
+  if (stats.stars >= minStars) statItems.push([formatCount(stats.stars), 'GitHub Stars']);
+  if (stats.forks >= 5) statItems.push([formatCount(stats.forks), 'Forks']);
+  if (stats.followers != null && statItems.length < 3) statItems.push([formatCount(stats.followers), 'GitHub Followers']);
   if (stats.contributionsLastYear != null) statItems.push([formatCount(stats.contributionsLastYear), 'Contributions · Past Year']);
   else if (stats.releases > 0) statItems.push([formatCount(stats.releases), 'Releases Published']);
   const strip = statItems.map(([n, l]) => `                <div class="hstat">

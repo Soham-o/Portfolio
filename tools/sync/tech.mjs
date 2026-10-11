@@ -37,7 +37,7 @@ const FILE_MAP = [
   [/^dockerfile$/i, 'Docker'], [/^docker-compose\.ya?ml$/i, 'Docker'], [/^compose\.ya?ml$/i, 'Docker'],
   [/^vercel\.json$/i, 'Vercel'], [/^netlify\.toml$/i, 'Netlify'], [/^procfile$/i, 'Procfile deploy'],
   [/^firebase\.json$/i, 'Firebase'], [/^wrangler\.toml$/i, 'Cloudflare Workers'], [/^render\.ya?ml$/i, 'Render'],
-  [/\.ipynb$/i, 'Jupyter'], [/^tsconfig\.json$/i, 'TypeScript'], [/^tailwind\.config\.(js|ts|cjs|mjs)$/i, 'Tailwind CSS'],
+  [/\.ipynb$/i, 'Jupyter Notebook'], [/^tsconfig\.json$/i, 'TypeScript'], [/^tailwind\.config\.(js|ts|cjs|mjs)$/i, 'Tailwind CSS'],
   [/^vite\.config\.(js|ts|mjs)$/i, 'Vite'], [/^next\.config\.(js|ts|mjs)$/i, 'Next.js'], [/^manage\.py$/i, 'Django'],
   [/^pubspec\.yaml$/i, 'Flutter'], [/^cargo\.toml$/i, 'Cargo'], [/^go\.mod$/i, 'Go modules'], [/^pom\.xml$/i, 'Maven'],
   [/^build\.gradle(\.kts)?$/i, 'Gradle'],

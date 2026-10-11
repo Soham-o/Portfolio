@@ -29,6 +29,7 @@
     "totalStarMilestones": [10, 25, 50, 100, 250, 500, 1000, 2500],
     "publicRepoMilestones": [5, 10, 25, 50, 100],
     "minStreakDays": 7,
+    "minStarsToShow": 10,
     "minLanguagesForBreadth": 3,
     "maxItems": 12,
     "maxPerType": 4

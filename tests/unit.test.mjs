@@ -173,7 +173,7 @@ test('tech: combines languages, manifests, files and topics without duplicates',
   });
   const names = tech.map((t) => t.name);
   assert.deepEqual(names.slice(0, 2), ['Python', 'HTML']);
-  for (const n of ['React', 'Flask', 'Pandas', 'scikit-learn', 'Docker', 'Jupyter', 'GitHub Actions', 'Machine Learning']) assert.ok(names.includes(n), n);
+  for (const n of ['React', 'Flask', 'Pandas', 'scikit-learn', 'Docker', 'Jupyter Notebook', 'GitHub Actions', 'Machine Learning']) assert.ok(names.includes(n), n);
   assert.equal(names.filter((n) => n === 'Flask').length, 1);
   assert.deepEqual(parseRequirements('a==1\n# x\nB>=2; python_version>"3"\n'), ['a', 'b']);
   assert.deepEqual(parsePyproject('[project]\ndependencies = ["fastapi>=0.1", "uvicorn"]').sort(), ['fastapi', 'uvicorn']);
@@ -300,4 +300,16 @@ test('eligibility, sorting and naming helpers', () => {
   assert.equal(slugify('InternPilot-AI'), 'internpilot-ai');
   assert.equal(safeUrl('javascript:alert(1)'), null);
   assert.equal(truncate('a b c d e f', 7), 'a b c…');
+});
+
+test('achievements: breadth ignores markup/notebook "languages"', () => {
+  const state = { firstSyncAt: 'x', milestones: {} };
+  const projects = [
+    proj({ id: 1, language: 'Jupyter Notebook', languages: [{ name: 'Jupyter Notebook' }, { name: 'Python' }] }),
+    proj({ id: 2, language: 'HTML', languages: [{ name: 'HTML' }, { name: 'CSS' }] }),
+    proj({ id: 3, language: 'Python' }),
+    proj({ id: 4, language: 'JavaScript' }),
+  ];
+  const items = computeAchievements({ projects, profile: null, contributions: null, external: null, state, config: { ...cfg, achievements: { ...cfg.achievements, minLanguagesForBreadth: 3 } }, now: new Date() });
+  assert.ok(!items.some((i) => i.type === 'breadth'), 'Python + JavaScript only = 2 languages');
 });

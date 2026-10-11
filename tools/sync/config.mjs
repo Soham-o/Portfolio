@@ -12,7 +12,7 @@ const DEFAULTS = {
   achievements: {
     repoStarMilestones: [10, 25, 50, 100, 250, 500, 1000], repoForkMilestones: [5, 10, 25, 50, 100],
     totalStarMilestones: [10, 25, 50, 100, 250, 500, 1000], publicRepoMilestones: [5, 10, 25, 50, 100],
-    minStreakDays: 7, minLanguagesForBreadth: 3, maxItems: 12, maxPerType: 4,
+    minStreakDays: 7, minLanguagesForBreadth: 3, maxItems: 12, maxPerType: 4, minStarsToShow: 10,
   },
 };
 

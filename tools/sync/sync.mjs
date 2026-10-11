@@ -12,8 +12,8 @@ import { computeAchievements } from './achievements.mjs';
 import { renderAll } from './render.mjs';
 import { readJson, readText, stableJson, sha256, slugify, hoursBetween, safeUrl, dayKey, noopLogger } from './util.mjs';
 
-export const PROCESSOR_VERSION = 3; // bump to force re-processing of cached READMEs
-export const RENDER_VERSION = 1;    // bump when render.mjs output changes, to force a republish
+export const PROCESSOR_VERSION = 4; // bump to force re-processing of cached READMEs
+export const RENDER_VERSION = 2;    // bump when render.mjs output changes, to force a republish
 const STATE_VERSION = 1;
 
 export function emptyState() {
@@ -96,7 +96,7 @@ export async function runSync({ root, client, now = new Date(), logger = noopLog
       projects: prevProjects, profile: prevProfile?.profile ?? null, stats: prevProfile?.stats ?? null,
       contributions: prevProfile?.contributions ?? null, external: prevProfile?.external ?? null,
       achievements: prevAchievements?.items ?? [], manualAchievements, history: prevHistory.snapshots,
-      status: prevStatus, removedSlugs: [], redirects: redirectsFrom(state),
+      status: prevStatus, removedSlugs: [], redirects: redirectsFrom(state), minStarsToShow: config.achievements.minStarsToShow,
     };
     const out = await renderAll({ root, paths, config, model, now });
     return { files: out.files, deletes: out.deletes, publish: true, summary: { renderOnly: true }, status: prevStatus };
@@ -390,6 +390,7 @@ export async function runSync({ root, client, now = new Date(), logger = noopLog
 
   const model = {
     projects: sorted, profile, stats, contributions, external, achievements, manualAchievements, history, status,
+    minStarsToShow: config.achievements.minStarsToShow,
     removedSlugs: summary.removed.flatMap((r) => { const s = state.repos[String(r.id)]; return [s.slug, ...(s.slugHistory || [])]; }),
     excludedSlugs: Object.values(state.repos).filter((s) => s.status === 'excluded' && s.slug).flatMap((s) => [s.slug, ...(s.slugHistory || [])]),
     redirects: redirectsFrom(state),
@@ -421,10 +422,10 @@ export function computeStats(projects, profile, contributions) {
   const langBytes = {};
   for (const p of owned) for (const l of p.languages || []) langBytes[l.name] = (langBytes[l.name] || 0) + l.bytes;
   const totalBytes = Object.values(langBytes).reduce((a, b) => a + b, 0);
-  const langs = Object.entries(langBytes).sort((a, b) => b[1] - a[1]);
+  const langs = Object.entries(langBytes).filter(([, b]) => totalBytes && b / totalBytes >= 0.001).sort((a, b) => b[1] - a[1]);
   const top = langs.slice(0, 7).map(([name, bytes]) => ({ name, pct: Math.round((bytes / totalBytes) * 1000) / 10 }));
-  const rest = langs.slice(7).reduce((a, [, b]) => a + b, 0);
-  if (rest > 0) top.push({ name: 'Other', pct: Math.round((rest / totalBytes) * 1000) / 10 });
+  const rest = totalBytes - langs.slice(0, 7).reduce((a, [, b]) => a + b, 0);
+  if (rest / totalBytes >= 0.001) top.push({ name: 'Other', pct: Math.round((rest / totalBytes) * 1000) / 10 });
   const primaryCounts = {};
   for (const p of owned) if (p.language) primaryCounts[p.language] = (primaryCounts[p.language] || 0) + 1;
   return {

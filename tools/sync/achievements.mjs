@@ -2,6 +2,12 @@
 // Every item links to where it can be checked. Nothing is inferred beyond the numbers the API returns.
 import { fmtMonth, fmtDate } from './util.mjs';
 
+// GitHub reports these as "languages", but they don't demonstrate programming-language breadth.
+export const NON_PROGRAMMING = new Set([
+  'HTML', 'CSS', 'SCSS', 'Sass', 'Less', 'Jupyter Notebook', 'Dockerfile', 'Makefile', 'Markdown', 'TeX',
+  'Procfile', 'Batchfile', 'PowerShell', 'Shell', 'Roff', 'Mermaid', 'YAML', 'JSON',
+]);
+
 function highestReached(value, thresholds) {
   let best = null;
   for (const t of [...thresholds].sort((a, b) => a - b)) if (value >= t) best = t;
@@ -137,13 +143,15 @@ export function computeAchievements({ projects, profile, contributions, external
   const seenLangs = [];
   let breadthDate = null;
   for (const p of byCreated) {
-    if (p.language && !seenLangs.includes(p.language)) { seenLangs.push(p.language); breadthDate = p.createdAt; }
+    // Primary language, or the main programming language when the primary one is e.g. a notebook
+    const lang = [p.language, ...(p.languages || []).map((l) => l.name)].find((l) => l && !NON_PROGRAMMING.has(l));
+    if (lang && !seenLangs.includes(lang)) { seenLangs.push(lang); breadthDate = p.createdAt; }
   }
   if (seenLangs.length >= cfg.minLanguagesForBreadth) {
     items.push({
       id: `breadth:${seenLangs.length}`, type: 'breadth', title: `Projects in ${seenLangs.length} Languages`, org: '— Breadth',
       date: breadthDate, when: fmtMonth(breadthDate),
-      description: `Primary languages across public projects: ${seenLangs.join(', ')}.`,
+      description: `Programming languages used as the main language of public projects: ${seenLangs.join(', ')}.`,
       url: `https://github.com/${user}?tab=repositories`,
     });
   }

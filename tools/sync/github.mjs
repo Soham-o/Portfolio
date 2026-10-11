@@ -75,6 +75,8 @@ export class GitHubClient {
   }
 
   _recordRate(headers) {
+    const resource = headers.get('x-ratelimit-resource');
+    if (resource && resource !== 'core') return;
     const limit = headers.get('x-ratelimit-limit');
     const remaining = headers.get('x-ratelimit-remaining');
     const reset = headers.get('x-ratelimit-reset');
