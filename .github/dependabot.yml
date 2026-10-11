@@ -1,11 +1,17 @@
-# Weekly update PRs for the sync tool's two npm dependencies and the GitHub Actions used by workflows.
+# Weekly dependency updates, grouped into one PR per ecosystem to keep noise low.
 version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      npm-deps:
+        patterns: ["*"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      actions:
+        patterns: ["*"]
