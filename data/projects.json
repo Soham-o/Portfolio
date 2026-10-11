@@ -1,146 +1,7 @@
 {
-  "generatedAt": "2026-10-11T04:19:38.161Z",
+  "generatedAt": "2026-10-11T06:01:56.814Z",
   "username": "Soham-o",
   "projects": [
-    {
-      "id": 1148920724,
-      "slug": "portfolio",
-      "name": "Portfolio",
-      "displayName": "Portfolio",
-      "fullName": "Soham-o/Portfolio",
-      "owner": "Soham-o",
-      "url": "https://github.com/Soham-o/Portfolio",
-      "description": "",
-      "summary": "",
-      "summaryText": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
-      "summarySource": "readme",
-      "category": "",
-      "featured": false,
-      "curated": false,
-      "order": null,
-      "topics": [],
-      "language": "HTML",
-      "languages": [
-        {
-          "name": "HTML",
-          "bytes": 440525,
-          "pct": 61.2
-        },
-        {
-          "name": "JavaScript",
-          "bytes": 226990,
-          "pct": 31.5
-        },
-        {
-          "name": "CSS",
-          "bytes": 49826,
-          "pct": 6.9
-        },
-        {
-          "name": "Shell",
-          "bytes": 2182,
-          "pct": 0.3
-        }
-      ],
-      "tech": [
-        {
-          "name": "HTML",
-          "source": "language"
-        },
-        {
-          "name": "JavaScript",
-          "source": "language"
-        },
-        {
-          "name": "CSS",
-          "source": "language"
-        },
-        {
-          "name": "GitHub Actions",
-          "source": "file"
-        }
-      ],
-      "license": null,
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 2,
-      "hasIssues": true,
-      "archived": false,
-      "isTemplate": false,
-      "fork": false,
-      "defaultBranch": "main",
-      "createdAt": "2026-02-03T14:20:18Z",
-      "updatedAt": "2026-10-11T04:19:20Z",
-      "pushedAt": "2026-10-11T04:19:16Z",
-      "homepage": "",
-      "demo": {
-        "url": "https://soham-o.github.io/Portfolio/",
-        "source": "readme"
-      },
-      "image": {
-        "url": "https://opengraph.githubassets.com/02da64abea49ed45/Soham-o/Portfolio",
-        "source": "social"
-      },
-      "releases": [],
-      "latestRelease": null,
-      "readmeStatus": "ok",
-      "readme": {
-        "path": "README.md",
-        "htmlUrl": "https://github.com/Soham-o/Portfolio/blob/main/README.md",
-        "overviewHtml": "<div align=\"center\">\n  <img src=\"https://capsule-render.vercel.app/api?type=waving&amp;color=auto&amp;height=200&amp;section=header&amp;text=Hi%20there,%20I%27m%20Soham%20Panda!&amp;fontSize=70&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=AIML%20Data%20Engineer%20%E2%80%A2%20Web%20Developer&amp;descAlignY=51&amp;descAlign=50\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</div>\n\n<div align=\"center\">\n  <h3>Transforming Data into Actionable Insights &amp; Building Modern Web Experiences</h3>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://www.linkedin.com/in/soham-panda-a90720336/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"mailto:sohampanda95599@gmail.com\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n  <a href=\"https://soham-o.github.io/Portfolio/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">\n    <img src=\"https://img.shields.io/badge/Portfolio-FFC107?style=for-the-badge&amp;logo=google-chrome&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  </a>\n</div>\n\n<hr />",
-        "sections": [
-          {
-            "id": "readme--about-me",
-            "title": "👨‍💻 About Me",
-            "kind": "about",
-            "html": "<h2 id=\"readme--about-me\">👨‍💻 About Me</h2>\n<p>I am a <strong>Computer Science Student</strong> at <strong>SGTU</strong> (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.</p>\n<ul>\n<li>🔭 I’m currently working on <strong>Data Engineering Pipelines &amp; Full Stack Web Apps</strong>.</li>\n<li>🌱 I’m currently learning <strong>Advanced Neural Networks &amp; System Design</strong>.</li>\n<li>👯 I’m looking to collaborate on <strong>Open Source AI Projects</strong>.</li>\n<li>💬 Ask me about <strong>React, Python, Data Analysis, and UI/UX</strong>.</li>\n</ul>\n<hr />"
-          },
-          {
-            "id": "readme--tech-stack",
-            "title": "🛠️ Tech Stack",
-            "kind": "stack",
-            "html": "<h2 id=\"readme--tech-stack\">🛠️ Tech Stack</h2>\n<div align=\"center\">\n\n<p><strong>Languages</strong><br />\n<img src=\"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&amp;logo=html5&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&amp;logo=css3&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Frontend</strong><br />\n<img src=\"https://img.shields.io/badge/React-20232A?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Data &amp; AI</strong><br />\n<img src=\"https://img.shields.io/badge/Pandas-150458?style=for-the-badge&amp;logo=pandas&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/NumPy-013243?style=for-the-badge&amp;logo=numpy&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&amp;logo=tensorflow&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n<p><strong>Tools</strong><br />\n<img src=\"https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n<img src=\"https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&amp;logo=visual-studio-code&amp;logoColor=white\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" /></p>\n</div>\n\n<hr />"
-          },
-          {
-            "id": "readme--github-stats",
-            "title": "📊 GitHub Stats",
-            "kind": "other",
-            "html": "<h2 id=\"readme--github-stats\">📊 GitHub Stats</h2>\n<div align=\"center\">\n  <img src=\"https://github-readme-stats.vercel.app/api?username=Soham-o&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117\" alt=\"Soham's Stats\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <br />\n  <img src=\"https://github-readme-streak-stats.herokuapp.com/?user=Soham-o&amp;theme=tokyonight&amp;hide_border=true&amp;background=0D1117\" alt=\"Soham's Streak\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n  <br />\n  <img src=\"https://github-readme-stats.vercel.app/api/top-langs/?username=Soham-o&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117\" alt=\"Top Langs\" loading=\"lazy\" decoding=\"async\" referrerpolicy=\"no-referrer\" />\n</div>\n\n<hr />"
-          },
-          {
-            "id": "readme--featured-projects",
-            "title": "🚀 Featured Projects",
-            "kind": "features",
-            "html": "<h2 id=\"readme--featured-projects\">🚀 Featured Projects</h2>\n<table>\n<thead>\n<tr>\n<th align=\"left\">Project</th>\n<th align=\"left\">Description</th>\n<th align=\"left\">Tech Stack</th>\n</tr>\n</thead>\n<tbody><tr>\n<td align=\"left\"><strong><a href=\"https://github.com/Soham-o/Mybuddy\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">MyBuddy</a></strong></td>\n<td align=\"left\">A personalized companion app or utility tool designed to assist users with daily tasks.</td>\n<td align=\"left\"><code>Python</code></td>\n</tr>\n<tr>\n<td align=\"left\"><strong><a href=\"https://github.com/Soham-o/Portfolio\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">Personal Portfolio</a></strong></td>\n<td align=\"left\">A modern, responsive developer portfolio with 3D animations and theme switching.</td>\n<td align=\"left\"><code>HTML</code> <code>CSS</code> <code>JS</code></td>\n</tr>\n</tbody></table>\n<hr />\n<div align=\"center\">\n  Built with ❤️ by Soham Panda\n</div>\n\n<hr />"
-          },
-          {
-            "id": "readme--how-this-portfolio-updates-itself",
-            "title": "⚙️ How this portfolio updates itself",
-            "kind": "other",
-            "html": "<h2 id=\"readme--how-this-portfolio-updates-itself\">⚙️ How this portfolio updates itself</h2>\n<p>Projects, project pages, GitHub stats and verified milestones are synced automatically from my public\nGitHub repositories by a GitHub Actions workflow (hourly, plus on demand), then redeployed to GitHub Pages.\nMake a repository public and it shows up here on its own. Setup, configuration and troubleshooting:\n<a href=\"https://github.com/Soham-o/Portfolio/blob/main/docs/AUTOMATION.md\" target=\"_blank\" rel=\"noopener noreferrer nofollow\">docs/AUTOMATION.md</a>.</p>"
-          }
-        ],
-        "highlights": {
-          "overview": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
-          "problem": "",
-          "features": []
-        },
-        "excerpt": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
-        "truncated": false,
-        "demoLinks": [
-          {
-            "url": "https://soham-o.github.io/Portfolio/",
-            "text": ""
-          }
-        ],
-        "summary": "I am a Computer Science Student at SGTU (Batch of 2028) with a passion for digital awareness and innovation. I bridge the gap between complex data systems and intuitive user interfaces.",
-        "summaryFrom": "👨‍💻 About Me",
-        "tagline": "",
-        "images": []
-      },
-      "nameHistory": []
-    },
     {
       "id": 1275129730,
       "slug": "earthshare",
@@ -349,9 +210,9 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/AirTwin-X",
       "description": "",
-      "summary": "",
-      "summaryText": "AirTwin X takes a city's current air-quality reading and walks it through a pipeline: estimate which sources are driving the pollution, rank a fixed set of municipal interventions, simulate what combining them would do, and translate the predicted improvement into health and economic estimates.",
-      "summarySource": "readme",
+      "summary": "An air-quality decision-support prototype combining source attribution, intervention ranking, and scenario simulation. It includes documented fallbacks when live data sources are not configured.",
+      "summaryText": "An air-quality decision-support prototype combining source attribution, intervention ranking, and scenario simulation. It includes documented fallbacks when live data sources are not configured.",
+      "summarySource": "override",
       "category": "",
       "featured": false,
       "curated": false,
@@ -526,9 +387,9 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/cursor_bite",
       "description": "Cursor Bite - Modern AI-powered context-aware assistant",
-      "summary": "",
-      "summaryText": "Cursor Bite - Modern AI-powered context-aware assistant",
-      "summarySource": "description",
+      "summary": "A Windows desktop assistant that opens an action menu near the cursor and offers text-processing tools. The repository README distinguishes implemented actions from planned ones.",
+      "summaryText": "A Windows desktop assistant that opens an action menu near the cursor and offers text-processing tools. The repository README distinguishes implemented actions from planned ones.",
+      "summarySource": "override",
       "category": "",
       "featured": false,
       "curated": false,
@@ -750,8 +611,8 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/PersonaLearn",
       "description": "",
-      "summary": "ML-powered system that personalises content delivery based on learner behaviour patterns. Adapts difficulty and format dynamically — built with Python and Streamlit.",
-      "summaryText": "ML-powered system that personalises content delivery based on learner behaviour patterns. Adapts difficulty and format dynamically — built with Python and Streamlit.",
+      "summary": "A Streamlit study assistant that explains topics using analogies based on a learner's selected interests, then generates a quiz.",
+      "summaryText": "A Streamlit study assistant that explains topics using analogies based on a learner's selected interests, then generates a quiz.",
       "summarySource": "override",
       "category": "ML · Adaptive Learning",
       "featured": false,
@@ -1065,9 +926,9 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/autonomous-driving-system",
       "description": "",
-      "summary": "",
-      "summaryText": "Industry-grade autonomous vehicle simulation system integrating deep-learning perception, rule-based + RL decision making, classical path planning, PID vehicle control, and a real-time Streamlit dashboard.",
-      "summarySource": "readme",
+      "summary": "A modular autonomous-driving simulation project combining perception, decision logic, path planning, vehicle control, and a Streamlit dashboard. It is a simulation project, not a road-ready autonomous vehicle.",
+      "summaryText": "A modular autonomous-driving simulation project combining perception, decision logic, path planning, vehicle control, and a Streamlit dashboard. It is a simulation project, not a road-ready autonomous vehicle.",
+      "summarySource": "override",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1229,9 +1090,9 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/voteros",
       "description": "",
-      "summary": "",
-      "summaryText": "VoterOS is an interactive, AI-powered system designed to demystify the electoral process. It shifts civic engagement from reactive searching to proactive orchestration.",
-      "summarySource": "readme",
+      "summary": "An interactive civic-information project focused on explaining electoral processes and helping users explore election-related information.",
+      "summaryText": "An interactive civic-information project focused on explaining electoral processes and helping users explore election-related information.",
+      "summarySource": "override",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1363,9 +1224,9 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/kinesis_prototype",
       "description": "Kinesis is an AI-driven system that predicts and manages crowd behavior in real time using simulation, biometrics, and natural language control.",
-      "summary": "",
-      "summaryText": "Kinesis is an AI-driven system that predicts and manages crowd behavior in real time using simulation, biometrics, and natural language control.",
-      "summarySource": "description",
+      "summary": "A Streamlit prototype for exploring crowd-behavior scenarios through simulation and data-driven scoring. See the repository README for the exact inputs and limitations.",
+      "summaryText": "A Streamlit prototype for exploring crowd-behavior scenarios through simulation and data-driven scoring. See the repository README for the exact inputs and limitations.",
+      "summarySource": "override",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1487,8 +1348,8 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/Task_Manager",
       "description": "Turn your to-do list into a command center with My Tasks.  After a quick sign-up, your personal dashboard is ready for you to add, edit, and organize your tasks. The magic is in the perspective: get a clean summary with the List View, or map out your strategy on the visual Board View. Switch between them anytime to match your workflow.",
-      "summary": "A clean, responsive task management interface built with HTML, CSS, and JavaScript. Focused on frictionless UX — add, complete, and clear tasks without page reloads.",
-      "summaryText": "A clean, responsive task management interface built with HTML, CSS, and JavaScript. Focused on frictionless UX — add, complete, and clear tasks without page reloads.",
+      "summary": "A task-management web app with list and board views for adding, editing, and organizing tasks.",
+      "summaryText": "A task-management web app with list and board views for adding, editing, and organizing tasks.",
       "summarySource": "override",
       "category": "Productivity Tool",
       "featured": false,
@@ -1591,9 +1452,9 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/Spotify_Songs_Genre_Segmentation",
       "description": "The project blends music and data science, offering an engaging way to apply machine learning in a real-world context. It’s perfect for data enthusiasts who want to work with tangible and relatable data while also exploring how algorithms interpret patterns in music.  Using Python Pandas, NumPy, Matplotlib, Seaborn ,Scikit-learn in Jupyter Notebook",
-      "summary": "",
-      "summaryText": "The project blends music and data science, offering an engaging way to apply machine learning in a real-world context. It’s perfect for data enthusiasts who want to work with tangible and relatable data while also exploring how algorithms interpret patterns in music. Using Python Pandas, NumPy, Matplotlib, Seaborn ,Scikit-learn in Jupyter Notebook",
-      "summarySource": "description",
+      "summary": "A data-science notebook that explores audio features of Spotify tracks and groups songs using machine-learning techniques.",
+      "summaryText": "A data-science notebook that explores audio features of Spotify tracks and groups songs using machine-learning techniques.",
+      "summarySource": "override",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1691,8 +1552,8 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/Movie_Recommender_System",
       "description": "A movie recommendation system built using Python and Streamlit library.",
-      "summary": "Content-based recommendation engine using cosine similarity on TF-IDF vectors. Built with Python, scikit-learn, and Streamlit — surfaces relevant titles from a dataset of 5,000+ films.",
-      "summaryText": "Content-based recommendation engine using cosine similarity on TF-IDF vectors. Built with Python, scikit-learn, and Streamlit — surfaces relevant titles from a dataset of 5,000+ films.",
+      "summary": "A content-based movie recommender using TF-IDF features and cosine similarity, with a Streamlit interface and the TMDB 5000 dataset.",
+      "summaryText": "A content-based movie recommender using TF-IDF features and cosine similarity, with a Streamlit interface and the TMDB 5000 dataset.",
       "summarySource": "override",
       "category": "ML · Recommender System",
       "featured": false,
@@ -1790,9 +1651,9 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/Fake-News-Detection-",
       "description": "",
-      "summary": "",
-      "summaryText": "A lightweight Machine Learning project to detect fake news articles using Scikit-Learn. This system uses TF-IDF (Term Frequency-Inverse Document Frequency) for feature extraction and Logistic Regression for classification, offering high accuracy with minimal computational cost.",
-      "summarySource": "readme",
+      "summary": "A scikit-learn notebook that uses TF-IDF text features and Logistic Regression for fake-news classification.",
+      "summaryText": "A scikit-learn notebook that uses TF-IDF text features and Logistic Regression for fake-news classification.",
+      "summarySource": "override",
       "category": "",
       "featured": false,
       "curated": false,
@@ -1900,9 +1761,9 @@
       "owner": "Soham-o",
       "url": "https://github.com/Soham-o/MLmini_Projects",
       "description": "",
-      "summary": "",
-      "summaryText": "🏠 Project 1: California Housing Price Predictor (hpd.ipynb) A linear regression model designed to predict the median house value based on various geographical and demographic features.",
-      "summarySource": "readme",
+      "summary": "A collection of introductory machine-learning notebooks, including a California housing-price prediction exercise. See the README for the current project list.",
+      "summaryText": "A collection of introductory machine-learning notebooks, including a California housing-price prediction exercise. See the README for the current project list.",
+      "summarySource": "override",
       "category": "",
       "featured": false,
       "curated": false,
