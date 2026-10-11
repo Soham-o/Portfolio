@@ -98,7 +98,8 @@ export function handle(world, method, rawUrl, headers = {}, body = null) {
     }
   }
 
-  const json = (status, data, extra = {}) => ({ status, headers: { 'content-type': 'application/json', 'x-ratelimit-limit': '5000', 'x-ratelimit-remaining': '4999', 'x-ratelimit-reset': '9999999999', ...extra }, body: data });
+  const scopeHeader = world.oauthScopes !== undefined ? { 'x-oauth-scopes': world.oauthScopes } : {};
+  const json = (status, data, extra = {}) => ({ status, headers: { 'content-type': 'application/json', 'x-ratelimit-limit': '5000', 'x-ratelimit-remaining': '4999', 'x-ratelimit-reset': '9999999999', ...scopeHeader, ...extra }, body: data });
   const owner = world.user.login;
   const find = (o, n) => world.repos.find((r) => r.owner.toLowerCase() === o.toLowerCase() && r.name.toLowerCase() === n.toLowerCase() && !r.private);
   let m;

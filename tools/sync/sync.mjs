@@ -9,11 +9,13 @@ import {
 import { processReadme } from './readme.mjs';
 import { detectTech } from './tech.mjs';
 import { computeAchievements } from './achievements.mjs';
+import { chooseSummary } from './summary.mjs';
 import { renderAll } from './render.mjs';
+import { writeCapableScopes } from './github.mjs';
 import { readJson, readText, stableJson, sha256, slugify, hoursBetween, safeUrl, dayKey, noopLogger } from './util.mjs';
 
-export const PROCESSOR_VERSION = 4; // bump to force re-processing of cached READMEs
-export const RENDER_VERSION = 2;    // bump when render.mjs output changes, to force a republish
+export const PROCESSOR_VERSION = 5; // bump to force re-processing of cached READMEs
+export const RENDER_VERSION = 3;    // bump when render.mjs output changes, to force a republish
 const STATE_VERSION = 1;
 
 export function emptyState() {
@@ -110,6 +112,11 @@ export async function runSync({ root, client, now = new Date(), logger = noopLog
   const listed = (await listPublicRepos(client, username)).map(pickRepo)
     .filter((r) => r.owner && r.owner.toLowerCase() === username.toLowerCase());
   logger.info(`Discovered ${listed.length} public repositories for ${username}`);
+  const risky = writeCapableScopes(client.oauthScopes);
+  if (risky.length) {
+    throw new Error(`Refusing to sync with a token that has write-capable scopes (${risky.join(', ')}). `
+      + 'Use a fine-grained token with public read-only access, or no PORTFOLIO_SYNC_TOKEN at all.');
+  }
 
   // ── 2. Identity: stable repo IDs, rename tracking, stable slugs
   const takenBy = new Map();
@@ -248,6 +255,7 @@ export async function runSync({ root, client, now = new Date(), logger = noopLog
       url: repo.htmlUrl,
       description: repo.description,
       summary: override.summary || '',
+      ...(() => { const c = chooseSummary({ override, description: repo.description, name: repo.name, readme }); return { summaryText: c.text, summarySource: c.source }; })(),
       category: override.category || '',
       featured: Boolean(override.featured),
       curated: Boolean(override.curated),
@@ -279,6 +287,7 @@ export async function runSync({ root, client, now = new Date(), logger = noopLog
         ? {
           path: readme.path, htmlUrl: readme.htmlUrl, overviewHtml: readme.overviewHtml, sections: readme.sections,
           highlights: readme.highlights, excerpt: readme.excerpt, truncated: readme.truncated, demoLinks: readme.demoLinks,
+          summary: readme.summary || '', summaryFrom: readme.summaryFrom || '', tagline: readme.tagline || '',
           images: readme.images.slice(0, 12),
         }
         : null,

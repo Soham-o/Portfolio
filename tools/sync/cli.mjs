@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { GitHubClient } from './github.mjs';
 import { runSync } from './sync.mjs';
 import { paths as pathsFor } from './config.mjs';
-import { validateMarkers } from './markers.mjs';
+import { validateOutput, checkCommitted } from './validate.mjs';
 import { writeFileAtomic, consoleLogger, readJson } from './util.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -46,42 +46,7 @@ async function acquireLock(file, now = Date.now()) {
   }
 }
 
-/** Validate generated output before anything touches disk. Returns a list of problems. */
-export async function validateOutput(files, p) {
-  const problems = [];
-  for (const [file, content] of files) {
-    if (typeof content !== 'string' || !content.length) problems.push(`${file}: empty output`);
-    if (file.endsWith('.json')) {
-      try { JSON.parse(content); } catch (e) { problems.push(`${file}: invalid JSON (${e.message})`); }
-    }
-    if (file.endsWith('.html')) {
-      if (!/<\/html>\s*$/i.test(content)) problems.push(`${path.basename(file)}: truncated HTML`);
-      for (const e of validateMarkers(content)) problems.push(`${path.basename(file)}: ${e}`);
-      if (/<script(?![^>]*(?:src="(?:\.\.\/)?(?:script|github-sync)\.js"|type="application\/ld\+json"))[^>]*>/i.test(content)) {
-        problems.push(`${path.basename(file)}: unexpected <script> tag in generated output`);
-      }
-    }
-  }
-  for (const f of [p.projectsHtml, p.journeyHtml]) if (!files.has(f)) problems.push(`${path.basename(f)} was not rendered`);
-  return problems;
-}
-
-export async function checkCommitted(root) {
-  const p = pathsFor(root);
-  const problems = [];
-  for (const f of [p.projectsHtml, p.journeyHtml]) {
-    const html = await fs.readFile(f, 'utf8');
-    for (const e of validateMarkers(html)) problems.push(`${path.basename(f)}: ${e}`);
-  }
-  const projects = (await readJson(p.projectsJson, { projects: [] }))?.projects || [];
-  for (const proj of projects) {
-    try { await fs.access(path.join(p.projectPagesDir, `${proj.slug}.html`)); } catch { problems.push(`missing page projects/${proj.slug}.html`); }
-  }
-  for (const f of [p.statusJson, p.state, p.profileJson, p.achievementsJson, p.historyJson].filter(Boolean)) {
-    try { await readJson(f, null); } catch (e) { problems.push(e.message); }
-  }
-  return problems;
-}
+export { validateOutput, checkCommitted } from './validate.mjs';
 
 async function setOutput(name, value) {
   if (!process.env.GITHUB_OUTPUT) return;

@@ -70,21 +70,3 @@ test('e2e: a concurrent run exits cleanly without touching files', async () => {
   assert.match(res.output, /changed=false/);
   assert.match(res.stderr, /Another sync is running/);
 });
-
-test('repository workflows are wired for schedule, manual and webhook triggers', async () => {
-  const wf = await fs.readFile(path.join(REPO_ROOT, '.github/workflows/sync-github.yml'), 'utf8');
-  assert.match(wf, /schedule:\s*\n\s*- cron: "17 \*\/3 \* \* \*"/);
-  assert.match(wf, /push:\s*\n\s*branches: \["main"\]\s*\n\s*paths: \["content\/\*\*", "templates\/\*\*"\]/);
-  assert.match(wf, /if: needs\.sync\.outputs\.changed == 'true' && needs\.sync\.outputs\.pages == 'success'/);
-  assert.match(wf, /\[skip ci\]/, 'bot commits must not re-trigger workflows');
-  assert.match(wf, /workflow_dispatch:/);
-  assert.match(wf, /repository_dispatch:\s*\n\s*types: \[github-sync\]/);
-  assert.match(wf, /concurrency:\s*\n\s*group: github-sync\s*\n\s*cancel-in-progress: false/);
-  assert.match(wf, /persist-credentials: false/);
-  assert.match(wf, /npm test/);
-  assert.match(wf, /uses: \.\/\.github\/workflows\/static\.yml/);
-  const st = await fs.readFile(path.join(REPO_ROOT, '.github/workflows/static.yml'), 'utf8');
-  assert.match(st, /workflow_call:/);
-  assert.match(st, /ref: \$\{\{ inputs\.ref \|\| github\.sha \}\}/);
-  assert.match(st, /--exclude 'data\/cache'/);
-});

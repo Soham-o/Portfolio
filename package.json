@@ -10,12 +10,13 @@
     "sync": "node tools/sync/cli.mjs",
     "sync:full": "node tools/sync/cli.mjs --full",
     "render": "node tools/sync/cli.mjs --render-only",
-    "check": "node tools/sync/cli.mjs --check",
+    "check": "node tools/sync/check.mjs",
     "test": "node --test tests/*.test.mjs",
     "lint": "node tools/lint.mjs"
   },
   "devDependencies": {
     "marked": "15.0.12",
-    "sanitize-html": "2.18.0"
+    "sanitize-html": "2.18.0",
+    "yaml": "2.9.0"
   }
 }

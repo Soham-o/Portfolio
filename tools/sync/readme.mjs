@@ -28,7 +28,7 @@ const SECTION_KINDS = [
   ['setup', /\b(install|setup|set up|getting started|quick ?start|prerequisites|requirements|configuration|deploy)/i],
   ['usage', /\b(usage|how to use|examples?|running|run |run$|commands|api)/i],
   ['demo', /\b(demo|screenshots?|preview|output|results?|gallery|showcase)/i],
-  ['about', /\b(about|overview|introduction|intro|description|what is|summary|objective|purpose|goals?)/i],
+  ['about', /\b(about|overview|introduction|intro|description|what is|summary|objective|purpose|goals?|the idea|vision|concept)/i],
   ['license', /\blicen[cs]e/i],
   ['meta', /\b(contribut|contact|author|acknowledg|credits|support|faq|roadmap|todo|changelog)/i],
 ];
@@ -205,14 +205,119 @@ export function plainText(md) {
 }
 
 function firstParagraphText(tokens) {
-  for (const t of tokens) {
-    if (t.type === 'paragraph') {
-      const text = plainText(t.text);
-      // Skip paragraphs that are only badges/images/links
-      if (text.length >= 25) return text;
-    }
+  for (const para of collectParagraphs(tokens)) {
+    const why = summaryRejection(para.raw, para.text);
+    if (!why || (why === 'tagline' && wordCount(para.text) >= 8)) return para.text;
   }
   return '';
+}
+
+/* ───────────────────── summary extraction ─────────────────────
+ * A README's useful summary is often NOT its first paragraph: it can follow a bold tagline, sit in a
+ * centered HTML <p>, a blockquote, or under "Overview" / "Project summary" / "The vision". We collect
+ * candidate paragraphs from all of those, reject taglines, link directories, badge strings and
+ * install commands, and take the first one that reads like a description. Nothing is generated.
+ */
+
+const COMMAND_RE = /(^|\s)(\$ |pip3? install|npm (i|install|run|ci)\b|yarn (add|install)|pnpm |git clone|docker(-compose)? (run|compose|build)|python3? [\w./-]+\.py|cd [\w./-]+|streamlit run|uvicorn )/i;
+
+function wordCount(text) {
+  return (String(text).match(/[\p{L}\p{N}][\p{L}\p{N}'’.+-]*/gu) || []).length;
+}
+
+/** Text blocks from an HTML token: <p>/<div>/<li> contents; headings and <sub> captions are skipped. */
+function htmlBlocks(html) {
+  return String(html)
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/<(h[1-6]|sub|sup|script|style|picture)\b[\s\S]*?<\/\1>/gi, '\n\n')
+    .replace(/<\/?(p|div|li|ul|ol|br|tr|td|table|blockquote|section|center|details|summary)\b[^>]*>/gi, '\n\n')
+    .split(/\n\s*\n/)
+    .map((b) => ({ raw: b, text: plainText(b) }))
+    .filter((b) => b.text);
+}
+
+/** Flatten paragraphs (incl. inside blockquotes and HTML blocks), keeping a following list. */
+export function collectParagraphs(tokens, out = []) {
+  for (let i = 0; i < tokens.length; i += 1) {
+    const t = tokens[i];
+    if (t.type === 'paragraph') {
+      let text = plainText(t.text);
+      let next = tokens[i + 1];
+      if (next?.type === 'space') next = tokens[i + 2];
+      if (/:\s*$/.test(text) && next?.type === 'list') {
+        const items = next.items.map((it) => plainText(it.text.split('\n')[0]).replace(/[.;,]\s*$/, '')).filter(Boolean).slice(0, 5);
+        if (items.length) text = `${text.replace(/:\s*$/, '')}: ${items.join('; ')}.`;
+      }
+      out.push({ raw: t.text, text });
+    } else if (t.type === 'blockquote') {
+      collectParagraphs(t.tokens || [], out);
+    } else if (t.type === 'html') {
+      for (const b of htmlBlocks(t.text)) out.push(b);
+    }
+  }
+  return out;
+}
+
+/** Strip a leading bold label such as "What it is:" or "Hackathon Alignment:". */
+function stripLabel(text) {
+  return text.replace(/^[\p{L}\s'’-]{2,30}:\s+(?=\S)/u, (m) => (wordCount(m) <= 4 ? '' : m));
+}
+
+/** Why a paragraph is NOT usable as a summary, or null when it is. */
+export function summaryRejection(raw, text) {
+  const t = String(text || '').trim();
+  if (!t) return 'empty';
+  if (COMMAND_RE.test(t) || /```/.test(raw || '')) return 'command';
+  if (/^table of contents\b/i.test(t)) return 'toc';
+  if (/^["“'‘].*["”'’]\.?$/s.test(t)) return 'quote'; // a pull-quote is a slogan, not a description
+  const letters = (t.match(/\p{L}/gu) || []).length;
+  if (letters / t.length < 0.6) return 'symbols';
+  const linkCount = ((raw || '').match(/\]\(|<a\s/gi) || []).length;
+  if (linkCount >= 2) {
+    const withoutLinks = plainText(String(raw).replace(/\[[^\]]*\]\([^)]*\)/g, ' ').replace(/<a\b[\s\S]*?<\/a>/gi, ' '));
+    if (wordCount(withoutLinks) < 6) return 'link-directory';
+  }
+  const segments = t.split(/\s[•·|]\s/);
+  if (segments.length >= 3 && segments.every((x) => wordCount(x) <= 5)) return 'link-directory';
+  if (wordCount(t) < 12 || t.length < 70) return 'tagline';
+  return null;
+}
+
+/** First 1–3 sentences, at most ~320 characters. */
+function summarize(text) {
+  // Split only at sentence ends followed by a capitalised word, so "Next.js" or "hpd.ipynb" stay intact.
+  const sentences = text.split(/(?<=[.!?])\s+(?=["“(\p{Lu}\p{N}])/u);
+  let out = '';
+  for (const s of sentences) {
+    if (out && (`${out} ${s}`).length > 320) break;
+    out = out ? `${out} ${s}` : s;
+    if (out.length >= 160) break;
+  }
+  return truncate(out.trim(), 320);
+}
+
+/**
+ * Pick a README summary. Order: overview (before the first section) → introduction-type sections
+ * ("Overview", "Project summary", "About", "The vision"…) → problem/other early sections.
+ * Returns { summary, tagline, from } where `from` names the section used ('' when none).
+ */
+export function extractSummary(overviewTokens, sections) {
+  const groups = [
+    { from: 'overview', tokens: overviewTokens },
+    ...sections.filter((x) => x.kind === 'about').map((x) => ({ from: x.title, tokens: x._tokens })),
+    ...sections.slice(0, 4).filter((x) => ['problem', 'other', 'features'].includes(x.kind) && !/contents/i.test(x.title))
+      .map((x) => ({ from: x.title, tokens: x._tokens })),
+  ];
+  let tagline = '';
+  for (const g of groups) {
+    for (const para of collectParagraphs(g.tokens || [])) {
+      const text = stripLabel(para.text);
+      const why = summaryRejection(para.raw, text);
+      if (!why) return { summary: summarize(text), tagline, from: g.from };
+      if (why === 'tagline' && !tagline && g.from === 'overview' && wordCount(text) >= 3) tagline = text;
+    }
+  }
+  return { summary: '', tagline, from: '' };
 }
 
 function listItems(tokens, max = 8) {
@@ -327,11 +432,11 @@ export function processReadme(markdown, { owner, repo, branch, readmePath = 'REA
   const byKind = (k) => sections.find((s) => s.kind === k);
   const featuresSec = byKind('features');
   const problemSec = byKind('problem');
-  const aboutSec = byKind('about');
-  const overviewText = firstParagraphText(overviewTokens) || (aboutSec ? firstParagraphText(aboutSec._tokens) : '');
+  const extracted = extractSummary(overviewTokens, sections);
+  const overviewText = extracted.summary;
 
   const highlights = {
-    overview: overviewText ? truncate(overviewText, 420) : '',
+    overview: overviewText,
     problem: problemSec ? truncate(firstParagraphText(problemSec._tokens), 320) : '',
     features: featuresSec ? listItems(featuresSec._tokens) : [],
   };
@@ -347,6 +452,9 @@ export function processReadme(markdown, { owner, repo, branch, readmePath = 'REA
     demoLinks: demoLinks.slice(0, 3),
     highlights,
     excerpt: overviewText ? truncate(overviewText, 220) : '',
+    summary: extracted.summary,
+    summaryFrom: extracted.from,
+    tagline: extracted.tagline ? truncate(extracted.tagline, 140) : '',
     truncated,
   };
 }

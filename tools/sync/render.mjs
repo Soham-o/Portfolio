@@ -28,7 +28,8 @@ function absoluteSiteUrl(siteUrl, rel) {
 }
 
 function cardDescription(p) {
-  return p.summary || p.description || p.readme?.excerpt || 'No description provided on GitHub yet.';
+  // summaryText is chosen during sync (override → meaningful description → README summary → fallback)
+  return p.summaryText || p.summary || p.description || p.readme?.excerpt || 'No description provided on GitHub yet.';
 }
 
 function categoryLabel(p) {
@@ -74,7 +75,7 @@ export function renderProjectCard(p, prefix = '') {
   const img = assetUrl(p.image?.url, prefix);
   const href = esc(pageHref(p.slug, prefix));
   const data = [
-    `data-name="${esc(`${p.displayName} ${p.name} ${p.description} ${(p.topics || []).join(' ')} ${p.summary}`.toLowerCase())}"`,
+    `data-name="${esc(`${p.displayName} ${p.name} ${p.description} ${(p.topics || []).join(' ')} ${p.summary} ${p.summarySource === 'none' ? '' : p.summaryText || ''}`.toLowerCase())}"`,
     `data-tech="${esc(techKeys(p).join('|'))}"`,
     `data-stars="${p.stars}"`,
     `data-updated="${esc(p.pushedAt)}"`,
@@ -382,7 +383,7 @@ export function renderProjectPage(p, { template, config, status }) {
   const canonical = absoluteSiteUrl(siteUrl, pageHref(p.slug));
   const img = assetUrl(p.image?.url, prefix);
   const ogImage = p.image?.url && /^https:/.test(p.image.url) ? p.image.url : absoluteSiteUrl(siteUrl, p.image?.url || '');
-  const desc = truncate(p.summary || p.description || p.readme?.excerpt || `${p.displayName} — a public project by ${config.site.ownerName}.`, 200);
+  const desc = truncate(p.summarySource && p.summarySource !== 'none' ? p.summaryText : (p.summary || p.description || p.readme?.excerpt || `${p.displayName} — a public project by ${config.site.ownerName}.`), 200);
   const title = `${p.displayName} | ${config.site.ownerName}`;
 
   const head = [
@@ -453,6 +454,7 @@ ${facts.map(([l, v]) => `                    <div class="case-cell">
   const hl = p.readme?.highlights || {};
   const glance = [];
   if (p.summary) glance.push(['Summary', `<p>${esc(p.summary)}</p>`]);
+  else if (p.summarySource === 'readme' && (p.description || p.readme?.tagline)) glance.push(['Overview · from README', `<p>${esc(p.summaryText)}</p>`]);
   else if (!p.readme && p.description) glance.push(['Description · from GitHub', `<p>${esc(p.description)}</p>`]);
   if (hl.problem) glance.push(['Problem · from README', `<p>${esc(hl.problem)}</p>`]);
   if (hl.features?.length) glance.push(['Key features · from README', `<ul>${hl.features.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>`]);
@@ -523,7 +525,7 @@ ${p.releases.slice(0, 8).map((r) => `                <ul class="timeline-list">
         <div class="title-section project-title">
             <span class="fp-type">${esc(categoryLabel(p))}</span>
             <h1 class="big-text">${esc(p.displayName)}</h1>
-            <p class="projects-subtitle">${esc(p.description || p.readme?.excerpt || 'No description provided on GitHub yet.')}</p>
+            <p class="projects-subtitle">${esc(p.description || p.readme?.tagline || (p.summarySource && p.summarySource !== 'none' ? truncate(p.summaryText, 220) : '') || 'No description provided on GitHub yet.')}</p>
 ${pills.length ? `            <div class="tech-tags sync-pills">${pills.map((x) => `<span class="tech-tag">${esc(x)}</span>`).join('')}</div>\n` : ''}        </div>
 
 ${hero}

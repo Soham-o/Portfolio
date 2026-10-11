@@ -10,9 +10,10 @@ export const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url
 
 export async function makeSite({ withData = false } = {}) {
   const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'portfolio-sync-'));
-  for (const f of ['projects.html', 'journey.html', 'index.html', 'about.html']) {
+  for (const f of ['projects.html', 'journey.html', 'index.html', 'about.html', 'style.css', 'script.js', 'github-sync.js']) {
     await fs.copyFile(path.join(REPO_ROOT, f), path.join(dir, f));
   }
+  await fs.cp(path.join(REPO_ROOT, 'Image-Doc'), path.join(dir, 'Image-Doc'), { recursive: true });
   await fs.cp(path.join(REPO_ROOT, 'templates'), path.join(dir, 'templates'), { recursive: true });
   await fs.cp(path.join(REPO_ROOT, 'content'), path.join(dir, 'content'), { recursive: true });
   if (withData) await fs.cp(path.join(REPO_ROOT, 'data'), path.join(dir, 'data'), { recursive: true });

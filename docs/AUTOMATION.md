@@ -5,35 +5,27 @@ workflow now reads your **public** GitHub data on a schedule, regenerates the Gi
 of the site, commits them, and redeploys. There is no server, database or paid service.
 
 ```
- every 3 hours (+ content/ pushes, manual, optional webhook)
+ hourly (+ content/ pushes, manual, optional webhook)
         │
         ▼
- sync-github.yml ──► npm test ──► tools/sync (read-only GitHub API)
-        │                              │
-        │            data/*.json, projects/<slug>.html, projects.html, journey.html, sitemap.xml
-        ▼                              │
- commit (only if something changed) ◄──┘
-        │
+ A · sync   (contents:read)   npm test → read-only GitHub API → sanitize READMEs → render → validate
+        │                     → upload ONLY the changed generated files + SHA-256 manifest (artifact)
         ▼
- static.yml (reused) ──► GitHub Pages
+ B · commit (contents:write)  no npm, no README code: verify allowlist + hashes → apply → validate
+        │                     → commit → rebase → re-validate → fast-forward push (token only for git)
+        ▼
+ C · deploy (pages:write)     static.yml (reused) → allowlisted site files only → GitHub Pages
 ```
 
 ## 1. Activate it
 
-The code is already in `Soham-o/Portfolio` on `main`. What's left depends on GitHub Pages:
+The code is in `Soham-o/Portfolio` on `main`, and the repository is **public**.
 
-> **Blocker as of Oct 2026:** `Soham-o/Portfolio` is a **private** repository on a **Free** plan,
-> and GitHub Pages is not enabled for it (`has_pages: false`). GitHub only serves Pages from private
-> repositories on paid plans, so the site cannot currently go live from this repo. The sync still runs
-> and commits fresh data; only the deploy job is skipped until Pages works.
-
-Pick one (your decision — nothing here was changed for you):
-
-- **Make the repository public** (recommended: it's a portfolio, it contains no secrets — history was
-  scanned — and public repos also get unlimited Actions minutes). Then Settings → Pages →
-  Source: **GitHub Actions**.
-- **Or** upgrade to GitHub Pro (included free in the GitHub Student Developer Pack), then enable
-  Pages with Source **GitHub Actions**.
+> **One manual step left (Oct 2026):** GitHub Pages is not enabled for the repository
+> (`has_pages: false`). It's a repository setting that only you can switch on:
+> **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+> Until then, the sync keeps running and committing fresh data, `static.yml` finishes with a
+> "Site not deployed" warning instead of failing, and the deploy job is skipped.
 
 Then:
 
@@ -43,7 +35,13 @@ Then:
 3. Open `https://soham-o.github.io/Portfolio/projects.html` and `/journey.html`. You should see
    *Everything Else I've Shipped* and *Built in Public* filled in, and a green
    "GitHub data synced …" indicator.
-4. If the repo is now public, consider switching the schedule to hourly (`17 * * * *`).
+
+**Canonical URL.** `https://soham-o.github.io/Portfolio/` is GitHub's address for Pages on the
+`Soham-o/Portfolio` repository (there is no `soham-o.github.io` user site or custom domain that would
+change it; the old `…/Portfolio-Folder/` link pointed at a repository that no longer exists). It is set
+in `content/portfolio.config.json` and the README. In CI the URL that GitHub Pages actually reports
+overrides the config automatically (e.g. if you add a custom domain later), and `npm run check`
+verifies that every canonical link, `og:url` and sitemap entry share one base.
 
 No secrets are required. The workflow uses the built-in `GITHUB_TOKEN`, which is created per run,
 expires when the run ends, and is never written to disk by the sync code.
@@ -60,7 +58,7 @@ expires when the run ends, and is never written to disk by the sync code.
 
 | Trigger | Latency | Notes |
 |---|---|---|
-| Schedule (`17 */3 * * *`) | **≤ ~3 hours**, plus GitHub's scheduling delay (often 5–15 min, occasionally more) | Always on. Also reconciles anything missed. Every 3 h keeps a private repo inside the Free plan's 2,000 Actions minutes/month; use hourly once public. |
+| Schedule (`17 * * * *`) | **≤ ~1 hour**, plus GitHub's scheduling delay (often 5–15 min, occasionally more) | Always on. Also reconciles anything missed. Actions minutes are free for public repositories; if the repo ever goes private again, use `17 */3 * * *` to stay inside the Free plan's 2,000 minutes/month. |
 | Push to `content/**` or `templates/**` | ~1–2 min | Your edits to overrides/achievements/template are rendered and deployed right away. |
 | Manual "Run workflow" | ~1–2 min | Tick **full** to re-read every README. |
 | Optional webhook relay | ~1–2 min after the event | Needs a GitHub App + a tiny free worker (section 6). |
@@ -96,6 +94,19 @@ Each run is billed as ~2 Actions minutes (install, tests, sync); deploys add ~1 
 Nothing is invented. When data is missing the page says so ("no README yet", "calendar unavailable")
 instead of showing estimates. No AI summarisation is used: summaries are deterministic extracts from
 your README/description, so they can't contain claims you didn't write.
+
+**Card summaries** (first usable wins):
+
+1. `summary` in `content/projects.overrides.json`;
+2. the GitHub description, if it says more than the repo name ("Project Employee Analysis" doesn't);
+3. a README paragraph: the overview before the first section, then *Overview / Project summary /
+   About / Introduction / Purpose / The idea / The vision*, then early *Why / Problem* sections.
+   Paragraphs inside centered HTML and blockquotes count; taglines (< 12 words), link directories
+   ("Docs · Demo · Issues"), badge strings, pull-quotes and install commands are skipped; an intro
+   ending in ":" keeps its bullet list; at most ~320 characters, cut at sentence boundaries;
+4. otherwise an explicit "No description yet" message — never a guess.
+
+The detail page keeps the full README, and shows a short tagline (or the GitHub description) under the title.
 
 ## 4. Controlling what appears — `content/` (yours; the sync never writes here)
 
@@ -176,16 +187,33 @@ never repo names or content. The hourly schedule keeps running as a safety net.
 
 ## 7. Optional: higher rate limits / private-contribution counts
 
-Add a repository secret **`PORTFOLIO_SYNC_TOKEN`**: a fine-grained token with *Public repositories
-(read-only)* access and no extra permissions. The sync step uses it instead of `GITHUB_TOKEN`;
-the commit step still uses `GITHUB_TOKEN`. Only useful if the contribution calendar shows as
-unavailable, or you have a very large number of repos.
+Add a repository secret **`PORTFOLIO_SYNC_TOKEN`**: a **fine-grained** token with *Public repositories
+(read-only)* access and no extra permissions. Only job A (the read-only sync) receives it. Classic
+tokens report their scopes, and the sync refuses to run with one that has any write-capable scope
+(`repo`, `public_repo`, `workflow`, `write:*`, `admin:*`, `gist`, `user`, …). Fine-grained tokens don't
+report their permissions, so creating them read-only is up to you. Only useful if the contribution
+calendar shows as unavailable, or you have a very large number of repos.
 
 ## 8. Security model
 
-- Read-only API access; no secrets in the repo (the `npm run lint` secret scan checks this).
-- The sync step runs with `persist-credentials: false`; only the final commit step gets a
-  write-capable token, scoped by `permissions: contents: write` for that job.
+- **Three jobs, least privilege each** (workflow-level `permissions: {}`):
+  - **A · sync** has `contents: read` + `pages: read` only. It is the only job that fetches and parses
+    repository content (READMEs, manifests). Its `GITHUB_TOKEN` cannot write. Checkout uses
+    `persist-credentials: false`. It validates the output, then `tools/sync/package.mjs` uploads only the
+    changed generated files plus a SHA-256 manifest; any change outside the generated-file allowlist
+    (`data/*.json`, `data/cache/repos/*.json`, `projects/*.html`, `projects.html`, `journey.html`,
+    `sitemap.xml`) aborts the run.
+  - **B · commit** has `contents: write` and never runs `npm install` or the README pipeline.
+    `tools/sync/apply.mjs` (dependency-free) checks the base commit, the path allowlist, every hash and
+    symlinks *before* writing, applies writes and deletions (stale project pages), and re-validates —
+    all with no token present. The token is handed only to `git fetch`/`git push` in
+    `tools/sync/git-publish.sh`, as a per-command header (never stored in `.git/config`). Pushes are
+    fast-forward only; a conflicting or moved branch makes the run fail without overwriting anything.
+  - **C · deploy** (`pages: write`, `id-token: write`) runs `static.yml` for the exact pushed commit,
+    only when Pages is enabled. `tools/assemble-site.sh` copies an **allowlist** of public files (pages,
+    CSS/JS, `Image-Doc/`, `projects/`, `sitemap.xml`). Tooling, tests, `content/`, `data/` (sync state
+    and caches), docs and package files are never published.
+- No `pull_request` triggers, so untrusted PR code never runs with these permissions or secrets.
 - Private repos: the listing endpoint returns public repos only, results are filtered again on
   `private === false`, private repos in GraphQL results are dropped, and the relay never forwards
   names. A test asserts private data never reaches any generated file even if the API leaked it.
@@ -193,8 +221,7 @@ unavailable, or you have a very large number of repos.
   (no scripts, styles, iframes, event handlers, `javascript:`/`data:` URLs, foreign `id`s), and
   sanitized again at render time. External links get `rel="noopener noreferrer nofollow"`.
 - All other repository text is HTML-escaped. Repository code is never executed.
-- Generated pages are validated before writing; writes are atomic; a lock prevents overlapping
-  local runs and workflow `concurrency` serialises CI runs.
+- `tests/workflow.test.mjs` parses both workflows and fails if any of these boundaries regress.
 
 ## 9. Reliability
 
@@ -206,13 +233,15 @@ unavailable, or you have a very large number of repos.
   redirect page. Overrides keyed by the old name keep applying.
 - Running the sync repeatedly with unchanged data writes nothing (tested).
 - Deploys go through GitHub Pages, which only switches to a new version after a successful deploy.
+- Job A failing → nothing is uploaded; job B failing (bad artifact, failed validation, conflict,
+  rejected push) → nothing is pushed; in every case the live site stays as it was.
 - A failed run shows an error in the Actions run summary; the next scheduled run retries.
 
 ## 10. Local development
 
 ```bash
 npm ci
-npm test                    # 44 tests: unit, integration (mock GitHub), relay, end-to-end CLI
+npm test                    # 77 tests: unit, mock-API integration, artifact/git handoff, workflow permissions, relay, end-to-end CLI
 npm run lint                # syntax, JSON, markers, secret scan
 GITHUB_TOKEN=$(gh auth token) npm run sync      # real sync against your account
 npm run render              # rebuild pages from committed data, no API calls

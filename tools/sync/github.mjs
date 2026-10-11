@@ -47,6 +47,7 @@ export class GitHubClient {
     this.userAgent = userAgent;
     this.requestCount = 0;
     this.rate = { limit: null, remaining: null, resetAt: null };
+    this.oauthScopes = null; // only classic PATs report scopes
   }
 
   get authenticated() {
@@ -75,6 +76,8 @@ export class GitHubClient {
   }
 
   _recordRate(headers) {
+    const scopes = headers.get('x-oauth-scopes');
+    if (scopes !== null && scopes !== undefined) this.oauthScopes = scopes.split(',').map((x) => x.trim()).filter(Boolean);
     const resource = headers.get('x-ratelimit-resource');
     if (resource && resource !== 'core') return;
     const limit = headers.get('x-ratelimit-limit');
@@ -208,4 +211,13 @@ export function parseNextLink(link) {
 
 function backoff(attempt) {
   return Math.min(8000, 500 * 2 ** (attempt - 1)) + Math.floor(Math.random() * 250);
+}
+
+/**
+ * Scopes a classic token may have for this read-only sync. Anything else (repo, public_repo, workflow,
+ * write:*, admin:*, gist, user, delete_repo …) could modify GitHub state and is refused.
+ */
+export function writeCapableScopes(scopes) {
+  if (!Array.isArray(scopes)) return [];
+  return scopes.filter((s) => !(s.startsWith('read:') || s === 'user:email'));
 }

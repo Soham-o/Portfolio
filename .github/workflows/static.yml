@@ -1,4 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
+# Simple workflow for deploying static content to Pages
 name: Deploy static content to Pages
 
 on:
@@ -18,15 +18,41 @@ on:
         required: false
         default: ""
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+# No default permissions; each job asks for what it needs.
+permissions: {}
 
 jobs:
+  # Is GitHub Pages enabled (Settings → Pages → Source: GitHub Actions)? If not, skip deploying with a
+  # clear warning instead of failing every push.
+  pages-status:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: read
+    outputs:
+      enabled: ${{ steps.pages.outcome == 'success' }}
+    steps:
+      - name: Check Pages configuration
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+      - name: Report that the site was not deployed
+        if: steps.pages.outcome != 'success'
+        run: |
+          echo "::warning title=Site not deployed::GitHub Pages is not enabled for this repository. Enable it under Settings → Pages → Source: GitHub Actions, then re-run this workflow."
+          {
+            echo "### ⚠️ Site not deployed"
+            echo "GitHub Pages is not enabled for this repository, so nothing was published."
+            echo "Enable it under **Settings → Pages → Build and deployment → Source: GitHub Actions**, then re-run this workflow."
+          } >> "$GITHUB_STEP_SUMMARY"
+
   # Single deploy job since we're just deploying
   deploy:
+    needs: pages-status
+    if: needs.pages-status.outputs.enabled == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
     # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
     # (Job-level so it also applies when this workflow is called from sync-github.yml.)
@@ -42,19 +68,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ inputs.ref || github.sha }}
+          persist-credentials: false
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Assemble site
-        # Publish the website only — tooling, tests and the sync cache stay out of the public site.
-        run: |
-          mkdir -p _site
-          rsync -a \
-            --exclude '.git' --exclude '.github' --exclude '_site' --exclude 'node_modules' \
-            --exclude 'tools' --exclude 'tests' --exclude 'relay' --exclude 'templates' --exclude 'docs' \
-            --exclude 'content' --exclude 'data/cache' --exclude 'data/.sync.lock' \
-            --exclude 'package.json' --exclude 'package-lock.json' --exclude '.gitignore' \
-            ./ _site/
-          test -f _site/index.html
+        # Allowlist: only the public website (pages, styles, scripts, images, generated project pages,
+        # sitemap). Tooling, tests, content/, data/ (sync state + caches) and docs are never published.
+        run: bash tools/assemble-site.sh _site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

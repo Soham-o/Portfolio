@@ -312,3 +312,54 @@ test('empty repositories (no commits, no README, no languages) are handled', asy
   assert.equal(p.displayName, 'Empty Repo');
   assert.match(await read(dir, 'projects/empty-repo.html'), /doesn't have a README yet/);
 });
+
+test('a classic token with write scopes is refused; read-only scopes are accepted', async () => {
+  const dir = await makeSite();
+  for (const scopes of ['repo', 'public_repo, read:user', 'workflow']) {
+    const world = makeWorld({ oauthScopes: scopes });
+    await assert.rejects(() => runSync({ root: dir, client: makeClient(world), now: T0 }), /write-capable scopes/, scopes);
+  }
+  const ok = makeWorld({ oauthScopes: 'read:user, user:email' });
+  const r = await runSync({ root: dir, client: makeClient(ok), now: T0 });
+  assert.equal(r.summary.discovered, 7);
+});
+
+test('canonical, Open Graph and sitemap URLs share one base, including a Pages sub-path', async () => {
+  for (const [siteUrl, base] of [[undefined, 'https://soham-o.github.io/Portfolio/'], ['https://example.github.io/Sub', 'https://example.github.io/Sub/']]) {
+    const dir = await makeSite();
+    const env = siteUrl ? { SITE_URL: siteUrl } : {};
+    await commit(await runSync({ root: dir, client: makeClient(makeWorld()), now: T0, env }));
+    const page = await read(dir, 'projects/internpilot-ai.html');
+    assert.match(page, new RegExp(`<link rel="canonical" href="${base.replace(/\./g, '\\.')}projects/internpilot-ai\\.html">`));
+    assert.match(page, new RegExp(`<meta property="og:url" content="${base.replace(/\./g, '\\.')}projects/internpilot-ai\\.html">`));
+    const locs = [...(await read(dir, 'sitemap.xml')).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    assert.ok(locs.length > 4 && locs.every((l) => l.startsWith(base)), locs.join(' '));
+    // nested pages use relative asset paths that resolve under any base path
+    assert.match(page, /href="\.\.\/style\.css"/);
+    assert.match(page, /href="\.\.\/projects\.html"/);
+    const { checkCommitted } = await import('../tools/sync/validate.mjs');
+    assert.deepEqual(await checkCommitted(dir), []);
+  }
+});
+
+test('README portfolio link matches the configured canonical base URL', async () => {
+  const cfg = JSON.parse(await fs.readFile(path.join(REPO_ROOT, 'content/portfolio.config.json'), 'utf8'));
+  const readmeMd = await fs.readFile(path.join(REPO_ROOT, 'README.md'), 'utf8');
+  const links = [...readmeMd.matchAll(/https:\/\/soham-o\.github\.io\/[^"')\s]*/gi)].map((m) => m[0]);
+  assert.ok(links.length > 0);
+  for (const l of links) assert.ok(l.startsWith(cfg.site.url), `${l} vs ${cfg.site.url}`);
+});
+
+test('cards use the chosen summary; undocumented repos show the explicit fallback', async () => {
+  const dir = await makeSite();
+  await commit(await runSync({ root: dir, client: makeClient(makeWorld()), now: T0 }));
+  const projects = await projectsOf(dir);
+  const nd = projects.find((p) => p.name === 'newsletter-digest');
+  assert.equal(nd.summarySource, 'none');
+  const html = await read(dir, 'projects.html');
+  assert.ok(html.includes('No description yet — the repository has no description or README summary.'));
+  const ip = projects.find((p) => p.name === 'InternPilot-AI');
+  assert.equal(ip.summarySource, 'description');
+  const pl = projects.find((p) => p.name === 'PersonaLearn');
+  assert.equal(pl.summarySource, 'override', 'manual override wins');
+});
