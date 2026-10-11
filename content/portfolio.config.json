@@ -5,6 +5,7 @@
     "includeForks": false,
     "includeArchived": true,
     "excludeRepos": [
+      "Soham-o",
       "Portfolio"
     ],
     "excludeTopics": [
