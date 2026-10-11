@@ -58,6 +58,15 @@
     },
     "voteros": {
       "summary": "An interactive civic-information project focused on explaining electoral processes and helping users explore election-related information."
+    },
+    "EarthShare": {
+      "summary": "A carbon-footprint prototype for recording everyday activities, viewing deterministic emissions estimates, and tracking climate actions. The README describes a FastAPI backend and Next.js frontend, and notes that the project is not a security-audited production service."
+    },
+    "CalmReader": {
+      "summary": "A reading-focused web app with text and article import, a focus mode that dims surrounding paragraphs, guided questions, and a reflection archive."
+    },
+    "Employee-Analysis": {
+      "summary": "The public repository does not currently include a README overview, so its purpose and results cannot be summarized accurately from the available documentation."
     }
   }
 }
