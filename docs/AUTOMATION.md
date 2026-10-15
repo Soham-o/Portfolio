@@ -108,6 +108,23 @@ your README/description, so they can't contain claims you didn't write.
 
 The detail page keeps the full README, and shows a short tagline (or the GitHub description) under the title.
 
+## Projects page layout
+
+1. **"Systems That Run Themselves." (top):** your hand-written case studies (InternPilot AI, PVCA,
+   Newsletter Digest), followed automatically by every public repo that has the GitHub topic
+   **`autonomous`**, shown as large cards.
+2. **"Everything Else I've Shipped" (bottom):** every other public repo, in **GitHub order** (most
+   recently pushed first, like the *Last updated* sort on your GitHub profile), with search, filters
+   and sorting.
+3. **Mybuddy:** a hand-written card below the list, because its repository is private and can't be
+   placed by GitHub order. Make it public and it appears in the list automatically (then delete the
+   hand-written card).
+
+**To mark a new project as self-running:** on its GitHub page click ⚙ next to *About* → *Topics* →
+add `autonomous`. The next sync (hourly, or *Run workflow*) moves it to the top. To override, set
+`"autonomous": true` or `false` for that repo in `content/projects.overrides.json`. The topic list
+is configurable as `github.autonomousTopics` in `content/portfolio.config.json`.
+
 ## 4. Controlling what appears — `content/` (yours; the sync never writes here)
 
 **`content/projects.overrides.json`** — keyed by repo name (renames are followed automatically):

@@ -3,7 +3,7 @@ import path from 'node:path';
 import { readJson, safeUrl } from './util.mjs';
 
 const DEFAULTS = {
-  github: { username: null, includeForks: false, includeArchived: true, excludeRepos: [], excludeTopics: [], requireDescriptionOrReadme: false },
+  github: { username: null, includeForks: false, includeArchived: true, excludeRepos: [], excludeTopics: [], autonomousTopics: ['autonomous'], requireDescriptionOrReadme: false },
   site: { url: '', ownerName: '', linkedin: '', email: '' },
   sync: {
     staleAfterHours: 36, heartbeatHours: 24, fullRefreshHours: 24, maxReadmeBytes: 300000, maxManifestBytes: 200000,
@@ -76,7 +76,7 @@ export async function loadContent(root, env = process.env) {
 export function validateConfig(config) {
   const u = config.github.username;
   if (!u || !/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})$/.test(u)) throw new Error(`Invalid github.username: ${u}`);
-  for (const k of ['excludeRepos', 'excludeTopics']) {
+  for (const k of ['excludeRepos', 'excludeTopics', 'autonomousTopics']) {
     if (!Array.isArray(config.github[k])) throw new Error(`github.${k} must be an array`);
   }
   for (const k of ['staleAfterHours', 'heartbeatHours', 'fullRefreshHours', 'maxReadmeBytes']) {

@@ -133,8 +133,16 @@ function syncStatusLine(status, extraClass = '') {
   return `<p class="sync-status ${extraClass}${degraded ? ' is-partial' : ''}" data-sync-status data-synced-at="${esc(status.lastPublishedAt)}" data-stale-after="${esc(status.staleAfterHours ?? 36)}"><span class="sync-dot" aria-hidden="true"></span><span class="sync-status-text">GitHub data synced ${esc(fmtDate(status.lastPublishedAt))}${degraded ? ' · some sources used cached data' : ''}</span></p>`;
 }
 
+/** Self-running systems synced from GitHub, shown at the end of the top "Systems That Run Themselves" grid. */
+export function renderAutonomousSection(model) {
+  const list = model.projects.filter((p) => p.autonomous && !p.curated)
+    .sort((a, b) => (a.order ?? 999) - (b.order ?? 999)); // stable: keeps GitHub order otherwise
+  if (!list.length) return '';
+  return list.map((p) => renderProjectCard({ ...p, featured: true })).join('\n\n');
+}
+
 export function renderProjectsSection(model) {
-  const auto = model.projects.filter((p) => !p.curated);
+  const auto = model.projects.filter((p) => !p.curated && !p.autonomous);
   const counts = new Map();
   for (const p of auto) {
     const keys = new Set([p.language, ...(p.tech || []).filter((t) => t.source !== 'language').slice(0, 4).map((t) => t.name)].filter(Boolean));
@@ -151,7 +159,7 @@ export function renderProjectsSection(model) {
   return `        <section class="sync-projects" id="all-projects" aria-labelledby="all-projects-title">
             <div class="sync-projects-head">
                 <h2 class="section-heading" id="all-projects-title">Everything Else I've Shipped</h2>
-                <p class="projects-subtitle">Every public repository on my GitHub, pulled in automatically — each with its own detail page built from the README.</p>
+                <p class="projects-subtitle">Every other public repository on my GitHub, in the same order as my GitHub profile (most recently updated first). New repositories appear here automatically, each with its own detail page built from the README.</p>
                 ${syncStatusLine(model.status)}
             </div>
 ${showTools ? `            <div class="sync-toolbar" role="search">
@@ -159,8 +167,7 @@ ${showTools ? `            <div class="sync-toolbar" role="search">
                 <input id="sync-search" class="sync-search" type="search" placeholder="Search projects, topics, tech…" autocomplete="off">
                 <label class="visually-hidden" for="sync-sort">Sort projects</label>
                 <select id="sync-sort" class="sync-select">
-                    <option value="default">Featured first</option>
-                    <option value="updated">Recently updated</option>
+                    <option value="default">Recently updated (GitHub order)</option>
                     <option value="stars">Most stars</option>
                     <option value="newest">Newest</option>
                 </select>
@@ -605,6 +612,9 @@ export async function renderAll({ paths, config, model }) {
   // projects.html
   let projectsHtml = await readText(paths.projectsHtml);
   projectsHtml = replaceMarker(projectsHtml, 'projects', renderProjectsSection(model));
+  if (listMarkers(projectsHtml).includes('autonomous')) {
+    projectsHtml = replaceMarker(projectsHtml, 'autonomous', renderAutonomousSection(model));
+  }
   for (const m of listMarkers(projectsHtml)) {
     const cm = m.match(/^card-links:(.+)$/);
     if (cm) projectsHtml = replaceMarker(projectsHtml, m, renderCuratedLinks(cm[1], byName.get(cm[1].toLowerCase())));

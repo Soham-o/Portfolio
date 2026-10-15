@@ -1,30 +1,28 @@
 {
   "$comment": "Optional per-repository overrides, keyed by repository name (renames are followed automatically). Every field is optional. The sync never writes to this file.",
   "$fields": {
-    "featured": "true → shown first, in the large card layout",
+    "autonomous": "true/false → force a repo into (or out of) the top 'Systems That Run Themselves' section; by default a repo goes there when it has the GitHub topic 'autonomous'",
+    "featured": "true → large card layout (position still follows GitHub order)",
     "hidden": "true → never shown on the site (the repo stays public on GitHub)",
     "curated": "true → the repo already has a hand-written card on projects.html, so it is not duplicated in the auto-synced grid; if a matching public repository cannot be verified, the card shows no source link instead of guessing a URL",
     "category": "label shown above the title (defaults to primary language)",
     "summary": "your own one-paragraph summary (defaults to the GitHub description / README)",
     "image": "path or https URL of a cover image (defaults to the first README image, then GitHub's social preview)",
     "demo": "live demo URL (defaults to the repo homepage, GitHub Pages, or a demo link found in the README)",
-    "order": "number; lower sorts earlier among featured projects"
+    "order": "number; lower sorts earlier within the top 'Systems That Run Themselves' section"
   },
   "projects": {
     "Task_Manager": {
-      "curated": true,
       "category": "Productivity Tool",
       "image": "Image-Doc/p1.png",
       "summary": "A task-management web app with list and board views for adding, editing, and organizing tasks."
     },
     "PersonaLearn": {
-      "curated": true,
       "category": "ML · Adaptive Learning",
       "image": "Image-Doc/p2.png",
       "summary": "A Streamlit study assistant that explains topics using analogies based on a learner's selected interests, then generates a quiz."
     },
     "Movie_Recommender_System": {
-      "curated": true,
       "category": "ML · Recommender System",
       "image": "Image-Doc/p4.png",
       "summary": "A content-based movie recommender using TF-IDF features and cosine similarity, with a Streamlit interface and the TMDB 5000 dataset."

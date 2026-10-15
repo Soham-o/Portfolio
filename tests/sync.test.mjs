@@ -31,9 +31,13 @@ test('initial discovery: eligible public repos get cards, pages and data', async
   // Auto grid contains non-curated repos only; curated ones keep their hand-written card.
   const grid = html.slice(html.indexOf('github-sync:projects:start'), html.indexOf('github-sync:projects:end'));
   assert.match(grid, /<h2>InternPilot-AI<\/h2>/);
-  assert.doesNotMatch(grid, /PersonaLearn/);
-  // Curated card links now point to the generated detail page
-  assert.match(html, /github-sync:card-links:PersonaLearn:start -->\s*<div class="fp-links">[\s\S]*?href="projects\/personalearn\.html" class="btn-visit"/);
+  // Former hand-written repo cards are now synced cards that keep their override image/category
+  assert.match(grid, /<img src="Image-Doc\/p2\.png"[\s\S]*?ML · Adaptive Learning[\s\S]*?<h2>PersonaLearn<\/h2>/);
+  // A hand-written card whose repo isn't public never gets a guessed link
+  assert.match(html, /github-sync:card-links:Mybuddy:start -->\s*<div class="fp-links">\s*<span class="btn-visit" aria-disabled="true">/);
+  // Bottom list is in GitHub order (most recently pushed first)
+  const order = [...grid.matchAll(/data-updated="([^"]+)"/g)].map((m) => m[1]);
+  assert.deepEqual(order, [...order].sort().reverse());
   // Fork and configured exclusions are absent
   assert.doesNotMatch(JSON.stringify(projects), /some-fork/);
   assert.equal(projects.find((p) => p.name === 'Soham-o'), undefined);
@@ -116,12 +120,12 @@ test('renamed repository keeps identity, gets a new slug and a redirect, overrid
   const p = projects.find((x) => x.id === 102);
   assert.equal(projects.filter((x) => x.id === 102).length, 1);
   assert.equal(p.slug, 'personalearn-v2');
-  assert.equal(p.curated, true, 'override keyed by old name still applies');
-  assert.equal(p.category, 'ML · Adaptive Learning');
+  assert.equal(p.category, 'ML · Adaptive Learning', 'override keyed by old name still applies');
   const redirect = await read(dir, 'projects/personalearn.html');
   assert.match(redirect, /http-equiv="refresh" content="0; url=personalearn-v2\.html"/);
   // Curated card (marker uses the old name) links to the new page
   assert.match(await read(dir, 'projects.html'), /href="projects\/personalearn-v2\.html" class="btn-visit"/);
+  assert.doesNotMatch(await read(dir, 'projects.html'), /href="projects\/personalearn\.html"/);
 });
 
 test('deleted or privatized repositories are removed only after confirmation', async () => {
@@ -362,4 +366,34 @@ test('cards use the chosen summary; undocumented repos show the explicit fallbac
   assert.equal(ip.summarySource, 'description');
   const pl = projects.find((p) => p.name === 'PersonaLearn');
   assert.equal(pl.summarySource, 'override', 'manual override wins');
+});
+
+test('repos tagged "autonomous" on GitHub move to the top section; the rest stay in GitHub order', async () => {
+  const dir = await makeSite();
+  const world = makeWorld();
+  await sync(dir, world);
+  let html = await read(dir, 'projects.html');
+  const top = () => html.slice(html.indexOf('github-sync:autonomous:start'), html.indexOf('github-sync:autonomous:end'));
+  const bottom = () => html.slice(html.indexOf('github-sync:projects:start'), html.indexOf('github-sync:projects:end'));
+  assert.doesNotMatch(top(), /sync-card/, 'nothing tagged yet');
+
+  // Owner adds the topic on GitHub → next sync moves it up, as a large card, and out of the bottom list
+  const r = world.repos.find((x) => x.name === 'newsletter-digest');
+  r.topics = ['autonomous', 'telegram-bot'];
+  r.updated_at = '2026-10-11T03:00:00Z';
+  await sync(dir, world, later(1));
+  html = await read(dir, 'projects.html');
+  assert.match(top(), /<article class="featured-project">[\s\S]*<h2>Newsletter Digest<\/h2>/);
+  assert.doesNotMatch(bottom(), /Newsletter Digest/);
+  assert.equal((html.match(/<h2>Newsletter Digest<\/h2>/g) || []).length, 1, 'never listed twice');
+
+  // An override can force it back down
+  const ovFile = path.join(dir, 'content/projects.overrides.json');
+  const ov = JSON.parse(await fs.readFile(ovFile, 'utf8'));
+  ov.projects['newsletter-digest'] = { autonomous: false };
+  await fs.writeFile(ovFile, JSON.stringify(ov));
+  await sync(dir, world, later(2));
+  html = await read(dir, 'projects.html');
+  assert.doesNotMatch(top(), /Newsletter Digest/);
+  assert.match(bottom(), /<h2>Newsletter Digest<\/h2>/);
 });

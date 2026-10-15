@@ -67,13 +67,17 @@ function languagePercentages(languages) {
     .map(([name, bytes]) => ({ name, bytes, pct: Math.round((bytes / total) * 1000) / 10 }));
 }
 
+/** GitHub order: most recently pushed first, like the "Last updated" sort on a GitHub profile. */
 export function sortProjects(list) {
-  return [...list].sort((a, b) => {
-    if (a.featured !== b.featured) return a.featured ? -1 : 1;
-    if (a.featured && b.featured && (a.order ?? 999) !== (b.order ?? 999)) return (a.order ?? 999) - (b.order ?? 999);
-    if (a.archived !== b.archived) return a.archived ? 1 : -1;
-    return String(b.pushedAt).localeCompare(String(a.pushedAt)) || a.name.localeCompare(b.name);
-  });
+  return [...list].sort((a, b) => String(b.pushedAt).localeCompare(String(a.pushedAt))
+    || String(b.updatedAt).localeCompare(String(a.updatedAt)) || a.name.localeCompare(b.name));
+}
+
+/** A self-running system: tagged on GitHub with an autonomous topic, or marked in the overrides. */
+export function isAutonomous(repo, override, config) {
+  if (typeof override.autonomous === 'boolean') return override.autonomous;
+  const topics = (config.github.autonomousTopics || []).map((t) => String(t).toLowerCase());
+  return (repo.topics || []).some((t) => topics.includes(String(t).toLowerCase()));
 }
 
 /**
@@ -259,6 +263,7 @@ export async function runSync({ root, client, now = new Date(), logger = noopLog
       category: override.category || '',
       featured: Boolean(override.featured),
       curated: Boolean(override.curated),
+      autonomous: isAutonomous(repo, override, config),
       order: typeof override.order === 'number' ? override.order : null,
       topics: repo.topics,
       language: repo.language,

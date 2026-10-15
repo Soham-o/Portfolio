@@ -11,6 +11,9 @@
     "excludeTopics": [
       "portfolio-hide"
     ],
+    "autonomousTopics": [
+      "autonomous"
+    ],
     "requireDescriptionOrReadme": false
   },
   "site": {

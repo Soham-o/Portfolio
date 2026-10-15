@@ -199,7 +199,8 @@
           "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/progress.png"
         ]
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1300537845,
@@ -376,7 +377,8 @@
         "tagline": "A Streamlit decision-support prototype for urban air-quality interventions",
         "images": []
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1358825462,
@@ -600,7 +602,8 @@
           "https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png"
         ]
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1136219572,
@@ -616,7 +619,7 @@
       "summarySource": "override",
       "category": "ML · Adaptive Learning",
       "featured": false,
-      "curated": true,
+      "curated": false,
       "order": null,
       "topics": [],
       "language": "Python",
@@ -746,7 +749,8 @@
           "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20123003.png"
         ]
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1273992234,
@@ -915,7 +919,8 @@
           "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/mobile.png"
         ]
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1260140601,
@@ -1079,7 +1084,8 @@
         "tagline": "",
         "images": []
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1222658746,
@@ -1213,7 +1219,8 @@
           "https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine"
         ]
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1214424413,
@@ -1337,7 +1344,8 @@
         "tagline": "",
         "images": []
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1068386786,
@@ -1353,7 +1361,7 @@
       "summarySource": "override",
       "category": "Productivity Tool",
       "featured": false,
-      "curated": true,
+      "curated": false,
       "order": null,
       "topics": [],
       "language": "HTML",
@@ -1441,7 +1449,8 @@
         "tagline": "A privacy-first, zero-latency task manager that lives entirely in your browser.",
         "images": []
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1031344132,
@@ -1541,7 +1550,8 @@
           "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
         ]
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1026537848,
@@ -1557,7 +1567,7 @@
       "summarySource": "override",
       "category": "ML · Recommender System",
       "featured": false,
-      "curated": true,
+      "curated": false,
       "order": null,
       "topics": [],
       "language": "Jupyter Notebook",
@@ -1640,7 +1650,8 @@
           "https://cdn-icons-png.flaticon.com/512/2503/2503508.png"
         ]
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1157662701,
@@ -1750,7 +1761,8 @@
         "tagline": "",
         "images": []
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1147679907,
@@ -1823,7 +1835,8 @@
         "tagline": "",
         "images": []
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     },
     {
       "id": 1007141888,
@@ -1896,7 +1909,8 @@
         "tagline": "Project Employee Analysis",
         "images": []
       },
-      "nameHistory": []
+      "nameHistory": [],
+      "autonomous": false
     }
   ]
 }

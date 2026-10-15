@@ -290,14 +290,14 @@ test('eligibility, sorting and naming helpers', () => {
   assert.equal(eligibility({ ...base, id: 42 }, { config: config2, override: {} }), 'config-exclude');
   assert.equal(eligibility({ ...base, topics: ['hide'] }, { config: config2, override: {} }), 'topic-exclude');
   assert.equal(eligibility(base, { config: config2, override: { hidden: true } }), 'hidden');
+  // GitHub order: most recently pushed first, regardless of featured/archived
   const sorted = sortProjects([
     { name: 'old', featured: false, archived: false, pushedAt: '2020' },
     { name: 'arch', featured: false, archived: true, pushedAt: '2030' },
     { name: 'new', featured: false, archived: false, pushedAt: '2025' },
-    { name: 'feat2', featured: true, order: 2, pushedAt: '2000' },
-    { name: 'feat1', featured: true, order: 1, pushedAt: '1999' },
+    { name: 'feat', featured: true, order: 1, pushedAt: '1999' },
   ]);
-  assert.deepEqual(sorted.map((p) => p.name), ['feat1', 'feat2', 'new', 'old', 'arch']);
+  assert.deepEqual(sorted.map((p) => p.name), ['arch', 'new', 'old', 'feat']);
   assert.equal(prettyName('Movie_Recommender_System'), 'Movie Recommender System');
   assert.equal(prettyName('Fake-News-Detection-'), 'Fake-News-Detection');
   assert.equal(prettyName('AirTwin-X'), 'AirTwin-X');
