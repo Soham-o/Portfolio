@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T07:32:45.588Z",
+  "generatedAt": "2026-10-15T11:06:36.152Z",
   "username": "Soham-o",
   "projects": [
     {
@@ -17,6 +17,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Python",
@@ -199,8 +200,7 @@
           "https://raw.githubusercontent.com/Soham-o/EarthShare/main/docs/screenshots/progress.png"
         ]
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1300537845,
@@ -217,6 +217,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Python",
@@ -377,8 +378,7 @@
         "tagline": "A Streamlit decision-support prototype for urban air-quality interventions",
         "images": []
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1358825462,
@@ -395,6 +395,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Python",
@@ -602,8 +603,7 @@
           "https://raw.githubusercontent.com/Soham-o/cursor_bite/main/docs/images/radial-menu.png"
         ]
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1136219572,
@@ -620,6 +620,7 @@
       "category": "ML · Adaptive Learning",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Python",
@@ -749,8 +750,7 @@
           "https://raw.githubusercontent.com/Soham-o/PersonaLearn/main/Screenshot%202026-01-18%20123003.png"
         ]
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1273992234,
@@ -767,6 +767,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "JavaScript",
@@ -919,8 +920,7 @@
           "https://raw.githubusercontent.com/Soham-o/CalmReader/main/docs/screenshots/mobile.png"
         ]
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1260140601,
@@ -937,6 +937,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Python",
@@ -1084,8 +1085,7 @@
         "tagline": "",
         "images": []
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1222658746,
@@ -1102,6 +1102,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Python",
@@ -1219,8 +1220,7 @@
           "https://via.placeholder.com/1200x300/0E1117/00FFFF?text=VoterOS:+The+Civic+Journey+Engine"
         ]
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1214424413,
@@ -1237,6 +1237,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Python",
@@ -1344,8 +1345,7 @@
         "tagline": "",
         "images": []
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1068386786,
@@ -1362,6 +1362,7 @@
       "category": "Productivity Tool",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "HTML",
@@ -1449,8 +1450,7 @@
         "tagline": "A privacy-first, zero-latency task manager that lives entirely in your browser.",
         "images": []
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1031344132,
@@ -1467,6 +1467,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Jupyter Notebook",
@@ -1550,8 +1551,7 @@
           "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png"
         ]
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1026537848,
@@ -1568,6 +1568,7 @@
       "category": "ML · Recommender System",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Jupyter Notebook",
@@ -1650,8 +1651,7 @@
           "https://cdn-icons-png.flaticon.com/512/2503/2503508.png"
         ]
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1157662701,
@@ -1668,6 +1668,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Jupyter Notebook",
@@ -1761,8 +1762,7 @@
         "tagline": "",
         "images": []
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1147679907,
@@ -1779,6 +1779,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Jupyter Notebook",
@@ -1835,8 +1836,7 @@
         "tagline": "",
         "images": []
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     },
     {
       "id": 1007141888,
@@ -1853,6 +1853,7 @@
       "category": "",
       "featured": false,
       "curated": false,
+      "autonomous": false,
       "order": null,
       "topics": [],
       "language": "Jupyter Notebook",
@@ -1909,8 +1910,7 @@
         "tagline": "Project Employee Analysis",
         "images": []
       },
-      "nameHistory": [],
-      "autonomous": false
+      "nameHistory": []
     }
   ]
 }
