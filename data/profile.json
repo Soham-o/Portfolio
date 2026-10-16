@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T13:19:23.000Z",
+  "generatedAt": "2026-10-16T18:08:42.502Z",
   "profile": {
     "login": "Soham-o",
     "name": "Soham Panda",
@@ -12,7 +12,7 @@
     "twitter": "",
     "followers": 47,
     "following": 30,
-    "publicRepos": 22,
+    "publicRepos": 23,
     "publicGists": 0,
     "createdAt": "2024-05-03T06:28:22Z"
   },
@@ -22,7 +22,7 @@
     "forks": 0,
     "releases": 0,
     "followers": 47,
-    "contributionsLastYear": 275,
+    "contributionsLastYear": 278,
     "languages": [
       {
         "name": "Jupyter Notebook",
@@ -58,9 +58,9 @@
   },
   "contributions": {
     "available": true,
-    "total": 275,
-    "commits": 157,
-    "pullRequests": 22,
+    "total": 278,
+    "commits": 158,
+    "pullRequests": 23,
     "issues": 0,
     "reviews": 0,
     "days": [
@@ -1542,24 +1542,24 @@
       },
       {
         "date": "2026-10-16",
-        "count": 0
+        "count": 3
       }
     ],
     "contributedTo": [
       {
         "nameWithOwner": "openclaw/openclaw",
         "url": "https://github.com/openclaw/openclaw",
-        "stars": 392165
+        "stars": 392182
       },
       {
         "nameWithOwner": "heilcheng/awesome-agent-skills",
         "url": "https://github.com/heilcheng/awesome-agent-skills",
-        "stars": 6275
+        "stars": 6277
       },
       {
         "nameWithOwner": "1jehuang/jcode",
         "url": "https://github.com/1jehuang/jcode",
-        "stars": 20913
+        "stars": 20931
       },
       {
         "nameWithOwner": "AOSSIE-Org/LibrEd",
@@ -1570,12 +1570,23 @@
         "nameWithOwner": "hermes-labs-ai/lintlang",
         "url": "https://github.com/hermes-labs-ai/lintlang",
         "stars": 140
+      },
+      {
+        "nameWithOwner": "RogueAlg0/taken",
+        "url": "https://github.com/RogueAlg0/taken",
+        "stars": 2
       }
     ]
   },
   "external": {
-    "total": 3,
+    "total": 4,
     "items": [
+      {
+        "title": "feat(discover): find Cursor project rules",
+        "url": "https://github.com/hermes-labs-ai/lintlang/pull/170",
+        "repo": "hermes-labs-ai/lintlang",
+        "mergedAt": "2026-10-16T17:04:26Z"
+      },
       {
         "title": "fix: improve YAML tool-name diagnostics",
         "url": "https://github.com/hermes-labs-ai/lintlang/pull/174",
