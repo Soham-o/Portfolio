@@ -33,7 +33,7 @@ jobs:
     steps:
       - name: Check Pages configuration
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
         continue-on-error: true
       - name: Report that the site was not deployed
         if: steps.pages.outcome != 'success'
@@ -65,20 +65,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: ${{ inputs.ref || github.sha }}
           persist-credentials: false
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Assemble site
         # Allowlist: only the public website (pages, styles, scripts, images, generated project pages,
         # sitemap). Tooling, tests, content/, data/ (sync state + caches) and docs are never published.
         run: bash tools/assemble-site.sh _site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
