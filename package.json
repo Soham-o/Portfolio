@@ -15,8 +15,8 @@
     "lint": "node tools/lint.mjs"
   },
   "devDependencies": {
-    "marked": "15.0.12",
-    "sanitize-html": "2.18.0",
-    "yaml": "2.9.0"
+    "marked": "18.1.1",
+    "sanitize-html": "2.18.1",
+    "yaml": "2.9.1"
   }
 }
