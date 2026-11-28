@@ -1,8 +1,8 @@
 {
-  "lastSuccessAt": "2026-11-27T23:32:17.552Z",
-  "lastPublishedAt": "2026-11-27T23:32:17.552Z",
-  "contentHash": "85c4727c91224786387a77525141cb3b7fbe8e97b1837a811bf4129742640051",
-  "mode": "incremental",
+  "lastSuccessAt": "2026-11-28T07:59:25.652Z",
+  "lastPublishedAt": "2026-11-28T07:59:25.652Z",
+  "contentHash": "b5715f951d2bba3b6b33da49207935f35fe5a2a147231c66c82d234578877bdf",
+  "mode": "full",
   "authenticated": true,
   "repoCount": 14,
   "components": {
@@ -12,10 +12,10 @@
   },
   "warnings": [],
   "staleAfterHours": 36,
-  "apiRequests": 18,
+  "apiRequests": 70,
   "rateLimit": {
     "limit": 5000,
-    "remaining": 4983,
-    "resetAt": "2026-11-28T00:32:17.000Z"
+    "remaining": 4931,
+    "resetAt": "2026-11-28T08:59:25.000Z"
   }
 }
